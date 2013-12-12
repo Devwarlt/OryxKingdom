@@ -147,6 +147,11 @@ public class Account
         }
         set { _IgnoredAccounts = string.Join(",", value); }
     }
+  
+    [XmlElement("Commands")]
+    public string _Commands { get; set; }
+    [XmlIgnore]
+    public List<string> Commands { get { return (this._Commands != null ? this._Commands.Split(',').ToList() : new List<string>()); } set { this._Commands = string.Join(",", value); } }
 
     public int Credits { get; set; }
     public int NextCharSlotPrice { get; set; }

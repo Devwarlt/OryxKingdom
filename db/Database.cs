@@ -888,6 +888,22 @@ VALUES(@accId, @chrId, @name, @objType, @tex1, @tex2, @items, @fame, @fameStats,
             }
         }
 
+        public List<string> GetCommands(int accId)
+        {
+            var cmd = CreateQuery();
+            cmd.CommandText = "SELECT commands FROM accounts WHERE id=@accId";
+            cmd.Parameters.AddWithValue("@accid", accId);
+            try
+            {
+                List<string> commands = new List<string>();
+                foreach (var i in cmd.ExecuteScalar().ToString().Split(','))
+                    commands.Add(i);
+                return commands;
+            }
+            catch
+            { return new List<string>(); }
+        }
+
         public bool AddLock(int accId, int lockId)
         {
             List<int> x = GetLockeds(accId);

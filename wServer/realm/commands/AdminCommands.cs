@@ -1,20 +1,21 @@
-﻿#region
-
-using System;
+﻿using System;
+using System.Diagnostics;
 using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using db;
 using db.data;
+using terrain;
 using MySql.Data.MySqlClient;
+using wServer.logic.attack;
 using wServer.realm.entities;
 using wServer.realm.entities.player;
 using wServer.realm.setpieces;
 using wServer.realm.worlds;
 using wServer.svrPackets;
 
-#endregion
 
 namespace wServer.realm.commands
 {
@@ -23,11 +24,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "spawn"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 3; }
         }
 
         public void Execute(Player player, string[] args)
@@ -114,11 +110,6 @@ namespace wServer.realm.commands
             get { return "arena"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             var prtal = Entity.Resolve(0x1900);
@@ -160,11 +151,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "grave"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 3; }
         }
 
         public void Execute(Player player, string[] args)
@@ -285,11 +271,6 @@ namespace wServer.realm.commands
             get { return "addeff"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -324,11 +305,6 @@ namespace wServer.realm.commands
             get { return "remeff"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -359,11 +335,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "give"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 2; }
         }
 
         public void Execute(Player player, string[] args)
@@ -420,11 +391,6 @@ namespace wServer.realm.commands
             get { return "tp"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0 || args.Length == 1)
@@ -467,11 +433,6 @@ namespace wServer.realm.commands
             get { return "setpiece"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -503,11 +464,6 @@ namespace wServer.realm.commands
             get { return "debug"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             player.Client.SendPacket(new TextBoxPacket
@@ -526,11 +482,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "killall"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -564,11 +515,6 @@ namespace wServer.realm.commands
             get { return "killallx"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -597,11 +543,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "kick"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 2; }
         }
 
         public void Execute(Player player, string[] args)
@@ -638,11 +579,6 @@ namespace wServer.realm.commands
             get { return "getquest"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             player.SendInfo("Loc: " + player.Quest.X + " " + player.Quest.Y);
@@ -654,11 +590,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "osay"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -680,11 +611,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "swho"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 0; }
         }
 
         public void Execute(Player player, string[] args)
@@ -723,11 +649,6 @@ namespace wServer.realm.commands
             get { return "announce"; }
         } //msg all players in all worlds
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -755,11 +676,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "summon"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -793,11 +709,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "kill"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -845,10 +756,7 @@ namespace wServer.realm.commands
             get { return "restart"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
+        //TO DO: Add the timer + restart itself
 
         public void Execute(Player player, string[] args)
         {
@@ -884,11 +792,6 @@ namespace wServer.realm.commands
             get { return "vit"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             try
@@ -916,11 +819,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "def"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -952,11 +850,6 @@ namespace wServer.realm.commands
             get { return "att"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             try
@@ -984,11 +877,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "dex"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1020,11 +908,6 @@ namespace wServer.realm.commands
             get { return "hp"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             try
@@ -1052,11 +935,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "mp"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1088,11 +966,6 @@ namespace wServer.realm.commands
             get { return "spd"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             try
@@ -1122,11 +995,6 @@ namespace wServer.realm.commands
             get { return "wis"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             try
@@ -1154,11 +1022,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "whitelist"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1210,11 +1073,6 @@ namespace wServer.realm.commands
             get { return "ban"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 2; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -1263,11 +1121,6 @@ namespace wServer.realm.commands
             get { return "unban"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 2; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -1307,11 +1160,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "rank"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1357,11 +1205,6 @@ namespace wServer.realm.commands
             get { return "grank"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length < 2)
@@ -1405,11 +1248,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "setguild"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 5; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1458,11 +1296,6 @@ namespace wServer.realm.commands
             get { return "tq"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (player.Quest == null)
@@ -1491,11 +1324,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "god"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 3; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1535,11 +1363,6 @@ namespace wServer.realm.commands
             get { return "ip"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             var plr = player.Owner.GetUniqueNamedPlayerRough(string.Join(" ", args));
@@ -1571,11 +1394,6 @@ namespace wServer.realm.commands
             get { return "ipban"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             var plr = player.Owner.GetUniqueNamedPlayerRough(string.Join(" ", args));
@@ -1586,16 +1404,11 @@ namespace wServer.realm.commands
         }
     }
 
-    internal class VaultVisit : ICommand
+    internal class Vault : ICommand
     {
         public string Command
         {
             get { return "vault"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 2; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1637,11 +1450,6 @@ namespace wServer.realm.commands
             get { return "vanish"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length > 0)
@@ -1656,11 +1464,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "stars"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 3; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1692,11 +1495,6 @@ namespace wServer.realm.commands
             get { return "level"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             try
@@ -1725,11 +1523,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "name"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 3; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1779,11 +1572,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "rename"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 3; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1920,11 +1708,6 @@ namespace wServer.realm.commands
             get { return "message"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 5; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -1952,11 +1735,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "fame"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 3; }
         }
 
         public void Execute(Player player, string[] args)
@@ -1991,11 +1769,6 @@ namespace wServer.realm.commands
             get { return "closerealm"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 3; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (player.Owner is GameWorld)
@@ -2011,11 +1784,6 @@ namespace wServer.realm.commands
         public string Command
         {
             get { return "lucitest"; }
-        }
-
-        public int RequiredRank
-        {
-            get { return 9; }
         }
 
         public void Execute(Player player, string[] args)

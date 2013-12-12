@@ -1,6 +1,4 @@
-﻿#region
-
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using db;
@@ -8,9 +6,9 @@ using db.data;
 using wServer.cliPackets;
 using wServer.logic;
 using wServer.realm.worlds;
+using wServer.realm.commands;
+using wServer.realm.entities;
 using wServer.svrPackets;
-
-#endregion
 
 namespace wServer.realm.entities.player
 {
@@ -52,15 +50,30 @@ namespace wServer.realm.entities.player
                     Name = "[VIP] " + psr.Account.Tags + " " + psr.Account.Name;
                     break;
                 case 3:
-                    Name = "[GM] " + psr.Account.Tags + " " + psr.Account.Name;
+                    Name = "[Trial GM] " + psr.Account.Tags + " " + psr.Account.Name;
                     break;
                 case 4:
-                    Name = "[CM] " + psr.Account.Tags + " " + psr.Account.Name;
+                    Name = "[Tester] " + psr.Account.Tags + " " + psr.Account.Name;
                     break;
                 case 5:
-                    Name = "[Dev] " + psr.Account.Tags + " " + psr.Account.Name;
+                    Name = "[GM] " + psr.Account.Tags + " " + psr.Account.Name;
                     break;
                 case 6:
+                    Name = "[QA] " + psr.Account.Tags + " " + psr.Account.Name;
+                    break;
+                case 7:
+                    Name = "[Dev] " + psr.Account.Tags + " " + psr.Account.Name;
+                    break;
+                case 8:
+                    Name = "[CM] " + psr.Account.Tags + " " + psr.Account.Name;
+                    break;
+                case 9:
+                    Name = "[Head QA] " + psr.Account.Tags + " " + psr.Account.Name;
+                    break;
+                case 10:
+                    Name = "[Head Dev] " + psr.Account.Tags + " " + psr.Account.Name;
+                    break;
+                case 11:
                     Name = "[Founder] " + psr.Account.Tags + " " + psr.Account.Name;
                     break;
             }
@@ -101,15 +114,98 @@ namespace wServer.realm.entities.player
 
             Locked = psr.Account.Locked ?? new List<int>();
             Ignored = psr.Account.Ignored ?? new List<int>();
+            Commands = psr.Account.Commands ?? new List<string>();
             try
             {
                 using (var dbx = new Database())
                 {
                     Locked = dbx.GetLockeds(AccountId);
                     Ignored = dbx.GetIgnoreds(AccountId);
+                    Commands = dbx.GetCommands(AccountId);
 
                     dbx.Dispose();
                 }
+
+                List<string> BrokenCommands = new List<string>(new string[] { "vanish" });
+
+                List<string> TestingCommands = new List<string>(new string[] { "" });
+
+                List<string> BuySellCommands = new List<string>(new string[] { "buy", "sell" });
+                List<string> GuildCommands = new List<string>(new string[] { "g", "invite" });
+                List<string> BanCommands = new List<string>(new string[] { "ban", "unban", "warn", "ip", "ipban" });
+                List<string> StatCommands = new List<string>(new string[] { "hp", "mp", "att", "def", "vit", "wis", "dex", "spd", "stars", "level", "fame" });
+
+                List<string> PlayerCommands = new List<string>(new string[] { "tutorial", "name", "visit", "who", "swho", "pause", "afk", "getquest", "teleport", "tell", "group", "solo", "shop", "commands", "stats", "arenas", "leaderboard", "gleaderboard", "forge", "forgelist", "yes", "no", "say", "server", "stats", "p", "bp", "nothing" });
+                List<string> VIPCommands = new List<string>(new string[] { "d" });
+                List<string> TrialGMCommands = new List<string>(new string[] { "give", "god", "addeff", "remeff", "tq", "visitBP", "grave", "summon", "arena", "closerealm" });
+                List<string> GMCommands = new List<string>(new string[] { "ban", "unban", "kill", "kick", "message", "announce" }); GMCommands.AddRange(TrialGMCommands); GMCommands.AddRange(BanCommands); GMCommands.AddRange(StatCommands);
+                List<string> QACommands = new List<string>(new string[] { "tq", "visitBP", "grave", "kick", "summon", "message", "spawn", "announce", "setpiece" });
+                List<string> DevCommands = new List<string>(new string[] { "killall", "killallx", "spawn", "restart", "osay" }); DevCommands.AddRange(GMCommands);
+                List<string> CMCommands = new List<string>(new string[] { "rename", "grank", "setguild" }); CMCommands.AddRange(DevCommands);
+                List<string> HeadQACommands = new List<string>(new string[] { "" }); HeadQACommands.AddRange(CMCommands);
+                List<string> HeadDevCommands = new List<string>(new string[] { "" }); HeadDevCommands.AddRange(HeadQACommands);
+                List<string> FounderCommands = new List<string>(new string[] { "" });
+
+                var t = typeof(ICommand);
+
+                foreach (var i in t.Assembly.GetTypes())
+                {
+                    if (t.IsAssignableFrom(i) && i != t)
+                    {
+                        var instance = (ICommand)Activator.CreateInstance(i);
+                        FounderCommands.Add(instance.Command);
+                    }
+                }
+                switch (psr.Account.Rank)
+                {
+                    default:
+                        break;
+                    case 2:
+                        Commands.AddRange(VIPCommands);
+                        break;
+                    case 3:
+                        Commands.AddRange(TrialGMCommands);
+                        break;
+                    case 4:
+                        Commands.AddRange(TestingCommands);
+                        break;
+                    case 5:
+                        Commands.AddRange(GMCommands);
+                        break;
+                    case 6:
+                        Commands.AddRange(QACommands);
+                        break;
+                    case 7:
+                        Commands.AddRange(DevCommands);
+                        break;
+                    case 8:
+                        Commands.AddRange(CMCommands);
+                        break;
+                    case 9:
+                        Commands.AddRange(HeadQACommands);
+                        break;
+                    case 10:
+                        Commands.AddRange(HeadDevCommands);
+                        break;
+
+                    case 11:
+                        Commands.AddRange(FounderCommands);
+                        Commands.Add("visitBP");
+                        break;
+                }
+                Commands.AddRange(PlayerCommands);
+                Commands.AddRange(GuildCommands);
+                Commands.AddRange(BuySellCommands);
+
+                Commands = Commands.Distinct().ToList();
+                #region Donator bundles //will do later
+                List<string> Bundle1Commands = new List<string>(new string[] { "" });
+                List<string> Bundle2Commands = new List<string>(new string[] { "" });
+                List<string> Bundle3Commands = new List<string>(new string[] { "" });
+                List<string> Bundle4Commands = new List<string>(new string[] { "" });
+                #endregion
+
+
             }
             catch
             {
@@ -169,6 +265,7 @@ namespace wServer.realm.entities.player
 
         public List<int> Locked { get; set; }
         public List<int> Ignored { get; set; }
+        public List<string> Commands { get; set; }
 
         public bool Glowing { get; set; }
         public int MP { get; set; }

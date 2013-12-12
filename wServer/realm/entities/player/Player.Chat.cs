@@ -184,7 +184,7 @@ namespace wServer.realm.entities.player
 
         private void ExecCmd(ICommand command, string[] args)
         {
-            if (command.RequiredRank <= psr.Account.Rank)
+            if (psr.Player.Commands.Contains(command.Command))
             {
                 command.Execute(this, args);
             }

@@ -17,11 +17,6 @@ namespace wServer.realm.commands
             get { return "g"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 0; }
-        }
-
         public void Execute(Player player, string[] args)
         {
             if (player.Guild != "")
@@ -71,10 +66,6 @@ namespace wServer.realm.commands
             get { return "invite"; }
         }
 
-        public int RequiredRank
-        {
-            get { return 0; }
-        }
 
         public void Execute(Player player, string[] args)
         {
