@@ -701,16 +701,11 @@ namespace wServer.realm.commands
             var copy = cmds.Values.ToArray();
             for (var i = 0; i < copy.Length; i++)
             {
-                if (i != 0) sb.Append("  |  ");
+                if (i != 0) sb.Append(", ");
                 sb.Append(copy[i].Command);
             }
 
-            player.Client.SendPacket(new TextBoxPacket
-            {
-                Title = "Commands:",
-                Message = (sb.ToString()),
-                Button1 = "Ok"
-            });
+            player.SendInfo(sb.ToString());
         }
     }
 

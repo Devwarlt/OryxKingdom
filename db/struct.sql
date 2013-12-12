@@ -161,6 +161,13 @@ CREATE TABLE IF NOT EXISTS `guilds` (
   PRIMARY KEY (`id`,`members`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
 
+CREATE TABLE IF NOT EXISTS `houses` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `name` varchar(128) NOT NULL DEFAULT 'DEFAULT_HOUSE',
+  `level` int(11) NOT NULL DEFAULT '1',
+  PRIMARY KEY (`id`,`level`)
+) ENGINE=MyISAM DEFAULT CHARSET=utf8;
+
 -- Data exporting was unselected.
 
 

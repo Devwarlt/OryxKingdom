@@ -52,7 +52,7 @@ namespace server.credits
                 @"<html>
     <head>
         <title>Nope</title>
-        <script>window.close();</script>
+        <script></script>
     </head>
     <body style='background: #333333'>
         <h1 style='color: #EEEEEE; text-align: center'>

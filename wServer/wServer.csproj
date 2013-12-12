@@ -55,6 +55,25 @@
     <WarningLevel>4</WarningLevel>
     <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <UseVSHostingProcess>false</UseVSHostingProcess>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="BouncyCastle.Crypto, Version=1.7.4137.9688, Culture=neutral, PublicKeyToken=a4292a325f69b123, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
@@ -179,6 +198,7 @@
     <Compile Include="realm\worlds\BattleArena2.cs" />
     <Compile Include="realm\worlds\BeachZone.cs" />
     <Compile Include="realm\worlds\BattleArena.cs" />
+    <Compile Include="realm\worlds\House.cs" />
     <Compile Include="realm\worlds\ForestMap.cs" />
     <Compile Include="realm\worlds\Turkey.cs" />
     <Compile Include="realm\worlds\ZombieMG.cs" />
@@ -540,6 +560,8 @@
     <EmbeddedResource Include="realm\worlds\halloweennexus.wmap" />
     <EmbeddedResource Include="realm\worlds\forestmap.wmap" />
     <EmbeddedResource Include="realm\worlds\turkey.wmap" />
+    <None Include="realm\worlds\nexus_old.jm" />
+    <None Include="realm\worlds\nexus_old.wmap" />
     <None Include="realm\worlds\vault.jm" />
     <None Include="realm\worlds\vaultnew.wmap" />
     <EmbeddedResource Include="realm\worlds\ZombieMap.wmap" />

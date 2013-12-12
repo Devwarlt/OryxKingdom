@@ -224,6 +224,15 @@ public class Guild
 }
 
 [Serializable, XmlRoot]
+
+public class House
+{
+    [XmlAttribute("id")]
+    public int Id { get; set; }
+}
+
+[Serializable, XmlRoot]
+
 public class GuildStruct
 {
     [XmlAttribute("id")]
