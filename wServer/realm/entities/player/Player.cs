@@ -881,6 +881,11 @@ namespace wServer.realm.entities.player
                             case 0x195d:
                                 world = RealmManager.AddWorld(new MarketMap());
                                 break;
+                            case 0x268D:
+                                world = RealmManager.PlayerHome(psr);
+                                setWorldInstance = false;
+                                break;
+
                             case 0x070d:
                                 world = RealmManager.Monitor.GetRandomRealm();
                                 break;

@@ -79,7 +79,7 @@ namespace wServer.realm
             "Demon",
             "Spider",
             "Scorpion",
-            "Ghost" //, "Lost Lands" //2 word realm, can't handle this shit
+            "Ghost" //, "Lost Lands" //2 word realm, can't handle this
         };
 
         public static List<string> battleArenaName = new List<string>
@@ -91,6 +91,7 @@ namespace wServer.realm
         public static int nextTestId = 0;
         public static readonly ConcurrentDictionary<int, World> Worlds = new ConcurrentDictionary<int, World>();
         public static readonly ConcurrentDictionary<int, Vault> Vaults = new ConcurrentDictionary<int, Vault>();
+        public static readonly ConcurrentDictionary<int, PlayerHouse> PlayerHomes = new ConcurrentDictionary<int, PlayerHouse>();
         public static readonly Dictionary<string, GuildHall> GuildHalls = new Dictionary<string, GuildHall>();
 
         public static readonly ConcurrentDictionary<int, ClientProcessor> Clients =
@@ -108,6 +109,7 @@ namespace wServer.realm
             Worlds[World.NEXUS_ID] = Worlds[0] = new Nexus();
             Worlds[World.NEXUS_LIMBO] = new NexusLimbo();
             Worlds[World.VAULT_ID] = new Vault(true);
+            Worlds[World.HOUSE] = new PlayerHouse(true);
             Worlds[World.TEST_ID] = new Test();
             Worlds[World.RAND_REALM] = new RandomRealm();
             Worlds[World.GAUNTLET] = new GauntletMap();
@@ -172,6 +174,21 @@ namespace wServer.realm
             return v;
         }
 
+        public static PlayerHouse PlayerHome(ClientProcessor processor)
+        {
+            PlayerHouse ph;
+            var id = processor.Account.AccountId;
+            if (PlayerHomes.ContainsKey(id))
+            {
+                ph = PlayerHomes[id];
+            }
+            else
+            {
+                ph = PlayerHomes[id] = (PlayerHouse)AddWorld(new PlayerHouse(false, processor));
+            }
+            return ph;
+        }
+
         public static World GuildHallWorld(string g)
         {
             if (!GuildHalls.ContainsKey(g))
@@ -184,7 +201,8 @@ namespace wServer.realm
             {
                 GuildHalls.Remove(g);
                 var gh = (GuildHall) AddWorld(new GuildHall(g));
-                GuildHalls.Add(g, gh);
+            return GuildHalls[g];
+            GuildHalls.Add(g, gh);
             }
             return GuildHalls[g];
         }

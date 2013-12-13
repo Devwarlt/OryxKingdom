@@ -12,9 +12,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("wServer")]
 [assembly: AssemblyDescription("ROTMG Private Server")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("MMOE.NET")]
+[assembly: AssemblyCompany("ORYXKINGDOM.COM")]
 [assembly: AssemblyProduct("wServer")]
-[assembly: AssemblyCopyright("Copyright © MMOE.NET 2013")]
+[assembly: AssemblyCopyright("Copyright © ORYXKINGDOM 2013")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
