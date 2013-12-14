@@ -200,8 +200,7 @@ namespace wServer.realm
             if (GuildHalls[g].Players.Count == 0)
             {
                 GuildHalls.Remove(g);
-                var gh = (GuildHall) AddWorld(new GuildHall(g));
-            return GuildHalls[g];
+                var gh = (GuildHall)AddWorld(new GuildHall(g));
             GuildHalls.Add(g, gh);
             }
             return GuildHalls[g];

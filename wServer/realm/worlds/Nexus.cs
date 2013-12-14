@@ -7,7 +7,7 @@
             Id = NEXUS_ID;
             Name = "Nexus";
             Background = 2;
-            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.nexuslels.wmap"));
+            base.FromWorldMap(typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.nexus_old.wmap"));
         }
 
         public override void Tick(RealmTime time)

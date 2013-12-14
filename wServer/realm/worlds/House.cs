@@ -23,7 +23,7 @@ namespace wServer.realm.worlds
             if (!(IsLimbo = isLimbo))
             {
                 base.FromWorldMap(
-                    typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.vault.wmap"));
+                    typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.house.wmap"));
             }
             //switch (Level())
             //{

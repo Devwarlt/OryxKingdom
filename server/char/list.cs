@@ -108,7 +108,7 @@ namespace server.@char
                         Name = "Testing",
                         Lat = 22.28,
                         Long = 114.16,
-                        DNS = "IP_HERE", //I'll probably host, ill host a hamachi serv aswell
+                        DNS = "76.100.54.98", //I'll probably host
                         Usage = 0.2,
                         AdminOnly = false,
                         RankRequired = 1
