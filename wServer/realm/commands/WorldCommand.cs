@@ -23,7 +23,7 @@ namespace wServer.realm.commands
             get { return "tutorial"; }
         }
 
-  
+
 
         public void Execute(Player player, string[] args)
         {
@@ -45,7 +45,7 @@ namespace wServer.realm.commands
             get { return "who"; }
         }
 
-        
+
 
         public void Execute(Player player, string[] args)
         {
@@ -68,7 +68,7 @@ namespace wServer.realm.commands
             get { return "server"; }
         }
 
-        
+
 
         public void Execute(Player player, string[] args)
         {
@@ -637,11 +637,11 @@ namespace wServer.realm.commands
         public void Execute(Player player, string[] args)
         {
             var cmds = new Dictionary<string, ICommand>();
-            var t = typeof (ICommand);
+            var t = typeof(ICommand);
             foreach (var i in t.Assembly.GetTypes())
                 if (t.IsAssignableFrom(i) && i != t)
                 {
-                    var instance = (ICommand) Activator.CreateInstance(i);
+                    var instance = (ICommand)Activator.CreateInstance(i);
                     cmds.Add(instance.Command, instance);
                 }
             var sb = new StringBuilder("");
@@ -909,14 +909,14 @@ namespace wServer.realm.commands
         public void Execute(Player player, string[] args)
         {
             var leaderboardInfo = new Database().GetArenaLeaderboards();
-           
+
             player.Client.SendPacket(new TextBoxPacket
             {
                 Title = "Arena Leaderboard",
                 Message = string.Join("\n", leaderboardInfo),
                 Button1 = "Ok"
             });
-           
+
         }
     }
 
@@ -930,14 +930,14 @@ namespace wServer.realm.commands
         public void Execute(Player player, string[] args)
         {
             var leaderboardInfo = new Database().GetGuildLeaderboards();
-            
+
             player.Client.SendPacket(new TextBoxPacket
             {
                 Title = "Guilds",
                 Message = string.Join("\n", leaderboardInfo),
                 Button1 = "Ok"
             });
-            
+
         }
     }
 
@@ -1085,6 +1085,55 @@ namespace wServer.realm.commands
         }
     }
 
+    class BuyCommand : ICommand
+    {
+        public string Command { get { return "buy"; } }
+
+        public void Execute(Player player, string[] args)
+        {
+            if (args.Length == 0)
+            {
+                player.SendHelp("Use /buy <itemname>");
+            }
+            else
+            {
+                string itemname = string.Join(" ", args);
+                player.price = new Prices();
+                short itemid = -1;
+                Dictionary<string, short> icdatas = new Dictionary<string, short>(XmlDatas.IdToType, StringComparer.OrdinalIgnoreCase);
+                if (!icdatas.TryGetValue(itemname, out itemid))
+                {
+                    player.SendError("Item not found");
+                    return;
+                }
+                int ItemPrice = player.price.ItemPrice(itemname);
+                if (ItemPrice != -1)
+                {
+                    player.Decision = 3;
+                    player.SendInfo(string.Format("Buying {0} will cost {1} fame. Buy it? \n Type /yes or /no", itemname, ItemPrice));
+                }
+                else
+                    player.SendError("Could not find price for specified item");
+            }
+        }
+    }
+
+    class ListPrices : ICommand
+    {
+        public string Command { get { return "prices"; } }
+
+        public void Execute(Player player, string[] args)
+        {
+            if (args.Length == 0)
+            {
+
+            }
+            if (args.Length >= 1)
+            {
+            }
+        }
+    }
+
     internal class ForgeCommand : ICommand
     {
         public string Command
@@ -1145,7 +1194,7 @@ namespace wServer.realm.commands
                         else
                         {
                             player.SendInfo("It costs " +
-                                            (player.combs.Combo.Item2/
+                                            (player.combs.Combo.Item2 /
                                              (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1)) +
                                             " fame to forge these items. Are you sure?\nType /yes or /no");
                             player.Decision = 1;
@@ -1169,7 +1218,7 @@ namespace wServer.realm.commands
             {
                 if (player.combs.SlotList.Count > 0)
                 {
-                    if (player.combs.Combo.Item2/(player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1) <=
+                    if (player.combs.Combo.Item2 / (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1) <=
                         player.CurrentFame)
                     {
                         short resultId;
@@ -1184,7 +1233,7 @@ namespace wServer.realm.commands
                                 player.CurrentFame =
                                     player.Client.Account.Stats.Fame =
                                         new Database().UpdateFame(player.Client.Account,
-                                            -(player.combs.Combo.Item2/
+                                            -(player.combs.Combo.Item2 /
                                               (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e ? 2 : 1)));
                                 player.SendInfo("Your items have been forged into a " + player.combs.Combo.Item1 +
                                                 (player.HasSlot(3) && player.Inventory[3].ObjectType == 0x193e
@@ -1216,6 +1265,27 @@ namespace wServer.realm.commands
                 }
                 else
                     player.SendInfo("Could not sell.");
+            }
+            else if (player.Decision == 3)
+            {
+                if (player.CurrentFame > player.price.Itemprice && player.price.Itemprice != -1)
+                {
+                    for (int i = 4; i < player.Inventory.Length; i++)
+                    {
+                        if (player.Inventory[i] == null)
+                        {
+                            player.Inventory[i] = XmlDatas.ItemDescs[player.price.item];
+                            player.UpdateCount++;
+                            player.SendInfo("Success!");
+                            player.Fame -= player.price.Itemprice;
+                            player.UpdateCount++;
+                            return;
+                        }
+                    }
+                    player.SendError("No empty slots to put the item in");
+                }
+                else
+                    player.SendError("Not enough fame!");
             }
             player.Decision = 0;
         }

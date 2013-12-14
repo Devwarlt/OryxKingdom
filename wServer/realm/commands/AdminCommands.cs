@@ -1066,6 +1066,95 @@ namespace wServer.realm.commands
         }
     }
 
+    
+    /*class Warn : ICommand
+     {
+         public string Command { get { return "warn"; } }
+ 
+         public void Execute(Player player, string[] args)
+         {
+             if (args.Length < 2)
+             {
+                 player.SendHelp("Usage: /warn <username> <reason>");
+             }
+             try
+             {
+                 using (Database dbx = new Database())
+                 {
+                     int warnings = 0;
+                     string name = "'" + args[0] + "'";
+                     string warningreason = string.Join(" ", args.Skip(1).ToArray());
+                     string Reasons = "";
+                     var cmd = dbx.CreateQuery();
+                     cmd.CommandText = "SELECT warnings, warningsreasons FROM accounts where name=@name";
+                     cmd.Parameters.AddWithValue("@name", name);
+                     cmd.ExecuteNonQuery();
+                     using (var rdr = cmd.ExecuteReader())
+                     {
+                         rdr.Read();
+                         warnings = rdr.GetInt32("warnings");
+                         Reasons = rdr.GetString("warningsreasons");
+                         Reasons += "," + "";
+                     }
+                     if (warnings < 2)
+                     {
+                         var cmda = dbx.CreateQuery();
+                         cmda.CommandText = "UPDATE accounts SET warnings=@warnings, warningsreasons=@reasons , WHERE name=@name";
+                         cmda.Parameters.AddWithValue("@name", name);
+                         cmda.Parameters.AddWithValue("@warnings", warnings + 1);
+                         
+                         if (cmda.ExecuteNonQuery() == 0)
+                         {
+                             player.SendInfo("Could not warn");
+                         }
+                         else
+                         {
+                             foreach (var i in player.Owner.Players)
+                             {
+                                 if (i.Value.nName.ToLower() == args[0].ToLower().Trim())
+                                 {
+                                     player.SendInfo("You've successfully warned an account");
+                                     Console.ForegroundColor = ConsoleColor.Yellow;
+                                     Console.Out.WriteLine(args[0] + " was Warned.");
+                                     Console.ForegroundColor = ConsoleColor.White;
+                                     foreach (var j in RealmManager.Clients.Values)
+                                         if (j.Account.Name == name)
+                                         {
+ 
+                                              j.SendPacket(new TextBoxPacket()
+                                              {
+                                                  Title = "You've been warned for inappropriate behaviour",
+                                                  Message = "One of the Staff member warned you for inappropriate behaviour on the server",
+                                                  Button1 = "Ok",
+                                                  Type = ""
+                                              });
+                                         }
+                                 }
+                             }
+                         }
+                     }
+                     else if (warnings < 6)
+                     {
+                         player.SendInfo("This account has 3+ warnings now, do you want to ban it for a day?");
+                     }
+                     else if (warnings < 9)
+                     {
+                         player.SendInfo("This account has 6+ warnings now, do you want to ban it for a week?");
+                     }
+                     else if (warnings > 9)
+                     {
+                         player.SendInfo("This account has 9+ warnings now, do you want to ban it permanently?");
+                     }
+                 }
+             }
+             catch
+             {
+                 player.SendInfo("Could not ban");
+             }
+         }
+     }
+ */
+    
     internal class Ban : ICommand
     {
         public string Command

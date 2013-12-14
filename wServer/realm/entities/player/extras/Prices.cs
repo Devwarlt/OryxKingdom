@@ -12,54 +12,47 @@ namespace wServer.realm.entities.player
     {
         public List<int> SellSlots = new List<int>();
         public Dictionary<short, int> prices = new Dictionary<short, int>();
-
+        public int Itemprice = -1;
+        public short item = -1;
+        public string ItemName = "";
+        public List<TierList> PricesList = new List<TierList>();
         public Prices()
         {
             //Note: These are SELL prices, not BUY prices.
 
-            AddPrice(2, "Potion of Defense", "Potion of Attack", "Potion of Mana", "Potion of Dexterity",
-                "Potion of Wisdom", "Potion of Vitality", "Potion of Speed", "Potion of Life");
-            AddPrice(5, "Amulet of Resurrection", "Agateclaw Dagger", "Staff of Astral Knowledge", "Skysplitter Sword",
-                "Bow of Innocent Blood", "Wand of Ancient Warning", "Robe of the Elder Warlock", "Griffon Hide Armor",
-                "Abyssal Armor");
-            AddPrice(5, "Magic Nova Spell", "Tome of Divine Favor", "Golden Quiver", "Cloak of Endless Twilight",
-                "Golden Helm", "Mithril Shield", "Seal of the Holy Warrior", "Lifedrinker Skull", "Nightwing Venom",
-                "Dragonstalker Trap", "Banishment Orb", "Prism of Phantoms", "Scepter of Skybolts", "Ice Star");
-            AddPrice(26, "Potion of Oryx");
-            AddPrice(30, "Dagger of Foul Malevolence", "Staff of the Cosmic Whole", "Sword of Acclaim",
-                "Wand of Recompense", "Bow of Covert Havens", "Robe of the Grand Sorcerer", "Hydra Skin Armor",
-                "Acropolis Armor");
-            AddPrice(30, "Elemental Detonation Spell", "Tome of Holy Guidance", "Quiver of Elvish Mastery",
-                "Cloak of Ghostly Concealment", "Helm of the Great General", "Colossus Shield",
-                "Seal of the Blessed Champion", "Bloodsucker Skull", "Baneserpent Poison", "Giantcatcher Trap",
-                "Planefetter Orb", "Prism of Apparitions", "Scepter of Storms", "Doom Circle");
-            AddPrice(50, "Wine Cellar Incantation");
-            AddPrice(50, "Dagger of Sinister Deeds", "Staff of the Vital Unity", "Sword of Splendor",
-                "Wand of Evocation", "Bow of Mystical Energy", "Robe of the Star Mother", "Wyrmhide Armor",
-                "Dominion Armor");
-            AddPrice(50, "Souleater Skull", "Mobstopper Trap", "Cloak of Dimensions", "Bloodorc Quiver",
-                "Space Deterioration Spell", "Helm of the Holy Warrior", "Tome of the Fountains", "Magma Shield",
-                "1940s Orb", "Toothpaste Poison", "Seal of Mass Power", "Prism of the Soul Stealer",
-                "Scepter of the Grand Sorcerer");
-            AddPrice(60, "Dagger of Dire Hatred", "Staff of the Fundamental Core", "Sword of Majesty",
-                "Wand of Retribution", "Bow of Deep Enchantment", "Robe of the Ancient Intellect", "Leviathan Armor",
-                "Annihilation Armor");
-            AddPrice(60, "Skull of the Undead King", "Azure Trap", "Cloak of the Phantom", "Quiver of Artemis",
-                "Spell of the Eternal Void", "Helm of the Leviathan General", "Tome of the Ancients", "Shield of Death",
-                "Fury Orb", "Bile Poison", "Seal of War", "Prism of the Bloody Surprise", "Scepter of Vorv");
-            AddPrice(100, "Crystal Sword", "Crystal Wand", "Crystal Dagger", "Coral Bow", "Forge Amulet",
-                "Ring of the Pyramid", "Ring of the Nile", "Ring of the Sphinx", "Spectral Cloth Armor",
-                "Captain's Ring");
-            AddPrice(125, "Staff of Extreme Prejudice", "Wand of the Bulwark", "Anatis Staff", "Orb of the Chaos Walker",
-                "Prism of Inception", "Tome of Holy Protection", "Tome of Noble Assault", "Scepter of Thunderclash");
-            AddPrice(150, "Spirit Dagger", "Ghostly Prism");
-            AddPrice(160, "Chicken Leg of Doom");
-            AddPrice(200, "Doom Bow", "Demon Blade", "Platinum Sword", "Platinum Wand", "Miasma Poison",
-                "Shield of Ogmur");
-            AddPrice(300, "Thousand Shot");
-            AddPrice(500, "Sword of Dark Enchantment");
+            AddPrice(1, "Ravenheart Sword", "Studded Leather Armor", "Mithril Armor", "Fire Dagger", "Golden Bow", "Robe of the Illusionist", "Staff of Horror");
+            AddPrice(2, "Dragonsoul Sword", "Drake Hide Armor", "Dragonscale Armor", "Ragetalon Dagger", "Verdant Bow", "Robe of the Master", "Staff of Necrotic Arcana");
+            AddPrice(3, "Archon Sword", "Golden Shield", "Roc Leather Armor", "Desolation Armor", "Emeraldshard Dagger", "Bow of Fey Magic", "Scorching Blast Spell", "Tome of Renewing", "Seal of the Divine", "Cloak of the Red Agent", "Robe of the Shadow Magus", "Magesteel Quiver", "Steel Helm", "Staff of Diabolic Secrets", "Felwasp Toxin", "Essence Tap Skull", "Demonhunter Trap", "Timelock Orb", "Prism of Figments", "Cloudflash Scepter");
+            AddPrice(4, "Hippogriff Hide Armor", "Vengeance Armor");
+            AddPrice(5, "Skysplitter Sword", "Mithril Shield", "Griffon Hide Armor", "Abyssal Armor", "Agateclaw Dagger", "Bow of Innocent Blood", "Destruction Sphere Spell", "Tome of Divine Favor", "Seal of the Holy Warrior", "Cloak of Endless Twilight", "Robe of the Moon Wizard", "Golden Quiver", "Golden Helm", "Staff of Astral Knowledge", "Nightwing Venom", "Lifedrinker Skull", "Dragonstalker Trap", "Banishment Orb", "Prism of Phantoms", "Scepter of Skybolts");
+            AddPrice(10, "Sword of Acclaim", "Poison Fang Dagger", "Fire Water", "Cream Spirit", "Chardonnay", "Melon Liqueur", "Cabernet", "Vintage Port", "Sauvignon Blanc", "Muscat", "Rice Wine", "Shiraz", "Snake Oil", "Healing Ichor", "Tincture of Dexterity", "Tincture of Life", "Tincture of Mana", "Tincture of Defense", "Snake Eye Ring", "Spider's Eye Ring", "Ring of Greater Attack", "Ring of Greater Defense", "Ring of Greater Speed", "Ring of Greater Vitality", "Ring of Greater Wisdom", "Ring of Greater Dexterity", "Ring of Greater Health", "Ring of Greater Magic", "Robe of the Elder Warlock");
+            AddPrice(15, "Wand of Evocation");
+            AddPrice(20, "Wand of Retribution", "Potion of Speed", "Potion of Dexterity", "Greater Health Potion", "Greater Magic Potion", "Ring of Superior Attack", "Ring of Superior Defense", "Ring of Superior Speed", "Ring of Superior Vitality", "Ring of Superior Wisdom", "Ring of Superior Dexterity", "Ring of Superior Health", "Ring of Superior Magic", "Pirate Rum", "Magic Mushroom");
+            AddPrice(25, "Snake Skin Shield", "Snake Skin Armor", "Purple Drake Egg", "Blue Drake Egg", "Orange Drake Egg", "Green Drake Egg", "Yellow Drake Egg");
+            AddPrice(30, "Hydra Skin Armor", "Acropolis Armor", "Dagger of Foul Malevolence", "Bow of Covert Havens", "Potion of Attack", "Potion of Wisdom", "Effusion of Dexterity", "Effusion of Life", "Effusion of Mana", "Effusion of Defense", "Magic Nova Spell", "Tome of Holy Guidance", "Seal of the Blessed Champion", "Cloak of Ghostly Concealment", "Robe of the Grand Sorcerer", "Quiver of Elvish Mastery", "Helm of the Great General", "Staff of the Cosmic Whole", "Baneserpent Poison", "Bloodsucker Skull", "Giantcatcher Trap", "Planefetter Orb", "Prism of Apparitions", "Scepter of Storms", "Coral Juice", "Pollen Powder");
+            AddPrice(35, "Potion of Vitality");
+            AddPrice(40, "Sword of Splendor", "Wyrmhide Armor", "Dominion Armor", "Dagger of Sinister Deeds", "Bow of Mystical Energy", "Potion of Defense", "Robe of the Star Mother", "Staff of the Vital Unity");
+            AddPrice(50, "Sword of Majesty", "Colossus Shield", "Leviathan Armor", "Annihilation Armor", "Dagger of Dire Hatred", "Bow of Deep Enchantment", "Ring of Paramount Attack", "Ring of Paramount Defense", "Ring of Paramount Speed", "Ring of Paramount Vitality", "Ring of Paramount Wisdom", "Ring of Paramount Dexterity", "Ring of Paramount Health", "Ring of Paramount Magic", "Elemental Detonation Spell", "Robe of the Ancient Intellect", "Staff of the Fundamental Core", "White Drake Egg", "Robe of the Tlatoani", "Cracked Crystal Skull", "Crystal Bone Ring");
+            AddPrice(65, "Potion of Life", "Potion of Mana");
+            AddPrice(75, "Staff of the Crystal Serpent");
+            AddPrice(100, "Ring of Exalted Attack", "Ring of Exalted Defense", "Ring of Exalted Speed", "Ring of Exalted Vitality", "Ring of Exalted Wisdom", "Ring of Exalted Dexterity", "Ring of Exalted Health", "Ring of Exalted Magic", "Coral Ring");
+            AddPrice(200, "Staff of Extreme Prejudice");
+            AddPrice(300, "Coral Silk Armor", "Coral Venom Trap", "Bone Dagger", "Spectral Cloth Armor");
+            AddPrice(400, "Skull of Endless Torment", "Captain's Ring", "Ghostly Prism");
+            AddPrice(500, "Crystal Wand", "Wand of the Bulwark", "Ring of the Sphinx", "Ring of the Nile", "Ring of the Pyramid", "Seal of Blasphemous Prayer", "Thousand Shot", "St. Abraham's Wand", "Chasuble of Holy Light", "Ring of Divine Faith", "Experimental Ring");
+            AddPrice(600, "Crystal Sword", "Demon Blade", "Ancient Stone Sword", "Chicken Leg of Doom", "Anatis Staff", "Robe of the Mad Scientist", "Conducting Wand");
+            AddPrice(650, "Cloak of the Planewalker");
+            AddPrice(700, "Penetrating Blast Spell", "Tome of Purification", "Spirit Dagger", "Scepter of Fulmination");
+            AddPrice(900, "Dirk of Cronus", "Doom Bow", "Coral Bow", "Minor Health Potion", "Minor Magic Potion", "America Ring");
+            AddPrice(1000, "Quiver of Thunder", "Helm of the Juggernaut", "Orb of Conflict", "Tome of Holy Protection");
+            AddPrice(1200, "Shield of Ogmur", "Prism of Dancing Swords");
+            AddPrice(1500, "Ammy");
+            AddPrice(5000, "Transformation Potion", "Platinum Sword");
+            AddPrice(10000, "Bronze Medal", "Sword of Dark Enchantment");
+            AddPrice(20000, "Silver Medal");
+            AddPrice(30000, "Gold Medal");
+            AddPrice(99999, "Sword of OUTDATED MERCY");
         }
-
         public bool HasPrices(Player p)
         {
             var ret = false;
@@ -74,6 +67,24 @@ namespace wServer.realm.entities.player
             return ret;
         }
 
+        public int ItemPrice(string name)
+        {
+            int price = 0;
+            short itemid = XmlDatas.IdToType[name];
+            foreach (KeyValuePair<short, int> i in prices)
+            {
+                if (i.Key == itemid)
+                {
+                    ItemName = name;
+                    price = i.Value;
+                    item = itemid;
+                    Itemprice = price;
+                    break;
+                }
+            }
+            return price;
+        }
+
         public int GetPrices(Player p)
         {
             var price = 0;
@@ -85,6 +96,21 @@ namespace wServer.realm.entities.player
 
         public void AddPrice(int price, params string[] items)
         {
+
+            /*
+       TierList List = new TierList();
+       List.Price = price;
+   //    foreach (var i in items)
+   //      List.itemnames.Add(i);
+       switch(price)
+       {  
+         case 1:
+           List.Description = "T8 Weapons"; break;
+         case 2:
+           List.Description = ""; break;
+       }
+              */
+
             foreach (var i in items)
                 try
                 {
@@ -95,5 +121,16 @@ namespace wServer.realm.entities.player
                     Console.Out.WriteLine("Can't find item: " + i);
                 }
         }
+    }
+    public class TierList
+    {
+        public List<string> itemnames;
+        public int Price;
+        public string Description = "";
+        /*  public void TierList()
+          {
+          }
+   
+           */
     }
 }
