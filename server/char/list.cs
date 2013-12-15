@@ -98,7 +98,7 @@ namespace server.@char
                         Name = "Oryx's Kingdom",
                         Lat = 22.28,
                         Long = 114.16,
-                        DNS = "127.0.0.1", //Temporary
+                        DNS = "172.246.115.68", //Temporary
                         Usage = 0.2,
                         AdminOnly = false,
                         RankRequired = 0
