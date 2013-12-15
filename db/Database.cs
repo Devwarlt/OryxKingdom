@@ -41,7 +41,7 @@ namespace db
         {
             _con = Testing
                 ? new MySqlConnection(
-                    "Server=127.0.0.1;Database=rotmg;uid=root;password=;Pooling=true;Connection Timeout=30;MinimumPoolSize=10;maximumpoolsize=1200;")
+                    "Server=172.246.115.68;Database=oryxkingdom;uid=OryxsKingdomTest;password=SwagOverload123;Pooling=true;Connection Timeout=30;MinimumPoolSize=10;maximumpoolsize=1200;")
 
                     //Testing Server
                 : new MySqlConnection(

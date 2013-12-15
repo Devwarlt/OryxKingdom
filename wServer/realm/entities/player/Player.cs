@@ -32,7 +32,7 @@ namespace wServer.realm.entities.player
         private byte[,] tiles;
 
         public Player(ClientProcessor psr)
-            : base((short) psr.Character.ObjectType, psr.Random)
+            : base((short)psr.Character.ObjectType, psr.Random)
         {
             this.psr = psr;
             statsMgr = new StatsManager(this);
@@ -296,7 +296,7 @@ namespace wServer.realm.entities.player
                 HasConditionEffect(ConditionEffects.Invincible))
                 return;
 
-            dmg = (int) statsMgr.GetDefenseDamage(dmg, false);
+            dmg = (int)statsMgr.GetDefenseDamage(dmg, false);
             if (!HasConditionEffect(ConditionEffects.Invulnerable))
                 HP -= dmg;
             UpdateCount++;
@@ -304,7 +304,7 @@ namespace wServer.realm.entities.player
             {
                 TargetId = Id,
                 Effects = 0,
-                Damage = (ushort) dmg,
+                Damage = (ushort)dmg,
                 Killed = HP <= 0,
                 BulletId = 0,
                 ObjectId = chr.Id
@@ -322,122 +322,122 @@ namespace wServer.realm.entities.player
             switch (stats)
             {
                 case StatsType.AccountId:
-                    AccountId = (int) val;
+                    AccountId = (int)val;
                     break;
 
                 case StatsType.Experience:
-                    Experience = (int) val;
+                    Experience = (int)val;
                     break;
                 case StatsType.ExperienceGoal:
-                    ExperienceGoal = (int) val;
+                    ExperienceGoal = (int)val;
                     break;
                 case StatsType.Level:
-                    Level = (int) val;
+                    Level = (int)val;
                     break;
 
                 case StatsType.Fame:
-                    CurrentFame = (int) val;
+                    CurrentFame = (int)val;
                     break;
                 case StatsType.CurrentFame:
-                    Fame = (int) val;
+                    Fame = (int)val;
                     break;
                 case StatsType.FameGoal:
-                    FameGoal = (int) val;
+                    FameGoal = (int)val;
                     break;
                 case StatsType.Stars:
-                    Stars = (int) val;
+                    Stars = (int)val;
                     break;
 
                 case StatsType.Guild:
-                    Guild = (string) val;
+                    Guild = (string)val;
                     break;
                 case StatsType.GuildRank:
-                    GuildRank = (int) val;
+                    GuildRank = (int)val;
                     break;
 
                 case StatsType.Credits:
-                    Credits = (int) val;
+                    Credits = (int)val;
                     break;
                 case StatsType.NameChosen:
-                    NameChosen = (int) val != 0 ? true : false;
+                    NameChosen = (int)val != 0 ? true : false;
                     break;
                 case StatsType.Texture1:
-                    Texture1 = (int) val;
+                    Texture1 = (int)val;
                     break;
                 case StatsType.Texture2:
-                    Texture2 = (int) val;
+                    Texture2 = (int)val;
                     break;
 
                 case StatsType.Glowing:
                     Glowing = false;//(int) val != 0 ? true : false;
                     break;
                 case StatsType.HP:
-                    HP = (int) val;
+                    HP = (int)val;
                     break;
                 case StatsType.MP:
-                    MP = (int) val;
+                    MP = (int)val;
                     break;
 
                 case StatsType.Inventory0:
-                    Inventory[0] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[0] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory1:
-                    Inventory[1] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[1] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory2:
-                    Inventory[2] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[2] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory3:
-                    Inventory[3] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[3] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory4:
-                    Inventory[4] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[4] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory5:
-                    Inventory[5] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[5] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory6:
-                    Inventory[6] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[6] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory7:
-                    Inventory[7] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[7] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory8:
-                    Inventory[8] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[8] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory9:
-                    Inventory[9] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[9] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory10:
-                    Inventory[10] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[10] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
                 case StatsType.Inventory11:
-                    Inventory[11] = (int) val == -1 ? null : XmlDatas.ItemDescs[(short) (int) val];
+                    Inventory[11] = (int)val == -1 ? null : XmlDatas.ItemDescs[(short)(int)val];
                     break;
 
                 case StatsType.MaximumHP:
-                    Stats[0] = (int) val;
+                    Stats[0] = (int)val;
                     break;
                 case StatsType.MaximumMP:
-                    Stats[1] = (int) val;
+                    Stats[1] = (int)val;
                     break;
                 case StatsType.Attack:
-                    Stats[2] = (int) val;
+                    Stats[2] = (int)val;
                     break;
                 case StatsType.Defense:
-                    Stats[3] = (int) val;
+                    Stats[3] = (int)val;
                     break;
                 case StatsType.Speed:
-                    Stats[4] = (int) val;
+                    Stats[4] = (int)val;
                     break;
                 case StatsType.Vitality:
-                    Stats[5] = (int) val;
+                    Stats[5] = (int)val;
                     break;
                 case StatsType.Wisdom:
-                    Stats[6] = (int) val;
+                    Stats[6] = (int)val;
                     break;
                 case StatsType.Dexterity:
-                    Stats[7] = (int) val;
+                    Stats[7] = (int)val;
                     break;
             }
         }
@@ -518,7 +518,7 @@ namespace wServer.realm.entities.player
             chr.CurrentFame = Fame;
             chr.HitPoints = HP;
             chr.MagicPoints = MP;
-            chr.Equipment = Inventory.Select(_ => _ == null ? (short) -1 : _.ObjectType).ToArray();
+            chr.Equipment = Inventory.Select(_ => _ == null ? (short)-1 : _.ObjectType).ToArray();
             chr.MaxHitPoints = Stats[0];
             chr.MaxMagicPoints = Stats[1];
             chr.Attack = Stats[2];
@@ -539,7 +539,7 @@ namespace wServer.realm.entities.player
                 if (Inventory[i] == null) continue;
                 foreach (var b in Inventory[i].StatsBoost)
                 {
-                    switch ((StatsType) b.Key)
+                    switch ((StatsType)b.Key)
                     {
                         case StatsType.MaximumHP:
                             Boost[0] += b.Value;
@@ -607,7 +607,7 @@ namespace wServer.realm.entities.player
                 });
             }
             if (psr.Character.Pet >= 0)
-                GivePet((short) psr.Character.Pet);
+                GivePet((short)psr.Character.Pet);
             try
             {
                 SendAccountList(Locked, LOCKED_LIST_ID);
@@ -682,8 +682,8 @@ namespace wServer.realm.entities.player
                 hpRegenCounter = 0;
             else
             {
-                hpRegenCounter += statsMgr.GetHPRegen()*time.thisTickTimes/1000f;
-                var regen = (int) hpRegenCounter;
+                hpRegenCounter += statsMgr.GetHPRegen() * time.thisTickTimes / 1000f;
+                var regen = (int)hpRegenCounter;
                 if (regen > 0)
                 {
                     HP = Math.Min(Stats[0] + Boost[0], HP + regen);
@@ -696,8 +696,8 @@ namespace wServer.realm.entities.player
                 mpRegenCounter = 0;
             else
             {
-                mpRegenCounter += statsMgr.GetMPRegen()*time.thisTickTimes/1000f;
-                var regen = (int) mpRegenCounter;
+                mpRegenCounter += statsMgr.GetMPRegen() * time.thisTickTimes / 1000f;
+                var regen = (int)mpRegenCounter;
                 if (regen > 0)
                 {
                     MP = Math.Min(Stats[1] + Boost[1], MP + regen);
@@ -740,7 +740,7 @@ namespace wServer.realm.entities.player
                     DurationMS = 0
                 });
             }
-            Move((float) newX, (float) newY);
+            Move((float)newX, (float)newY);
         }
 
         public void UsePortal(RealmTime time, UsePortalPacket pkt)
@@ -770,28 +770,28 @@ namespace wServer.realm.entities.player
                         switch (entity.ObjectType) //handling default case for not found. Add more as implemented
                         {
                             case 0x0703: //portal of cowardice
-                            {
-                                if (RealmManager.PlayerWorldMapping.ContainsKey(AccountId))
-                                    //may not be valid, realm recycled?
-                                    world = RealmManager.PlayerWorldMapping[AccountId];
+                                {
+                                    if (RealmManager.PlayerWorldMapping.ContainsKey(AccountId))
+                                        //may not be valid, realm recycled?
+                                        world = RealmManager.PlayerWorldMapping[AccountId];
                                     //also reconnecting to vault is a little unexpected
-                                else if (world.Id == -5 || world.Id == -11)
-                                    world = RealmManager.GetWorld(World.NEXUS_ID);
-                                else
-                                    world = RealmManager.GetWorld(World.NEXUS_ID);
-                            }
+                                    else if (world.Id == -5 || world.Id == -11)
+                                        world = RealmManager.GetWorld(World.NEXUS_ID);
+                                    else
+                                        world = RealmManager.GetWorld(World.NEXUS_ID);
+                                }
                                 break;
                             case 0x0d40:
-                            {
-                                if (RealmManager.PlayerWorldMapping.ContainsKey(AccountId))
-                                    //may not be valid, realm recycled?
-                                    world = RealmManager.PlayerWorldMapping[AccountId];
+                                {
+                                    if (RealmManager.PlayerWorldMapping.ContainsKey(AccountId))
+                                        //may not be valid, realm recycled?
+                                        world = RealmManager.PlayerWorldMapping[AccountId];
                                     //also reconnecting to vault is a little unexpected
-                                else if (world.Id == -5 || world.Id == -11)
-                                    world = RealmManager.GetWorld(World.NEXUS_ID);
-                                else
-                                    world = RealmManager.GetWorld(World.NEXUS_ID);
-                            }
+                                    else if (world.Id == -5 || world.Id == -11)
+                                        world = RealmManager.GetWorld(World.NEXUS_ID);
+                                    else
+                                        world = RealmManager.GetWorld(World.NEXUS_ID);
+                                }
                                 break;
                             case 0x0712:
                                 world = RealmManager.GetWorld(World.NEXUS_ID);
@@ -838,16 +838,16 @@ namespace wServer.realm.entities.player
                                 world = RealmManager.AddWorld(new TombMap());
                                 break;
                             case 0x1905:
-                            {
-                                psr.SendPacket(new TextBoxPacket
                                 {
-                                    Button1 = "Enter",
-                                    Button2 = "Cancel",
-                                    Message = "Join the arena at the price of 150 fame?",
-                                    Title = "Arena Confirmation",
-                                    Type = "EnterArena1"
-                                });
-                            }
+                                    psr.SendPacket(new TextBoxPacket
+                                    {
+                                        Button1 = "Enter",
+                                        Button2 = "Cancel",
+                                        Message = "Join the arena at the price of 150 fame?",
+                                        Title = "Arena Confirmation",
+                                        Type = "EnterArena1"
+                                    });
+                                }
                                 break;
                             case 0x1908:
 
@@ -902,28 +902,28 @@ namespace wServer.realm.entities.player
                                 world = RealmManager.AddWorld(new PartyCellarMap());
                                 break;
                             case 0x701c:
-                            {
-                                psr.SendPacket(new TextBoxPacket
                                 {
-                                    Button1 = "Enter",
-                                    Button2 = "Cancel",
-                                    Message = "Join sheep herding at the price of 500 fame?",
-                                    Title = "Sheep Herding",
-                                    Type = "SheepHerding"
-                                });
-                            }
+                                    psr.SendPacket(new TextBoxPacket
+                                    {
+                                        Button1 = "Enter",
+                                        Button2 = "Cancel",
+                                        Message = "Join sheep herding at the price of 500 fame?",
+                                        Title = "Sheep Herding",
+                                        Type = "SheepHerding"
+                                    });
+                                }
                                 break;
                             case 0x7024:
-                            {
-                                psr.SendPacket(new TextBoxPacket
                                 {
-                                    Button1 = "Yes",
-                                    Button2 = "Cancel",
-                                    Message = "Join zombies at the price of 100 fame?",
-                                    Title = "Zombies",
-                                    Type = "Zombies"
-                                });
-                            }
+                                    psr.SendPacket(new TextBoxPacket
+                                    {
+                                        Button1 = "Yes",
+                                        Button2 = "Cancel",
+                                        Message = "Join zombies at the price of 100 fame?",
+                                        Title = "Zombies",
+                                        Type = "Zombies"
+                                    });
+                                }
                                 break;
                             case 0x7025:
                                 world = RealmManager.AddWorld(new ForestMap());
@@ -1060,8 +1060,8 @@ namespace wServer.realm.entities.player
             Owner.BroadcastPacket(new DamagePacket
             {
                 TargetId = Id,
-                Effects = (!ceffects.HasValue) ? 0 : (ConditionEffects) ceffects,
-                Damage = (ushort) pkt.Damage,
+                Effects = (!ceffects.HasValue) ? 0 : (ConditionEffects)ceffects,
+                Damage = (ushort)pkt.Damage,
                 Killed = HP <= 0,
                 BulletId = pkt.BulletId,
                 ObjectId = pkt.EnemyId
@@ -1223,17 +1223,17 @@ namespace wServer.realm.entities.player
                     if (Level <= 1)
                     {
                         objType = 0x0723;
-                        time = 30*1000;
+                        time = 30 * 1000;
                     }
                     else if (Level < 20)
                     {
                         objType = 0x0724;
-                        time = 60*1000;
+                        time = 60 * 1000;
                     }
                     else
                     {
                         objType = 0x0725;
-                        time = 5*60*1000;
+                        time = 5 * 60 * 1000;
                     }
                     break;
             }
@@ -1254,7 +1254,7 @@ namespace wServer.realm.entities.player
             Pet.Move(X, Y);
             Pet.isPet = true;
             Owner.EnterWorld(Pet);
-            
+
         }
 
         public bool CompareName(string name)

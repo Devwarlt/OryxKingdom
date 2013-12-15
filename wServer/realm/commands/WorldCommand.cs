@@ -1308,6 +1308,11 @@ namespace wServer.realm.commands
             {
                 player.SendInfo("Cancelled selling.");
             }
+
+            else if (player.Decision == 3)
+            {
+                player.SendInfo("Cancelled buying");
+            }
             player.Decision = 0;
         }
     }
@@ -1329,6 +1334,67 @@ namespace wServer.realm.commands
     //    }
     //}
 
+    class ClearInventory : ICommand
+    {
+        public string Command { get { return "ci"; } } // Clear Inventory by Dushy
+
+        public void Execute(Player player, string[] args)
+        {
+            string name = string.Join(" ", args.ToArray()).Trim();
+            name = name.ToLower();
+            try
+            {
+
+                player.Inventory[0] = null;
+                player.Inventory[1] = null;
+                player.Inventory[2] = null;
+                player.Inventory[3] = null;
+                player.Inventory[4] = null;
+                player.Inventory[5] = null;
+                player.Inventory[6] = null; ;
+                player.Inventory[7] = null;
+                player.Inventory[8] = null;
+                player.Inventory[9] = null;
+                player.Inventory[10] = null;
+                player.Inventory[11] = null;
+                player.UpdateCount++;
+                return;
+            }
+            catch
+            {
+                player.SendInfo("Error !");
+            }
+        }
+    }
+    class ClearSlot : ICommand
+    {
+        public string Command { get { return "clear"; } } // Clear Inventory by Dushy
+
+        public void Execute(Player player, string[] args)
+        {
+            string name = string.Join(" ", args.ToArray()).Trim();
+            name = name.ToLower();
+            try
+            {
+                List<int> slotList = new List<int>();
+                for (var i = 0; i < args.Length; i++)
+                    if (!slotList.Contains(Convert.ToInt32(args[i])))
+                        slotList.Add(Convert.ToInt32(args[i]));
+                if (slotList.Count < 1)
+                    throw new Exception();
+                foreach (int i in slotList)
+                {
+                    player.Inventory[i] = null;
+                }
+                player.UpdateCount++;
+                return;
+            }
+            catch
+            {
+                player.SendInfo("Error !");
+            }
+        }
+    }
     internal class PremChat : ICommand
     {
         public string Command

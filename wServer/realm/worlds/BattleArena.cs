@@ -36,7 +36,7 @@ namespace wServer.realm.worlds
             Flags.Add("counting", false);
             rand = new Random();
             base.FromWorldMap(
-                typeof (RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.NewArena.wmap"));
+                typeof(RealmManager).Assembly.GetManifestResourceStream("wServer.realm.worlds.NewArena.wmap"));
         }
 
         public bool Joinable
@@ -53,7 +53,7 @@ namespace wServer.realm.worlds
         {
             var enems = new List<string>();
             var r = new Random();
-            for (var i = 0; i < Math.Ceiling((double) (Wave + Players.Count)/2); i++)
+            for (var i = 0; i < Math.Ceiling((double)(Wave + Players.Count) / 2); i++)
             {
                 enems.Add(RandomEnemies[r.Next(0, RandomEnemies.Length)]);
             }
@@ -159,17 +159,15 @@ namespace wServer.realm.worlds
                         Wave++;
                         if (Wave < 6)
                         {
-                            RandomBosses = new[] {"Red Demon", "Phoenix Lord", "Henchman of Oryx"};
+                            RandomBosses = new[] { "Red Demon", "Phoenix Lord", "Henchman of Oryx" };
                         }
                         if (Wave > 5 && Wave < 11)
                         {
-                            RandomBosses = new[]
-                            {"Red Demon", "Phoenix Lord", "Henchman of Oryx", "Stheno the Snake Queen"};
+                            RandomBosses = new[] { "Red Demon", "Phoenix Lord", "Henchman of Oryx", "Stheno the Snake Queen" };
                         }
                         if (Wave > 10 && Wave < 16)
                         {
-                            RandomBosses = new[]
-                            {"Elder Tree", "Stheno the Snake Queen", "Archdemon Malphas", "Septavius the Ghost God"};
+                            RandomBosses = new[] { "Elder Tree", "Stheno the Snake Queen", "Archdemon Malphas", "Septavius the Ghost God" };
                         }
                         if (Wave > 15 && Wave < 21)
                         {
@@ -189,7 +187,7 @@ namespace wServer.realm.worlds
                             };
                         }
                         var db = new Database();
-                        FamePot = Wave*10/(Players.Count == 1 ? 1 : 2);
+                        FamePot = Wave * 10 / (Players.Count == 1 ? 1 : 2);
                         foreach (var i in Players)
                         {
                             i.Value.CurrentFame =

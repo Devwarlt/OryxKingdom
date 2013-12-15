@@ -199,11 +199,11 @@ namespace wServer.realm.entities.player
             if (cmds == null)
             {
                 cmds = new Dictionary<string, ICommand>();
-                var t = typeof (ICommand);
+                var t = typeof(ICommand);
                 foreach (var i in t.Assembly.GetTypes())
                     if (t.IsAssignableFrom(i) && i != t)
                     {
-                        var instance = (ICommand) Activator.CreateInstance(i);
+                        var instance = (ICommand)Activator.CreateInstance(i);
                         cmds.Add(instance.Command, instance);
                     }
             }
