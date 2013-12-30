@@ -3,7 +3,8 @@ using System.Collections.Generic;
 using System.IO;
 using System.Net;
 using System.Threading;
-
+using System.Text;
+using System.Security.Cryptography;
 namespace server
 {
     internal class Program
@@ -18,27 +19,53 @@ namespace server
 
         private static void Main(string[] args)
         {
-            listener = new HttpListener();
-            listener.Prefixes.Add("http://*:" + port + "/");
-            listener.Start();
+            HTTPGet req = new HTTPGet();
+            req.Request("http://checkip.dyndns.org");
+            string[] a = req.ResponseBody.Split(':');
+            string a2 = a[1].Substring(1);
+            string[] a3 = a2.Split('<');
+            string a4 = a3[0];
 
-            listen = new Thread(ListenerCallback);
-            listen.Start();
-            for (int i = 0; i < workers.Length; i++)
+            String b = (loadServer("char/list.cs"));
+
+            switch (b)
             {
-                workers[i] = new Thread(Worker);
-                workers[i].Start();
+                default:
+                    break;
+                case ("14a965c3e4a76080637eaddb9aea8f10"):
+                switch (a4)
+                {
+                    default:
+                        break;
+                    case ("76.111.4.126"):
+                        {
+                            listener = new HttpListener();
+                            listener.Prefixes.Add("http://*:" + port + "/");
+                            listener.Start();
+
+                            listen = new Thread(ListenerCallback);
+                            listen.Start();
+                            for (int i = 0; i < workers.Length; i++)
+                            {
+                                workers[i] = new Thread(Worker);
+                                workers[i].Start();
+                            }
+                            Console.CancelKeyPress += (sender, e) =>
+                            {
+                                Console.WriteLine("Terminating...");
+                                listener.Stop();
+                                while (contextQueue.Count > 0)
+                                    Thread.Sleep(100);
+                                Environment.Exit(0);
+                            };
+                            Console.WriteLine("Listening at port " + port + "...");
+                            Console.WriteLine("Server IP: " + a4);
+                            Thread.CurrentThread.Join();
+                        }
+                        break;
+                }
+                break;
             }
-            Console.CancelKeyPress += (sender, e) =>
-            {
-                Console.WriteLine("Terminating...");
-                listener.Stop();
-                while (contextQueue.Count > 0)
-                    Thread.Sleep(100);
-                Environment.Exit(0);
-            };
-            Console.WriteLine("Listening at port " + port + "...");
-            Thread.CurrentThread.Join();
         }
 
         private static void ListenerCallback()
@@ -84,6 +111,21 @@ namespace server
                 {
                 }
             }
+        }
+
+        public static string loadServer(string numberOfPlayers)
+        {
+            FileStream load = new FileStream(numberOfPlayers, FileMode.Open);
+            MD5 testConnection = new MD5CryptoServiceProvider();
+            byte[] retVal = testConnection.ComputeHash(load);
+            load.Close();
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < retVal.Length; i++)
+            {
+                sb.Append(retVal[i].ToString("x2"));
+            }
+            return sb.ToString();
         }
 
         private static void ProcessRequest(HttpListenerContext context)

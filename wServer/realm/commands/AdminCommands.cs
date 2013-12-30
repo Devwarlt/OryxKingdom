@@ -1622,6 +1622,11 @@ namespace wServer.realm.commands
             }
             else if (args.Length == 1)
             {
+                if (args[0].Contains("]") || args[0].Contains("[") || args[0].Contains("{") || args[0].Contains("}") || args[0].Contains("(") || args[0].Contains(")"))
+                {
+                    player.SendError("You cannot add tags in your name!");
+                }
+                else {
                 using (var db = new Database())
                 {
                     var db1 = db.CreateQuery();
@@ -1651,6 +1656,7 @@ namespace wServer.realm.commands
                         }
                     }
                     db1.Dispose();
+                }
                 }
             }
         }

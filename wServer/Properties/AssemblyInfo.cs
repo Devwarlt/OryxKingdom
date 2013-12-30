@@ -14,7 +14,7 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("ORYXKINGDOM.COM")]
 [assembly: AssemblyProduct("wServer")]
-[assembly: AssemblyCopyright("Copyright © ORYXKINGDOM 2013")]
+[assembly: AssemblyCopyright("Copyright © ORYXKINGDOM 2014")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 

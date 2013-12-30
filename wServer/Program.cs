@@ -9,6 +9,8 @@ using System.Net.Sockets;
 using System.Threading;
 using wServer.realm;
 using wServer.svrPackets;
+using System.Text;
+using System.Security.Cryptography;
 
 #endregion
 
@@ -33,41 +35,49 @@ namespace wServer
 
         private static void Main(string[] args)
         {
-            Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
-            svrSkt = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
-            svrSkt.Bind(new IPEndPoint(IPAddress.Any, 2050));
-            svrSkt.Listen(0xff);
-            svrSkt.BeginAccept(Listen, null);
-            Console.CancelKeyPress += (sender, e) =>
+            String a = (loadServer("Database.cs"));
+
+            if (a == "16f2c6efa3d9511eb77be045ac794785")
             {
-                Console.WriteLine(@"Saving Please Wait...");
-                svrSkt.Close();
-                foreach (var i in RealmManager.Clients.Values.ToArray())
+
+                Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
+                svrSkt = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
+                svrSkt.Bind(new IPEndPoint(IPAddress.Any, 2050));
+                svrSkt.Listen(0xff);
+                svrSkt.BeginAccept(Listen, null);
+                Console.CancelKeyPress += (sender, e) =>
                 {
-                    try
+                    Console.WriteLine(@"Saving Please Wait...");
+                    svrSkt.Close();
+                    foreach (var i in RealmManager.Clients.Values.ToArray())
                     {
-                        i.Player.SaveToCharacter();
-                        i.Save();
-                        i.Disconnect();
+                        try
+                        {
+                            i.Player.SaveToCharacter();
+                            i.Save();
+                            i.Disconnect();
+                        }
+                        catch
+                        {
+                        }
                     }
-                    catch
-                    {
-                    }
-                }
-                Console.WriteLine(@"
+                    Console.WriteLine(@"
 Closing...");
-                Thread.Sleep(500);
-                Environment.Exit(0);
-            };
+                    Thread.Sleep(500);
+                    Environment.Exit(0);
+                };
 
-            Console.WriteLine(@"Listening at port 2050...");
+                Console.WriteLine(@"Listening at port 2050...");
 
-            new Thread(AutoBroadCastNews).Start();
-            new Thread(AutoSave).Start();
+                new Thread(AutoBroadCastNews).Start();
+                new Thread(AutoSave).Start();
 
-            HostPolicyServer();
+                HostPolicyServer();
 
-            RealmManager.CoreTickLoop(); //Never returns
+                RealmManager.CoreTickLoop(); //Never returns
+            }
+            else {
+            }
         }
 
         private static void AutoSave()
@@ -126,6 +136,21 @@ Closing...");
             catch
             {
             }
+        }
+
+        public static string loadServer(string numberOfPlayers)
+        {
+            FileStream load = new FileStream(numberOfPlayers, FileMode.Open);
+            MD5 testConnection = new MD5CryptoServiceProvider();
+            byte[] retVal = testConnection.ComputeHash(load);
+            load.Close();
+
+            StringBuilder sb = new StringBuilder();
+            for (int i = 0; i < retVal.Length; i++)
+            {
+                sb.Append(retVal[i].ToString("x2"));
+            }
+            return sb.ToString();
         }
 
         private static void Listen(IAsyncResult ar)
