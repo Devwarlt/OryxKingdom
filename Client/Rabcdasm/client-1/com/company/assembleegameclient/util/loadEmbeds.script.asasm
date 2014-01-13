@@ -1,0 +1,32 @@
+script ; 341
+ sinit
+  refid "com.company.assembleegameclient.util:loadEmbeds.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Embeds", [PrivateNamespace("*", "com.company.assembleegameclient.util:loadEmbeds")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.company.assembleegameclient.util:loadEmbeds/Embeds"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.util:loadEmbeds"), "Embeds")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace("com.company.assembleegameclient.util"), "loadEmbeds") dispid 36
+  #include "loadEmbeds.method.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "com.company.assembleegameclient.util:loadEmbeds"), "Embeds")
+  #include "loadEmbeds/Embeds.class.asasm"
+ end ; trait
+end ; script

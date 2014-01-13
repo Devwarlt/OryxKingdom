@@ -1,0 +1,109 @@
+class
+ refid "_-0G-:_-My"
+ instance QName(PackageNamespace("_-0G-"), "_-My")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-bb")
+  iinit
+   refid "_-0G-:_-My/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     modulo
+     convert_d
+     subtract
+     subtract_i
+     istypelate
+     bitxor
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-Ql") flag METADATA type QName(PackageNamespace("_-0I9"), "_-0Jr")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "_-0G-:_-My/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      bitxor
+      divide
+      pushwith
+      convert_d
+      coerce_s
+      newactivation
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L21
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-Ql")
+      getproperty         QName(PackageNamespace(""), "_-v7")
+      findpropstrict      QName(PackageNamespace("_-0LC"), "_-s7")
+      constructprop       QName(PackageNamespace("_-0LC"), "_-s7"), 0
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0G-:_-My/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

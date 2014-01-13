@@ -1,0 +1,128 @@
+class
+ refid "_-0IS:_-09s"
+ instance QName(PackageNamespace("_-0IS"), "_-09s")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-gI")
+  iinit
+   refid "_-0IS:_-09s/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "SavedCharacter")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     inclocal            2
+     strictequals
+     declocal_i          2
+     dxnslate
+     modulo
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     kill                2
+     subtract_i
+     declocal            2
+     pushnull
+     inclocal            2
+     pushscope
+
+L20:
+     getlocal2
+     dup
+     iftrue              L26
+
+     pop
+     getlocal3
+     convert_b
+L26:
+     iffalse             L37
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "DELETE_CHARACTER_EVENT")
+     constructsuper      1
+
+     getlocal2
+     dup
+     iftrue              L36
+
+     pop
+     getlocal1
+     convert_b
+L36:
+     iffalse             L40
+
+L37:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "savedChar_")
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "savedChar_") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "SavedCharacter") end
+ end ; instance
+ cinit
+  refid "_-0IS:_-09s/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    subtract_i
+    decrement
+    greaterthan
+    istypelate
+    popscope
+    bitxor
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal2
+    convert_b
+L20:
+    iffalse             L24
+
+    findproperty        QName(PackageNamespace(""), "DELETE_CHARACTER_EVENT")
+    pushstring          "DELETE_CHARACTER_EVENT"
+    initproperty        QName(PackageNamespace(""), "DELETE_CHARACTER_EVENT")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "DELETE_CHARACTER_EVENT") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("DELETE_CHARACTER_EVENT") end
+end ; class

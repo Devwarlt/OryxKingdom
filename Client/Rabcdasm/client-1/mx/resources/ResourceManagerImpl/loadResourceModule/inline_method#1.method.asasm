@@ -1,0 +1,65 @@
+method
+ refid "mx.resources:ResourceManagerImpl/loadResourceModule/inline_method#1"
+ param QName(PackageNamespace("mx.events"), "ModuleEvent")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 4
+  localcount 4
+  initscopedepth 6
+  maxscopedepth 6
+  code
+   pushnull
+   coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+   setlocal3
+
+   pushstring          "Unable to load resource module from "
+   getlex              QName(PackageInternalNs("mx.resources"), "url")
+   add
+   coerce_s
+   setlocal2
+
+   getlex              QName(PackageInternalNs("mx.resources"), "resourceEventDispatcher")
+   getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+   getproperty         QName(PackageNamespace(""), "ERROR")
+   callproperty        QName(PackageNamespace(""), "willTrigger"), 1
+   iffalse             L36
+
+   findpropstrict      QName(PackageNamespace("mx.events"), "ResourceEvent")
+   getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+   getproperty         QName(PackageNamespace(""), "ERROR")
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "bubbles")
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "cancelable")
+   constructprop       QName(PackageNamespace("mx.events"), "ResourceEvent"), 3
+   coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+   setlocal3
+
+   getlocal3
+   pushbyte            0
+   setproperty         QName(PackageNamespace(""), "bytesLoaded")
+
+   getlocal3
+   pushbyte            0
+   setproperty         QName(PackageNamespace(""), "bytesTotal")
+
+   getlocal3
+   getlocal2
+   setproperty         QName(PackageNamespace(""), "errorText")
+
+   getlex              QName(PackageInternalNs("mx.resources"), "resourceEventDispatcher")
+   getlocal3
+   callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+   jump                L40
+
+L36:
+   findpropstrict      QName(PackageNamespace(""), "Error")
+   getlocal2
+   constructprop       QName(PackageNamespace(""), "Error"), 1
+   throw
+L40:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

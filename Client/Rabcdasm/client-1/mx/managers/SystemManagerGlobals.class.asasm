@@ -1,0 +1,53 @@
+class
+ refid "mx.managers:SystemManagerGlobals"
+ instance QName(PackageNamespace("mx.managers"), "SystemManagerGlobals")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.managers:SystemManagerGlobals")
+  iinit
+   refid "mx.managers:SystemManagerGlobals/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "mx.managers:SystemManagerGlobals/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "topLevelSystemManagers")
+    newarray            0
+    setproperty         QName(PackageNamespace(""), "topLevelSystemManagers")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "topLevelSystemManagers") slotid 1 type QName(PackageNamespace(""), "Array") end
+ trait slot QName(PackageNamespace(""), "bootstrapLoaderInfoURL") slotid 2 type QName(PackageNamespace(""), "String") end
+ trait slot QName(PackageNamespace(""), "showMouseCursor") slotid 3 type QName(PackageNamespace(""), "Boolean") end
+ trait slot QName(PackageNamespace(""), "changingListenersInOtherSystemManagers") slotid 4 type QName(PackageNamespace(""), "Boolean") end
+ trait slot QName(PackageNamespace(""), "dispatchingEventToOtherSystemManagers") slotid 5 type QName(PackageNamespace(""), "Boolean") end
+ trait slot QName(PackageNamespace(""), "info") slotid 6 type QName(PackageNamespace(""), "Object") end
+ trait slot QName(PackageNamespace(""), "parameters") slotid 7 type QName(PackageNamespace(""), "Object") end
+end ; class

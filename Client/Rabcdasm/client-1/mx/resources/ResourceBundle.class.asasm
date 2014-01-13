@@ -1,0 +1,235 @@
+class
+ refid "mx.resources:ResourceBundle"
+ instance QName(PackageNamespace("mx.resources"), "ResourceBundle")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("IResourceBundle", [PackageNamespace("mx.resources")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.resources:ResourceBundle")
+  iinit
+   refid "mx.resources:ResourceBundle/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Null()
+   optional Null()
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("*", "mx.resources:ResourceBundle"), "_content")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_locale")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_bundleName")
+
+     getlocal0
+     getlocal0
+     callproperty        QName(ProtectedNamespace("mx.resources:ResourceBundle"), "getContent"), 0
+     initproperty        QName(PrivateNamespace("*", "mx.resources:ResourceBundle"), "_content")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_bundleName") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "bundleName")
+   method
+    refid "mx.resources:ResourceBundle/bundleName/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_bundleName")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "mx.resources:ResourceBundle"), "_content") type QName(PackageNamespace(""), "Object") end
+  trait getter QName(PackageNamespace(""), "content")
+   method
+    refid "mx.resources:ResourceBundle/content/getter"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:ResourceBundle"), "_content")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_locale") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "locale")
+   method
+    refid "mx.resources:ResourceBundle/locale/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "_locale")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.resources:ResourceBundle"), "getContent")
+   method
+    refid "mx.resources:ResourceBundle:getContent"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      newobject           0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "mx.resources:ResourceBundle"), "_getObject")
+   method
+    refid "mx.resources:ResourceBundle/_getObject"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "content")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "mx.resources:ResourceBundle"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), ProtectedNamespace("mx.resources:ResourceBundle"), PrivateNamespace("*", "mx.resources:ResourceBundle/_getObject"), PackageNamespace("mx.resources"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("mx.resources:ResourceBundle")])
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal2
+
+      getlocal2
+      iftrue              L21
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      pushstring          "Key "
+      getlocal1
+      add
+      pushstring          " was not found in resource bundle "
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "bundleName")
+      add
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+L21:
+      getlocal2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.resources:ResourceBundle/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.6.0.0"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.0") end
+ trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "locale") slotid 2 type QName(PackageNamespace(""), "String") end
+ trait slot QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "backupApplicationDomain") slotid 3 type QName(PackageNamespace("flash.system"), "ApplicationDomain") end
+ trait method QName(PrivateNamespace("*", "mx.resources:ResourceBundle"), "getClassByName") flag FINAL dispid 3
+  method
+   refid "mx.resources:ResourceBundle/getClassByName"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+   returns QName(PackageNamespace(""), "Class")
+   body
+    maxstack 2
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal3
+
+     getlocal2
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "hasDefinition"), 1
+     iffalse             L16
+
+     getlocal2
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "getDefinition"), 1
+     getlex              QName(PackageNamespace(""), "Class")
+     astypelate
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal3
+
+L16:
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

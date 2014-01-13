@@ -1,0 +1,111 @@
+class
+ refid "_-Dd:_-xQ"
+ instance QName(PackageInternalNs("_-Dd"), "_-xQ")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Dz")
+  iinit
+   refid "_-Dd:_-xQ/iinit"
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.util"), "IntPoint")>)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     getlocal0
+     declocal_i          2
+     getglobalscope
+     negate
+     declocal            2
+     convert_o
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L28
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "TILES_EVENT")
+     constructsuper      1
+
+     getlocal3
+     iftrue              L28
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "tiles_")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "tiles_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("com.company.util"), "IntPoint")>) end
+ end ; instance
+ cinit
+  refid "_-Dd:_-xQ/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    typeof
+    pushnan
+    negate_i
+    getlocal1
+    pushscope
+
+    equals
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal1
+    convert_b
+L20:
+    iffalse             L24
+
+    findproperty        QName(PackageNamespace(""), "TILES_EVENT")
+    pushstring          "TILES_EVENT"
+    initproperty        QName(PackageNamespace(""), "TILES_EVENT")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "TILES_EVENT") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("TILES_EVENT") end
+end ; class

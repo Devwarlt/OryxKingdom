@@ -1,0 +1,25 @@
+script ; 265
+ sinit
+  refid "_-s3:_-yp.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-yp", [PackageNamespace("_-s3")])
+    pushnull
+    newclass            "_-s3:_-yp"
+    initproperty        QName(PackageNamespace("_-s3"), "_-yp")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-s3"), "_-yp")
+  #include "_-yp.class.asasm"
+ end ; trait
+end ; script

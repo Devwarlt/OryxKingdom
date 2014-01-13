@@ -1,0 +1,33 @@
+script ; 104
+ sinit
+  refid "_-03T:_-0AP.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-0AP", [PackageNamespace("_-03T")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "_-03T:_-0AP"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-03T"), "_-0AP")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-03T"), "_-0AP")
+  #include "_-0AP.class.asasm"
+ end ; trait
+end ; script

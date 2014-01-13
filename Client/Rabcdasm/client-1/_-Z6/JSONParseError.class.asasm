@@ -1,0 +1,158 @@
+class
+ refid "_-Z6:JSONParseError"
+ instance QName(PackageNamespace("_-Z6"), "JSONParseError")
+  extends QName(PackageNamespace(""), "Error")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0BV")
+  iinit
+   refid "_-Z6:JSONParseError/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "String")
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Integer(0)
+   optional Utf8("")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal_i          2
+     kill                3
+     convert_i
+     popscope
+     kill                2
+     bitor
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     iftrue              L27
+
+     pop
+     getlocal2
+     jump                L26
+
+     declocal            2
+     inclocal_i          4
+     declocal_i          2
+     decrement_i
+     getlocal1
+     getlocal            4
+L26:
+     convert_b
+L27:
+     iffalse             L38
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal            5
+     dup
+     iftrue              L37
+
+     pop
+     getlocal3
+     convert_b
+L37:
+     iffalse             L51
+
+L38:
+     findproperty        QName(PackageNamespace(""), "name")
+     pushstring          "JSONParseError"
+     initproperty        QName(PackageNamespace(""), "name")
+
+     getlocal            4
+     iftrue              L48
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_location")
+
+     getlocal            5
+     iffalse             L51
+
+L48:
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_text")
+
+L51:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_location") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_text") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "location")
+   method
+    refid "_-Z6:JSONParseError/location/getter"
+    returns QName(PackageNamespace(""), "int")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_location")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "text")
+   method
+    refid "_-Z6:JSONParseError/text/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Z6:JSONParseError"), "_text")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Z6:JSONParseError/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

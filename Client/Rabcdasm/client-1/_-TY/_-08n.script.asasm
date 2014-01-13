@@ -1,0 +1,29 @@
+script ; 498
+ sinit
+  refid "_-TY:_-08n.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-TY:_-08n"
+    popscope
+    initproperty        QName(PackageNamespace("_-TY"), "_-08n")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-TY"), "_-08n") slotid 1
+  #include "_-08n.class.asasm"
+ end ; trait
+end ; script

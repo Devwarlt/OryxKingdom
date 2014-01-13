@@ -1,0 +1,178 @@
+class
+ refid "_-Dd:_-Mu"
+ instance QName(PackageNamespace("_-Dd"), "_-Mu")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-He")
+  iinit
+   refid "_-Dd:_-Mu/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     getlocal2
+     getlocal3
+     setlocal2
+
+     pushfalse
+     equals
+     convert_b
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-Dd:_-Mu/cinit"
+  body
+   maxstack 7
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    coerce_s
+    strictequals
+    multiply
+    multiply
+    getlocal0
+    greaterequals
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iftrue              L79
+
+    findproperty        QName(PackageNamespace(""), "_-6h")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "_-6h")
+
+    getlocal2
+    iftrue              L59
+
+    findproperty        QName(PackageNamespace(""), "_-SE")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "_-SE")
+
+    getlocal1
+    dup
+    iftrue              L36
+
+    pop
+    getlocal0
+    convert_b
+    jump                L36
+
+    pushnull
+    divide
+    convert_i
+    nextvalue
+    convert_b
+    nextname
+L36:
+    iffalse             L59
+
+    findproperty        QName(PackageNamespace(""), "_-0Gm")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "_-0Gm")
+
+    getlocal2
+    dup
+    iffalse             L46
+
+    pop
+    getlocal0
+    convert_b
+L46:
+    iftrue              L59
+
+    findproperty        QName(PackageNamespace(""), "_-0GD")
+    pushbyte            3
+    jump                L56
+
+    bitnot
+    hasnext
+    nextname
+    decrement_i
+    setlocal2
+
+    strictequals
+L56:
+    initproperty        QName(PackageNamespace(""), "_-0GD")
+
+    getlocal2
+    iftrue              L79
+
+L59:
+    findproperty        QName(PackageNamespace(""), "_-0KQ")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "_-Dd:_-Mu/cinit#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-Dd:_-Mu/cinit#1"), PackageNamespace("_-Dd"), PackageInternalNs("_-Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-He"), StaticProtectedNs("_-He")])
+    getlex              QName(PackageNamespace(""), "int")
+    applytype           1
+    pushbyte            3
+    construct           1
+    dup
+    pushbyte            0
+    pushbyte            255
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            1
+    pushbyte            255
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            2
+    pushbyte            255
+    setproperty         MultinameL([PackageNamespace("")])
+
+    initproperty        QName(PackageNamespace(""), "_-0KQ")
+
+L79:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-6h") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "_-SE") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "_-0Gm") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "_-0GD") slotid 4 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "_-0KQ") slotid 5 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "int")>) end
+end ; class

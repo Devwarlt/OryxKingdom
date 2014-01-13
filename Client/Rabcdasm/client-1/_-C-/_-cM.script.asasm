@@ -1,0 +1,29 @@
+script ; 27
+ sinit
+  refid "_-C-:_-cM.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-C-:_-cM"
+    popscope
+    initproperty        QName(PackageNamespace("_-C-"), "_-cM")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-C-"), "_-cM") slotid 1
+  #include "_-cM.class.asasm"
+ end ; trait
+end ; script

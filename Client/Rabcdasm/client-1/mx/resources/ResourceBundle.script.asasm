@@ -1,0 +1,29 @@
+script ; 469
+ sinit
+  refid "mx.resources:ResourceBundle.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ResourceBundle", [PackageNamespace("mx.resources")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:ResourceBundle"
+    popscope
+    initproperty        QName(PackageNamespace("mx.resources"), "ResourceBundle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "ResourceBundle")
+  #include "ResourceBundle.class.asasm"
+ end ; trait
+end ; script

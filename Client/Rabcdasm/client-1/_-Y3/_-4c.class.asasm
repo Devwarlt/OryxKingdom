@@ -1,0 +1,117 @@
+class
+ refid "_-Y3:_-4c"
+ instance QName(PackageNamespace("_-Y3"), "_-4c")
+  extends QName(PackageNamespace("_-Y3"), "_-d5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-zI")
+  iinit
+   refid "_-Y3:_-4c/iinit"
+   param QName(PackageNamespace("_-eZ"), "_-08b")
+   param QName(PackageNamespace("_-Y3"), "_-5d")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal            3
+     subtract_i
+     coerce_s
+     getlocal2
+     getlocal3
+     coerce_s
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L26
+
+     getlocal0
+     getlocal2
+     constructsuper      1
+
+     getlocal            4
+     iffalse             L29
+
+L26:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "_-OR")
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-OR") type QName(PackageNamespace("_-eZ"), "_-08b") end
+  trait method QName(PackageNamespace(""), "apply") flag OVERRIDE
+   method
+    refid "_-Y3:_-4c/apply"
+    param QName(PackageNamespace(""), "Class")
+    param QName(PackageNamespace("_-eZ"), "_-08b")
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "provider")
+      jump                L10
+
+      getlocal2
+      getlocal2
+      declocal_i          2
+      checkfilter
+      subtract
+      pushtrue
+L10:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-OR")
+      getlocal3
+      callproperty        QName(Namespace("_-yV"), "apply"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Y3:_-4c/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

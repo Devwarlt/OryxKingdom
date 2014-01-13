@@ -1,0 +1,114 @@
+class
+ refid "_-GA:_-8P"
+ instance QName(PackageNamespace("_-GA"), "_-8P")
+  extends QName(PackageNamespace("_-03T"), "_-03")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Gy")
+  iinit
+   refid "_-GA:_-8P/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     bitxor
+     divide
+     rshift
+     pushscope
+
+     convert_s
+     convert_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     bitand
+     setlocal3
+
+     bitand
+     getlocal1
+     dup
+     convert_i
+L20:
+     getlocal2
+     iftrue              L40
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iffalse             L40
+
+     getlex              QName(PackageNamespace("_-GA"), "_-8P")
+     getproperty         QName(PackageNamespace(""), "_-OR")
+     iftrue              L40
+
+     getlocal1
+     dup
+     iftrue              L35
+
+     pop
+     getlocal0
+     convert_b
+L35:
+     iffalse             L40
+
+     getlex              QName(PackageNamespace("_-GA"), "_-8P")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-OR")
+     setproperty         QName(PackageNamespace(""), "_-OR")
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-GA:_-8P/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "_-OR") slotid 1 type QName(PackageNamespace("_-eZ"), "_-08b") end
+ trait method QName(PackageNamespace(""), "_-VO") flag FINAL dispid 3
+  method
+   refid "_-GA:_-8P/_-VO"
+   returns QName(PackageNamespace("_-eZ"), "_-08b")
+   body
+    maxstack 3
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "_-OR")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

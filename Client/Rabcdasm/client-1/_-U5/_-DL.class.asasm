@@ -1,0 +1,143 @@
+class
+ refid "_-U5:_-DL"
+ instance QName(PackageNamespace("_-U5"), "_-DL")
+  extends QName(PackageNamespace("_-sp"), "_-aJ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-WS")
+  iinit
+   refid "_-U5:_-DL/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushnull
+     multiply
+     getlocal2
+     getlocal1
+     multiply
+     increment_i
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L21
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-011"), "_-wx")
+     constructsuper      1
+
+     getlocal2
+     iffalse             L24
+
+L21:
+     findproperty        QName(PrivateNamespace("*", "_-U5:_-DL"), "instance")
+     getlocal0
+     setproperty         QName(PrivateNamespace("*", "_-U5:_-DL"), "instance")
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-U5:_-DL/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "_-U5:_-DL"), "instance") slotid 1 type QName(PackageNamespace("_-U5"), "_-DL") end
+ trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 3
+  method
+   refid "_-U5:_-DL/getInstance"
+   returns QName(PackageNamespace("_-U5"), "_-DL")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pop
+     increment
+     coerce_s
+     add_i
+     convert_b
+     negate
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     jump                L20
+
+     convert_s
+     pushwith
+     multiply
+     bitand
+     getlocal3
+     increment_i
+L20:
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L27
+
+     pop
+     getlocal0
+     convert_b
+L27:
+     iffalse             L34
+
+     getlex              QName(PrivateNamespace("*", "_-U5:_-DL"), "instance")
+     getlocal1
+     iftrue              L39
+
+     iftrue              L38
+
+     getlocal1
+     iftrue              L38
+
+L34:
+     findproperty        QName(PrivateNamespace("*", "_-U5:_-DL"), "instance")
+     getlocal0
+     construct           0
+     setproperty         QName(PrivateNamespace("*", "_-U5:_-DL"), "instance")
+
+L38:
+     getlex              QName(PrivateNamespace("*", "_-U5:_-DL"), "instance")
+L39:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

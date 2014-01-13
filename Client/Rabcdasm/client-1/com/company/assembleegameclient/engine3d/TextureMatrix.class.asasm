@@ -1,0 +1,792 @@
+class
+ refid "com.company.assembleegameclient.engine3d:TextureMatrix"
+ instance QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "TextureMatrix")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-07J")
+  iinit
+   refid "com.company.assembleegameclient.engine3d:TextureMatrix/iinit"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     popscope
+     strictequals
+     newactivation
+     convert_s
+     pushfalse
+     pushtrue
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L64
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     initproperty        QName(PackageNamespace(""), "tToS_")
+
+     getlocal            4
+     dup
+     jump                L29
+
+     getlocal2
+     negate
+     declocal_i          2
+     declocal            2
+     not
+     inclocal_i          2
+L29:
+     iftrue              L33
+
+     pop
+     getlocal3
+     convert_b
+L33:
+     iffalse             L56
+
+     jump                L41
+
+     convert_i
+     multiply_i
+     hasnext
+     declocal            3
+     decrement_i
+     inclocal_i          2
+L41:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+     constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+
+     getlocal3
+     iftrue              L61
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     dup
+     iffalse             L55
+
+     pop
+     getlocal0
+     convert_b
+L55:
+     iftrue              L61
+
+L56:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "texture_")
+
+     getlocal            4
+     iffalse             L64
+
+L61:
+     getlocal0
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "_-ZZ"), 1
+
+L64:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "texture_") type QName(PackageNamespace("flash.display"), "BitmapData") value Null() end
+  trait slot QName(PackageNamespace(""), "tToS_") type QName(PackageNamespace("flash.geom"), "Matrix") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4") type QName(PackageNamespace("flash.geom"), "Matrix") value Null() end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_") type QName(PackageNamespace("flash.geom"), "Matrix") end
+  trait method QName(PackageNamespace(""), "_-BA")
+   method
+    refid "com.company.assembleegameclient.engine3d:TextureMatrix/_-BA"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal            2
+      inclocal_i          2
+      rshift
+      astypelate
+      popscope
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iftrue              L23
+
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "_-ZZ"), 1
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-8d")
+   method
+    refid "com.company.assembleegameclient.engine3d:TextureMatrix/_-8d"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      subtract_i
+      setlocal2
+
+      inclocal            2
+      getlocal2
+      urshift
+      getlocal2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L19
+
+      getlocal0
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "calculateTextureMatrix"), 1
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "calculateTextureMatrix")
+   method
+    refid "com.company.assembleegameclient.engine3d:TextureMatrix/calculateTextureMatrix"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      setlocal3
+
+      rshift
+      inclocal_i          2
+      kill                3
+      decrement_i
+      getlocal0
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+      getproperty         QName(PackageNamespace(""), "a")
+      setproperty         QName(PackageNamespace(""), "a")
+
+      getlocal            4
+      iffalse             L40
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+      getproperty         QName(PackageNamespace(""), "b")
+      setproperty         QName(PackageNamespace(""), "b")
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+      getproperty         QName(PackageNamespace(""), "c")
+      setproperty         QName(PackageNamespace(""), "c")
+
+      getlocal            5
+      dup
+      iffalse             L39
+
+      pop
+      getlocal0
+      convert_b
+L39:
+      iftrue              L67
+
+L40:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+      getproperty         QName(PackageNamespace(""), "d")
+      setproperty         QName(PackageNamespace(""), "d")
+
+      getlocal            5
+      dup
+      iffalse             L52
+
+      pop
+      getlocal3
+      convert_b
+L52:
+      iftrue              L61
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+      getproperty         QName(PackageNamespace(""), "tx")
+      setproperty         QName(PackageNamespace(""), "tx")
+
+      getlocal            5
+      iftrue              L67
+
+L61:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+      getproperty         QName(PackageNamespace(""), "ty")
+      setproperty         QName(PackageNamespace(""), "ty")
+
+L67:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            2
+      subtract
+      convert_i
+      setlocal2
+
+      getlocal2
+      getlocal            4
+      iffalse             L86
+
+      pushbyte            1
+      add
+      jump                L85
+
+      negate
+      not
+      pushscope
+
+      add_i
+      getlocal2
+      lessequals
+L85:
+      convert_i
+L86:
+      setlocal3
+
+      getlocal            5
+      iftrue              L99
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+      getlocal1
+      pushbyte            2
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      subtract
+      setproperty         QName(PackageNamespace(""), "a")
+
+L99:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+      getlocal1
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      subtract
+      setproperty         QName(PackageNamespace(""), "b")
+
+      getlocal            4
+      iffalse             L176
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+      getlocal1
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      subtract
+      setproperty         QName(PackageNamespace(""), "c")
+
+      getlocal            4
+      dup
+      iftrue              L127
+
+      pop
+      getlocal0
+      convert_b
+L127:
+      iffalse             L138
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+      getlocal1
+      getlocal3
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      subtract
+      setproperty         QName(PackageNamespace(""), "d")
+
+L138:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      setproperty         QName(PackageNamespace(""), "tx")
+
+      getlocal            5
+      dup
+      jump                L153
+
+      getlocal            4
+      nextvalue
+      getlocal2
+      inclocal            2
+      dup
+      hasnext
+L153:
+      iffalse             L157
+
+      pop
+      getlocal0
+      convert_b
+L157:
+      iftrue              L171
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      setproperty         QName(PackageNamespace(""), "ty")
+
+      getlocal            4
+      dup
+      iftrue              L170
+
+      pop
+      getlocal2
+      convert_b
+L170:
+      iffalse             L176
+
+L171:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "tToS_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "tempMatrix_")
+      callpropvoid        QName(PackageNamespace(""), "concat"), 1
+
+L176:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-ZZ")
+   method
+    refid "com.company.assembleegameclient.engine3d:TextureMatrix/_-ZZ"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "Number")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 10
+     localcount 15
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      add_i
+      increment_i
+      kill                13
+      kill                6
+      declocal_i          8
+      getlocal3
+L10:
+      setlocal            13
+
+      setlocal            14
+
+      getlocal0
+      pushscope
+
+      getlocal            14
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L38
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      pushnull
+      ifne                L38
+
+      getlocal            13
+      dup
+      iffalse             L31
+
+      pop
+      getlocal3
+      convert_b
+L31:
+      iftrue              L37
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+
+      getlocal            14
+      iffalse             L38
+
+L37:
+      returnvoid
+
+L38:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            3
+      subtract
+      convert_i
+      setlocal2
+
+      getlocal1
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      getproperty         QName(PackageNamespace(""), "width")
+      multiply
+      getlocal            14
+      dup
+      iftrue              L57
+
+      pop
+      getlocal2
+      convert_b
+L57:
+      iffalse             L59
+
+      convert_d
+L59:
+      setlocal3
+
+      getlocal1
+      pushbyte            1
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      getproperty         QName(PackageNamespace(""), "height")
+      multiply
+      getlocal            13
+      dup
+      iffalse             L73
+
+      pop
+      getlocal1
+      convert_b
+L73:
+      iftrue              L75
+
+      convert_d
+L75:
+      setlocal            4
+
+      getlocal1
+      pushbyte            3
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      getproperty         QName(PackageNamespace(""), "width")
+      multiply
+      getlocal            13
+      dup
+      iffalse             L89
+
+      pop
+      getlocal3
+      convert_b
+L89:
+      iftrue              L91
+
+      convert_d
+L91:
+      setlocal            5
+
+      getlocal1
+      pushbyte            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      getproperty         QName(PackageNamespace(""), "height")
+      multiply
+      getlocal            14
+      dup
+      iftrue              L112
+
+      jump                L109
+
+      pop
+      convert_i
+      kill                12
+      modulo
+      add
+      kill                9
+L109:
+      pop
+      getlocal3
+      convert_b
+L112:
+      iffalse             L114
+
+      convert_d
+L114:
+      setlocal            6
+
+      getlocal1
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      getproperty         QName(PackageNamespace(""), "width")
+      multiply
+      getlocal            13
+      dup
+      iffalse             L128
+
+      pop
+      getlocal1
+      convert_b
+L128:
+      iftrue              L130
+
+      convert_d
+L130:
+      setlocal            7
+
+      getlocal1
+      getlocal2
+      pushbyte            1
+      add
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#1"), PackageNamespace("com.company.assembleegameclient.engine3d"), PackageInternalNs("com.company.assembleegameclient.engine3d"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-07J"), StaticProtectedNs("_-07J")])
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "texture_")
+      getproperty         QName(PackageNamespace(""), "height")
+      multiply
+      getlocal            13
+      iftrue              L143
+
+      convert_d
+L143:
+      setlocal            8
+
+      getlocal            5
+      getlocal            13
+      iftrue              L157
+
+      getlocal3
+      subtract
+      getlocal            13
+      dup
+      iffalse             L155
+
+      pop
+      getlocal2
+      convert_b
+L155:
+      iftrue              L157
+
+      convert_d
+L157:
+      setlocal            9
+
+      getlocal            6
+      getlocal            14
+      dup
+      iftrue              L165
+
+      pop
+      getlocal0
+      convert_b
+L165:
+      iffalse             L170
+
+      getlocal            4
+      subtract
+      getlocal            14
+      iffalse             L171
+
+L170:
+      convert_d
+L171:
+      setlocal            10
+
+      getlocal            7
+      getlocal            13
+      dup
+      iffalse             L179
+
+      pop
+      getlocal1
+      convert_b
+L179:
+      iftrue              L184
+
+      getlocal3
+      subtract
+      getlocal            14
+      iffalse             L185
+
+L184:
+      convert_d
+L185:
+      setlocal            11
+
+      getlocal            8
+      getlocal            13
+      iftrue              L201
+
+      getlocal            4
+      subtract
+      getlocal            14
+      iffalse             L201
+
+      convert_d
+      jump                L201
+
+      greaterequals
+      getlocal            9
+      inclocal            5
+      kill                5
+      declocal_i          7
+      declocal_i          12
+L201:
+      setlocal            12
+
+      getlocal            13
+      dup
+      iffalse             L208
+
+      pop
+      getlocal2
+      convert_b
+L208:
+      iftrue              L221
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Matrix")
+      getlocal            9
+      getlocal            10
+      getlocal            11
+      getlocal            12
+      getlocal3
+      getlocal            4
+      constructprop       QName(PackageNamespace("flash.geom"), "Matrix"), 6
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+
+      getlocal            13
+      iftrue              L224
+
+L221:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:TextureMatrix#0"), "_-K4")
+      callpropvoid        QName(PackageNamespace(""), "invert"), 0
+
+L224:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.engine3d:TextureMatrix/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

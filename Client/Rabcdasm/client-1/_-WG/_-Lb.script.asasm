@@ -1,0 +1,29 @@
+script ; 904
+ sinit
+  refid "_-WG:_-Lb.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-Lb", [PackageNamespace("_-WG")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-WG:_-Lb"
+    popscope
+    initproperty        QName(PackageNamespace("_-WG"), "_-Lb")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-WG"), "_-Lb")
+  #include "_-Lb.class.asasm"
+ end ; trait
+end ; script

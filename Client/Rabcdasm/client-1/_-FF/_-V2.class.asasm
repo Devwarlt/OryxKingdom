@@ -1,0 +1,191 @@
+class
+ refid "_-FF:_-V2"
+ instance QName(PackageNamespace("_-FF"), "_-V2")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-my")
+  iinit
+   refid "_-FF:_-V2/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     pushscope
+
+     lshift
+     getlocal1
+     lessequals
+     typeof
+     increment_i
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "domain") flag METADATA type QName(PackageNamespace("_-WD"), "Domain")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-T-") flag METADATA type QName(PackageNamespace("_-U5"), "_-dd")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "_-FF:_-V2/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_b
+      modulo
+      greaterequals
+      bitxor
+      newactivation
+      equals
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L30
+
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.util"), "loadEmbeds")
+      callpropvoid        QName(PackageNamespace("com.company.assembleegameclient.util"), "loadEmbeds"), 0
+
+      getlocal1
+      dup
+      iffalse             L24
+
+      pop
+      getlocal2
+      convert_b
+L24:
+      iftrue              L30
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-T-")
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-FF:_-V2"), "_-0EM"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+L30:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-FF:_-V2"), "_-0EM")
+   method
+    refid "_-FF:_-V2/_-0EM"
+    returns QName(PackageNamespace("flash.display"), "Sprite")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      lessequals
+      add
+      strictequals
+      pushfalse
+      nextname
+      pop
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      pop
+      pushfalse
+      iffalse             L24
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "domain")
+      callproperty        QName(PackageNamespace(""), "_-FN"), 0
+      pop
+      pushtrue
+      iffalse             L28
+
+L24:
+      findpropstrict      QName(PackageNamespace("_-F1"), "_-Er")
+      constructprop       QName(PackageNamespace("_-F1"), "_-Er"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+      jump                L31
+
+L28:
+      findpropstrict      QName(PackageNamespace("_-0I9"), "_-05b")
+      constructprop       QName(PackageNamespace("_-0I9"), "_-05b"), 0
+      coerce              QName(PackageNamespace("flash.display"), "Sprite")
+L31:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-FF:_-V2/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

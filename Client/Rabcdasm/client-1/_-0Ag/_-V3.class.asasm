@@ -1,0 +1,141 @@
+class
+ refid "_-0Ag:_-V3"
+ instance QName(PackageNamespace("_-0Ag"), "_-V3")
+  extends QName(PackageNamespace("_-0Ag"), "_-Rq")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0ID")
+  iinit
+   refid "_-0Ag:_-V3/iinit"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     increment_i
+     getglobalscope
+     setlocal2
+
+     add
+     istypelate
+     declocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L18
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "name_") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "writeToOutput") flag OVERRIDE
+   method
+    refid "_-0Ag:_-V3/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          2
+      kill                2
+      inclocal_i          2
+      declocal_i          2
+      inclocal            2
+      multiply
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L20
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "name_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+L20:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_-0Ag:_-V3/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
+      jump                L10
+
+      convert_b
+      getlocal2
+      equals
+      getglobalscope
+      nextname
+      pushscope
+
+L10:
+      pushstring          "GUILDINVITE"
+      pushstring          "name_"
+      callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Ag:_-V3/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

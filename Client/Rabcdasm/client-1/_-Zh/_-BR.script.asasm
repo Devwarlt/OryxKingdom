@@ -1,0 +1,33 @@
+script ; 844
+ sinit
+  refid "_-Zh:_-BR.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-BR", [PackageNamespace("_-Zh")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-qN"), "_-px")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-qN"), "_-px")
+    newclass            "_-Zh:_-BR"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-Zh"), "_-BR")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Zh"), "_-BR")
+  #include "_-BR.class.asasm"
+ end ; trait
+end ; script

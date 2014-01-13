@@ -1,0 +1,191 @@
+class
+ refid "_-eZ:_-zC"
+ instance QName(PackageNamespace("_-eZ"), "_-zC")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-035")
+  iinit
+   refid "_-eZ:_-zC/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Object")
+   param QName(PackageNamespace(""), "Class")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal_i          3
+     inclocal_i          2
+     decrement
+     declocal            4
+     inclocal            4
+     kill                2
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     convert_b
+     declocal            3
+     increment
+     pushtrue
+     decrement_i
+     increment_i
+L21:
+     getlocal            4
+     dup
+     iffalse             L27
+
+     pop
+     getlocal1
+     convert_b
+L27:
+     iftrue              L41
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal            5
+     iffalse             L38
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "instance")
+
+     getlocal            5
+     iffalse             L41
+
+L38:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "_-06H")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "instance") end
+  trait slot QName(PackageNamespace(""), "_-06H") type QName(PackageNamespace(""), "Class") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "_-eZ:_-zC/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-eZ"), "_-zC")
+      jump                L10
+
+      urshift
+      pushfalse
+      pop
+      dup
+      lessthan
+      newactivation
+L10:
+      getlex              QName(PackageNamespace(""), "type")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "instance")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-06H")
+      constructprop       QName(PackageNamespace("_-eZ"), "_-zC"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-eZ:_-zC/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    bitand
+    newactivation
+    subtract_i
+    modulo
+    pop
+    convert_i
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L21
+
+    pushnull
+    rshift
+    getglobalscope
+    decrement
+    bitnot
+    pushundefined
+L21:
+    getlocal1
+    iftrue              L33
+
+    findproperty        QName(PackageNamespace(""), "_-jD")
+    pushstring          "postInstantiate"
+    initproperty        QName(PackageNamespace(""), "_-jD")
+
+    getlocal1
+    dup
+    iffalse             L32
+
+    pop
+    getlocal0
+    convert_b
+L32:
+    iftrue              L41
+
+L33:
+    findproperty        QName(PackageNamespace(""), "_-9H")
+    pushstring          "preConstruct"
+    initproperty        QName(PackageNamespace(""), "_-9H")
+
+    getlocal1
+    iftrue              L41
+
+    findproperty        QName(PackageNamespace(""), "_-7O")
+    pushstring          "postConstruct"
+    initproperty        QName(PackageNamespace(""), "_-7O")
+
+L41:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-jD") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("postInstantiate") end
+ trait const QName(PackageNamespace(""), "_-9H") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("preConstruct") end
+ trait const QName(PackageNamespace(""), "_-7O") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("postConstruct") end
+end ; class

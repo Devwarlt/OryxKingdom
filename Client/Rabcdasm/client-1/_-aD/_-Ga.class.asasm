@@ -1,0 +1,278 @@
+class
+ refid "_-aD:_-Ga"
+ instance QName(PackageNamespace("_-aD"), "_-Ga")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-09h", [PackageNamespace("_-aD")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-4W")
+  iinit
+   refid "_-aD:_-Ga/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     convert_b
+     negate
+     multiply
+     negate
+     astypelate
+     urshift
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-iq") flag METADATA type QName(PackageNamespace("_-0Mm"), "_-j5")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-aD:_-Ga"), "_-0Gz") type QName(PackageNamespace("_-sp"), "_-aJ") end
+  trait method QName(PackageNamespace(""), "_-UZ")
+   method
+    refid "_-aD:_-Ga/_-UZ"
+    param QName(PackageNamespace("_-aD"), "_-sv")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      getlocal2
+      inclocal_i          2
+      setlocal2
+
+      getlocal2
+      inclocal_i          5
+      pushtrue
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-zR")
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-iq")
+      callproperty        QName(Namespace("_-0AQ"), "_-Ut"), 0
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util.offer"), "Offers")
+      setlocal2
+
+      getlocal            5
+      dup
+      iftrue              L27
+
+      pop
+      getlocal2
+      convert_b
+L27:
+      iffalse             L43
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlocal3
+      setproperty         Multiname("paymentMethod", [PrivateNamespace("*", "_-aD:_-Ga"), PackageNamespace(""), PrivateNamespace("*", "_-aD:_-Ga/_-UZ"), PackageNamespace("_-aD"), PackageInternalNs("_-aD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-4W"), StaticProtectedNs("_-4W")])
+
+      getlocal            5
+      iffalse             L43
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      jump                L42
+
+      decrement
+      checkfilter
+      negate_i
+      getlocal            5
+      increment
+      getlocal            5
+L42:
+      callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+L43:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-zR")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "paymentMethod")
+      callproperty        QName(PackageNamespace(""), "_-8N"), 1
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-zR")
+      setlocal3
+
+      getlocal3
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "tok")
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "exp")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "offer")
+      callproperty        QName(PackageNamespace(""), "_-TR"), 3
+      getlocal            5
+      dup
+      iftrue              L70
+
+      pop
+      jump                L68
+
+      kill                2
+      inclocal_i          2
+      greaterthan
+      inclocal_i          4
+      kill                3
+      inclocal_i          3
+L68:
+      getlocal2
+      convert_b
+L70:
+      iffalse             L72
+
+      coerce_s
+L72:
+      setlocal            4
+
+      getlocal            5
+      iffalse             L91
+
+      findpropstrict      QName(PackageNamespace("flash.net"), "navigateToURL")
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlocal            4
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      callpropvoid        QName(PackageNamespace("flash.net"), "navigateToURL"), 2
+
+      getlocal            6
+      dup
+      iffalse             L87
+
+      pop
+      getlocal2
+      convert_b
+L87:
+      iftrue              L91
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "complete")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+L91:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "complete")
+   method
+    refid "_-aD:_-Ga/complete/getter"
+    returns QName(PackageNamespace("_-sp"), "_-aJ")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getglobalscope
+      inclocal_i          2
+      getlocal2
+      kill                2
+      getlocal2
+      convert_d
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L21
+
+      inclocal            2
+      declocal            2
+      inclocal_i          2
+      declocal_i          2
+      declocal            2
+      inclocal            2
+L21:
+      getlocal2
+      dup
+      iftrue              L27
+
+      pop
+      getlocal1
+      convert_b
+L27:
+      iffalse             L34
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-aD:_-Ga"), "_-0Gz")
+      coerce              QName(PackageNamespace("_-sp"), "_-aJ")
+      dup
+      iftrue              L37
+
+      pop
+L34:
+      findpropstrict      QName(PackageNamespace("_-sp"), "_-aJ")
+      constructprop       QName(PackageNamespace("_-sp"), "_-aJ"), 0
+      coerce              QName(PackageNamespace("_-sp"), "_-aJ")
+L37:
+      dup
+      setlocal1
+
+      initproperty        QName(PrivateNamespace("*", "_-aD:_-Ga"), "_-0Gz")
+
+      getlocal1
+      kill                1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-aD:_-Ga/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

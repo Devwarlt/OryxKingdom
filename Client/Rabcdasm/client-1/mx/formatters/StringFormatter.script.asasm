@@ -1,0 +1,29 @@
+script ; 475
+ sinit
+  refid "mx.formatters:StringFormatter.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("StringFormatter", [PackageNamespace("mx.formatters")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.formatters:StringFormatter"
+    popscope
+    initproperty        QName(PackageNamespace("mx.formatters"), "StringFormatter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.formatters"), "StringFormatter")
+  #include "StringFormatter.class.asasm"
+ end ; trait
+end ; script

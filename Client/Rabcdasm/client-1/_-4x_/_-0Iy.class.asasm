@@ -1,0 +1,1122 @@
+class
+ refid "_-4x:_-0Iy"
+ instance QName(PackageNamespace("_-4x"), "_-0Iy")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0HP")
+  iinit
+   refid "_-4x:_-0Iy/iinit"
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   flag HAS_OPTIONAL
+   optional Integer(0)
+   optional Integer(0)
+   optional Integer(0)
+   body
+    maxstack 9
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     getlocal0
+     setlocal2
+
+     inclocal_i          4
+     pushnan
+     lshift
+     declocal            4
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iftrue              L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iffalse             L72
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            5
+     dup
+     iffalse             L28
+
+     pop
+     getlocal0
+     convert_b
+L28:
+     iftrue              L81
+
+     getlocal0
+     jump                L37
+
+     convert_i
+     subtract_i
+     getlocal3
+     popscope
+     add_i
+     declocal            2
+L37:
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushshort           359
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     initproperty        QName(PackageNamespace(""), "h_")
+
+     getlocal            5
+     dup
+     iffalse             L60
+
+     pop
+     jump                L58
+
+     declocal_i          2
+     getlocal2
+     convert_b
+     inclocal_i          3
+     getlocal3
+     dxnslate
+L58:
+     getlocal2
+     convert_b
+L60:
+     iftrue              L72
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     initproperty        QName(PackageNamespace(""), "_-ew")
+
+     getlocal            5
+     iftrue              L81
+
+L72:
+     getlocal0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            1
+     getlocal3
+     callproperty        QName(PackageNamespace(""), "min"), 2
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     initproperty        QName(PackageNamespace(""), "_-fz")
+
+L81:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "h_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "_-ew") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "_-fz") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "clone")
+   method
+    refid "_-4x:_-0Iy/clone"
+    returns QName(PackageNamespace("_-4x"), "_-0Iy")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-4x"), "_-0Iy")
+      jump                L10
+
+      urshift
+      nextvalue
+      greaterequals
+      pushnan
+      pushnull
+      pushwith
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "h_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-ew")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      constructprop       QName(PackageNamespace("_-4x"), "_-0Iy"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "equals")
+   method
+    refid "_-4x:_-0Iy/equals"
+    param QName(PackageNamespace("_-4x"), "_-0Iy")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      coerce_a
+      inclocal_i          2
+      inclocal_i          2
+      setlocal2
+
+      pushnan
+      bitxor
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L78
+
+      getlocal1
+      pushnull
+      equals
+      getlocal2
+      dup
+      iftrue              L24
+
+      pop
+      getlocal2
+      convert_b
+L24:
+      iffalse             L64
+
+      not
+      dup
+      getlocal2
+      dup
+      iftrue              L33
+
+      pop
+      getlocal1
+      convert_b
+L33:
+      iffalse             L72
+
+      iffalse             L64
+
+      pop
+      getlocal3
+      dup
+      iffalse             L42
+
+      pop
+      getlocal3
+      convert_b
+L42:
+      iftrue              L78
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "h_")
+      getlocal3
+      jump                L53
+
+      declocal_i          2
+      increment_i
+      add_i
+      convert_s
+      pushfalse
+      istypelate
+L53:
+      iftrue              L109
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "h_")
+      getlocal3
+      dup
+      iffalse             L62
+
+      pop
+      getlocal0
+      convert_b
+L62:
+      iftrue              L111
+
+      equals
+L64:
+      dup
+      getlocal3
+      dup
+      iffalse             L71
+
+      pop
+      getlocal1
+      convert_b
+L71:
+      iftrue              L105
+
+L72:
+      iffalse             L104
+
+      getlocal2
+      iffalse             L112
+
+      pop
+      getlocal3
+      iftrue              L107
+
+L78:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-ew")
+      getlocal2
+      dup
+      jump                L89
+
+      declocal            2
+      setlocal2
+
+      setlocal2
+
+      increment
+      coerce_a
+      pushundefined
+L89:
+      iftrue              L93
+
+      pop
+      getlocal0
+      convert_b
+L93:
+      iffalse             L109
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_-ew")
+      getlocal3
+      dup
+      iffalse             L102
+
+      pop
+      getlocal3
+      convert_b
+L102:
+      iftrue              L111
+
+      equals
+L104:
+      dup
+L105:
+      iffalse             L112
+
+      pop
+L107:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+L109:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "_-fz")
+L111:
+      equals
+L112:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-Nu")
+   method
+    refid "_-4x:_-0Iy/_-Nu"
+    returns QName(PackageNamespace("_-4x"), "_-0KP")
+    body
+     maxstack 6
+     localcount 12
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                5
+      multiply
+      getlocal0
+      nextname
+      setlocal            5
+
+      setlocal            7
+
+L10:
+      setlocal            10
+
+      setlocal            11
+
+      getlocal0
+      pushscope
+
+      pushnan
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      findpropstrict      QName(PackageNamespace(""), "int")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "h_")
+      pushbyte            60
+      divide
+      callproperty        QName(PackageNamespace(""), "int"), 1
+      pushbyte            6
+      modulo
+      convert_i
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "h_")
+      getlocal            11
+      iffalse             L53
+
+      pushbyte            60
+      divide
+      getlocal            10
+      iftrue              L52
+
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "h_")
+      pushbyte            60
+      divide
+      callproperty        QName(PackageNamespace(""), "floor"), 1
+      subtract
+      getlocal            11
+      dup
+      iftrue              L51
+
+      pop
+      getlocal1
+      convert_b
+L51:
+      iffalse             L53
+
+L52:
+      convert_d
+L53:
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      getlocal            11
+      iffalse             L71
+
+      pushbyte            1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-ew")
+      subtract
+      multiply
+      getlocal            10
+      dup
+      iffalse             L69
+
+      pop
+      getlocal1
+      convert_b
+L69:
+      iftrue              L71
+
+      convert_d
+L71:
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      getlocal            11
+      iffalse             L93
+
+      pushbyte            1
+      getlocal2
+      getlocal            10
+      dup
+      iffalse             L84
+
+      pop
+      getlocal1
+      convert_b
+L84:
+      iftrue              L88
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-ew")
+      multiply
+L88:
+      subtract
+      multiply
+      getlocal            11
+      iffalse             L93
+
+      convert_d
+L93:
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      getlocal            10
+      dup
+      iffalse             L102
+
+      pop
+      getlocal3
+      convert_b
+L102:
+      iftrue              L121
+
+      pushbyte            1
+      dup
+      getlocal2
+      subtract
+      getlocal            10
+      dup
+      iffalse             L113
+
+      pop
+      getlocal0
+      convert_b
+L113:
+      iftrue              L117
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-ew")
+      multiply
+L117:
+      subtract
+      multiply
+      getlocal            10
+      iftrue              L122
+
+L121:
+      convert_d
+L122:
+      setlocal            5
+
+      jump                L308
+
+L124:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      getlocal            10
+      iftrue              L179
+
+      convert_d
+      setlocal            6
+
+      getlocal            5
+      convert_d
+      getlocal            11
+      iffalse             L239
+
+      setlocal            7
+
+      getlocal            11
+      iffalse             L300
+
+      getlocal3
+      convert_d
+      getlocal            11
+      dup
+      iftrue              L146
+
+      pop
+      getlocal3
+      convert_b
+L146:
+      iffalse             L169
+
+      setlocal            8
+
+      getlocal            10
+      iftrue              L200
+
+      jump                L397
+
+L151:
+      label
+      getlocal            4
+      convert_d
+      setlocal            6
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      convert_d
+      getlocal            11
+      iffalse             L238
+
+      setlocal            7
+
+      getlocal            11
+      dup
+      iftrue              L167
+
+      pop
+      getlocal1
+      convert_b
+L167:
+      iffalse             L240
+
+      getlocal3
+L169:
+      convert_d
+      setlocal            8
+
+      getlocal            10
+      iftrue              L212
+
+      jump                L397
+
+L174:
+      label
+      getlocal3
+      convert_d
+      getlocal            10
+      iftrue              L303
+
+L179:
+      setlocal            6
+
+      getlocal            11
+      iffalse             L212
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      convert_d
+      getlocal            11
+      dup
+      iftrue              L198
+
+      pop
+      getlocal1
+      convert_b
+      jump                L198
+
+      inclocal_i          3
+      instanceof
+      inclocal_i          8
+      instanceof
+      getlocal            7
+      popscope
+L198:
+      iffalse             L304
+
+      setlocal            7
+
+L200:
+      getlocal            5
+      getlocal            11
+      dup
+      iftrue              L207
+
+      pop
+      getlocal0
+      convert_b
+L207:
+      iffalse             L303
+
+      convert_d
+      getlocal            11
+      iffalse             L239
+
+      setlocal            8
+
+L212:
+      jump                L397
+
+L213:
+      label
+      getlocal3
+      getlocal            10
+      dup
+      iffalse             L221
+
+      pop
+      getlocal3
+      convert_b
+L221:
+      iftrue              L238
+
+      convert_d
+      getlocal            10
+      dup
+      iffalse             L229
+
+      pop
+      getlocal2
+      convert_b
+L229:
+      iftrue              L238
+
+      setlocal            6
+
+      getlocal            4
+      convert_d
+      setlocal            7
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      getlocal            10
+      iftrue              L279
+
+L238:
+      convert_d
+L239:
+      setlocal            8
+
+L240:
+      jump                L397
+
+L241:
+      label
+      getlocal            5
+      convert_d
+      getlocal            10
+      iftrue              L260
+
+      setlocal            6
+
+      getlocal3
+      getlocal            10
+      dup
+      iffalse             L254
+
+      pop
+      getlocal0
+      convert_b
+L254:
+      iftrue              L299
+
+      convert_d
+      setlocal            7
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      convert_d
+L260:
+      setlocal            8
+
+      getlocal            11
+      dup
+      iftrue              L267
+
+      pop
+      getlocal2
+      convert_b
+L267:
+      iffalse             L300
+
+      jump                L397
+
+L269:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+      getlocal            11
+      dup
+      iftrue              L278
+
+      pop
+      getlocal2
+      convert_b
+L278:
+      iffalse             L303
+
+L279:
+      convert_d
+      getlocal            11
+      iffalse             L298
+
+      setlocal            6
+
+      getlocal            11
+      dup
+      iftrue              L289
+
+      pop
+      getlocal2
+      convert_b
+L289:
+      iffalse             L300
+
+      getlocal3
+      getlocal            10
+      dup
+      iffalse             L297
+
+      pop
+      getlocal2
+      convert_b
+L297:
+      iftrue              L304
+
+L298:
+      convert_d
+L299:
+      setlocal            7
+
+L300:
+      getlocal            4
+      getlocal            11
+      iffalse             L304
+
+L303:
+      convert_d
+L304:
+      setlocal            8
+
+      jump                L397
+
+L306:
+      label
+      jump                L397
+
+L308:
+      getlocal1
+      getlocal            11
+      iffalse             L396
+
+      setlocal            9
+
+      pushbyte            0
+      getlocal            9
+      getlocal            10
+      iftrue              L344
+
+      ifstrictne          L319
+
+      pushbyte            0
+      jump                L395
+
+L319:
+      pushbyte            1
+      getlocal            11
+      iffalse             L395
+
+      getlocal            9
+      getlocal            10
+      dup
+      iffalse             L329
+
+      pop
+      getlocal3
+      convert_b
+L329:
+      iftrue              L355
+
+      ifstrictne          L335
+
+      pushbyte            1
+      getlocal            10
+      iftrue              L387
+
+      jump                L395
+
+L335:
+      pushbyte            2
+      getlocal            9
+      getlocal            11
+      dup
+      iftrue              L343
+
+      pop
+      getlocal2
+      convert_b
+L343:
+      iffalse             L388
+
+L344:
+      ifstrictne          L349
+
+      getlocal            11
+      iffalse             L363
+
+      pushbyte            2
+      jump                L395
+
+L349:
+      pushbyte            3
+      getlocal            11
+      iffalse             L385
+
+      getlocal            9
+      getlocal            10
+      iftrue              L369
+
+L355:
+      ifstrictne          L365
+
+      getlocal            10
+      dup
+      iffalse             L362
+
+      pop
+      getlocal1
+      convert_b
+L362:
+      iftrue              L389
+
+L363:
+      pushbyte            3
+      jump                L395
+
+L365:
+      pushbyte            4
+      getlocal            9
+      getlocal            11
+      iffalse             L388
+
+L369:
+      ifstrictne          L386
+
+      getlocal            11
+      dup
+      jump                L379
+
+      newactivation
+      setlocal            5
+
+      dxnslate
+      getlocal2
+      convert_u
+      not
+L379:
+      iftrue              L383
+
+      pop
+      getlocal2
+      convert_b
+L383:
+      iffalse             L389
+
+      pushbyte            4
+L385:
+      jump                L395
+
+L386:
+      pushbyte            5
+L387:
+      getlocal            9
+L388:
+      ifstrictne          L391
+
+L389:
+      pushbyte            5
+      jump                L395
+
+L391:
+      jump                L394
+
+      pushbyte            6
+      jump                L395
+
+L394:
+      pushbyte            6
+L395:
+      kill                9
+L396:
+      lookupswitch        L306, [L124, L151, L174, L213, L241, L269, L306]
+
+L397:
+      findpropstrict      QName(PackageNamespace("_-4x"), "_-0KP")
+      getlocal            6
+      getlocal            7
+      getlocal            8
+      constructprop       QName(PackageNamespace("_-4x"), "_-0KP"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_-4x:_-0Iy/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitor
+      add
+      convert_b
+      convert_b
+      greaterthan
+      pushnull
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "HSV("
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "h_")
+      getlocal2
+      dup
+      iftrue              L23
+
+      pop
+      getlocal2
+      convert_b
+L23:
+      iffalse             L63
+
+      jump                L31
+
+      greaterequals
+      greaterequals
+      nextname
+      rshift
+      getglobalscope
+      negate_i
+L31:
+      add
+      getlocal1
+      iftrue              L50
+
+      pushstring          ", "
+      getlocal1
+      iftrue              L67
+
+      add
+      jump                L45
+
+      bitnot
+      convert_u
+      pushnull
+      greaterequals
+      equals
+      typeof
+L45:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-ew")
+      getlocal1
+      iftrue              L63
+
+      add
+L50:
+      pushstring          ", "
+      getlocal1
+      dup
+      iffalse             L57
+
+      pop
+      getlocal0
+      convert_b
+L57:
+      iftrue              L67
+
+      add
+      getlocal2
+      iffalse             L66
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-fz")
+L63:
+      add
+      getlocal1
+      iftrue              L68
+
+L66:
+      pushstring          ")"
+L67:
+      add
+L68:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-4x:_-0Iy/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "random") flag FINAL dispid 3
+  method
+   refid "_-4x:_-0Iy/random"
+   returns QName(PackageNamespace("_-4x"), "_-0Iy")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("_-4x"), "_-0KP")
+     jump                L10
+
+     bitxor
+     pop
+     convert_s
+     istypelate
+     not
+     multiply
+L10:
+     getlex              QName(PackageNamespace("com.company.util"), "MoreColorUtil")
+     callproperty        QName(PackageNamespace(""), "_-0LE"), 0
+     callproperty        QName(PackageNamespace(""), "_-am"), 1
+     coerce              QName(PackageNamespace("_-4x"), "_-0KP")
+     setlocal1
+
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "_-025"), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

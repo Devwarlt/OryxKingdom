@@ -1,0 +1,88 @@
+class
+ refid "_-03T:ObjectProcessor/ObjectHandler"
+ instance QName(PrivateNamespace("*", "_-03T:ObjectProcessor#0"), "ObjectHandler")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ObjectProcessor.as$54:ObjectHandler")
+  iinit
+   refid "_-03T:ObjectProcessor/ObjectHandler/iinit"
+   param QName(PackageNamespace("_-qj"), "_-pn")
+   param QName(PackageNamespace(""), "Function")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_matcher")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_handler")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_matcher") type QName(PackageNamespace("_-qj"), "_-pn") end
+  trait slot QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_handler") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PackageNamespace(""), "handle")
+   method
+    refid "_-03T:ObjectProcessor/ObjectHandler/handle"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_matcher")
+      getlocal1
+      callproperty        QName(Namespace("_-08J"), "matches"), 1
+      coerce_a
+      dup
+      iffalse             L14
+
+      pop
+      getlocal0
+      getlocal1
+      callproperty        QName(PrivateNamespace("*", "_-03T:ObjectProcessor/ObjectHandler"), "_handler"), 1
+      coerce_a
+L14:
+      pop
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-03T:ObjectProcessor/ObjectHandler/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

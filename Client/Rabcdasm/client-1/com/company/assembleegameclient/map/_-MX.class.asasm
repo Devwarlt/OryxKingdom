@@ -1,0 +1,319 @@
+class
+ refid "com.company.assembleegameclient.map:_-MX"
+ instance QName(PackageNamespace("com.company.assembleegameclient.map"), "_-MX")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-ps")
+  iinit
+   refid "com.company.assembleegameclient.map:_-MX/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     convert_o
+     convert_b
+     dup
+     pushwith
+     add_i
+     getlocal1
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "type_") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "dx_") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "dy_") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait method QName(PackageNamespace(""), "_-7N")
+   method
+    refid "com.company.assembleegameclient.map:_-MX/_-7N"
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      multiply_i
+      pushnull
+      declocal_i          3
+      inclocal_i          3
+      convert_d
+      coerce_a
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      jump                L36
+
+L15:
+      label
+      getlocal0
+      getlex              QName(PackageNamespace(""), "_-02o")
+      initproperty        QName(PackageNamespace(""), "type_")
+
+      getlocal            4
+      iffalse             L102
+
+      jump                L102
+
+L22:
+      label
+      getlocal0
+      getlex              QName(PackageNamespace(""), "_-dq")
+      initproperty        QName(PackageNamespace(""), "type_")
+
+      getlocal3
+      dup
+      iffalse             L32
+
+      pop
+      getlocal0
+      convert_b
+L32:
+      iftrue              L102
+
+      jump                L102
+
+L34:
+      label
+      jump                L102
+
+L36:
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      setlocal2
+
+      getlocal3
+      dup
+      iffalse             L46
+
+      pop
+      getlocal2
+      convert_b
+L46:
+      iftrue              L78
+
+      pushstring          "Wave"
+      jump                L55
+
+      inclocal_i          3
+      urshift
+      pushtrue
+      getlocal3
+      inclocal            3
+      convert_s
+L55:
+      getlocal3
+      dup
+      iffalse             L61
+
+      pop
+      getlocal2
+      convert_b
+L61:
+      iftrue              L76
+
+      getlocal2
+      ifstrictne          L75
+
+      getlocal3
+      iftrue              L78
+
+      pushbyte            0
+      getlocal            4
+      dup
+      iftrue              L73
+
+      pop
+      getlocal0
+      convert_b
+L73:
+      iffalse             L98
+
+      jump                L98
+
+L75:
+      pushstring          "Flow"
+L76:
+      getlocal2
+      ifstrictne          L94
+
+L78:
+      pushbyte            1
+      getlocal3
+      dup
+      iffalse             L85
+
+      pop
+      getlocal0
+      convert_b
+L85:
+      iftrue              L98
+
+      jump                L98
+
+      jump                L94
+
+      negate_i
+      inclocal            2
+      declocal            3
+      declocal_i          2
+      declocal_i          3
+      pushtrue
+L94:
+      jump                L97
+
+      pushbyte            2
+      jump                L98
+
+L97:
+      pushbyte            2
+L98:
+      kill                2
+      lookupswitch        L34, [L15, L22, L34]
+
+      getlocal            4
+      iffalse             L117
+
+L102:
+      getlocal0
+      getlocal1
+      getproperty         MultinameA("dx", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-MX/_-7N#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-MX/_-7N#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-ps"), StaticProtectedNs("_-ps")])
+      initproperty        QName(PackageNamespace(""), "dx_")
+
+      getlocal            4
+      dup
+      iftrue              L112
+
+      pop
+      getlocal0
+      convert_b
+L112:
+      iffalse             L117
+
+      getlocal0
+      getlocal1
+      getproperty         MultinameA("dy", [PrivateNamespace("*", "com.company.assembleegameclient.map:_-MX/_-7N#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.map:_-MX/_-7N#1"), PackageNamespace("com.company.assembleegameclient.map"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-ps"), StaticProtectedNs("_-ps")])
+      initproperty        QName(PackageNamespace(""), "dy_")
+
+L117:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.map:_-MX/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    bitxor
+    equals
+    add_i
+    pushwith
+    checkfilter
+    typeof
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L21
+
+    convert_i
+    convert_d
+    typeof
+    getlocal2
+    modulo
+    coerce_s
+L21:
+    getlocal2
+    iffalse             L28
+
+    findproperty        QName(PackageNamespace(""), "_-0I7")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "_-0I7")
+
+    getlocal1
+    iftrue              L41
+
+L28:
+    findproperty        QName(PackageNamespace(""), "_-02o")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "_-02o")
+
+    getlocal1
+    dup
+    iffalse             L37
+
+    pop
+    getlocal1
+    convert_b
+L37:
+    iftrue              L41
+
+    findproperty        QName(PackageNamespace(""), "_-dq")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "_-dq")
+
+L41:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-0I7") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "_-02o") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "_-dq") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+end ; class

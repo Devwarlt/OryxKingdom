@@ -1,0 +1,232 @@
+class
+ refid "com.company.assembleegameclient.engine3d:_-fS"
+ instance QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "_-fS")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Yx")
+  iinit
+   refid "com.company.assembleegameclient.engine3d:_-fS/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     instanceof
+     increment_i
+     decrement
+     lessequals
+     add
+     convert_u
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.engine3d:_-fS/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    strictequals
+    decrement_i
+    negate
+    greaterthan
+    bitand
+    rshift
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal2
+    convert_b
+L19:
+    iftrue              L24
+
+    findproperty        QName(PackageNamespace(""), "LIGHT_VECTOR")
+    findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS"), "_-M0")
+    callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS"), "_-M0"), 0
+    initproperty        QName(PackageNamespace(""), "LIGHT_VECTOR")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "LIGHT_VECTOR") slotid 1 type QName(PackageNamespace("flash.geom"), "Vector3D") end
+ trait method QName(PackageNamespace(""), "_-sq") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.engine3d:_-fS/_-sq"
+   param QName(PackageNamespace("flash.geom"), "Vector3D")
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 6
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_i
+     convert_b
+     pushundefined
+     inclocal            4
+     subtract
+     lessthan
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "Math")
+     pushbyte            0
+     getlocal1
+     jump                L24
+
+     divide
+     strictequals
+     kill                3
+     inclocal_i          3
+     kill                3
+     pushwith
+L24:
+     getglobalscope
+     getslot             1
+     getproperty         QName(PackageNamespace(""), "LIGHT_VECTOR")
+     callproperty        QName(PackageNamespace(""), "dotProduct"), 1
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     convert_d
+     setlocal3
+
+     getlocal2
+     getlocal            4
+     dup
+     iffalse             L38
+
+     pop
+     getlocal2
+     convert_b
+L38:
+     iftrue              L47
+
+     pushbyte            1
+     getlocal2
+     subtract
+     getlocal            5
+     iffalse             L46
+
+     getlocal3
+     multiply
+L46:
+     add
+L47:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:_-fS"), "_-M0") flag FINAL dispid 4
+  method
+   refid "com.company.assembleegameclient.engine3d:_-fS/_-M0"
+   returns QName(PackageNamespace("flash.geom"), "Vector3D")
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushnull
+     setlocal2
+
+     setlocal2
+
+     hasnext
+     setlocal2
+
+     inclocal_i          2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.geom"), "Vector3D")
+     pushbyte            1
+     pushbyte            3
+     pushbyte            2
+     constructprop       QName(PackageNamespace("flash.geom"), "Vector3D"), 3
+     coerce              QName(PackageNamespace("flash.geom"), "Vector3D")
+     setlocal1
+
+     getlocal2
+     dup
+     iffalse             L27
+
+     pop
+     getlocal3
+     convert_b
+L27:
+     iftrue              L30
+
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "normalize"), 0
+
+L30:
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

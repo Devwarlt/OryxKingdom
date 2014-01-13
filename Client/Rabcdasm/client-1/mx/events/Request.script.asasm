@@ -1,0 +1,33 @@
+script ; 1139
+ sinit
+  refid "mx.events:Request.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Request", [PackageNamespace("mx.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "mx.events:Request"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.events"), "Request")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.events"), "Request")
+  #include "Request.class.asasm"
+ end ; trait
+end ; script

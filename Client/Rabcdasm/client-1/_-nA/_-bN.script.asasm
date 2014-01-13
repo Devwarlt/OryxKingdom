@@ -1,0 +1,33 @@
+script ; 51
+ sinit
+  refid "_-nA:_-bN.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-bN", [PackageNamespace("_-nA")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    newclass            "_-nA:_-bN"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-nA"), "_-bN")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-nA"), "_-bN")
+  #include "_-bN.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,106 @@
+class
+ refid "com.company.assembleegameclient.objects:GuildBoard"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "GuildBoard")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-G4", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-62")
+  iinit
+   refid "com.company.assembleegameclient.objects:GuildBoard/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     astypelate
+     kill                2
+     pushwith
+     inclocal            2
+     inclocal            2
+     kill                2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L21
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iffalse             L24
+
+L21:
+     findproperty        QName(PackageNamespace(""), "_-064")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "_-064")
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "_-Cs")
+   method
+    refid "com.company.assembleegameclient.objects:GuildBoard/_-Cs"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-Rv"), "Panel")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Rv"), "_-Sp")
+      jump                L10
+
+      not
+      bitnot
+      pushscope
+
+      checkfilter
+      increment_i
+      setlocal2
+
+L10:
+      getlocal1
+      constructprop       QName(PackageNamespace("_-Rv"), "_-Sp"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:GuildBoard/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

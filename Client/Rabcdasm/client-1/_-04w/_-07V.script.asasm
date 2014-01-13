@@ -1,0 +1,29 @@
+script ; 283
+ sinit
+  refid "_-04w:_-07V.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-07V", [PackageNamespace("_-04w")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-04w:_-07V"
+    popscope
+    initproperty        QName(PackageNamespace("_-04w"), "_-07V")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-04w"), "_-07V")
+  #include "_-07V.class.asasm"
+ end ; trait
+end ; script

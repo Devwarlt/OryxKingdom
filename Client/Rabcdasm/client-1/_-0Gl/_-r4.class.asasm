@@ -1,0 +1,155 @@
+class
+ refid "_-0Gl:_-r4"
+ instance QName(PackageNamespace("_-0Gl"), "_-r4")
+  extends QName(PackageNamespace("_-0LC"), "_-qO")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0IZ")
+  iinit
+   refid "_-0Gl:_-r4/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 8
+    localcount 5
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     pushtrue
+     convert_u
+     inclocal            2
+     setlocal3
+
+     inclocal_i          3
+     declocal_i          3
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iftrue              L79
+
+     getlocal0
+     pushstring          "Are you sure you want to delete \""
+     getlocal            4
+     dup
+     iffalse             L28
+
+     pop
+     getlocal3
+     convert_b
+L28:
+     iftrue              L72
+
+     getlocal1
+     add
+     jump                L38
+
+     nextname
+     astypelate
+     bitnot
+     greaterthan
+     declocal            2
+     getlocal3
+L38:
+     getlocal            4
+     dup
+     iffalse             L44
+
+     pop
+     getlocal2
+     convert_b
+L44:
+     iftrue              L68
+
+     pushstring          "\"?  "
+     getlocal3
+     dup
+     iftrue              L59
+
+     pop
+     getlocal2
+     convert_b
+     jump                L59
+
+     inclocal            2
+     divide
+     getlocal3
+     inclocal_i          3
+     declocal            2
+     setlocal2
+
+L59:
+     iffalse             L73
+
+     add
+     getlocal3
+     dup
+     iftrue              L67
+
+     pop
+     getlocal2
+     convert_b
+L67:
+     iffalse             L72
+
+L68:
+     pushstring          "This can not be undone."
+     getlocal            4
+     iftrue              L73
+
+     add
+L72:
+     pushstring          "Delete Picture"
+L73:
+     pushstring          "Cancel"
+     pushstring          "Delete"
+     pushstring          "/deletePicture"
+     constructsuper      5
+
+     getlocal            4
+     iftrue              L82
+
+L79:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "id_")
+
+L82:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id_") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "_-0Gl:_-r4/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

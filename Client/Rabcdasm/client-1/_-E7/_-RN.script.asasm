@@ -1,0 +1,29 @@
+script ; 1058
+ sinit
+  refid "_-E7:_-RN.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-E7:_-RN"
+    popscope
+    initproperty        QName(PackageNamespace("_-E7"), "_-RN")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-E7"), "_-RN") slotid 1
+  #include "_-RN.class.asasm"
+ end ; trait
+end ; script

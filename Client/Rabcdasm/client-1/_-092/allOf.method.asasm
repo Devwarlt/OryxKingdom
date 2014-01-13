@@ -1,0 +1,47 @@
+method
+ refid "_-092:allOf"
+ returns QName(PackageNamespace("_-qj"), "_-pn")
+ flag NEED_REST
+ body
+  maxstack 2
+  localcount 3
+  initscopedepth 1
+  maxscopedepth 2
+  code
+   getlocal0
+   pushscope
+
+   getlocal1
+   coerce              QName(PackageNamespace(""), "Array")
+   setlocal2
+
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "length")
+   pushbyte            1
+   equals
+   dup
+   iffalse             L17
+
+   pop
+   getlocal1
+   pushbyte            0
+   getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-092:allOf"), PackageNamespace("_-092"), PackageInternalNs("_-092"), Namespace("http://adobe.com/AS3/2006/builtin")])
+   getlex              QName(PackageNamespace(""), "Array")
+   istypelate
+L17:
+   iffalse             L23
+
+   getlocal1
+   pushbyte            0
+   getproperty         MultinameL([PackageNamespace(""), PrivateNamespace("*", "_-092:allOf"), PackageNamespace("_-092"), PackageInternalNs("_-092"), Namespace("http://adobe.com/AS3/2006/builtin")])
+   coerce              QName(PackageNamespace(""), "Array")
+   setlocal2
+
+L23:
+   findpropstrict      QName(PackageNamespace("_-092"), "_-0HI")
+   getlocal2
+   constructprop       QName(PackageNamespace("_-092"), "_-0HI"), 1
+   returnvalue
+  end ; code
+ end ; body
+end ; method

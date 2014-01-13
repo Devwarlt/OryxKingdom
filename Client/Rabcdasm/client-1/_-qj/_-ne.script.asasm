@@ -1,0 +1,33 @@
+script ; 908
+ sinit
+  refid "_-qj:_-ne.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-ne", [PackageNamespace("_-qj")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-qj"), "BaseDescription")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-qj"), "BaseDescription")
+    newclass            "_-qj:_-ne"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-qj"), "_-ne")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-qj"), "_-ne")
+  #include "_-ne.class.asasm"
+ end ; trait
+end ; script

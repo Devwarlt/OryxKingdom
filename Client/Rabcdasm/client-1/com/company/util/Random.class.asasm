@@ -1,0 +1,751 @@
+class
+ refid "com.company.util:Random"
+ instance QName(PackageNamespace("com.company.util"), "Random")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-ou")
+  iinit
+   refid "com.company.util:Random/iinit"
+   param QName(PackageNamespace(""), "uint")
+   flag HAS_OPTIONAL
+   optional Integer(1)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     kill                2
+     subtract
+     setlocal2
+
+     equals
+     negate
+     urshift
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L19
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iffalse             L22
+
+L19:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "seed")
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "seed") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "_-ds")
+   method
+    refid "com.company.util:Random/_-ds"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-Jt")
+   method
+    refid "com.company.util:Random/_-Jt"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      newactivation
+      instanceof
+      instanceof
+      getlocal1
+      instanceof
+      nextvalue
+L10:
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      pushint             2147483647
+      divide
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-9D")
+   method
+    refid "com.company.util:Random/_-9D"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    optional Double(0)
+    optional Double(1)
+    body
+     maxstack 6
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            6
+
+      jump                L10
+
+      equals
+      inclocal_i          5
+      setlocal            5
+
+      getlocal            6
+      pushwith
+      getlocal3
+L10:
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      pushint             2147483647
+      divide
+      getlocal            7
+      dup
+      iffalse             L23
+
+      pop
+      getlocal0
+      convert_b
+L23:
+      iftrue              L25
+
+      convert_d
+L25:
+      setlocal3
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+      jump                L35
+
+      setlocal            4
+
+      negate
+      declocal_i          4
+      getlocal            5
+      multiply_i
+      convert_u
+L35:
+      pushint             2147483647
+      divide
+      getlocal            6
+      iffalse             L40
+
+      convert_d
+L40:
+      setlocal            4
+
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            254
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "log"), 1
+      multiply
+      jump                L54
+
+      instanceof
+      convert_u
+      getlocal2
+      declocal_i          5
+      declocal            4
+      dxnslate
+L54:
+      callproperty        QName(PackageNamespace(""), "sqrt"), 1
+      getlex              QName(PackageNamespace(""), "Math")
+      pushbyte            2
+      getlocal            4
+      multiply
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      multiply
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      multiply
+      getlocal            7
+      iftrue              L67
+
+      convert_d
+L67:
+      setlocal            5
+
+      getlocal1
+      getlocal            7
+      iftrue              L77
+
+      getlocal            5
+      getlocal            6
+      iffalse             L76
+
+      getlocal2
+      multiply
+L76:
+      add
+L77:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-0MK")
+   method
+    refid "com.company.util:Random/_-0MK"
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      dup
+      setlocal2
+
+      nextvalue
+      inclocal_i          3
+      greaterthan
+      kill                3
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iftrue              L46
+
+      getlocal1
+      getlocal3
+      dup
+      iftrue              L22
+
+      pop
+      getlocal3
+      convert_b
+L22:
+      iffalse             L61
+
+      getlocal2
+      jump                L31
+
+      divide
+      inclocal_i          2
+      declocal_i          3
+      declocal            2
+      getlocal1
+      inclocal_i          2
+L31:
+      getlocal            4
+      dup
+      iffalse             L37
+
+      pop
+      getlocal3
+      convert_b
+L37:
+      iftrue              L63
+
+      ifne                L58
+
+      jump                L46
+
+      declocal            3
+      declocal            2
+      declocal_i          2
+      inclocal_i          3
+      setlocal3
+
+      getlocal3
+L46:
+      getlocal1
+      getlocal3
+      dup
+      iftrue              L53
+
+      pop
+      getlocal0
+      convert_b
+L53:
+      iffalse             L61
+
+      convert_u
+      getlocal3
+      iffalse             L61
+
+      jump                L69
+
+L58:
+      getlocal1
+      getlocal            4
+      iftrue              L69
+
+L61:
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML"), 0
+L63:
+      getlocal2
+      getlocal1
+      subtract
+      modulo
+      add
+      convert_u
+L69:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-0E0")
+   method
+    refid "com.company.util:Random/_-0E0"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      rshift
+      kill                3
+      declocal            2
+      kill                2
+      kill                3
+      subtract_i
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      getlocal3
+      dup
+      iftrue              L27
+
+      pop
+      getlocal2
+      jump                L26
+
+      inclocal            3
+      convert_d
+      pushnan
+      declocal_i          2
+      inclocal            2
+      inclocal            2
+L26:
+      convert_b
+L27:
+      iffalse             L51
+
+      getlocal2
+      getlocal            4
+      iftrue              L50
+
+      getlocal1
+      getlocal            4
+      dup
+      iffalse             L38
+
+      pop
+      getlocal1
+      convert_b
+L38:
+      iftrue              L49
+
+      subtract
+      getlocal3
+      dup
+      iftrue              L46
+
+      pop
+      getlocal3
+      convert_b
+L46:
+      iffalse             L50
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_-Jt"), 0
+L49:
+      multiply
+L50:
+      add
+L51:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "com.company.util:Random"), "_-ML")
+   method
+    refid "com.company.util:Random/_-ML"
+    returns QName(PackageNamespace(""), "uint")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      coerce_s
+      kill                2
+      declocal            4
+      greaterthan
+      kill                2
+      decrement_i
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      convert_u
+      setlocal1
+
+      pushbyte            0
+      convert_u
+      setlocal2
+
+      pushshort           16807
+      getlocal            5
+      iftrue              L43
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "seed")
+      getlocal            5
+      iftrue              L45
+
+      pushint             65535
+      getlocal            4
+      iffalse             L46
+
+      bitand
+      getlocal            4
+      iffalse             L47
+
+      multiply
+      getlocal            4
+      dup
+      iftrue              L39
+
+      pop
+      getlocal2
+      convert_b
+L39:
+      iffalse             L121
+
+      convert_u
+      setlocal2
+
+      pushshort           16807
+L43:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "seed")
+L45:
+      pushbyte            16
+L46:
+      rshift
+L47:
+      multiply
+      getlocal            5
+      dup
+      iffalse             L54
+
+      pop
+      getlocal3
+      convert_b
+L54:
+      iftrue              L103
+
+      convert_u
+      getlocal            4
+      dup
+      iftrue              L62
+
+      pop
+      getlocal1
+      convert_b
+L62:
+      iffalse             L159
+
+      setlocal1
+
+      getlocal2
+      getlocal1
+      getlocal            4
+      iffalse             L109
+
+      pushshort           32767
+      getlocal            4
+      dup
+      iftrue              L82
+
+      pop
+      getlocal1
+      convert_b
+      jump                L82
+
+      urshift
+      setlocal            4
+
+      inclocal            2
+      coerce_a
+      inclocal            3
+      setlocal2
+
+L82:
+      iffalse             L110
+
+      bitand
+      getlocal            4
+      iffalse             L118
+
+      pushbyte            16
+      lshift
+      getlocal            4
+      dup
+      iftrue              L94
+
+      pop
+      getlocal2
+      convert_b
+L94:
+      iffalse             L155
+
+      add
+      getlocal            5
+      dup
+      iffalse             L102
+
+      pop
+      getlocal3
+      convert_b
+L102:
+      iftrue              L121
+
+L103:
+      convert_u
+      getlocal            5
+      iftrue              L159
+
+      setlocal2
+
+      getlocal2
+      getlocal1
+L109:
+      pushbyte            15
+L110:
+      rshift
+      getlocal            5
+      dup
+      iffalse             L117
+
+      pop
+      getlocal0
+      convert_b
+L117:
+      iftrue              L155
+
+L118:
+      add
+      getlocal            5
+      iftrue              L161
+
+L121:
+      convert_u
+      getlocal            5
+      dup
+      iffalse             L128
+
+      pop
+      getlocal1
+      convert_b
+L128:
+      iftrue              L170
+
+      setlocal2
+
+      getlocal            5
+      iftrue              L163
+
+      getlocal2
+      getlocal            4
+      dup
+      iftrue              L139
+
+      pop
+      getlocal3
+      convert_b
+L139:
+      iffalse             L162
+
+      jump                L147
+
+      increment_i
+      setlocal3
+
+      inclocal            4
+      equals
+      modulo
+      coerce_s
+L147:
+      pushint             2147483647
+      getlocal            5
+      dup
+      iffalse             L154
+
+      pop
+      getlocal1
+      convert_b
+L154:
+      iftrue              L160
+
+L155:
+      ifngt               L163
+
+      getlocal            4
+      iffalse             L163
+
+      getlocal2
+L159:
+      pushint             2147483647
+L160:
+      subtract
+L161:
+      convert_u
+L162:
+      setlocal2
+
+L163:
+      getlocal0
+      getlocal2
+      dup
+      setlocal3
+
+      initproperty        QName(PackageNamespace(""), "seed")
+
+      getlocal3
+      kill                3
+L170:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.util:Random/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "_-6Z") flag FINAL dispid 3
+  method
+   refid "com.company.util:Random/_-6Z"
+   returns QName(PackageNamespace(""), "uint")
+   body
+    maxstack 6
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "Math")
+     jump                L10
+
+     istypelate
+     pushscope
+
+     getlocal3
+     lshift
+     add_i
+     convert_o
+L10:
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     getlex              QName(PackageNamespace(""), "uint")
+     getproperty         QName(PackageNamespace(""), "MAX_VALUE")
+     decrement
+     multiply
+     pushbyte            1
+     add
+     callproperty        QName(PackageNamespace(""), "round"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

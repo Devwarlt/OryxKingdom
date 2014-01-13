@@ -1,0 +1,203 @@
+class
+ refid "mx.core:MovieClipAsset"
+ instance QName(PackageNamespace("mx.core"), "MovieClipAsset")
+  extends QName(PackageNamespace("mx.core"), "FlexMovieClip")
+  implements Multiname("IFlexAsset", [PackageNamespace("mx.core")])
+  implements Multiname("IFlexDisplayObject", [PackageNamespace("mx.core")])
+  implements Multiname("IBorder", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:MovieClipAsset")
+  iinit
+   refid "mx.core:MovieClipAsset/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 11
+    maxscopedepth 12
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "width")
+     initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredWidth")
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "height")
+     initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredHeight")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredHeight") type QName(PackageNamespace(""), "Number") end
+  trait getter QName(PackageNamespace(""), "measuredHeight")
+   method
+    refid "mx.core:MovieClipAsset/measuredHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredHeight")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredWidth") type QName(PackageNamespace(""), "Number") end
+  trait getter QName(PackageNamespace(""), "measuredWidth")
+   method
+    refid "mx.core:MovieClipAsset/measuredWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipAsset"), "_measuredWidth")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "borderMetrics")
+   method
+    refid "mx.core:MovieClipAsset/borderMetrics/getter"
+    returns QName(PackageNamespace("mx.core"), "EdgeMetrics")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "scale9Grid")
+      pushnull
+      ifne                L8
+
+      getlex              QName(PackageNamespace("mx.core"), "EdgeMetrics")
+      getproperty         QName(PackageNamespace(""), "EMPTY")
+      returnvalue
+
+L8:
+      findpropstrict      QName(PackageNamespace("mx.core"), "EdgeMetrics")
+      getlex              QName(PackageNamespace(""), "scale9Grid")
+      getproperty         QName(PackageNamespace(""), "left")
+      getlex              QName(PackageNamespace(""), "scale9Grid")
+      getproperty         QName(PackageNamespace(""), "top")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "measuredWidth")
+      getlex              QName(PackageNamespace(""), "scale9Grid")
+      getproperty         QName(PackageNamespace(""), "right")
+      subtract
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "measuredHeight")
+      getlex              QName(PackageNamespace(""), "scale9Grid")
+      getproperty         QName(PackageNamespace(""), "bottom")
+      subtract
+      callproperty        QName(PackageNamespace(""), "ceil"), 1
+      constructprop       QName(PackageNamespace("mx.core"), "EdgeMetrics"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "move")
+   method
+    refid "mx.core:MovieClipAsset/move"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal0
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "y")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "setActualSize")
+   method
+    refid "mx.core:MovieClipAsset/setActualSize"
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 11
+     maxscopedepth 12
+     code
+      getlocal0
+      pushscope
+
+      findproperty        QName(PackageNamespace(""), "width")
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "width")
+
+      findproperty        QName(PackageNamespace(""), "height")
+      getlocal2
+      initproperty        QName(PackageNamespace(""), "height")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.core:MovieClipAsset/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 10
+   maxscopedepth 11
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.6.0.23201"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
+end ; class

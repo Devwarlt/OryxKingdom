@@ -1,0 +1,205 @@
+class
+ refid "_-MT:_-ON"
+ instance QName(PackageNamespace("_-MT"), "_-ON")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-Dv", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-JP")
+  iinit
+   refid "_-MT:_-ON/iinit"
+   param QName(PackageNamespace("flash.events"), "IEventDispatcher")
+   flag HAS_OPTIONAL
+   optional Null()
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     decrement
+     inclocal_i          2
+     declocal_i          2
+     dup
+     equals
+     hasnext
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iftrue              L41
+
+     getlocal0
+     jump                L28
+
+     inclocal_i          2
+     declocal            2
+     declocal_i          2
+     pushtrue
+     inclocal_i          2
+     inclocal_i          2
+L28:
+     getlex              QName(PackageNamespace("_-03T"), "_-078")
+     getlex              QName(PackageNamespace("_-MT"), "_-ON")
+     callproperty        QName(PackageNamespace(""), "create"), 1
+     initproperty        QName(PrivateNamespace("*", "_-MT:_-ON"), "_-ul")
+
+     jump                L39
+
+     equals
+     increment_i
+     pushnull
+     declocal_i          2
+     multiply_i
+     newactivation
+L39:
+     getlocal2
+     iffalse             L45
+
+L41:
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iffalse             L62
+
+L45:
+     getlocal0
+     getlocal2
+     dup
+     iftrue              L52
+
+     pop
+     getlocal1
+     convert_b
+L52:
+     iffalse             L58
+
+     getlocal1
+     coerce              QName(PackageNamespace("flash.events"), "IEventDispatcher")
+     dup
+     iftrue              L61
+
+     pop
+L58:
+     findpropstrict      QName(PackageNamespace("flash.events"), "EventDispatcher")
+     constructprop       QName(PackageNamespace("flash.events"), "EventDispatcher"), 0
+     coerce              QName(PackageNamespace("flash.events"), "IEventDispatcher")
+L61:
+     initproperty        QName(PrivateNamespace("*", "_-MT:_-ON"), "_eventDispatcher")
+
+L62:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-MT:_-ON"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-MT:_-ON"), "_eventDispatcher") type QName(PackageNamespace("flash.events"), "IEventDispatcher") end
+  trait method QName(PackageNamespace(""), "extend")
+   method
+    refid "_-MT:_-ON/extend"
+    param QName(PackageNamespace("_-0-p"), "_-Ly")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      pushwith
+      declocal_i          2
+      getlocal2
+      kill                2
+      setlocal2
+
+      inclocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal3
+      convert_b
+L20:
+      iffalse             L28
+
+      getlocal1
+      getproperty         QName(Namespace("_-06J"), "_-OR")
+      getlex              QName(PackageNamespace("flash.events"), "IEventDispatcher")
+      callproperty        QName(PackageNamespace(""), "map"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-MT:_-ON"), "_eventDispatcher")
+      callpropvoid        QName(PackageNamespace(""), "_-q3"), 1
+
+L28:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_-MT:_-ON/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-MT:_-ON"), "_-ul")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-MT:_-ON/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

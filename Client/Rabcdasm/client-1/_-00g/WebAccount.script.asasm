@@ -1,0 +1,33 @@
+script ; 218
+ sinit
+  refid "_-00g:WebAccount.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("WebAccount", [PackageNamespace("_-00g")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-qN"), "Account")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-qN"), "Account")
+    newclass            "_-00g:WebAccount"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-00g"), "WebAccount")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-00g"), "WebAccount")
+  #include "WebAccount.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,78 @@
+class
+ refid "_-0Jk:_-kG"
+ instance QName(PackageNamespace("_-0Jk"), "_-kG")
+  extends QName(PackageNamespace("_-0Jk"), "_-s")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Dy")
+  iinit
+   refid "_-0Jk:_-kG/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 7
+    localcount 7
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal3
+
+     kill                4
+     getlocal            4
+     urshift
+     coerce_s
+     add
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L27
+
+     getlocal0
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     constructsuper      4
+
+L27:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0Jk:_-kG/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

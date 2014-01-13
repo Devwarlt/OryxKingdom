@@ -1,0 +1,191 @@
+class
+ refid "com.company.assembleegameclient.objects:SlotsMachine"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "SlotsMachine")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-RC")
+  iinit
+   refid "com.company.assembleegameclient.objects:SlotsMachine/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     dup
+     nextname
+     add
+     increment_i
+     declocal            2
+     inclocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iffalse             L24
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L24:
+     getlocal0
+     pushtrue
+     setproperty         QName(PackageNamespace(""), "slotMachineObj_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "soldObjectName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:SlotsMachine/soldObjectName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "<font color=\"#E5BB00\">Slot Machine</font>"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "soldObjectInternalName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:SlotsMachine/soldObjectInternalName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "Slot Machine"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTooltip") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:SlotsMachine/getTooltip"
+    returns QName(PackageNamespace("_-E7"), "for ")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      inclocal_i          2
+      pushnan
+      popscope
+      add
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-E7"), "_-aS")
+      pushint             5652736
+      pushint             10197915
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "soldObjectInternalName"), 0
+      pushstring          "Pay gold for a chance to win more gold. The higher amount of gold you pay, the better your outcome may be!"
+      pushshort           200
+      constructprop       QName(PackageNamespace("_-E7"), "_-aS"), 5
+      coerce              QName(PackageNamespace("_-E7"), "for ")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIcon") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:SlotsMachine/getIcon"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      jump                L10
+
+      rshift
+      convert_u
+      add_i
+      newactivation
+      multiply
+      pop
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "objectType_")
+      pushbyte            50
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:SlotsMachine/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

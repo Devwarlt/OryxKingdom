@@ -1,0 +1,29 @@
+script ; 243
+ sinit
+  refid "_-02b:_-fn.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-fn", [PackageNamespace("_-02b")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-02b:_-fn"
+    popscope
+    initproperty        QName(PackageNamespace("_-02b"), "_-fn")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-02b"), "_-fn")
+  #include "_-fn.class.asasm"
+ end ; trait
+end ; script

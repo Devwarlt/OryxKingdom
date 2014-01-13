@@ -1,0 +1,29 @@
+script ; 473
+ sinit
+  refid "mx.resources:ResourceManager.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ResourceManager", [PackageNamespace("mx.resources")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:ResourceManager"
+    popscope
+    initproperty        QName(PackageNamespace("mx.resources"), "ResourceManager")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "ResourceManager")
+  #include "ResourceManager.class.asasm"
+ end ; trait
+end ; script

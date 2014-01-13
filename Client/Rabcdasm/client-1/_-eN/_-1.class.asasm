@@ -1,0 +1,97 @@
+class
+ refid "_-eN:_-1"
+ instance QName(PackageInternalNs("_-eN"), "_-1")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-uJ")
+  iinit
+   refid "_-eN:_-1/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     inclocal_i          2
+     negate_i
+     inclocal            2
+     coerce_s
+     getglobalscope
+     setlocal2
+
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iffalse             L23
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-eN:_-1/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    rshift
+    lshift
+    setlocal2
+
+    modulo
+    lessthan
+    setlocal3
+
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iftrue              L18
+
+    findproperty        QName(PackageNamespace(""), "DONE")
+    pushstring          "ACCOUNT_DONE"
+    initproperty        QName(PackageNamespace(""), "DONE")
+
+L18:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "DONE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_DONE") end
+end ; class

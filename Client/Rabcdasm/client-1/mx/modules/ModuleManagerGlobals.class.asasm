@@ -1,0 +1,47 @@
+class
+ refid "mx.modules:ModuleManagerGlobals"
+ instance QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.modules:ModuleManagerGlobals")
+  iinit
+   refid "mx.modules:ModuleManagerGlobals/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "mx.modules:ModuleManagerGlobals/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "managerSingleton")
+    pushnull
+    setproperty         QName(PackageNamespace(""), "managerSingleton")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "managerSingleton") slotid 1 type QName(PackageNamespace(""), "Object") value Null() end
+end ; class

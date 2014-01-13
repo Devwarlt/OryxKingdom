@@ -1,0 +1,196 @@
+class
+ refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"
+ instance QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1"), "ResourceEventDispatcher")
+  extends QName(PackageNamespace("flash.events"), "EventDispatcher")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("ResourceManagerImpl.as$589:ResourceEventDispatcher")
+  iinit
+   refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/iinit"
+   param QName(PackageNamespace("mx.modules"), "IModuleInfo")
+   body
+    maxstack 6
+    localcount 2
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "ERROR")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"), "moduleInfo_errorHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "PROGRESS")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"), "moduleInfo_progressHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     getlocal1
+     getlex              QName(PackageNamespace("mx.events"), "ModuleEvent")
+     getproperty         QName(PackageNamespace(""), "READY")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"), "moduleInfo_readyHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"), "moduleInfo_errorHandler")
+   method
+    refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/mx.resources:ResourceManagerImpl/ResourceEventDispatcher/moduleInfo_errorHandler"
+    param QName(PackageNamespace("mx.events"), "ModuleEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getproperty         QName(PackageNamespace(""), "ERROR")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bubbles")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "cancelable")
+      constructprop       QName(PackageNamespace("mx.events"), "ResourceEvent"), 3
+      coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesLoaded")
+      setproperty         QName(PackageNamespace(""), "bytesLoaded")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesTotal")
+      setproperty         QName(PackageNamespace(""), "bytesTotal")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "errorText")
+      setproperty         QName(PackageNamespace(""), "errorText")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"), "moduleInfo_progressHandler")
+   method
+    refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/mx.resources:ResourceManagerImpl/ResourceEventDispatcher/moduleInfo_progressHandler"
+    param QName(PackageNamespace("mx.events"), "ModuleEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getproperty         QName(PackageNamespace(""), "PROGRESS")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bubbles")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "cancelable")
+      constructprop       QName(PackageNamespace("mx.events"), "ResourceEvent"), 3
+      coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      setlocal2
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesLoaded")
+      setproperty         QName(PackageNamespace(""), "bytesLoaded")
+
+      getlocal2
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "bytesTotal")
+      setproperty         QName(PackageNamespace(""), "bytesTotal")
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"), "moduleInfo_readyHandler")
+   method
+    refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/mx.resources:ResourceManagerImpl/ResourceEventDispatcher/moduleInfo_readyHandler"
+    param QName(PackageNamespace("mx.events"), "ModuleEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getlex              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      constructprop       QName(PackageNamespace("mx.events"), "ResourceEvent"), 1
+      coerce              QName(PackageNamespace("mx.events"), "ResourceEvent")
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.resources:ResourceManagerImpl/ResourceEventDispatcher/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

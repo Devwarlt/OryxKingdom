@@ -1,0 +1,98 @@
+class
+ refid "_-0Ag:_-Rq"
+ instance QName(PackageNamespace("_-0Ag"), "_-Rq")
+  extends QName(PackageNamespace("com.company.net"), "_-098")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-XW")
+  iinit
+   refid "_-0Ag:_-Rq/iinit"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     bitand
+     getlocal2
+     urshift
+     declocal            2
+     coerce_a
+     convert_s
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "parseFromInput") flag FINAL flag OVERRIDE
+   method
+    refid "_-0Ag:_-Rq/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      jump                L10
+
+      negate
+      pushnan
+      convert_d
+      bitxor
+      newactivation
+      lessthan
+L10:
+      pushstring          "Client should not receive "
+      getlex              QName(PackageNamespace(""), "id_")
+      add
+      pushstring          " messages"
+      add
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Ag:_-Rq/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

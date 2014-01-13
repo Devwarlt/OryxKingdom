@@ -1,0 +1,258 @@
+class
+ refid "mx.resources:IResourceManager"
+ instance QName(PackageNamespace("mx.resources"), "IResourceManager")
+  implements Multiname("IEventDispatcher", [PackageNamespace("flash.events")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   refid "mx.resources:IResourceManager/iinit"
+  end ; method
+  trait getter QName(Namespace("mx.resources:IResourceManager"), "localeChain")
+   method
+    refid "mx.resources:IResourceManager:localeChain/getter"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.resources:IResourceManager"), "localeChain")
+   method
+    refid "mx.resources:IResourceManager:localeChain/setter"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "loadResourceModule")
+   method
+    refid "mx.resources:IResourceManager:loadResourceModule"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+    param QName(PackageNamespace("flash.system"), "SecurityDomain")
+    returns QName(PackageNamespace("flash.events"), "IEventDispatcher")
+    flag HAS_OPTIONAL
+    optional True()
+    optional Null()
+    optional Null()
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "unloadResourceModule")
+   method
+    refid "mx.resources:IResourceManager:unloadResourceModule"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional True()
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "addResourceBundle")
+   method
+    refid "mx.resources:IResourceManager:addResourceBundle"
+    param QName(PackageNamespace("mx.resources"), "IResourceBundle")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional False()
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "removeResourceBundle")
+   method
+    refid "mx.resources:IResourceManager:removeResourceBundle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "removeResourceBundlesForLocale")
+   method
+    refid "mx.resources:IResourceManager:removeResourceBundlesForLocale"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "update")
+   method
+    refid "mx.resources:IResourceManager:update"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getLocales")
+   method
+    refid "mx.resources:IResourceManager:getLocales"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getPreferredLocaleChain")
+   method
+    refid "mx.resources:IResourceManager:getPreferredLocaleChain"
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getBundleNamesForLocale")
+   method
+    refid "mx.resources:IResourceManager:getBundleNamesForLocale"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Array")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getResourceBundle")
+   method
+    refid "mx.resources:IResourceManager:getResourceBundle"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("mx.resources"), "IResourceBundle")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "findResourceBundleWithResource")
+   method
+    refid "mx.resources:IResourceManager:findResourceBundleWithResource"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace("mx.resources"), "IResourceBundle")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getObject") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getObject"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    flag HAS_OPTIONAL
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getString") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getString"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getStringArray") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getStringArray"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Array")
+    flag HAS_OPTIONAL
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getNumber") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getNumber"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Number")
+    flag HAS_OPTIONAL
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getInt") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getInt"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "int")
+    flag HAS_OPTIONAL
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getUint") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getUint"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "uint")
+    flag HAS_OPTIONAL
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getBoolean") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getBoolean"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Boolean")
+    flag HAS_OPTIONAL
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "getClass") flag METADATA
+   method
+    refid "mx.resources:IResourceManager:getClass"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Class")
+    flag HAS_OPTIONAL
+    optional Null()
+   end ; method
+   metadata "Bindable"
+    item "" "change"
+   end ; metadata
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "installCompiledResourceBundles")
+   method
+    refid "mx.resources:IResourceManager:installCompiledResourceBundles"
+    param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Array")
+    param QName(PackageNamespace(""), "Boolean")
+    returns QName(PackageNamespace(""), "Array")
+    flag HAS_OPTIONAL
+    optional False()
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.resources:IResourceManager"), "initializeLocaleChain")
+   method
+    refid "mx.resources:IResourceManager:initializeLocaleChain"
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.resources:IResourceManager/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 4
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

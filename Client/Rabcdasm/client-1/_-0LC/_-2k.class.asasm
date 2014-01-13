@@ -1,0 +1,200 @@
+class
+ refid "_-0LC:_-2k"
+ instance QName(PackageNamespace("_-0LC"), "_-2k")
+  extends QName(PackageNamespace("_-0LC"), "_-qO")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0JX")
+  iinit
+   refid "_-0LC:_-2k/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 8
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal2
+     inclocal_i          2
+     swap
+     greaterequals
+     kill                2
+     getlocal2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     jump                L22
+
+     urshift
+     inclocal            2
+     declocal_i          2
+     subtract_i
+     kill                2
+     inclocal_i          2
+L22:
+     iffalse             L39
+
+     getlocal0
+     getlocal1
+     pushstring          "Not Registered"
+     pushstring          "Cancel"
+     pushstring          "Register"
+     pushstring          "/needRegister"
+     constructsuper      5
+
+     getlocal2
+     iftrue              L39
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace(""), "BUTTON1_EVENT")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0LC:_-2k"), "onCancel")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal2
+     iftrue              L44
+
+L39:
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace(""), "BUTTON2_EVENT")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-0LC:_-2k"), "_-mO")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PrivateNamespace("*", "_-0LC:_-2k"), "onCancel")
+   method
+    refid "_-0LC:_-2k/onCancel"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      bitand
+      setlocal2
+
+      setlocal2
+
+      setlocal2
+
+      setlocal2
+
+      swap
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iftrue              L23
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0LC:_-2k"), "_-mO")
+   method
+    refid "_-0LC:_-2k/_-mO"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_d
+      lessequals
+      lessequals
+      declocal            2
+      decrement
+      inclocal_i          2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L25
+
+      getlex              QName(PackageNamespace("_-qN"), "Account")
+      callproperty        QName(PackageNamespace(""), "get"), 0
+      getlex              QName(PackageNamespace(""), "stage")
+      callpropvoid        QName(PackageNamespace(""), "showInGameRegister"), 1
+
+      getlocal2
+      iftrue              L25
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L25:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0LC:_-2k/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

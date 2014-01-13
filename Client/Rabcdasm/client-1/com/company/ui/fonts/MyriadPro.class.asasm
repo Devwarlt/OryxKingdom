@@ -1,0 +1,100 @@
+class
+ refid "com.company.ui.fonts:MyriadPro"
+ instance QName(PackageNamespace("com.company.ui.fonts"), "MyriadPro")
+  extends QName(PackageNamespace("mx.core"), "FontAsset")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-bV")
+  iinit
+   refid "com.company.ui.fonts:MyriadPro/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     negate
+     multiply_i
+     setlocal3
+
+     bitxor
+     greaterthan
+     getglobalscope
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.ui.fonts:MyriadPro/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    modulo
+    lessthan
+    astypelate
+    multiply_i
+    getlocal0
+    pushtrue
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal0
+    convert_b
+L19:
+    iftrue              L23
+
+    findproperty        QName(PrivateNamespace("*", "com.company.ui.fonts:MyriadPro"), "_-U9")
+    getlex              QName(PackageNamespace("com.company.ui.fonts"), "MyriadPro_MyriadProCFF")
+    initproperty        QName(PrivateNamespace("*", "com.company.ui.fonts:MyriadPro"), "_-U9")
+
+L23:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "com.company.ui.fonts:MyriadPro"), "_-U9") slotid 1 type QName(PackageNamespace(""), "Class") end
+end ; class

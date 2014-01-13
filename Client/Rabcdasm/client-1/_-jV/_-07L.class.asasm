@@ -1,0 +1,259 @@
+class
+ refid "_-jV:_-07L"
+ instance QName(PackageNamespace("_-jV"), "_-07L")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-04g")
+  iinit
+   refid "_-jV:_-07L/iinit"
+   param QName(PackageNamespace("flash.events"), "IEventDispatcher")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Class")
+   param QName(PackageNamespace(""), "Function")
+   param QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lessequals
+     pushundefined
+     setlocal2
+
+     inclocal_i          3
+     inclocal_i          5
+     multiply
+L10:
+     setlocal            7
+
+     setlocal            8
+
+     getlocal0
+     pushscope
+
+     getlocal            8
+     dup
+     iftrue              L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iffalse             L53
+
+     getlocal0
+     jump                L29
+
+     inclocal_i          6
+     subtract_i
+     inclocal_i          2
+     getlocal            6
+     add
+     getlocal3
+L29:
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0L4")
+
+     getlocal0
+     jump                L41
+
+     swap
+     bitxor
+     checkfilter
+     add
+     getlocal3
+     declocal_i          5
+L41:
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0EY")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0Me")
+
+     getlocal            7
+     dup
+     iffalse             L52
+
+     pop
+     getlocal3
+     convert_b
+L52:
+     iftrue              L56
+
+L53:
+     getlocal0
+     getlocal            4
+     initproperty        QName(PrivateNamespace("*", "_-jV:_-07L"), "_-1j")
+
+L56:
+     getlocal0
+     getlocal            5
+     initproperty        QName(PrivateNamespace("*", "_-jV:_-07L"), "_callback")
+
+     getlocal            7
+     iftrue              L64
+
+     getlocal0
+     getlocal            6
+     initproperty        QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0CY")
+
+L64:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0L4") type QName(PackageNamespace("flash.events"), "IEventDispatcher") end
+  trait getter QName(PackageNamespace(""), "dispatcher")
+   method
+    refid "_-jV:_-07L/dispatcher/getter"
+    returns QName(PackageNamespace("flash.events"), "IEventDispatcher")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0L4")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0EY") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "eventString")
+   method
+    refid "_-jV:_-07L/eventString/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0EY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0Me") type QName(PackageNamespace(""), "Function") end
+  trait getter QName(PackageNamespace(""), "listener")
+   method
+    refid "_-jV:_-07L/listener/getter"
+    returns QName(PackageNamespace(""), "Function")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0Me")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-jV:_-07L"), "_-1j") type QName(PackageNamespace(""), "Class") end
+  trait getter QName(PackageNamespace(""), "eventClass")
+   method
+    refid "_-jV:_-07L/eventClass/getter"
+    returns QName(PackageNamespace(""), "Class")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-jV:_-07L"), "_-1j")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-jV:_-07L"), "_callback") type QName(PackageNamespace(""), "Function") end
+  trait getter QName(PackageNamespace(""), "callback")
+   method
+    refid "_-jV:_-07L/callback/getter"
+    returns QName(PackageNamespace(""), "Function")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-jV:_-07L"), "_callback")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0CY") type QName(PackageNamespace(""), "Boolean") end
+  trait getter QName(PackageNamespace(""), "useCapture")
+   method
+    refid "_-jV:_-07L/useCapture/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-jV:_-07L"), "_-0CY")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-jV:_-07L/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

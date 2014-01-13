@@ -1,0 +1,812 @@
+class
+ refid "_-05H:_-Fo"
+ instance QName(PackageNamespace("_-05H"), "_-Fo")
+  extends QName(PackageNamespace("_-05H"), "_-Uy")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-B4")
+  iinit
+   refid "_-05H:_-Fo/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     istypelate
+     dup
+     pushnan
+     modulo
+     getglobalscope
+     bitnot
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L28
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     dup
+     iftrue              L23
+
+     pop
+     getlocal0
+     convert_b
+L23:
+     iffalse             L28
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-05H"), "_-09A")
+     constructprop       QName(PackageNamespace("_-05H"), "_-09A"), 0
+     initproperty        QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-7-")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-7-") type QName(PackageNamespace("_-05H"), "_-09A") end
+  trait slot QName(PrivateNamespace("*", "_-05H:_-Fo"), "condition") type QName(PackageNamespace(""), "XMLList") end
+  trait slot QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-0r") type QName(PackageNamespace(""), "XMLList") end
+  trait method QName(ProtectedNamespace("_-B4"), "compareSlots") flag OVERRIDE
+   method
+    refid "_-05H:_-Fo/_-B4:compareSlots"
+    param QName(PackageNamespace(""), "XML")
+    param QName(PackageNamespace(""), "XML")
+    returns QName(PackageNamespace(""), "void")
+    flag NEED_ACTIVATION
+    body
+     maxstack 7
+     localcount 11
+     initscopedepth 6
+     maxscopedepth 9
+     code
+      pushfalse
+      pushtrue
+      setlocal            9
+
+      jump                L10
+
+      hasnext
+      lessequals
+      lessequals
+      add
+      add_i
+      pushtrue
+L10:
+      setlocal            10
+
+      getlocal0
+      pushscope
+
+      newactivation
+      dup
+      setlocal3
+
+      pushscope
+
+      getscopeobject      1
+      pushnull
+      getlocal            10
+      iftrue              L51
+
+      coerce_s
+      getlocal            9
+      dup
+      iftrue              L28
+
+      pop
+      getlocal2
+      convert_b
+L28:
+      iffalse             L81
+
+      setslot             3
+
+      getlocal            9
+      iffalse             L114
+
+      getscopeobject      1
+      pushnan
+      setslot             4
+
+      getlocal            9
+      dup
+      iftrue              L41
+
+      pop
+      getlocal0
+      convert_b
+L41:
+      iffalse             L114
+
+      getscopeobject      1
+      pushnull
+      getlocal            9
+      dup
+      iftrue              L50
+
+      pop
+      getlocal1
+      convert_b
+L50:
+      iffalse             L78
+
+L51:
+      coerce_s
+      getlocal            9
+      iffalse             L81
+
+      setslot             5
+
+      getlocal            10
+      dup
+      iffalse             L61
+
+      pop
+      getlocal0
+      convert_b
+L61:
+      iftrue              L117
+
+      getscopeobject      1
+      getlocal            9
+      dup
+      iftrue              L69
+
+      pop
+      getlocal1
+      convert_b
+L69:
+      iffalse             L92
+
+      pushnull
+      getlocal            9
+      dup
+      iftrue              L77
+
+      pop
+      getlocal3
+      convert_b
+L77:
+      iffalse             L93
+
+L78:
+      coerce_s
+      getlocal            10
+      iftrue              L94
+
+L81:
+      setslot             6
+
+      getlocal            9
+      dup
+      iftrue              L88
+
+      pop
+      getlocal0
+      convert_b
+L88:
+      iffalse             L97
+
+      getscopeobject      1
+      getlocal            9
+      iffalse             L105
+
+L92:
+      pushnull
+L93:
+      coerce_s
+L94:
+      setslot             7
+
+      getlocal            10
+      iftrue              L114
+
+L97:
+      getscopeobject      1
+      getlocal            10
+      dup
+      iffalse             L104
+
+      pop
+      getlocal0
+      convert_b
+L104:
+      iftrue              L115
+
+L105:
+      getlocal1
+      setslot             1
+
+      getlocal            9
+      dup
+      iftrue              L113
+
+      pop
+      getlocal1
+      convert_b
+L113:
+      iffalse             L117
+
+L114:
+      getscopeobject      1
+L115:
+      getlocal2
+      setslot             2
+
+L117:
+      getlocal0
+      pushbyte            0
+      setlocal            5
+
+      getscopeobject      1
+      getslot             1
+      getproperty         Multiname("Projectile", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      getproperty         Multiname("ConditionEffect", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      checkfilter
+      coerce_a
+      setlocal            6
+
+      getlex              QName(PackageNamespace(""), "XMLList")
+      pushstring          ""
+      construct           1
+      setlocal            4
+
+      jump                L220
+
+L132:
+      label
+      getlocal            6
+      getlocal            5
+      nextvalue
+      dup
+      setlocal            7
+
+      dup
+      setlocal            8
+
+      pushwith
+      getlocal            10
+      dup
+      iffalse             L147
+
+      pop
+      getlocal3
+      convert_b
+L147:
+      iftrue              L217
+
+      findpropstrict      Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushstring          "Slowed"
+      equals
+      getlocal            9
+      dup
+      iftrue              L158
+
+      pop
+      getlocal1
+      convert_b
+L158:
+      iffalse             L170
+
+      dup
+      getlocal            9
+      dup
+      iftrue              L166
+
+      pop
+      getlocal2
+      convert_b
+L166:
+      iffalse             L190
+
+      iftrue              L189
+
+      getlocal            9
+      iffalse             L189
+
+L170:
+      pop
+      getlocal            10
+      dup
+      iffalse             L177
+
+      pop
+      getlocal1
+      convert_b
+L177:
+      iftrue              L217
+
+      findpropstrict      Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushstring          "Paralyzed"
+      equals
+      getlocal            9
+      dup
+      iftrue              L188
+
+      pop
+      getlocal0
+      convert_b
+L188:
+      iffalse             L198
+
+L189:
+      dup
+L190:
+      iftrue              L205
+
+      getlocal            9
+      dup
+      iftrue              L197
+
+      pop
+      getlocal0
+      convert_b
+L197:
+      iffalse             L205
+
+L198:
+      pop
+      getlocal            9
+      iffalse             L213
+
+      findpropstrict      Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushstring          "Dazed"
+      equals
+L205:
+      iffalse             L217
+
+      getlocal            9
+      dup
+      iftrue              L212
+
+      pop
+      getlocal2
+      convert_b
+L212:
+      iffalse             L217
+
+L213:
+      getlocal            4
+      getlocal            5
+      getlocal            7
+      setproperty         MultinameL([PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+
+L217:
+      popscope
+      kill                8
+      kill                7
+L220:
+      hasnext2            6, 5
+      iftrue              L132
+
+      kill                6
+      kill                5
+      getlocal            4
+      kill                4
+      initproperty        QName(PrivateNamespace("*", "_-05H:_-Fo"), "condition")
+
+      getlocal            10
+      iftrue              L375
+
+      getlocal0
+      pushbyte            0
+      setlocal            5
+
+      getscopeobject      1
+      getslot             2
+      getproperty         Multiname("Projectile", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      getproperty         Multiname("ConditionEffect", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      checkfilter
+      coerce_a
+      setlocal            6
+
+      getlex              QName(PackageNamespace(""), "XMLList")
+      pushstring          ""
+      jump                L248
+
+      increment_i
+      getlocal            9
+      bitnot
+      getlocal            9
+      setlocal            8
+
+      coerce_a
+L248:
+      construct           1
+      setlocal            4
+
+      jump                L319
+
+L251:
+      label
+      getlocal            6
+      getlocal            5
+      nextvalue
+      dup
+      setlocal            7
+
+      dup
+      setlocal            8
+
+      pushwith
+      getlocal            9
+      iffalse             L312
+
+      findpropstrict      Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushstring          "Slowed"
+      equals
+      getlocal            9
+      iffalse             L288
+
+      dup
+      getlocal            9
+      iffalse             L289
+
+      iftrue              L288
+
+      getlocal            10
+      iftrue              L304
+
+      pop
+      getlocal            9
+      iffalse             L312
+
+      findpropstrict      Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushstring          "Paralyzed"
+      equals
+      getlocal            9
+      dup
+      iftrue              L287
+
+      pop
+      getlocal1
+      convert_b
+L287:
+      iffalse             L304
+
+L288:
+      dup
+L289:
+      iftrue              L304
+
+      getlocal            10
+      dup
+      iffalse             L296
+
+      pop
+      getlocal0
+      convert_b
+L296:
+      iftrue              L304
+
+      pop
+      getlocal            9
+      iffalse             L316
+
+      findpropstrict      Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushstring          "Dazed"
+      equals
+L304:
+      iffalse             L316
+
+      getlocal            10
+      dup
+      iffalse             L311
+
+      pop
+      getlocal0
+      convert_b
+L311:
+      iftrue              L316
+
+L312:
+      getlocal            4
+      getlocal            5
+      getlocal            7
+      setproperty         MultinameL([PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+
+L316:
+      popscope
+      kill                8
+      kill                7
+L319:
+      hasnext2            6, 5
+      iftrue              L251
+
+      kill                6
+      kill                5
+      getlocal            4
+      kill                4
+      initproperty        QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-0r")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-7-")
+      getscopeobject      1
+      getslot             1
+      getscopeobject      1
+      getslot             2
+      callpropvoid        QName(PackageNamespace(""), "_-NQ"), 2
+
+      getlocal            9
+      iffalse             L457
+
+      findproperty        QName(PackageNamespace(""), "_-t4")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-7-")
+      getproperty         QName(PackageNamespace(""), "_-t4")
+      initproperty        QName(PackageNamespace(""), "_-t4")
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal            9
+      dup
+      iftrue              L348
+
+      pop
+      getlocal2
+      convert_b
+L348:
+      iffalse             L374
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-7-")
+      getproperty         QName(PackageNamespace(""), "_-5n")
+      coerce_a
+      setlocal            5
+
+      getlocal            9
+      iffalse             L366
+
+      jump                L371
+
+L357:
+      label
+      getscopeobject      1
+      getlocal            5
+      getlocal            4
+      nextname
+      coerce_s
+      setslot             3
+
+      getlocal            9
+      iffalse             L371
+
+L366:
+      getlex              QName(PackageNamespace(""), "_-5n")
+      getscopeobject      1
+      getslot             3
+      pushtrue
+      setproperty         MultinameL([PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+
+L371:
+      hasnext2            5, 4
+      iftrue              L357
+
+      kill                5
+L374:
+      kill                4
+L375:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "condition")
+      callproperty        Multiname("length", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushbyte            1
+      equals
+      getlocal            9
+      iffalse             L386
+
+      dup
+      iffalse             L392
+
+      getlocal            9
+      iffalse             L392
+
+L386:
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "_-0r")
+      callproperty        Multiname("length", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      pushbyte            1
+      equals
+L392:
+      iffalse             L503
+
+      getscopeobject      1
+      getlocal            9
+      iffalse             L458
+
+      findpropstrict      QName(PackageNamespace(""), "Number")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "condition")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      getproperty         MultinameA("duration", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        QName(PackageNamespace(""), "Number"), 1
+      convert_d
+      setslot             4
+
+      getlocal            9
+      dup
+      iftrue              L411
+
+      pop
+      getlocal1
+      convert_b
+L411:
+      iffalse             L422
+
+      getscopeobject      1
+      getlocal            10
+      iftrue              L458
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "condition")
+      callproperty        Multiname("text", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      coerce_s
+      getlocal            9
+      iffalse             L480
+
+      setslot             5
+
+L422:
+      getscopeobject      1
+      getlocal            9
+      dup
+      iftrue              L429
+
+      pop
+      getlocal2
+      convert_b
+L429:
+      iffalse             L458
+
+      pushstring          " "
+      getlocal            10
+      dup
+      iffalse             L437
+
+      pop
+      getlocal3
+      convert_b
+L437:
+      iftrue              L456
+
+      getscopeobject      1
+      getlocal            10
+      iftrue              L448
+
+      getslot             5
+      add
+      pushstring          " for "
+      getlocal            10
+      iftrue              L453
+
+      add
+      getscopeobject      1
+L448:
+      getslot             4
+      add
+      getlocal            10
+      iftrue              L466
+
+      pushstring          " secs\n"
+L453:
+      add
+      getlocal            9
+      iffalse             L466
+
+L456:
+      setslot             6
+
+L457:
+      getscopeobject      1
+L458:
+      pushstring          "Shot Effect:\n"
+      getlocal            10
+      dup
+      iffalse             L465
+
+      pop
+      getlocal3
+      convert_b
+L465:
+      iftrue              L472
+
+L466:
+      findpropstrict      QName(ProtectedNamespace("_-07d"), "_-qF")
+      getscopeobject      1
+      getslot             6
+      getlex              QName(PackageInternalNs("_-05H"), "_-iF")
+      callproperty        QName(ProtectedNamespace("_-07d"), "_-qF"), 2
+      add
+L472:
+      coerce_s
+      jump                L480
+
+      typeof
+      inclocal            8
+      getlocal2
+      getlocal            8
+      getlocal            5
+      setlocal3
+
+L480:
+      setslot             7
+
+      findproperty        QName(PackageNamespace(""), "_-t4")
+      getlex              QName(PackageNamespace(""), "_-t4")
+      getscopeobject      1
+      getslot             7
+      add
+      initproperty        QName(PackageNamespace(""), "_-t4")
+
+      getlocal            9
+      dup
+      iftrue              L493
+
+      pop
+      getlocal0
+      convert_b
+L493:
+      iffalse             L503
+
+      getlex              QName(PackageNamespace(""), "_-5n")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-05H:_-Fo"), "condition")
+      pushbyte            0
+      getproperty         MultinameL([PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+      callproperty        Multiname("toXMLString", [PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")]), 0
+      getscopeobject      1
+      getslot             7
+      setproperty         MultinameL([PrivateNamespace("*", "_-05H:_-Fo"), PackageNamespace("_-05H"), PrivateNamespace("*", "_-05H:_-Fo/_-B4:compareSlots"), PackageNamespace(""), PackageInternalNs("_-05H"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-B4"), StaticProtectedNs("_-B4"), StaticProtectedNs("_-07d")])
+
+L503:
+      returnvoid
+     end ; code
+     trait slot QName(PackageInternalNs("_-05H"), "itemXML") slotid 1 type QName(PackageNamespace(""), "XML") end
+     trait slot QName(PackageInternalNs("_-05H"), "curItemXML") slotid 2 type QName(PackageNamespace(""), "XML") end
+     trait slot QName(PackageInternalNs("_-05H"), "tagStr") slotid 3 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_-05H"), "duration") slotid 4 type QName(PackageNamespace(""), "Number") end
+     trait slot QName(PackageInternalNs("_-05H"), "conditionName") slotid 5 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_-05H"), "compositeStr") slotid 6 type QName(PackageNamespace(""), "String") end
+     trait slot QName(PackageInternalNs("_-05H"), "htmlStr") slotid 7 type QName(PackageNamespace(""), "String") end
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-05H:_-Fo/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

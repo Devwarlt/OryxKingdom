@@ -1,0 +1,310 @@
+class
+ refid "com.company.assembleegameclient.net.messages.data:_-35"
+ instance QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-35")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0EF")
+  iinit
+   refid "com.company.assembleegameclient.net.messages.data:_-35/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     nextname
+     convert_o
+     setlocal3
+
+     typeof
+     getglobalscope
+     pushtrue
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "item_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "_-01T") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "var") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "included_") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "parseFromInput")
+   method
+    refid "com.company.assembleegameclient.net.messages.data:_-35/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal_i          2
+      kill                2
+      declocal            2
+      setlocal2
+
+      swap
+      kill                2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L62
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace(""), "item_")
+
+      getlocal2
+      dup
+      iftrue              L32
+
+      pop
+      jump                L30
+
+      getlocal3
+      declocal            2
+      checkfilter
+      kill                2
+      setlocal2
+
+      increment
+L30:
+      getlocal1
+      convert_b
+L32:
+      iffalse             L66
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      jump                L43
+
+      declocal            2
+      getlocal3
+      setlocal2
+
+      inclocal            2
+      greaterthan
+      kill                2
+L43:
+      initproperty        QName(PackageNamespace(""), "_-01T")
+
+      getlocal3
+      dup
+      iffalse             L50
+
+      pop
+      getlocal2
+      convert_b
+L50:
+      iftrue              L66
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace(""), "var")
+
+      getlocal3
+      dup
+      iffalse             L61
+
+      pop
+      getlocal2
+      convert_b
+L61:
+      iftrue              L66
+
+L62:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readBoolean"), 0
+      initproperty        QName(PackageNamespace(""), "included_")
+
+L66:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "com.company.assembleegameclient.net.messages.data:_-35/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      pushscope
+
+      pushscope
+
+      add
+      hasnext
+      greaterthan
+      strictequals
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "item: "
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L42
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "item_")
+      getlocal2
+      iftrue              L41
+
+      add
+      getlocal1
+      iffalse             L77
+
+      pushstring          " slotType: "
+      getlocal1
+      jump                L37
+
+      pushfalse
+      istypelate
+      pushtrue
+      convert_b
+      negate
+      lessequals
+L37:
+      iffalse             L57
+
+      add
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-01T")
+L41:
+      add
+L42:
+      pushstring          " tradeable: "
+      getlocal1
+      dup
+      iftrue              L49
+
+      pop
+      getlocal1
+      convert_b
+L49:
+      iffalse             L76
+
+      jump                L57
+
+      subtract
+      modulo
+      convert_o
+      subtract
+      convert_b
+      getlocal2
+L57:
+      add
+      getlocal1
+      dup
+      iftrue              L64
+
+      pop
+      getlocal0
+      convert_b
+L64:
+      iffalse             L80
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "var")
+      getlocal1
+      dup
+      iftrue              L73
+
+      pop
+      getlocal0
+      convert_b
+L73:
+      iffalse             L79
+
+      add
+      pushstring          " included:"
+L76:
+      add
+L77:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "included_")
+L79:
+      add
+L80:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.net.messages.data:_-35/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

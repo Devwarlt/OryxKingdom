@@ -1,0 +1,370 @@
+class
+ refid "_-0Ag:_-0By"
+ instance QName(PackageNamespace("_-0Ag"), "_-0By")
+  extends QName(PackageNamespace("_-0Ag"), "_-Rq")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-4P")
+  iinit
+   refid "_-0Ag:_-0By/iinit"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                2
+     declocal            2
+     setlocal2
+
+     nextvalue
+     getlocal2
+     getlocal2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L72
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace(""), "String"), 0
+     initproperty        QName(PackageNamespace(""), "buildVersion_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     jump                L34
+
+     setlocal2
+
+     add_i
+     inclocal            2
+     equals
+     kill                2
+     instanceof
+L34:
+     constructprop       QName(PackageNamespace(""), "String"), 0
+     initproperty        QName(PackageNamespace(""), "guid_")
+
+     getlocal3
+     iffalse             L72
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace(""), "String"), 0
+     initproperty        QName(PackageNamespace(""), "password_")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace(""), "String"), 0
+     jump                L52
+
+     coerce_a
+     kill                2
+     setlocal2
+
+     getlocal2
+     astypelate
+     bitand
+L52:
+     initproperty        QName(PackageNamespace(""), "secret_")
+
+     getlocal3
+     iffalse             L75
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+     constructprop       QName(PackageNamespace("flash.utils"), "ByteArray"), 0
+     initproperty        QName(PackageNamespace(""), "key_")
+
+     getlocal3
+     iffalse             L75
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     constructprop       QName(PackageNamespace(""), "String"), 0
+     initproperty        QName(PackageNamespace(""), "_-2B")
+
+     getlocal3
+     dup
+     iftrue              L71
+
+     pop
+     getlocal3
+     convert_b
+L71:
+     iffalse             L75
+
+L72:
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L75:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "copyright_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "buildVersion_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "gameId_") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "guid_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_-kL") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "password_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "secret_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "keyTime_") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PackageNamespace(""), "key_") type QName(PackageNamespace("flash.utils"), "ByteArray") end
+  trait slot QName(PackageNamespace(""), "_-2B") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_-8U") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "_-yt") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "_-Jk") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "playPlatform") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait method QName(PackageNamespace(""), "writeToOutput") flag OVERRIDE
+   method
+    refid "_-0Ag:_-0By/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      setlocal2
+
+      rshift
+      getlocal2
+      getlocal2
+      kill                2
+      getlocal2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L41
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "copyright_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "buildVersion_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "gameId_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "guid_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-kL")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "password_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+      getlocal2
+      iffalse             L117
+
+L41:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "secret_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+      getlocal3
+      iftrue              L109
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "keyTime_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal1
+      jump                L59
+
+      equals
+      popscope
+      inclocal            2
+      setlocal2
+
+      setlocal2
+
+      setlocal3
+
+L59:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "key_")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeShort"), 1
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "key_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeBytes"), 1
+
+      getlocal2
+      iffalse             L81
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-2B")
+      getproperty         QName(PackageNamespace(""), "length")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal2
+      dup
+      iftrue              L80
+
+      pop
+      getlocal0
+      convert_b
+L80:
+      iffalse             L117
+
+L81:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-2B")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTFBytes"), 1
+
+      getlocal2
+      dup
+      jump                L94
+
+      inclocal            2
+      setlocal2
+
+      kill                2
+      multiply
+      greaterthan
+      getlocal3
+L94:
+      iftrue              L98
+
+      pop
+      getlocal3
+      convert_b
+L98:
+      iffalse             L109
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-8U")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+      getlocal2
+      iffalse             L113
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-yt")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+L109:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-Jk")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+L113:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "playPlatform")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeUTF"), 1
+
+L117:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_-0Ag:_-0By/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 9
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
+      jump                L10
+
+      swap
+      lessequals
+      convert_d
+      typeof
+      pushundefined
+      increment
+L10:
+      pushstring          "HELLO"
+      pushstring          "buildVersion_"
+      pushstring          "gameId_"
+      pushstring          "guid_"
+      pushstring          "password_"
+      pushstring          "secret_"
+      callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 6
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Ag:_-0By/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,25 @@
+script ; 25
+ sinit
+  refid "_-AG:_-v1.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-v1", [PackageNamespace("_-AG")])
+    pushnull
+    newclass            "_-AG:_-v1"
+    initproperty        QName(PackageNamespace("_-AG"), "_-v1")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-AG"), "_-v1")
+  #include "_-v1.class.asasm"
+ end ; trait
+end ; script

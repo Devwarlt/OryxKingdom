@@ -1,0 +1,206 @@
+class
+ refid "_-9W:ModularContextEvent"
+ instance QName(PackageNamespace("_-9W"), "ModularContextEvent")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-aF")
+  iinit
+   refid "_-9W:ModularContextEvent/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("_-0-p"), "_-Ly")
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     inclocal            2
+     decrement
+     instanceof
+     getlocal2
+     inclocal            2
+     inclocal_i          2
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L27
+
+     getlocal0
+     getlocal1
+     pushtrue
+     pushtrue
+     constructsuper      3
+
+     getlocal            4
+     dup
+     iffalse             L26
+
+     pop
+     getlocal2
+     convert_b
+L26:
+     iftrue              L30
+
+L27:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-9W:ModularContextEvent"), "_-rA")
+
+L30:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-9W:ModularContextEvent"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
+  trait getter QName(PackageNamespace(""), "context")
+   method
+    refid "_-9W:ModularContextEvent/context/getter"
+    returns QName(PackageNamespace("_-0-p"), "_-Ly")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-9W:ModularContextEvent"), "_-rA")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "_-9W:ModularContextEvent/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-9W"), "ModularContextEvent")
+      jump                L10
+
+      rshift
+      getlocal1
+      getlocal0
+      coerce_a
+      swap
+      nextvalue
+L10:
+      getlex              QName(PackageNamespace(""), "type")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "context")
+      constructprop       QName(PackageNamespace("_-9W"), "ModularContextEvent"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_-9W:ModularContextEvent/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "formatToString")
+      jump                L10
+
+      multiply_i
+      convert_i
+      divide
+      add_i
+      dxnslate
+      not
+L10:
+      pushstring          "ModularContextEvent"
+      pushstring          "context"
+      callproperty        QName(PackageNamespace(""), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-9W:ModularContextEvent/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    pushscope
+
+    urshift
+    not
+    convert_d
+    checkfilter
+    coerce_s
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    dup
+    iffalse             L20
+
+    pop
+    getlocal2
+    convert_b
+L20:
+    iftrue              L29
+
+    findproperty        QName(PackageNamespace(""), "_-qb")
+    pushstring          "contextAdd"
+    initproperty        QName(PackageNamespace(""), "_-qb")
+
+    getlocal1
+    iftrue              L29
+
+    findproperty        QName(PackageNamespace(""), "_-LD")
+    pushstring          "contextRemove"
+    initproperty        QName(PackageNamespace(""), "_-LD")
+
+L29:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-qb") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("contextAdd") end
+ trait const QName(PackageNamespace(""), "_-LD") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("contextRemove") end
+end ; class

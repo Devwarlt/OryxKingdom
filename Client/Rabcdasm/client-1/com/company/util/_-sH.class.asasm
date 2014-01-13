@@ -1,0 +1,131 @@
+class
+ refid "com.company.util:_-sH"
+ instance QName(PackageNamespace("com.company.util"), "_-sH")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-7v")
+  iinit
+   refid "com.company.util:_-sH/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     pushundefined
+     convert_s
+     pushfalse
+     strictequals
+     convert_b
+     nextname
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.util:_-sH/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "unescape") flag FINAL dispid 3
+  method
+   refid "com.company.util:_-sH/unescape"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("flash.xml"), "XMLDocument")
+     jump                L10
+
+     istypelate
+     lessthan
+     bitxor
+     add
+     astypelate
+     getlocal2
+L10:
+     getlocal1
+     constructprop       QName(PackageNamespace("flash.xml"), "XMLDocument"), 1
+     getproperty         QName(PackageNamespace(""), "firstChild")
+     getproperty         QName(PackageNamespace(""), "nodeValue")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_-M6") flag FINAL dispid 4
+  method
+   refid "com.company.util:_-sH/_-M6"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 6
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "XML")
+     jump                L10
+
+     multiply_i
+     bitand
+     coerce_s
+     subtract
+     decrement_i
+     pushscope
+
+L10:
+     findpropstrict      QName(PackageNamespace("flash.xml"), "XMLNode")
+     getlex              QName(PackageNamespace("flash.xml"), "XMLNodeType")
+     getproperty         QName(PackageNamespace(""), "TEXT_NODE")
+     getlocal1
+     constructprop       QName(PackageNamespace("flash.xml"), "XMLNode"), 2
+     callproperty        QName(PackageNamespace(""), "XML"), 1
+     callproperty        Multiname("toXMLString", [PrivateNamespace("*", "com.company.util:_-sH/_-M6#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.util:_-sH/_-M6#1"), PackageNamespace("com.company.util"), PackageInternalNs("com.company.util"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-7v"), StaticProtectedNs("_-7v")]), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

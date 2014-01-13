@@ -1,0 +1,99 @@
+class
+ refid "_-0LC:_-Zt"
+ instance QName(PackageNamespace("_-0LC"), "_-Zt")
+  extends QName(PackageNamespace("_-0LC"), "_-qO")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-h6")
+  iinit
+   refid "_-0LC:_-Zt/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 8
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal_i          2
+     inclocal_i          2
+     kill                2
+     declocal_i          2
+     declocal_i          2
+     convert_u
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     jump                L22
+
+     setlocal3
+
+     setlocal2
+
+     instanceof
+     kill                2
+     inclocal            2
+     setlocal2
+
+L22:
+     iffalse             L26
+
+     pop
+     getlocal1
+     convert_b
+L26:
+     iftrue              L43
+
+     getlocal0
+     pushstring          "An error has occured:\n"
+     getlocal3
+     dup
+     iffalse             L35
+
+     pop
+     getlocal1
+     convert_b
+L35:
+     iftrue              L38
+
+     getlocal1
+     add
+L38:
+     pushstring          "D'oh, this isn't good"
+     pushstring          "Ok"
+     pushnull
+     pushstring          "/error"
+     constructsuper      5
+
+L43:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0LC:_-Zt/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

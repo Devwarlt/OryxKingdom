@@ -1,0 +1,202 @@
+class
+ refid "_-zo:_-mS"
+ instance QName(PackageNamespace("_-zo"), "_-mS")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-fg")
+  iinit
+   refid "_-zo:_-mS/iinit"
+   param QName(PackageNamespace(""), "Object")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     setlocal2
+
+     subtract_i
+     bitxor
+     setlocal2
+
+     setlocal2
+
+     swap
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L48
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "TEXT_ERROR")
+     constructsuper      1
+
+     getlocal3
+     jump                L26
+
+     declocal_i          2
+     getlocal2
+     newactivation
+     kill                2
+     typeof
+     subtract_i
+L26:
+     dup
+     iffalse             L31
+
+     pop
+     getlocal3
+     convert_b
+L31:
+     iftrue              L52
+
+     getlocal1
+     pushnull
+     ifeq                L49
+
+     getlocal3
+     iftrue              L48
+
+     getlocal0
+     getlocal1
+     callproperty        Multiname("toString", [PrivateNamespace("*", "_-zo:_-mS/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "_-zo:_-mS/iinit#1"), PackageNamespace("_-zo"), PackageInternalNs("_-zo"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-fg"), StaticProtectedNs("_-fg"), StaticProtectedNs("flash.events:Event")]), 0
+     initproperty        QName(PackageNamespace(""), "text_")
+
+     getlocal3
+     dup
+     iffalse             L47
+
+     pop
+     getlocal3
+     convert_b
+L47:
+     iftrue              L52
+
+L48:
+     jump                L52
+
+L49:
+     getlocal0
+     pushstring          "null"
+     initproperty        QName(PackageNamespace(""), "text_")
+
+L52:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "text_") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "_-zo:_-mS/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-zo"), "_-mS")
+      jump                L10
+
+      popscope
+      lessthan
+      nextvalue
+      astypelate
+      bitand
+      decrement_i
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "text_")
+      constructprop       QName(PackageNamespace("_-zo"), "_-mS"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_-zo:_-mS/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "formatToString")
+      jump                L10
+
+      getlocal1
+      lshift
+      divide
+      dup
+      bitnot
+      convert_o
+L10:
+      getlex              QName(PackageNamespace(""), "TEXT_ERROR")
+      pushstring          "text_"
+      callproperty        QName(PackageNamespace(""), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-zo:_-mS/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    swap
+    subtract
+    pushfalse
+    lshift
+    pushnan
+    getlocal1
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iffalse             L18
+
+    findproperty        QName(PackageNamespace(""), "TEXT_ERROR")
+    pushstring          "TEXT_ERROR"
+    initproperty        QName(PackageNamespace(""), "TEXT_ERROR")
+
+L18:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "TEXT_ERROR") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("TEXT_ERROR") end
+end ; class

@@ -1,0 +1,358 @@
+class
+ refid "com.company.net:_-098"
+ instance QName(PackageNamespace("com.company.net"), "_-098")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-1E")
+  iinit
+   refid "com.company.net:_-098/iinit"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_s
+     kill                2
+     convert_o
+     pushundefined
+     swap
+     declocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iftrue              L23
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "id_")
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "id_") type QName(PackageNamespace(""), "uint") end
+  trait method QName(PackageNamespace(""), "parseFromInput")
+   method
+    refid "com.company.net:_-098/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "writeToOutput")
+   method
+    refid "com.company.net:_-098/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "com.company.net:_-098/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      not
+      typeof
+      bitor
+      add_i
+      astypelate
+      pushscope
+
+L10:
+      pushstring          "MESSAGE"
+      pushstring          "id_"
+      callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-1E"), "formatToString")
+   method
+    refid "com.company.net:_-098/_-1E:formatToString"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "String")
+    flag NEED_REST
+    body
+     maxstack 7
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal            2
+      multiply
+      getlocal            5
+      dxnslate
+      setlocal3
+
+      inclocal_i          2
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushstring          "["
+      getlocal            5
+      dup
+      iffalse             L21
+
+      pop
+      getlocal2
+      convert_b
+L21:
+      iftrue              L24
+
+      getlocal1
+      add
+L24:
+      coerce_s
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L121
+
+L29:
+      label
+      getlocal3
+      getlocal            6
+      iffalse             L139
+
+      pushstring          " "
+      getlocal            6
+      dup
+      iftrue              L40
+
+      pop
+      getlocal0
+      convert_b
+L40:
+      iffalse             L136
+
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.net:_-098/_-1E:formatToString#0"), PackageNamespace(""), ProtectedNamespace("_-1E"), PrivateNamespace("*", "com.company.net:_-098/_-1E:formatToString#1"), PackageNamespace("com.company.net"), PackageInternalNs("com.company.net"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-1E")])
+      add
+      getlocal            5
+      iftrue              L136
+
+      pushstring          "=\""
+      getlocal            5
+      dup
+      iffalse             L54
+
+      pop
+      getlocal3
+      convert_b
+L54:
+      iftrue              L79
+
+      add
+      getlocal            5
+      dup
+      iffalse             L69
+
+      jump                L66
+
+      setlocal            5
+
+      equals
+      getlocal            5
+      bitxor
+      getlocal3
+      setlocal            4
+
+L66:
+      pop
+      getlocal3
+      convert_b
+L69:
+      iftrue              L78
+
+      getlocal0
+      getlocal2
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.net:_-098/_-1E:formatToString#0"), PackageNamespace(""), ProtectedNamespace("_-1E"), PrivateNamespace("*", "com.company.net:_-098/_-1E:formatToString#1"), PackageNamespace("com.company.net"), PackageInternalNs("com.company.net"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-1E")])
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.net:_-098/_-1E:formatToString#0"), PackageNamespace(""), ProtectedNamespace("_-1E"), PrivateNamespace("*", "com.company.net:_-098/_-1E:formatToString#1"), PackageNamespace("com.company.net"), PackageInternalNs("com.company.net"), Namespace("http://adobe.com/AS3/2006/builtin"), StaticProtectedNs("_-1E")])
+      add
+      getlocal            6
+      iffalse             L136
+
+L78:
+      pushstring          "\""
+L79:
+      add
+      getlocal            5
+      dup
+      iffalse             L86
+
+      pop
+      getlocal2
+      convert_b
+L86:
+      iftrue              L136
+
+      add
+      getlocal            6
+      dup
+      iftrue              L94
+
+      pop
+      getlocal2
+      convert_b
+L94:
+      iffalse             L137
+
+      coerce_s
+      getlocal            5
+      dup
+      iffalse             L102
+
+      pop
+      getlocal2
+      convert_b
+L102:
+      iftrue              L135
+
+      setlocal3
+
+      getlocal            6
+      dup
+      iftrue              L117
+
+      pop
+      getlocal3
+      jump                L116
+
+      add_i
+      lshift
+      convert_u
+      kill                2
+      inclocal_i          2
+      inclocal_i          4
+L116:
+      convert_b
+L117:
+      iffalse             L138
+
+      inclocal_i          4
+      getlocal            5
+      iftrue              L127
+
+L121:
+      getlocal            4
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L29
+
+      getlocal            5
+      iftrue              L138
+
+L127:
+      getlocal3
+      getlocal            6
+      dup
+      iftrue              L134
+
+      pop
+      getlocal1
+      convert_b
+L134:
+      iffalse             L139
+
+L135:
+      pushstring          "]"
+L136:
+      add
+L137:
+      setlocal3
+
+L138:
+      getlocal3
+L139:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.net:_-098/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

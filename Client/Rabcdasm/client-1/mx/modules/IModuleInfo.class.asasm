@@ -1,0 +1,106 @@
+class
+ refid "mx.modules:IModuleInfo"
+ instance QName(PackageNamespace("mx.modules"), "IModuleInfo")
+  implements Multiname("IEventDispatcher", [PackageNamespace("flash.events")])
+  flag SEALED
+  flag INTERFACE
+  iinit
+   refid "mx.modules:IModuleInfo/iinit"
+  end ; method
+  trait getter QName(Namespace("mx.modules:IModuleInfo"), "data")
+   method
+    refid "mx.modules:IModuleInfo:data/getter"
+    returns QName(PackageNamespace(""), "Object")
+   end ; method
+  end ; trait
+  trait setter QName(Namespace("mx.modules:IModuleInfo"), "data")
+   method
+    refid "mx.modules:IModuleInfo:data/setter"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.modules:IModuleInfo"), "error")
+   method
+    refid "mx.modules:IModuleInfo:error/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.modules:IModuleInfo"), "factory")
+   method
+    refid "mx.modules:IModuleInfo:factory/getter"
+    returns QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.modules:IModuleInfo"), "loaded")
+   method
+    refid "mx.modules:IModuleInfo:loaded/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.modules:IModuleInfo"), "ready")
+   method
+    refid "mx.modules:IModuleInfo:ready/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.modules:IModuleInfo"), "setup")
+   method
+    refid "mx.modules:IModuleInfo:setup/getter"
+    returns QName(PackageNamespace(""), "Boolean")
+   end ; method
+  end ; trait
+  trait getter QName(Namespace("mx.modules:IModuleInfo"), "url")
+   method
+    refid "mx.modules:IModuleInfo:url/getter"
+    returns QName(PackageNamespace(""), "String")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.modules:IModuleInfo"), "load")
+   method
+    refid "mx.modules:IModuleInfo:load"
+    param QName(PackageNamespace("flash.system"), "ApplicationDomain")
+    param QName(PackageNamespace("flash.system"), "SecurityDomain")
+    param QName(PackageNamespace("flash.utils"), "ByteArray")
+    param QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    optional Null()
+    optional Null()
+    optional Null()
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.modules:IModuleInfo"), "release")
+   method
+    refid "mx.modules:IModuleInfo:release"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.modules:IModuleInfo"), "unload")
+   method
+    refid "mx.modules:IModuleInfo:unload"
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+  trait method QName(Namespace("mx.modules:IModuleInfo"), "publish")
+   method
+    refid "mx.modules:IModuleInfo:publish"
+    param QName(PackageNamespace("mx.core"), "IFlexModuleFactory")
+    returns QName(PackageNamespace(""), "void")
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.modules:IModuleInfo/cinit"
+  body
+   maxstack 0
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 4
+   code
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

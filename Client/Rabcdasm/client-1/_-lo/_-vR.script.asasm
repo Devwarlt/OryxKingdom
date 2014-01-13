@@ -1,0 +1,33 @@
+script ; 483
+ sinit
+  refid "_-lo:_-vR.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-vR", [PackageNamespace("_-lo")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "_-lo:_-vR"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-lo"), "_-vR")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-lo"), "_-vR")
+  #include "_-vR.class.asasm"
+ end ; trait
+end ; script

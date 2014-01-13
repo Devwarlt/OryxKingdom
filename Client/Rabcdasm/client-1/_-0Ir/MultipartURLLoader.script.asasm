@@ -1,0 +1,45 @@
+script ; 831
+ sinit
+  refid "_-0Ir:MultipartURLLoader.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "_-0Ir:MultipartURLLoader"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-0Ir"), "MultipartURLLoader")
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-0Ir:MultipartURLLoader/FilePart"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-0Ir:MultipartURLLoader#1"), "FilePart")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0Ir"), "MultipartURLLoader") slotid 1
+  #include "MultipartURLLoader.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-0Ir:MultipartURLLoader#1"), "FilePart") slotid 2
+  #include "MultipartURLLoader/FilePart.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,105 @@
+class
+ refid "_-9R:_-3E"
+ instance QName(PackageNamespace("_-9R"), "_-3E")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-qT")
+  iinit
+   refid "_-9R:_-3E/iinit"
+   param QName(PackageNamespace("_-011"), "_-0Dq")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     bitxor
+     getlocal3
+     convert_o
+     inclocal_i          2
+     hasnext
+     inclocal            2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iffalse             L25
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "NAMERESULTEVENT")
+     constructsuper      1
+
+     getlocal2
+     iffalse             L28
+
+L25:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "_-yS")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-yS") type QName(PackageNamespace("_-011"), "_-0Dq") end
+ end ; instance
+ cinit
+  refid "_-9R:_-3E/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    divide
+    pushfalse
+    urshift
+    multiply
+    dup
+    pushscope
+
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L19
+
+    findproperty        QName(PackageNamespace(""), "NAMERESULTEVENT")
+    pushstring          "NAMERESULTEVENT"
+    initproperty        QName(PackageNamespace(""), "NAMERESULTEVENT")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "NAMERESULTEVENT") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("NAMERESULTEVENT") end
+end ; class

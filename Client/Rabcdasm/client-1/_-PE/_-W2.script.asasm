@@ -1,0 +1,37 @@
+script ; 49
+ sinit
+  refid "_-PE:_-W2.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-W2", [PackageNamespace("_-PE")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-sp"), "_-0JG")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-sp"), "_-aJ")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-sp"), "_-aJ")
+    newclass            "_-PE:_-W2"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-PE"), "_-W2")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-PE"), "_-W2")
+  #include "_-W2.class.asasm"
+ end ; trait
+end ; script

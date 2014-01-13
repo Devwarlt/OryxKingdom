@@ -1,0 +1,49 @@
+script ; 652
+ sinit
+  refid "_-OH.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 8
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Bitmap")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "FlexBitmap")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "BitmapAsset")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "BitmapAsset")
+    newclass            "_-OH"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "_-OH")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "_-OH") slotid 1
+  #include "_-OH.class.asasm"
+ end ; trait
+end ; script

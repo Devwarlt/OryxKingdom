@@ -1,0 +1,33 @@
+script ; 1161
+ sinit
+  refid "_-05H:implements.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("implements", [PackageNamespace("_-05H")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-05H"), "_-Uy")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-05H"), "_-Uy")
+    newclass            "_-05H:implements"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-05H"), "implements")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-05H"), "implements")
+  #include "implements.class.asasm"
+ end ; trait
+end ; script

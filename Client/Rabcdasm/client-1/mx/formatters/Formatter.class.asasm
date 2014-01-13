@@ -1,0 +1,408 @@
+class
+ refid "mx.formatters:Formatter"
+ instance QName(PackageNamespace("mx.formatters"), "Formatter")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("IFormatter", [PackageNamespace("mx.formatters")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.formatters:Formatter")
+  iinit
+   refid "mx.formatters:Formatter/iinit"
+   body
+    maxstack 6
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     getlex              QName(PackageNamespace("mx.resources"), "ResourceManager")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     initproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_resourceManager")
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getproperty         QName(ProtectedNamespace("mx.formatters:Formatter"), "resourceManager")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "CHANGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "resourceManager_changeHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     getlocal0
+     callpropvoid        QName(ProtectedNamespace("mx.formatters:Formatter"), "resourcesChanged"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "error") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_resourceManager") type QName(PackageNamespace("mx.resources"), "IResourceManager") end
+  trait getter QName(ProtectedNamespace("mx.formatters:Formatter"), "resourceManager") flag METADATA
+   method
+    refid "mx.formatters:Formatter:resourceManager/getter"
+    returns QName(PackageNamespace("mx.resources"), "IResourceManager")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_resourceManager")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+   metadata "Bindable"
+    item "" "unused"
+   end ; metadata
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.formatters:Formatter"), "resourcesChanged")
+   method
+    refid "mx.formatters:Formatter:resourcesChanged"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "format")
+   method
+    refid "mx.formatters:Formatter/format"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushstring          "This format function is abstract. "
+      pushstring          "Subclasses must override it."
+      add
+      initproperty        QName(PackageNamespace(""), "error")
+
+      pushstring          ""
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "resourceManager_changeHandler")
+   method
+    refid "mx.formatters:Formatter/resourceManager_changeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(ProtectedNamespace("mx.formatters:Formatter"), "resourcesChanged"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.formatters:Formatter/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.6.0.23201"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    findproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialized")
+    pushfalse
+    setproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialized")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialized") slotid 2 type QName(PackageNamespace(""), "Boolean") value False() end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_static_resourceManager") slotid 3 type QName(PackageNamespace("mx.resources"), "IResourceManager") end
+ trait getter QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager") flag FINAL dispid 3
+  method
+   refid "mx.formatters:Formatter/static_resourceManager/getter"
+   returns QName(PackageNamespace("mx.resources"), "IResourceManager")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_static_resourceManager")
+     iftrue              L8
+
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_static_resourceManager")
+     getlex              QName(PackageNamespace("mx.resources"), "ResourceManager")
+     callproperty        QName(PackageNamespace(""), "getInstance"), 0
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_static_resourceManager")
+
+L8:
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_static_resourceManager")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidFormatError") slotid 4 type QName(PackageNamespace(""), "String") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidFormatErrorOverride") slotid 5 type QName(PackageNamespace(""), "String") end
+ trait getter QName(PackageNamespace(""), "defaultInvalidFormatError") flag FINAL dispid 4
+  method
+   refid "mx.formatters:Formatter/defaultInvalidFormatError/getter"
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialize"), 0
+
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidFormatError")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait setter QName(PackageNamespace(""), "defaultInvalidFormatError") flag FINAL dispid 5
+  method
+   refid "mx.formatters:Formatter/defaultInvalidFormatError/setter"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidFormatErrorOverride")
+     getlocal1
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidFormatErrorOverride")
+
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidFormatError")
+     getlocal1
+     pushnull
+     ifeq                L12
+
+     getlocal1
+     coerce_s
+     jump                L17
+
+L12:
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager")
+     pushstring          "formatters"
+     pushstring          "defaultInvalidFormatError"
+     callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
+     coerce_s
+L17:
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidFormatError")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidValueError") slotid 6 type QName(PackageNamespace(""), "String") end
+ trait slot QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidValueErrorOverride") slotid 7 type QName(PackageNamespace(""), "String") end
+ trait getter QName(PackageNamespace(""), "defaultInvalidValueError") flag FINAL dispid 6
+  method
+   refid "mx.formatters:Formatter/defaultInvalidValueError/getter"
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialize")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialize"), 0
+
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidValueError")
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait setter QName(PackageNamespace(""), "defaultInvalidValueError") flag FINAL dispid 7
+  method
+   refid "mx.formatters:Formatter/defaultInvalidValueError/setter"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 4
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidValueErrorOverride")
+     getlocal1
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidValueErrorOverride")
+
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidValueError")
+     getlocal1
+     pushnull
+     ifeq                L12
+
+     getlocal1
+     coerce_s
+     jump                L17
+
+L12:
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager")
+     pushstring          "formatters"
+     pushstring          "defaultInvalidValueError"
+     callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
+     coerce_s
+L17:
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "_defaultInvalidValueError")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialize") flag FINAL dispid 8
+  method
+   refid "mx.formatters:Formatter/initialize"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 6
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialized")
+     iftrue              L17
+
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "CHANGE")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager_changeHandler")
+     pushfalse
+     pushbyte            0
+     pushtrue
+     callpropvoid        QName(Namespace("flash.events:IEventDispatcher"), "addEventListener"), 5
+
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourcesChanged")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourcesChanged"), 0
+
+     findproperty        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialized")
+     pushtrue
+     setproperty         QName(PrivateNamespace("*", "mx.formatters:Formatter"), "initialized")
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourcesChanged") flag FINAL dispid 9
+  method
+   refid "mx.formatters:Formatter/static_resourcesChanged"
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findproperty        QName(PackageNamespace(""), "defaultInvalidFormatError")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidFormatErrorOverride")
+     setproperty         QName(PackageNamespace(""), "defaultInvalidFormatError")
+
+     findproperty        QName(PackageNamespace(""), "defaultInvalidValueError")
+     getlex              QName(PrivateNamespace("*", "mx.formatters:Formatter"), "defaultInvalidValueErrorOverride")
+     setproperty         QName(PackageNamespace(""), "defaultInvalidValueError")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourceManager_changeHandler") flag FINAL dispid 10
+  method
+   refid "mx.formatters:Formatter/static_resourceManager_changeHandler"
+   param QName(PackageNamespace("flash.events"), "Event")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 1
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourcesChanged")
+     callpropvoid        QName(PrivateNamespace("*", "mx.formatters:Formatter"), "static_resourcesChanged"), 0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,119 @@
+class
+ refid "com.company.assembleegameclient.engine3d:Order"
+ instance QName(PackageNamespace("com.company.assembleegameclient.engine3d"), "Order")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-027")
+  iinit
+   refid "com.company.assembleegameclient.engine3d:Order/iinit"
+   param QName(PrivateNamespace("*", "com.company.assembleegameclient.engine3d:Order.sinit"), "StaticEnforcer")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     pop
+     inclocal_i          2
+     increment_i
+     kill                2
+     kill                2
+     inclocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.engine3d:Order/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    decrement
+    getlocal3
+    convert_s
+    nextname
+    urshift
+    getlocal2
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L20
+
+    rshift
+    nextname
+    greaterthan
+    pushundefined
+    negate
+    bitor
+L20:
+    getlocal1
+    iffalse             L37
+
+    findproperty        QName(PackageNamespace(""), "_-hD")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "_-hD")
+
+    getlocal1
+    dup
+    iftrue              L31
+
+    pop
+    getlocal2
+    convert_b
+L31:
+    iffalse             L37
+
+    findproperty        QName(PackageNamespace(""), "_-Dn")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "_-Dn")
+
+    getlocal2
+    iftrue              L40
+
+L37:
+    findproperty        QName(PackageNamespace(""), "_-0f")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "_-0f")
+
+L40:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-hD") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "_-Dn") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "_-0f") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+end ; class

@@ -1,0 +1,37 @@
+script ; 590
+ sinit
+  refid "com.company.ui.fonts:MyriadPro.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.text"), "Font")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "FontAsset")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.core"), "FontAsset")
+    newclass            "com.company.ui.fonts:MyriadPro"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("com.company.ui.fonts"), "MyriadPro")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.ui.fonts"), "MyriadPro") slotid 1
+  #include "MyriadPro.class.asasm"
+ end ; trait
+end ; script

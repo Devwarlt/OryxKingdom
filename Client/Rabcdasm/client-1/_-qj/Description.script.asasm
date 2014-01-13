@@ -1,0 +1,25 @@
+script ; 273
+ sinit
+  refid "_-qj:Description.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Description", [PackageNamespace("_-qj")])
+    pushnull
+    newclass            "_-qj:Description"
+    initproperty        QName(PackageNamespace("_-qj"), "Description")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-qj"), "Description")
+  #include "Description.class.asasm"
+ end ; trait
+end ; script

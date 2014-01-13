@@ -1,0 +1,29 @@
+script ; 64
+ sinit
+  refid "_-WD:_-GJ.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-GJ", [PackageNamespace("_-WD")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-WD:_-GJ"
+    popscope
+    initproperty        QName(PackageNamespace("_-WD"), "_-GJ")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-WD"), "_-GJ")
+  #include "_-GJ.class.asasm"
+ end ; trait
+end ; script

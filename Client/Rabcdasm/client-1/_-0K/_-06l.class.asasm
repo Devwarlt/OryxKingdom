@@ -1,0 +1,231 @@
+class
+ refid "_-0K:_-06l"
+ instance QName(PackageNamespace("_-0K"), "_-06l")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-CM")
+  iinit
+   refid "_-0K:_-06l/iinit"
+   param QName(PackageNamespace("_-eZ"), "_-08b")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal2
+     convert_b
+     subtract_i
+     lessthan
+     popscope
+     subtract
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L28
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iffalse             L24
+
+     pop
+     getlocal0
+     convert_b
+L24:
+     iftrue              L28
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-0K:_-06l"), "_-vz")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0K:_-06l"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
+  trait method QName(PackageNamespace(""), "create")
+   method
+    refid "_-0K:_-06l/create"
+    param QName(PackageNamespace("_-Ex"), "_-KT")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 6
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      convert_b
+      kill                4
+      negate_i
+      getglobalscope
+      kill                3
+      kill                2
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal            4
+      dup
+      iftrue              L25
+
+      pop
+      getlocal0
+      convert_b
+L25:
+      iffalse             L33
+
+      findpropstrict      QName(PackageNamespace("_-03T"), "guardsApprove")
+      getlocal1
+      getproperty         QName(Namespace("_-0-d"), "_-0-R")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0K:_-06l"), "_-vz")
+      callproperty        QName(PackageNamespace("_-03T"), "guardsApprove"), 2
+      iffalse             L99
+
+L33:
+      getlocal1
+      getproperty         QName(Namespace("_-0-d"), "commandClass")
+      coerce              QName(PackageNamespace(""), "Class")
+      setlocal2
+
+      getlocal            5
+      dup
+      iffalse             L50
+
+      jump                L47
+
+      bitand
+      modulo
+      decrement_i
+      convert_d
+      urshift
+      inclocal            2
+L47:
+      pop
+      getlocal0
+      convert_b
+L50:
+      iftrue              L58
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0K:_-06l"), "_-vz")
+      getlocal            4
+      iffalse             L60
+
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "map"), 1
+      callpropvoid        QName(PackageNamespace(""), "_-hZ"), 0
+
+L58:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0K:_-06l"), "_-vz")
+L60:
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getInstance"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal3
+
+      getlocal            5
+      iftrue              L97
+
+      findpropstrict      QName(PackageNamespace("_-03T"), "applyHooks")
+      getlocal1
+      getproperty         QName(Namespace("_-0-d"), "_-7w")
+      getlocal0
+      jump                L77
+
+      getlocal            4
+      increment
+      pushfalse
+      kill                4
+      bitand
+      nextvalue
+L77:
+      getproperty         QName(PrivateNamespace("*", "_-0K:_-06l"), "_-vz")
+      callpropvoid        QName(PackageNamespace("_-03T"), "applyHooks"), 2
+
+      getlocal            4
+      dup
+      iftrue              L85
+
+      pop
+      getlocal0
+      convert_b
+L85:
+      iffalse             L99
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0K:_-06l"), "_-vz")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "_-1Y"), 1
+
+      getlocal            4
+      dup
+      iftrue              L96
+
+      pop
+      getlocal3
+      convert_b
+L96:
+      iffalse             L99
+
+L97:
+      getlocal3
+      returnvalue
+
+L99:
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0K:_-06l/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

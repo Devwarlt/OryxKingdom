@@ -1,0 +1,184 @@
+class
+ refid "_-0-p:_-CP"
+ instance QName(PackageNamespace("_-0-p"), "_-CP")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-01k")
+  iinit
+   refid "_-0-p:_-CP/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     modulo
+     convert_o
+     pushtrue
+     lessequals
+     add_i
+     pushtrue
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0-p:_-CP/cinit"
+  body
+   maxstack 36
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    convert_s
+    getlocal3
+    add_i
+    setlocal3
+
+    equals
+    popscope
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iftrue              L48
+
+    findproperty        QName(PackageNamespace(""), "FATAL")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "FATAL")
+
+    findproperty        QName(PackageNamespace(""), "ERROR")
+    pushbyte            4
+    initproperty        QName(PackageNamespace(""), "ERROR")
+
+    getlocal1
+    dup
+    iftrue              L27
+
+    pop
+    getlocal1
+    convert_b
+L27:
+    iffalse             L48
+
+    findproperty        QName(PackageNamespace(""), "WARN")
+    pushbyte            8
+    initproperty        QName(PackageNamespace(""), "WARN")
+
+    findproperty        QName(PackageNamespace(""), "INFO")
+    pushbyte            16
+    initproperty        QName(PackageNamespace(""), "INFO")
+
+    getlocal2
+    dup
+    iffalse             L47
+
+    jump                L44
+
+    multiply
+    multiply_i
+    pushfalse
+    bitor
+    decrement_i
+    decrement
+L44:
+    pop
+    getlocal1
+    convert_b
+L47:
+    iftrue              L51
+
+L48:
+    findproperty        QName(PackageNamespace(""), "DEBUG")
+    pushbyte            32
+    initproperty        QName(PackageNamespace(""), "DEBUG")
+
+L51:
+    findproperty        QName(PackageNamespace(""), "_-An")
+    pushbyte            0
+    dup
+    pushstring          "FATAL"
+    pushbyte            0
+    pushstring          "ERROR"
+    pushbyte            0
+    dup
+    dup
+    pushstring          "WARN"
+    pushbyte            0
+    dup
+    dup
+    jump                L71
+
+    nextname
+    divide
+    add_i
+    subtract
+    strictequals
+    convert_s
+L71:
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    pushstring          "INFO"
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushbyte            0
+    dup
+    dup
+    pushstring          "DEBUG"
+    newarray            33
+    initproperty        QName(PackageNamespace(""), "_-An")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "FATAL") slotid 1 type QName(PackageNamespace(""), "uint") value Integer(2) end
+ trait const QName(PackageNamespace(""), "ERROR") slotid 2 type QName(PackageNamespace(""), "uint") value Integer(4) end
+ trait const QName(PackageNamespace(""), "WARN") slotid 3 type QName(PackageNamespace(""), "uint") value Integer(8) end
+ trait const QName(PackageNamespace(""), "INFO") slotid 4 type QName(PackageNamespace(""), "uint") value Integer(16) end
+ trait const QName(PackageNamespace(""), "DEBUG") slotid 5 type QName(PackageNamespace(""), "uint") value Integer(32) end
+ trait const QName(PackageNamespace(""), "_-An") slotid 6 type QName(PackageNamespace(""), "Array") end
+end ; class

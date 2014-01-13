@@ -1,0 +1,438 @@
+class
+ refid "_-0Km:_-Ib"
+ instance QName(PackageNamespace("_-0Km"), "_-Ib")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-2g")
+  iinit
+   refid "_-0Km:_-Ib/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     typeof
+     coerce_a
+     bitor
+     lessequals
+     getlocal2
+     convert_u
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     jump                L21
+
+     add
+     convert_u
+     convert_b
+     multiply
+     divide
+     not
+L21:
+     dup
+     iftrue              L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iffalse             L38
+
+     getlocal0
+     pushnull
+     constructsuper      1
+
+     getlocal2
+     iftrue              L41
+
+     findproperty        QName(PackageNamespace(""), "objectId_")
+     findpropstrict      QName(PackageNamespace(""), "_-7y")
+     callproperty        QName(PackageNamespace(""), "_-7y"), 0
+     initproperty        QName(PackageNamespace(""), "objectId_")
+
+     getlocal1
+     iffalse             L41
+
+L38:
+     findproperty        QName(PackageNamespace(""), "_-Pm")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "_-Pm")
+
+L41:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_-0Km:_-Ib/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "_-0Km:_-Ib/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Km:_-Ib/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "_-YB") flag FINAL dispid 3
+  method
+   refid "_-0Km:_-Ib/_-YB"
+   param QName(PackageNamespace("_-0Km"), "_-DJ")
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   returns QName(PackageNamespace("_-0Km"), "_-Ib")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal            4
+
+     jump                L10
+
+     setlocal3
+
+     getlocal3
+     modulo
+     hasnext
+     declocal            2
+     declocal            4
+L10:
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     jump                L64
+
+L14:
+     label
+     findpropstrict      QName(PackageNamespace("_-0Km"), "_-4m")
+     getlocal2
+     constructprop       QName(PackageNamespace("_-0Km"), "_-4m"), 1
+     returnvalue
+
+L19:
+     label
+     findpropstrict      QName(PackageNamespace("_-0Km"), "FountainEffect")
+     getlocal2
+     constructprop       QName(PackageNamespace("_-0Km"), "FountainEffect"), 1
+     returnvalue
+
+     getlocal            5
+     dup
+     iffalse             L30
+
+     pop
+     getlocal3
+     convert_b
+L30:
+     iftrue              L185
+
+L31:
+     label
+     findpropstrict      QName(PackageNamespace("_-0Km"), "_-BB")
+     getlocal2
+     getlocal1
+     constructprop       QName(PackageNamespace("_-0Km"), "_-BB"), 2
+     returnvalue
+
+     getlocal            4
+     iffalse             L50
+
+L39:
+     label
+     findpropstrict      QName(PackageNamespace("_-0Km"), "VentEffect")
+     getlocal2
+     constructprop       QName(PackageNamespace("_-0Km"), "VentEffect"), 1
+     returnvalue
+
+L44:
+     label
+     findpropstrict      QName(PackageNamespace("_-0Km"), "_-0GP")
+     getlocal2
+     getlocal1
+     constructprop       QName(PackageNamespace("_-0Km"), "_-0GP"), 2
+     returnvalue
+
+L50:
+     label
+     findpropstrict      QName(PackageNamespace("_-0Km"), "XMLEffect")
+     getlocal2
+     getlocal1
+     constructprop       QName(PackageNamespace("_-0Km"), "XMLEffect"), 2
+     returnvalue
+
+L56:
+     label
+     getlex              QName(PackageNamespace("_-0Km"), "_-en")
+     getlocal1
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "_-rU"), 2
+     returnvalue
+
+L62:
+     label
+     jump                L185
+
+L64:
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "id")
+     setlocal3
+
+     getlocal            4
+     iffalse             L170
+
+     pushstring          "Healing"
+     getlocal            5
+     dup
+     iffalse             L76
+
+     pop
+     getlocal0
+     convert_b
+L76:
+     iftrue              L105
+
+     getlocal3
+     getlocal            4
+     iffalse             L99
+
+     ifstrictne          L97
+
+     getlocal            4
+     dup
+     jump                L90
+
+     bitand
+     inclocal            4
+     declocal            3
+     getlocal3
+     nextname
+     negate
+L90:
+     iftrue              L94
+
+     pop
+     getlocal3
+     convert_b
+L94:
+     iffalse             L139
+
+     pushbyte            0
+     jump                L183
+
+L97:
+     pushstring          "Fountain"
+     getlocal3
+L99:
+     ifstrictne          L104
+
+     getlocal            5
+     iftrue              L165
+
+     pushbyte            1
+     jump                L183
+
+L104:
+     pushstring          "Gas"
+L105:
+     getlocal3
+     getlocal            5
+     iftrue              L138
+
+     ifstrictne          L113
+
+     getlocal            4
+     iffalse             L125
+
+     pushbyte            2
+     jump                L183
+
+L113:
+     pushstring          "Vent"
+     getlocal            4
+     iffalse             L142
+
+     getlocal3
+     getlocal            5
+     dup
+     iffalse             L123
+
+     pop
+     getlocal2
+     convert_b
+L123:
+     iftrue              L150
+
+     ifstrictne          L127
+
+L125:
+     pushbyte            3
+     jump                L183
+
+L127:
+     pushstring          "Bubbles"
+     getlocal            4
+     dup
+     iftrue              L134
+
+     pop
+     getlocal0
+     convert_b
+L134:
+     iffalse             L168
+
+     getlocal3
+     getlocal            4
+     iffalse             L150
+
+L138:
+     ifstrictne          L141
+
+L139:
+     pushbyte            4
+     jump                L183
+
+L141:
+     pushstring          "XMLEffect"
+L142:
+     getlocal3
+     getlocal            5
+     dup
+     iffalse             L149
+
+     pop
+     getlocal2
+     convert_b
+L149:
+     iftrue              L169
+
+L150:
+     ifstrictne          L167
+
+     getlocal            5
+     dup
+     iffalse             L164
+
+     pop
+     getlocal1
+     jump                L163
+
+     multiply
+     declocal_i          4
+     newactivation
+     convert_b
+     inclocal            2
+     dup
+L163:
+     convert_b
+L164:
+     iftrue              L170
+
+L165:
+     pushbyte            5
+     jump                L183
+
+L167:
+     pushstring          "CustomParticles"
+L168:
+     getlocal3
+L169:
+     ifstrictne          L179
+
+L170:
+     pushbyte            6
+     getlocal            4
+     dup
+     iftrue              L177
+
+     pop
+     getlocal2
+     convert_b
+L177:
+     iffalse             L183
+
+     jump                L183
+
+L179:
+     jump                L182
+
+     pushbyte            7
+     jump                L183
+
+L182:
+     pushbyte            7
+L183:
+     kill                3
+     lookupswitch        L62, [L14, L19, L31, L39, L44, L50, L56, L62]
+
+L185:
+     pushnull
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

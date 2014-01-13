@@ -1,0 +1,33 @@
+script ; 848
+ sinit
+  refid "_-L7:_-YS.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-YS", [PackageNamespace("_-L7")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "_-L7:_-YS"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-L7"), "_-YS")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-L7"), "_-YS")
+  #include "_-YS.class.asasm"
+ end ; trait
+end ; script

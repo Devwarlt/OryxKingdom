@@ -1,0 +1,109 @@
+class
+ refid "com.company.assembleegameclient.objects:MoneyChanger"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "MoneyChanger")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-G4", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-06r")
+  iinit
+   refid "com.company.assembleegameclient.objects:MoneyChanger/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     convert_o
+     nextvalue
+     getlocal2
+     kill                2
+     kill                2
+     astypelate
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L28
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     dup
+     iftrue              L24
+
+     pop
+     getlocal0
+     convert_b
+L24:
+     iffalse             L28
+
+     findproperty        QName(PackageNamespace(""), "_-064")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "_-064")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "_-Cs")
+   method
+    refid "com.company.assembleegameclient.objects:MoneyChanger/_-Cs"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-Rv"), "Panel")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Rv"), "_-0Dt")
+      jump                L10
+
+      hasnext
+      bitxor
+      add_i
+      convert_d
+      getlocal3
+      greaterthan
+L10:
+      getlocal1
+      constructprop       QName(PackageNamespace("_-Rv"), "_-0Dt"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:MoneyChanger/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

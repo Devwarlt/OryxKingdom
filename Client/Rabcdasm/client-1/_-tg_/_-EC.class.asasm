@@ -1,0 +1,105 @@
+class
+ refid "_-tg:_-EC"
+ instance QName(PackageNamespace("_-tg"), "_-EC")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0KW")
+  iinit
+   refid "_-tg:_-EC/iinit"
+   param QName(PackageNamespace("flash.display"), "BitmapData")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     setlocal2
+
+     getlocal3
+     bitand
+     pushtrue
+     setlocal2
+
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L29
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "ADD_PICTURE_EVENT")
+     pushtrue
+     constructsuper      2
+
+     getlocal3
+     dup
+     iffalse             L25
+
+     pop
+     getlocal3
+     convert_b
+L25:
+     iftrue              L29
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "bitmapData_")
+
+L29:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "bitmapData_") type QName(PackageNamespace("flash.display"), "BitmapData") end
+ end ; instance
+ cinit
+  refid "_-tg:_-EC/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    bitnot
+    divide
+    coerce_s
+    negate
+    bitand
+    pop
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iftrue              L18
+
+    findproperty        QName(PackageNamespace(""), "ADD_PICTURE_EVENT")
+    pushstring          "ADD_PICTURE_EVENT"
+    initproperty        QName(PackageNamespace(""), "ADD_PICTURE_EVENT")
+
+L18:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "ADD_PICTURE_EVENT") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("ADD_PICTURE_EVENT") end
+end ; class

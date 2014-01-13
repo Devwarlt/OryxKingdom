@@ -1,0 +1,29 @@
+script ; 1115
+ sinit
+  refid "com.hurlant.math:_-gb.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-gb", [PackageInternalNs("com.hurlant.math")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.hurlant.math:_-gb"
+    popscope
+    initproperty        QName(PackageInternalNs("com.hurlant.math"), "_-gb")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageInternalNs("com.hurlant.math"), "_-gb")
+  #include "_-gb.class.asasm"
+ end ; trait
+end ; script

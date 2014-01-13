@@ -1,0 +1,97 @@
+class
+ refid "_-0LV:_-AV"
+ instance QName(PackageNamespace("_-0LV"), "_-AV")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0KX")
+  iinit
+   refid "_-0LV:_-AV/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 7
+    localcount 7
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     swap
+     hasnext
+     inclocal_i          4
+     inclocal_i          4
+     pushnan
+     getlocal            5
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     jump                L22
+
+     inclocal_i          4
+     inclocal_i          2
+     inclocal_i          5
+     lshift
+     declocal            5
+     pushwith
+L22:
+     getlex              QName(PackageNamespace(""), "graphics")
+     pushbyte            0
+     dup
+     callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+     getlex              QName(PackageNamespace(""), "graphics")
+     pushbyte            0
+     dup
+     getlocal3
+     getlocal            4
+     callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+     getlex              QName(PackageNamespace(""), "graphics")
+     callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "y")
+
+     findproperty        QName(PackageNamespace(""), "buttonMode")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "buttonMode")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0LV:_-AV/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

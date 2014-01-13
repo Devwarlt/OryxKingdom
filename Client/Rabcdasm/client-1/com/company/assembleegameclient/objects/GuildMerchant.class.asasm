@@ -1,0 +1,284 @@
+class
+ refid "com.company.assembleegameclient.objects:GuildMerchant"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "GuildMerchant")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject")
+  implements Multiname("_-G4", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-AM")
+  iinit
+   refid "com.company.assembleegameclient.objects:GuildMerchant/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     not
+     newactivation
+     kill                2
+     inclocal_i          2
+     kill                2
+     declocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L70
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     dup
+     iffalse             L25
+
+     pop
+     getlocal2
+     convert_b
+L25:
+     iftrue              L70
+
+     findproperty        QName(PackageNamespace(""), "price_")
+     jump                L34
+
+     greaterthan
+     getlocal1
+     getlocal2
+     getlocal2
+     kill                2
+     setlocal2
+
+L34:
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal1
+     getproperty         Multiname("Price", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     initproperty        QName(PackageNamespace(""), "price_")
+
+     getlocal2
+     dup
+     iffalse             L52
+
+     pop
+     getlocal3
+     jump                L51
+
+     setlocal2
+
+     setlocal3
+
+     negate_i
+     inclocal            2
+     lessequals
+     multiply
+L51:
+     convert_b
+L52:
+     iftrue              L70
+
+     findproperty        QName(PackageNamespace(""), "currency_")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+     getproperty         QName(PackageNamespace(""), "_-Ah")
+     initproperty        QName(PackageNamespace(""), "currency_")
+
+     getlocal2
+     dup
+     iffalse             L63
+
+     pop
+     getlocal2
+     convert_b
+L63:
+     iftrue              L70
+
+     getlocal0
+     getlocal1
+     getproperty         Multiname("Description", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+     initproperty        QName(PackageNamespace(""), "description_")
+
+     getlocal3
+     iffalse             L74
+
+L70:
+     findproperty        QName(PackageNamespace(""), "_-0FS")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-07E")
+     getproperty         QName(PackageNamespace(""), "_-tS")
+     initproperty        QName(PackageNamespace(""), "_-0FS")
+
+L74:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "description_") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "soldObjectName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:GuildMerchant/soldObjectName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      jump                L10
+
+      convert_s
+      coerce_a
+      lessthan
+      rshift
+      convert_b
+      newactivation
+L10:
+      getproperty         QName(PackageNamespace(""), "_-0DN")
+      getlex              QName(PackageNamespace(""), "objectType_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "soldObjectInternalName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:GuildMerchant/soldObjectInternalName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      jump                L10
+
+      strictequals
+      not
+      bitor
+      convert_d
+      hasnext
+      bitnot
+L10:
+      getproperty         QName(PackageNamespace(""), "_-QF")
+      getlex              QName(PackageNamespace(""), "objectType_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      coerce              QName(PackageNamespace(""), "XML")
+      setlocal1
+
+      getlocal1
+      getproperty         MultinameA("id", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      callproperty        Multiname("toString", [PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:GuildMerchant#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-AM"), StaticProtectedNs("_-AM"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTooltip") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:GuildMerchant/getTooltip"
+    returns QName(PackageNamespace("_-E7"), "for ")
+    body
+     maxstack 8
+     localcount 2
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-E7"), "_-aS")
+      jump                L10
+
+      negate_i
+      not
+      getlocal1
+      bitand
+      pushnan
+      strictequals
+L10:
+      pushint             4405294
+      pushint             10197915
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "soldObjectName"), 0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "description_")
+      pushshort           200
+      constructprop       QName(PackageNamespace("_-E7"), "_-aS"), 5
+      coerce              QName(PackageNamespace("_-E7"), "for ")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIcon") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:GuildMerchant/getIcon"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      jump                L10
+
+      setlocal2
+
+      typeof
+      coerce_s
+      bitnot
+      multiply_i
+      instanceof
+L10:
+      getlex              QName(PackageNamespace(""), "objectType_")
+      pushbyte            80
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:GuildMerchant/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

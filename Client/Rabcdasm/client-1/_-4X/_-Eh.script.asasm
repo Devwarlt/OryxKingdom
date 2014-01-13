@@ -1,0 +1,29 @@
+script ; 56
+ sinit
+  refid "_-4X:_-Eh.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-Eh", [PackageNamespace("_-4X")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-4X:_-Eh"
+    popscope
+    initproperty        QName(PackageNamespace("_-4X"), "_-Eh")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-4X"), "_-Eh")
+  #include "_-Eh.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,29 @@
+script ; 579
+ sinit
+  refid "_-vf:_-gs.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-vf:_-gs"
+    popscope
+    initproperty        QName(PackageNamespace("_-vf"), "_-gs")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-vf"), "_-gs") slotid 1
+  #include "_-gs.class.asasm"
+ end ; trait
+end ; script

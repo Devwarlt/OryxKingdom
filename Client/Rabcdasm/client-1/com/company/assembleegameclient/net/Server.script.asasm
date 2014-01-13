@@ -1,0 +1,29 @@
+script ; 365
+ sinit
+  refid "com.company.assembleegameclient.net:Server.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Server", [PackageNamespace("com.company.assembleegameclient.net")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.company.assembleegameclient.net:Server"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.assembleegameclient.net"), "Server")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.assembleegameclient.net"), "Server")
+  #include "Server.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,260 @@
+class
+ refid "_-WD:_-0MA"
+ instance QName(PackageNamespace("_-WD"), "_-0MA")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Mf")
+  iinit
+   refid "_-WD:_-0MA/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     greaterequals
+     convert_d
+     pushnan
+     getlocal2
+     lessthan
+     convert_s
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-Yn") type QName(PackageNamespace(""), "String") value Utf8("Production") end
+  trait slot QName(PackageNamespace(""), "root") flag METADATA type QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-0Ky") flag METADATA type QName(PackageNamespace("_-WD"), "_-Bd")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "domain") flag METADATA type QName(PackageNamespace("_-WD"), "Domain")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-IO")
+   method
+    refid "_-WD:_-0MA/_-IO"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      getlocal3
+      increment
+      instanceof
+      nextvalue
+      divide
+      istypelate
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "_-Bz"), 0
+      getlocal2
+      dup
+      iftrue              L22
+
+      pop
+      getlocal2
+      convert_b
+L22:
+      iffalse             L24
+
+      not
+L24:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-Bz")
+   method
+    refid "_-WD:_-0MA/_-Bz"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      strictequals
+      convert_s
+      convert_b
+      pushscope
+
+      hasnext
+      convert_o
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L40
+
+      jump                L27
+
+      add
+      modulo
+      astypelate
+      urshift
+      getglobalscope
+      pushnull
+L27:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-0Ky")
+      callproperty        QName(PackageNamespace(""), "_-Hz"), 0
+      getlocal2
+      dup
+      iffalse             L36
+
+      pop
+      getlocal0
+      convert_b
+L36:
+      iftrue              L53
+
+      iffalse             L50
+
+      getlocal1
+      iffalse             L50
+
+L40:
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-0BP"), 0
+      getlocal1
+      dup
+      iftrue              L48
+
+      pop
+      getlocal0
+      convert_b
+L48:
+      iffalse             L53
+
+      returnvalue
+
+L50:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "domain")
+      callproperty        QName(PackageNamespace(""), "_-Hn"), 0
+L53:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-0BP")
+   method
+    refid "_-WD:_-0MA/_-0BP"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      nextname
+      greaterequals
+      dxnslate
+      getlocal0
+      typeof
+      getglobalscope
+L10:
+      getproperty         QName(PackageNamespace(""), "root")
+      getproperty         QName(PackageNamespace(""), "loaderInfo")
+      coerce              QName(PackageNamespace("flash.display"), "LoaderInfo")
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "parameters")
+      getproperty         Multiname("deployment", [PrivateNamespace("*", "_-WD:_-0MA"), PackageNamespace(""), PrivateNamespace("*", "_-WD:_-0MA/_-0BP"), PackageNamespace("_-WD"), PackageInternalNs("_-WD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Mf"), StaticProtectedNs("_-Mf")])
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-WD:_-0MA"), "_-Yn")
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-WD:_-0MA/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

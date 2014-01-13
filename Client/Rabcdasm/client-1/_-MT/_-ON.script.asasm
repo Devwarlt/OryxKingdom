@@ -1,0 +1,29 @@
+script ; 88
+ sinit
+  refid "_-MT:_-ON.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-ON", [PackageNamespace("_-MT")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-MT:_-ON"
+    popscope
+    initproperty        QName(PackageNamespace("_-MT"), "_-ON")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-MT"), "_-ON")
+  #include "_-ON.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,29 @@
+script ; 1168
+ sinit
+  refid "mx.core:RSLData.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("RSLData", [PackageNamespace("mx.core")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.core:RSLData"
+    popscope
+    initproperty        QName(PackageNamespace("mx.core"), "RSLData")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "RSLData")
+  #include "RSLData.class.asasm"
+ end ; trait
+end ; script

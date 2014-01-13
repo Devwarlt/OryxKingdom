@@ -1,0 +1,250 @@
+class
+ refid "_-zD:_-G9"
+ instance QName(PackageNamespace("_-zD"), "_-G9")
+  extends QName(PackageNamespace("_-C-"), "_-cM")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-00h")
+  iinit
+   refid "_-zD:_-G9/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     pop
+     popscope
+     multiply_i
+     negate_i
+     dxnslate
+     typeof
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("_-0LC"), "_-s7")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "character") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "SavedCharacter")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-yD") flag METADATA type QName(PackageNamespace("_-02b"), "_-0FA")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-0Dp") flag METADATA type QName(PackageNamespace("_-U5"), "_-Md")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-0-b") flag METADATA type QName(PackageNamespace("_-U5"), "_-01W")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "_-zD:_-G9/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      setlocal3
+
+      convert_s
+      nextvalue
+      swap
+      negate
+      lshift
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L26
+
+      jump                L23
+
+      pushwith
+      getglobalscope
+      not
+      divide
+      add
+      convert_b
+L23:
+      pop
+      getlocal2
+      convert_b
+L26:
+      iffalse             L45
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-yD")
+      getlocal2
+      iftrue              L44
+
+      getproperty         QName(PackageNamespace(""), "_-iu")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-zD:_-G9"), "_-Sf")
+      callpropvoid        QName(PackageNamespace(""), "addOnce"), 1
+
+      getlocal1
+      dup
+      iftrue              L41
+
+      pop
+      getlocal0
+      convert_b
+L41:
+      iffalse             L45
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-yD")
+L44:
+      callpropvoid        QName(PackageNamespace(""), "start"), 0
+
+L45:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-zD:_-G9"), "_-Sf")
+   method
+    refid "_-zD:_-G9/_-Sf"
+    param QName(PackageNamespace("_-4X"), "_-zU")
+    param QName(PackageNamespace(""), "Boolean")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Utf8("")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      multiply
+      pushnull
+      bitand
+      kill                4
+      setlocal3
+
+      getlocal0
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      iftrue              L50
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      getproperty         QName(PackageNamespace(""), "parent")
+      jump                L25
+
+      kill                2
+      swap
+      getlocal2
+      kill                3
+      declocal            3
+      popscope
+L25:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "view")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlocal            5
+      dup
+      iffalse             L34
+
+      pop
+      getlocal1
+      convert_b
+L34:
+      iftrue              L45
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-0Dp")
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 0
+
+      getlocal            5
+      dup
+      iffalse             L44
+
+      pop
+      getlocal2
+      convert_b
+L44:
+      iftrue              L50
+
+L45:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-0-b")
+      findpropstrict      QName(PackageNamespace("_-F1"), "CurrentCharacterScreen")
+      constructprop       QName(PackageNamespace("_-F1"), "CurrentCharacterScreen"), 0
+      callpropvoid        QName(PackageNamespace(""), "dispatch"), 1
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-zD:_-G9/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

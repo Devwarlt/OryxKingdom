@@ -1,0 +1,150 @@
+class
+ refid "com.company.assembleegameclient.util:_-04d"
+ instance QName(PackageNamespace("com.company.assembleegameclient.util"), "_-04d")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-wq")
+  iinit
+   refid "com.company.assembleegameclient.util:_-04d/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal3
+
+     pop
+     subtract_i
+     getlocal1
+     convert_u
+     add
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.util:_-04d/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "_-Fe") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.util:_-04d/_-Fe"
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "Number")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     lessthan
+     increment_i
+     nextvalue
+     convert_s
+     inclocal_i          2
+     newactivation
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     getlocal1
+     multiply
+     getlocal2
+     iffalse             L23
+
+     pushbyte            2
+     multiply
+     getlocal2
+     iffalse             L25
+
+L23:
+     getlocal1
+     subtract
+L25:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "_-3r") flag FINAL dispid 4
+  method
+   refid "com.company.assembleegameclient.util:_-04d/_-3r"
+   param QName(PackageNamespace(""), "Number")
+   returns QName(PackageNamespace(""), "int")
+   body
+    maxstack 6
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace(""), "Math")
+     jump                L10
+
+     subtract_i
+     subtract
+     decrement_i
+     popscope
+     strictequals
+     getlocal0
+L10:
+     getlocal1
+     pushbyte            60
+     dup
+     multiply
+     pushbyte            24
+     multiply
+     divide
+     callproperty        QName(PackageNamespace(""), "ceil"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

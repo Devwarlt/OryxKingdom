@@ -1,0 +1,311 @@
+class
+ refid "_-0Km:XMLEffect"
+ instance QName(PackageNamespace("_-0Km"), "XMLEffect")
+  extends QName(PackageNamespace("_-0Km"), "_-Ib")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-00D")
+  iinit
+   refid "_-0Km:XMLEffect/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace("_-0Km"), "_-DJ")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal_i          3
+     add
+     negate
+     getlocal2
+     inclocal_i          3
+     declocal            3
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L62
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     iftrue              L62
+
+     getlocal0
+     jump                L28
+
+     add
+     declocal            2
+     nextname
+     declocal_i          2
+     declocal_i          3
+     nextvalue
+L28:
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "go_")
+
+     getlocal            4
+     iffalse             L59
+
+     jump                L39
+
+     bitand
+     add
+     declocal            3
+     kill                3
+     inclocal            2
+     convert_s
+L39:
+     getlocal0
+     getlex              QName(PackageNamespace("_-0Km"), "_-0HY")
+     getproperty         QName(PackageNamespace(""), "_-020")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "particle")
+     getproperty         MultinameL([PrivateNamespace("*", "_-0Km:XMLEffect"), PackageNamespace("_-0Km"), PackageNamespace(""), PrivateNamespace("*", "_-0Km:XMLEffect/iinit"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-00D"), StaticProtectedNs("_-00D"), StaticProtectedNs("_-2g"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+     initproperty        QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0Bp")
+
+     getlocal            4
+     dup
+     iftrue              L52
+
+     pop
+     getlocal2
+     convert_b
+L52:
+     iffalse             L62
+
+     getlocal0
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "cooldown")
+     initproperty        QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-hY")
+
+     getlocal3
+     iftrue              L62
+
+L59:
+     getlocal0
+     pushdouble          0
+     initproperty        QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0LN")
+
+L62:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0Bp") type QName(PackageNamespace("_-0Km"), "_-7g") end
+  trait slot QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-hY") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0LN") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_-0Km:XMLEffect/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      declocal            3
+      coerce_s
+      istypelate
+      kill                4
+      setlocal            4
+
+      declocal            3
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iffalse             L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iftrue              L32
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "go_")
+      getproperty         QName(PackageNamespace(""), "map_")
+      pushnull
+      ifne                L34
+
+      getlocal            4
+      dup
+      iftrue              L31
+
+      pop
+      getlocal0
+      convert_b
+L31:
+      iffalse             L34
+
+L32:
+      pushfalse
+      returnvalue
+
+L34:
+      getlocal2
+      pushshort           1000
+      divide
+      getlocal            4
+      iffalse             L40
+
+      convert_d
+L40:
+      setlocal3
+
+      getlocal            4
+      dup
+      iftrue              L47
+
+      pop
+      getlocal1
+      convert_b
+L47:
+      iffalse             L81
+
+      getlocal0
+      jump                L56
+
+      getlocal3
+      inclocal_i          3
+      pushundefined
+      setlocal2
+
+      kill                4
+      pushtrue
+L56:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0LN")
+      getlocal            4
+      dup
+      iftrue              L64
+
+      pop
+      getlocal3
+      convert_b
+L64:
+      iffalse             L67
+
+      getlocal3
+      subtract
+L67:
+      initproperty        QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0LN")
+
+      getlocal            4
+      iffalse             L81
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0LN")
+      pushbyte            0
+      ifnge               L87
+
+      getlocal            5
+      dup
+      iffalse             L80
+
+      pop
+      getlocal1
+      convert_b
+L80:
+      iftrue              L87
+
+L81:
+      pushtrue
+      getlocal            5
+      iftrue              L118
+
+      returnvalue
+
+      getlocal            5
+      iftrue              L117
+
+L87:
+      getlocal0
+      jump                L95
+
+      inclocal_i          2
+      declocal_i          2
+      inclocal_i          4
+      nextname
+      nextvalue
+      rshift
+L95:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-hY")
+      initproperty        QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0LN")
+
+      getlocal            4
+      dup
+      iftrue              L104
+
+      pop
+      getlocal3
+      convert_b
+L104:
+      iffalse             L117
+
+      getlex              QName(PackageNamespace(""), "map_")
+      findpropstrict      QName(PackageNamespace("_-0Km"), "_-uj")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "_-0Bp")
+      constructprop       QName(PackageNamespace("_-0Km"), "_-uj"), 1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "go_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-0Km:XMLEffect"), "go_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      callpropvoid        QName(PackageNamespace(""), "addObj"), 3
+
+L117:
+      pushtrue
+L118:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Km:XMLEffect/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

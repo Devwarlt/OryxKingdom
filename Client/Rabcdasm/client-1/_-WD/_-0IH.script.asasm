@@ -1,0 +1,29 @@
+script ; 55
+ sinit
+  refid "_-WD:_-0IH.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-0IH", [PackageNamespace("_-WD")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-WD:_-0IH"
+    popscope
+    initproperty        QName(PackageNamespace("_-WD"), "_-0IH")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-WD"), "_-0IH")
+  #include "_-0IH.class.asasm"
+ end ; trait
+end ; script

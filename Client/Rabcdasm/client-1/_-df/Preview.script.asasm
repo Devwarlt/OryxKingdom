@@ -1,0 +1,61 @@
+script ; 392
+ sinit
+  refid "_-df:Preview.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 8
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Preview", [PackageNamespace("_-df")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    newclass            "_-df:Preview"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-df"), "Preview")
+
+    findpropstrict      Multiname("IconCallback", [PrivateNamespace("*", "_-df:Preview#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-df:Preview/IconCallback"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-df:Preview#1"), "IconCallback")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-df"), "Preview")
+  #include "Preview.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-df:Preview#1"), "IconCallback")
+  #include "Preview/IconCallback.class.asasm"
+ end ; trait
+end ; script

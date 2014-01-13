@@ -1,0 +1,33 @@
+script ; 132
+ sinit
+  refid "_-zD:_-GI.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-GI", [PackageNamespace("_-zD")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    newclass            "_-zD:_-GI"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-zD"), "_-GI")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-zD"), "_-GI")
+  #include "_-GI.class.asasm"
+ end ; trait
+end ; script

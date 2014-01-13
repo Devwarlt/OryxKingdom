@@ -1,0 +1,292 @@
+class
+ refid "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"
+ instance QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CreateNewCharacterRect")
+  extends QName(PackageNamespace("com.company.assembleegameclient.screens.charrects"), "CharacterRect")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-t")
+  iinit
+   refid "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR")
+   body
+    maxstack 8
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushint             6969154
+     pushint             8087120
+     constructsuper      2
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "charList_")
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+     getproperty         QName(PackageNamespace(""), "_-tj")
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+     getproperty         QName(PackageNamespace(""), "_-tj")
+     getproperty         QName(PackageNamespace(""), "length")
+     getlex              QName(PackageNamespace(""), "Math")
+     callproperty        QName(PackageNamespace(""), "random"), 0
+     multiply
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect/iinit"), PackageNamespace("com.company.assembleegameclient.screens.charrects"), PackageInternalNs("com.company.assembleegameclient.screens.charrects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-t"), StaticProtectedNs("_-t"), StaticProtectedNs("_-ot"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     coerce              QName(PackageNamespace(""), "XML")
+     setlocal2
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "SavedCharacter")
+     pushnull
+     getlocal2
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-lJ")
+     getproperty         QName(PackageNamespace(""), "RIGHT")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-lJ")
+     getproperty         QName(PackageNamespace(""), "_-sS")
+     pushbyte            0
+     pushfalse
+     pushfalse
+     callproperty        QName(PackageNamespace(""), "getImage"), 7
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal3
+
+     getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+     getlocal3
+     pushbyte            6
+     dup
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            12
+     subtract
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            6
+     subtract
+     callproperty        QName(PackageNamespace(""), "_-Yd"), 5
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal3
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "bitmap_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "bitmap_")
+     getlocal3
+     setproperty         QName(PackageNamespace(""), "bitmapData")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "bitmap_")
+     pushbyte            0
+     setproperty         QName(PackageNamespace(""), "x")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "bitmap_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
+     pushbyte            18
+     pushint             16777215
+     pushfalse
+     pushbyte            0
+     dup
+     pushstring          "Myriad Pro"
+     constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_")
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_")
+     pushstring          "New Character"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_")
+     callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_")
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     pushbyte            1
+     pushbyte            8
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_")
+     pushbyte            58
+     setproperty         QName(PackageNamespace(""), "x")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "charList_")
+     getproperty         QName(PackageNamespace(""), "numStars_")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-ZB")
+     callproperty        QName(PackageNamespace(""), "_-5e"), 0
+     ifeq                L215
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic")
+     constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "StarGraphic"), 0
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     getproperty         QName(PackageNamespace(""), "transform")
+     findpropstrict      QName(PackageNamespace("flash.geom"), "ColorTransform")
+     pushshort           179
+     pushshort           255
+     divide
+     pushshort           179
+     pushshort           255
+     divide
+     pushshort           179
+     pushshort           255
+     divide
+     constructprop       QName(PackageNamespace("flash.geom"), "ColorTransform"), 3
+     setproperty         QName(PackageNamespace(""), "colorTransform")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     pushdouble          1.2
+     setproperty         QName(PackageNamespace(""), "scaleX")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     pushdouble          1.2
+     setproperty         QName(PackageNamespace(""), "scaleY")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     pushbyte            58
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     pushbyte            26
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
+     pushbyte            14
+     pushint             11776947
+     pushfalse
+     pushbyte            0
+     dup
+     pushstring          "Myriad Pro"
+     constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-ZB")
+     callproperty        QName(PackageNamespace(""), "_-5e"), 0
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "charList_")
+     getproperty         QName(PackageNamespace(""), "numStars_")
+     subtract
+     pushstring          " Class quests not yet completed"
+     add
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_")
+     callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_")
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     pushbyte            1
+     pushbyte            8
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_")
+     pushbyte            58
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_")
+     getproperty         QName(PackageNamespace(""), "width")
+     add
+     pushbyte            2
+     add
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_")
+     pushbyte            24
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L215:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "charList_") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "bitmap_") type QName(PackageNamespace("flash.display"), "Bitmap") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "classNameText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineIcon_") type QName(PackageNamespace("flash.display"), "Sprite") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect"), "taglineText_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PackageNamespace(""), "newCharacter") type QName(PackageNamespace("_-sp"), "_-aJ") end
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.screens.charrects:CreateNewCharacterRect/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

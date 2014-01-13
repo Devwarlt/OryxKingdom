@@ -1,0 +1,25 @@
+script ; 1041
+ sinit
+  refid "mx.resources:IResourceModule.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("IResourceModule", [PackageNamespace("mx.resources")])
+    pushnull
+    newclass            "mx.resources:IResourceModule"
+    initproperty        QName(PackageNamespace("mx.resources"), "IResourceModule")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "IResourceModule")
+  #include "IResourceModule.class.asasm"
+ end ; trait
+end ; script

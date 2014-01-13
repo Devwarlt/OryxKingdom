@@ -1,0 +1,973 @@
+class
+ refid "_-qD:_-XK"
+ instance QName(PackageNamespace("_-qD"), "_-XK")
+  extends QName(PackageNamespace("_-qD"), "_-Eb")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-OB")
+  iinit
+   refid "_-qD:_-XK/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 8
+    localcount 11
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal            5
+
+     inclocal            7
+     inclocal_i          8
+     pushnan
+     kill                2
+     convert_s
+L10:
+     setlocal            9
+
+     setlocal            10
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            5
+
+     pushnull
+     coerce              QName(PackageNamespace("_-qD"), "_-03Y")
+     setlocal            6
+
+     getlocal            10
+     dup
+     iftrue              L26
+
+     pop
+     getlocal2
+     convert_b
+L26:
+     iffalse             L81
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     initproperty        QName(PackageNamespace(""), "_-zO")
+
+     getlocal            9
+     iftrue              L42
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            10
+     dup
+     iftrue              L41
+
+     pop
+     getlocal3
+     convert_b
+L41:
+     iffalse             L119
+
+L42:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-qD"), "_-wo")
+     constructprop       QName(PackageNamespace("_-qD"), "_-wo"), 0
+     initproperty        QName(PackageNamespace(""), "_-pu")
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-pu")
+     getlocal            10
+     iffalse             L90
+
+     getlocal1
+     getlocal            9
+     dup
+     iffalse             L57
+
+     pop
+     getlocal1
+     convert_b
+L57:
+     iftrue              L91
+
+     pushbyte            2
+     divide
+     getlocal            10
+     dup
+     iftrue              L66
+
+     pop
+     getlocal2
+     convert_b
+L66:
+     iffalse             L73
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-pu")
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     subtract
+L73:
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            9
+     dup
+     iffalse             L80
+
+     pop
+     getlocal1
+     convert_b
+L80:
+     iftrue              L106
+
+L81:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-pu")
+     getlocal            9
+     dup
+     iffalse             L89
+
+     pop
+     getlocal3
+     convert_b
+L89:
+     iftrue              L108
+
+L90:
+     pushbyte            228
+L91:
+     setproperty         QName(PackageNamespace(""), "y")
+
+     jump                L99
+
+     inclocal_i          9
+     setlocal            4
+
+     negate_i
+     setlocal            5
+
+     pop
+     declocal            8
+L99:
+     getlocal            10
+     dup
+     iftrue              L105
+
+     pop
+     getlocal2
+     convert_b
+L105:
+     iffalse             L119
+
+L106:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-pu")
+L108:
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "CHANGE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "_-RF")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal            10
+     iffalse             L119
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-pu")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L119:
+     pushbyte            0
+     setlocal            7
+
+     getlex              QName(PackageNamespace("_-qD"), "_-wo")
+     getproperty         QName(PackageNamespace(""), "_-0Ey")
+     coerce_a
+     setlocal            8
+
+     jump                L173
+
+L126:
+     label
+     getlocal            8
+     getlocal            7
+     nextvalue
+     coerce_s
+     getlocal            9
+     iftrue              L137
+
+     dup
+     getlocal            10
+     iffalse             L139
+
+     setlocal            5
+
+L137:
+     getlex              QName(PackageNamespace("_-qD"), "_-wo")
+     getproperty         QName(PackageNamespace(""), "ATTACK2")
+L139:
+     ifne                L159
+
+     findpropstrict      QName(PackageNamespace("_-qD"), "_-03Y")
+     getlocal1
+     getlocal2
+     getlocal3
+     pushbyte            2
+     multiply
+     getlocal            4
+     pushtrue
+     constructprop       QName(PackageNamespace("_-qD"), "_-03Y"), 5
+     coerce              QName(PackageNamespace("_-qD"), "_-03Y")
+     setlocal            6
+
+     getlocal            10
+     dup
+     iftrue              L157
+
+     pop
+     getlocal1
+     convert_b
+L157:
+     iffalse             L173
+
+     jump                L168
+
+L159:
+     findpropstrict      QName(PackageNamespace("_-qD"), "_-03Y")
+     getlocal1
+     getlocal2
+     getlocal3
+     getlocal            4
+     pushtrue
+     constructprop       QName(PackageNamespace("_-qD"), "_-03Y"), 5
+     coerce              QName(PackageNamespace("_-qD"), "_-03Y")
+     setlocal            6
+
+L168:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-zO")
+     getlocal            5
+     getlocal            6
+     setproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L173:
+     hasnext2            8, 7
+     iftrue              L126
+
+     jump                L182
+
+     increment_i
+     kill                6
+     add_i
+     inclocal            6
+     multiply_i
+     subtract_i
+L182:
+     kill                8
+     kill                7
+     getlocal            9
+     dup
+     iffalse             L190
+
+     pop
+     getlocal1
+     convert_b
+L190:
+     iftrue              L205
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-zO")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-pu")
+     callproperty        QName(PackageNamespace(""), "_-rq"), 0
+     getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     initproperty        QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+
+     getlocal            9
+     iftrue              L205
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L205:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-pu") type QName(PackageNamespace("_-qD"), "_-wo") end
+  trait slot QName(PackageNamespace(""), "_-zO") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_") type QName(PackageNamespace("_-qD"), "_-03Y") value Null() end
+  trait method QName(PackageNamespace(""), "getBitmapData") flag OVERRIDE
+   method
+    refid "_-qD:_-XK/getBitmapData"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 8
+     localcount 6
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      lessthan
+      getlocal3
+      inclocal            3
+      declocal_i          4
+      setlocal2
+
+      getlocal2
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "_-sS")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("getBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      convert_i
+      setlocal2
+
+      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+      getlocal2
+      pushbyte            7
+      multiply
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "height")
+      pushtrue
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal3
+
+      getlocal            5
+      dup
+      iffalse             L42
+
+      pop
+      getlocal2
+      convert_b
+L42:
+      iftrue              L52
+
+      getlocal3
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "rect")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      pushbyte            0
+      dup
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      callpropvoid        QName(PackageNamespace(""), "copyPixels"), 3
+
+L52:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "WALK1")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("getBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlocal            4
+      iffalse             L78
+
+      getlocal3
+      getlocal1
+      jump                L71
+
+      inclocal            2
+      inclocal            4
+      convert_o
+      convert_s
+      getlocal3
+      setlocal3
+
+L71:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "rect")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlocal2
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      callpropvoid        QName(PackageNamespace(""), "copyPixels"), 3
+
+L78:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "WALK2")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("getBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlocal            4
+      iffalse             L99
+
+      getlocal3
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "rect")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlocal2
+      pushbyte            2
+      multiply
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      callpropvoid        QName(PackageNamespace(""), "copyPixels"), 3
+
+L99:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "ATTACK1")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("getBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlocal            4
+      iffalse             L127
+
+      getlocal3
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "rect")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlocal2
+      pushbyte            4
+      multiply
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      jump                L126
+
+      checkfilter
+      increment
+      inclocal            2
+      kill                4
+      decrement_i
+      getlocal            4
+L126:
+      callpropvoid        QName(PackageNamespace(""), "copyPixels"), 3
+
+L127:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "ATTACK2")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      callproperty        Multiname("getBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 0
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      setlocal1
+
+      getlocal            4
+      iffalse             L148
+
+      getlocal3
+      getlocal1
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "rect")
+      findpropstrict      QName(PackageNamespace("flash.geom"), "Point")
+      getlocal2
+      pushbyte            5
+      multiply
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.geom"), "Point"), 2
+      callpropvoid        QName(PackageNamespace(""), "copyPixels"), 3
+
+L148:
+      getlocal3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "loadBitmapData") flag OVERRIDE
+   method
+    refid "_-qD:_-XK/loadBitmapData"
+    param QName(PackageNamespace("flash.display"), "BitmapData")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 9
+     localcount 7
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal2
+
+      multiply_i
+      pushscope
+
+      nextname
+      multiply_i
+      kill                2
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-qD"), "_-03Y")
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            16
+      ifnle               L47
+
+      getlocal            6
+      iffalse             L61
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "_-sS")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("_-qD"), "_-03Y")
+      setlocal2
+
+      getlocal            6
+      dup
+      iftrue              L40
+
+      pop
+      getlocal3
+      convert_b
+L40:
+      iffalse             L168
+
+      getlocal2
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "loadBitmapData"), 1
+
+      getlocal            6
+      iffalse             L168
+
+      jump                L162
+
+L47:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "width")
+      pushbyte            7
+      divide
+      convert_i
+      getlocal            5
+      iftrue              L60
+
+      setlocal3
+
+      getlocal            5
+      iftrue              L116
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "height")
+      convert_i
+L60:
+      setlocal            4
+
+L61:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "_-sS")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal1
+      pushbyte            0
+      dup
+      getlocal3
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "_-Yd"), 5
+      callpropvoid        Multiname("loadBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      jump                L81
+
+      declocal_i          5
+      multiply
+      negate_i
+      getlocal3
+      setlocal            4
+
+      coerce_s
+L81:
+      getlocal            6
+      dup
+      iftrue              L87
+
+      pop
+      getlocal1
+      convert_b
+L87:
+      iffalse             L162
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "WALK1")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal1
+      getlocal3
+      pushbyte            0
+      getlocal3
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "_-Yd"), 5
+      callpropvoid        Multiname("loadBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "WALK2")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal1
+      getlocal3
+      pushbyte            2
+      multiply
+      pushbyte            0
+      getlocal3
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "_-Yd"), 5
+      callpropvoid        Multiname("loadBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L116:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "ATTACK1")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal1
+      getlocal3
+      pushbyte            4
+      multiply
+      pushbyte            0
+      getlocal3
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "_-Yd"), 5
+      callpropvoid        Multiname("loadBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+      getlocal            5
+      dup
+      iffalse             L137
+
+      pop
+      getlocal2
+      convert_b
+L137:
+      iftrue              L162
+
+      jump                L145
+
+      setlocal2
+
+      inclocal            3
+      kill                2
+      getglobalscope
+      declocal            3
+      inclocal_i          5
+L145:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "ATTACK2")
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      getlex              QName(PackageNamespace("com.company.util"), "BitmapUtil")
+      getlocal1
+      getlocal3
+      pushbyte            5
+      multiply
+      pushbyte            0
+      getlocal3
+      pushbyte            2
+      multiply
+      getlocal            4
+      callproperty        QName(PackageNamespace(""), "_-Yd"), 5
+      callpropvoid        Multiname("loadBitmapData", [PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")]), 1
+
+L162:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L168:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clear") flag OVERRIDE
+   method
+    refid "_-qD:_-XK/clear"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      negate
+      negate_i
+      getglobalscope
+      convert_i
+      decrement
+      pushtrue
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iftrue              L19
+
+      pop
+      getlocal2
+      convert_b
+L19:
+      iffalse             L23
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-qD:_-XK#0"), "_-RF")
+   method
+    refid "_-qD:_-XK/_-RF"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            2
+      getlocal2
+      instanceof
+      strictequals
+      urshift
+      getlocal3
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-qD"), "_-03Y")
+      setlocal2
+
+      getlocal            4
+      dup
+      iftrue              L23
+
+      pop
+      getlocal0
+      convert_b
+L23:
+      iffalse             L43
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+      getlocal            4
+      dup
+      iftrue              L32
+
+      pop
+      getlocal0
+      convert_b
+L32:
+      iffalse             L73
+
+      pushnull
+      ifeq                L43
+
+      getlocal            4
+      iffalse             L71
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlocal3
+      iftrue              L65
+
+L43:
+      getlocal0
+      jump                L51
+
+      convert_d
+      declocal_i          3
+      dup
+      lessequals
+      typeof
+      kill                3
+L51:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-pu")
+      callproperty        QName(PackageNamespace(""), "_-rq"), 0
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      initproperty        QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+
+      getlocal3
+      dup
+      iffalse             L64
+
+      pop
+      getlocal2
+      convert_b
+L64:
+      iftrue              L75
+
+L65:
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal            4
+      iffalse             L75
+
+L71:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+L73:
+      callproperty        QName(PackageNamespace(""), "_-0DJ"), 0
+      iffalse             L109
+
+L75:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-zO")
+      getlex              QName(PackageNamespace("_-qD"), "_-wo")
+      getproperty         QName(PackageNamespace(""), "_-sS")
+      jump                L86
+
+      rshift
+      inclocal_i          2
+      setlocal3
+
+      kill                3
+      pop
+      rshift
+L86:
+      getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-XK#0"), PackageNamespace("_-qD"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-XK#1"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-OB"), StaticProtectedNs("_-OB"), StaticProtectedNs("_-pB"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("_-qD"), "_-03Y")
+      setlocal2
+
+      getlocal            4
+      dup
+      iftrue              L95
+
+      pop
+      getlocal3
+      convert_b
+L95:
+      iffalse             L109
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-qD:_-XK#0"), "selected_")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "getBitmapData"), 0
+      callpropvoid        QName(PackageNamespace(""), "loadBitmapData"), 1
+
+      getlocal3
+      iftrue              L109
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L109:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-qD:_-XK/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

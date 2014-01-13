@@ -1,0 +1,29 @@
+script ; 391
+ sinit
+  refid "_-060:_-03X.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-060:_-03X"
+    popscope
+    initproperty        QName(PackageNamespace("_-060"), "_-03X")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-060"), "_-03X") slotid 1
+  #include "_-03X.class.asasm"
+ end ; trait
+end ; script

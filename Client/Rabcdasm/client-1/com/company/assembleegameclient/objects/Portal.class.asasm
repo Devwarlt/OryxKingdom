@@ -1,0 +1,230 @@
+class
+ refid "com.company.assembleegameclient.objects:Portal"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Portal")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  implements Multiname("_-G4", [PackageNamespace("com.company.assembleegameclient.objects")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-24")
+  iinit
+   refid "com.company.assembleegameclient.objects:Portal/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     dxnslate
+     urshift
+     convert_d
+     inclocal            2
+     convert_d
+     subtract_i
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L26
+
+     pop
+     getlocal0
+     jump                L25
+
+     lessthan
+     equals
+     setlocal2
+
+     multiply_i
+     setlocal3
+
+     bitand
+L25:
+     convert_b
+L26:
+     iffalse             L32
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal3
+     iftrue              L49
+
+L32:
+     findproperty        QName(PackageNamespace(""), "_-064")
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "_-064")
+
+     getlocal2
+     iffalse             L44
+
+     getlocal0
+     getlocal1
+     pushstring          "NexusPortal"
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Portal/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:Portal/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-24"), StaticProtectedNs("_-24"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 1
+     initproperty        QName(PackageNamespace(""), "_-0JA")
+
+     getlocal2
+     iffalse             L49
+
+L44:
+     getlocal0
+     getlocal1
+     pushstring          "LockedPortal"
+     callproperty        Multiname("hasOwnProperty", [PrivateNamespace("*", "com.company.assembleegameclient.objects:Portal/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.objects:Portal/iinit#1"), PackageNamespace("com.company.assembleegameclient.objects"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-24"), StaticProtectedNs("_-24"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")]), 1
+     initproperty        QName(PackageNamespace(""), "_-xq")
+
+L49:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-0JA") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "_-xq") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "_-09S") type QName(PackageNamespace(""), "Boolean") value True() end
+  trait method QName(PackageNamespace(""), "draw") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Portal/draw"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>)
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 6
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          4
+      convert_u
+      getlocal0
+      inclocal_i          4
+      setlocal2
+
+      kill                3
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iftrue              L27
+
+      pop
+      jump                L25
+
+      convert_i
+      getlocal2
+      kill                3
+      getlocal            4
+      kill                4
+      getlocal3
+L25:
+      getlocal1
+      convert_b
+L27:
+      iffalse             L45
+
+      getlocal0
+      getlocal1
+      getlocal2
+      getlocal3
+      callsupervoid       QName(PackageNamespace(""), "draw"), 3
+      getlocal            5
+      dup
+      iftrue              L39
+
+      pop
+      getlocal3
+      convert_b
+L39:
+      iffalse             L45
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-0JA")
+      iffalse             L49
+
+      getlocal            4
+      iftrue              L49
+
+L45:
+      findpropstrict      QName(PackageNamespace(""), "_-oL")
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "_-oL"), 2
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-Cs")
+   method
+    refid "com.company.assembleegameclient.objects:Portal/_-Cs"
+    param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+    returns QName(PackageNamespace("_-Rv"), "Panel")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Rv"), "_-Y8")
+      jump                L10
+
+      convert_b
+      getlocal3
+      pushfalse
+      subtract_i
+      nextname
+      getlocal2
+L10:
+      getlocal1
+      getlocal0
+      constructprop       QName(PackageNamespace("_-Rv"), "_-Y8"), 2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Portal/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

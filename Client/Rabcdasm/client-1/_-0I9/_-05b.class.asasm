@@ -1,0 +1,248 @@
+class
+ refid "_-0I9:_-05b"
+ instance QName(PackageNamespace("_-0I9"), "_-05b")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-dg")
+  iinit
+   refid "_-0I9:_-05b/iinit"
+   body
+    maxstack 6
+    localcount 5
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     inclocal_i          3
+     typeof
+     pushtrue
+     subtract_i
+     bitor
+     getlocal2
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+     constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextField")
+     setlocal1
+
+     getlocal            4
+     iftrue              L38
+
+     getlocal1
+     pushfalse
+     jump                L37
+
+     modulo
+     kill                3
+     kill                2
+     dxnslate
+     greaterequals
+     pushundefined
+L37:
+     setproperty         QName(PackageNamespace(""), "selectable")
+
+L38:
+     findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+     constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+     coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+     setlocal2
+
+     getlocal2
+     pushbyte            20
+     setproperty         QName(PackageNamespace(""), "size")
+
+     getlocal1
+     getlocal2
+     setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+     getlocal3
+     dup
+     iftrue              L61
+
+     jump                L58
+
+     declocal_i          2
+     strictequals
+     decrement_i
+     subtract_i
+     getlocal3
+     bitxor
+L58:
+     pop
+     getlocal0
+     convert_b
+L61:
+     iffalse             L81
+
+     getlocal1
+     getlex              QName(PrivateNamespace("*", "_-0I9:_-05b"), "_-0U")
+     setproperty         QName(PackageNamespace(""), "htmlText")
+
+     getlocal1
+     pushshort           800
+     setproperty         QName(PackageNamespace(""), "width")
+
+     getlocal1
+     pushshort           600
+     pushbyte            2
+     divide
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            2
+     divide
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L81:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0I9:_-05b/cinit"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    decrement_i
+    getlocal1
+    negate_i
+    convert_b
+    strictequals
+    greaterequals
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal2
+    convert_b
+L20:
+    iffalse             L74
+
+    findproperty        QName(PrivateNamespace("*", "_-0I9:_-05b"), "_-0U")
+    pushstring          "<p align=\"center\"><font color=\"#FFFFFF\">Play at: "
+    getlocal1
+    dup
+    iffalse             L36
+
+    pop
+    jump                L34
+
+    hasnext
+    nextname
+    decrement
+    convert_s
+    lshift
+    typeof
+L34:
+    getlocal0
+    convert_b
+L36:
+    iftrue              L60
+
+    pushstring          "<br/></font><font color=\"#7777EE\">"
+    getlocal1
+    dup
+    iffalse             L51
+
+    pop
+    getlocal0
+    convert_b
+    jump                L51
+
+    not
+    decrement
+    pushnan
+    typeof
+    decrement
+    pop
+L51:
+    iftrue              L63
+
+    add
+    getlocal2
+    dup
+    iftrue              L59
+
+    pop
+    getlocal1
+    convert_b
+L59:
+    iffalse             L73
+
+L60:
+    pushstring          "<a href=\"http://www.realmofthemadgod.com/\">"
+    getlocal1
+    iftrue              L72
+
+L63:
+    add
+    getlocal2
+    dup
+    iftrue              L70
+
+    pop
+    getlocal1
+    convert_b
+L70:
+    iffalse             L73
+
+    pushstring          "www.realmofthemadgod.com</font></a></p>"
+L72:
+    add
+L73:
+    initproperty        QName(PrivateNamespace("*", "_-0I9:_-05b"), "_-0U")
+
+L74:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0I9:_-05b"), "_-0U") slotid 1 type QName(PackageNamespace(""), "String") end
+end ; class

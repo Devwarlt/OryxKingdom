@@ -1,0 +1,1157 @@
+class
+ refid "mx.formatters:DateFormatter"
+ instance QName(PackageNamespace("mx.formatters"), "DateFormatter")
+  extends QName(PackageNamespace("mx.formatters"), "Formatter")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.formatters:DateFormatter")
+  iinit
+   refid "mx.formatters:DateFormatter/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "_formatString") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "formatStringOverride") type QName(PackageNamespace(""), "String") end
+  trait getter QName(PackageNamespace(""), "formatString")
+   method
+    refid "mx.formatters:DateFormatter/formatString/getter"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "_formatString")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "formatString")
+   method
+    refid "mx.formatters:DateFormatter/formatString/setter"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "formatStringOverride")
+
+      getlocal0
+      getlocal1
+      pushnull
+      ifeq                L12
+
+      getlocal1
+      coerce_s
+      jump                L17
+
+L12:
+      getlex              QName(ProtectedNamespace("mx.formatters:Formatter"), "resourceManager")
+      pushstring          "SharedResources"
+      pushstring          "dateFormat"
+      callproperty        QName(Namespace("mx.resources:IResourceManager"), "getString"), 2
+      coerce_s
+L17:
+      initproperty        QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "_formatString")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("mx.formatters:DateFormatter"), "resourcesChanged") flag OVERRIDE
+   method
+    refid "mx.formatters:DateFormatter:resourcesChanged"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callsupervoid       QName(ProtectedNamespace("mx.formatters:Formatter"), "resourcesChanged"), 0
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "formatStringOverride")
+      initproperty        QName(PackageNamespace(""), "formatString")
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "format") flag OVERRIDE
+   method
+    refid "mx.formatters:DateFormatter/format"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlex              QName(PackageNamespace(""), "error")
+      iffalse             L10
+
+      findproperty        QName(PackageNamespace(""), "error")
+      pushnull
+      initproperty        QName(PackageNamespace(""), "error")
+
+L10:
+      getlocal1
+      not
+      dup
+      iftrue              L24
+
+      pop
+      getlocal1
+      getlex              QName(PackageNamespace(""), "String")
+      istypelate
+      dup
+      iffalse             L24
+
+      pop
+      getlocal1
+      pushstring          ""
+      equals
+L24:
+      iffalse             L30
+
+      findproperty        QName(PackageNamespace(""), "error")
+      getlex              QName(PackageNamespace(""), "defaultInvalidValueError")
+      initproperty        QName(PackageNamespace(""), "error")
+
+      pushstring          ""
+      returnvalue
+
+L30:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "String")
+      istypelate
+      iffalse             L50
+
+      getglobalscope
+      getslot             1
+      findpropstrict      QName(PackageNamespace(""), "String")
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "String"), 1
+      callproperty        QName(PackageNamespace(""), "parseDateString"), 1
+      coerce              QName(PackageNamespace(""), "Object")
+      setlocal1
+
+      getlocal1
+      iftrue              L49
+
+      findproperty        QName(PackageNamespace(""), "error")
+      getlex              QName(PackageNamespace(""), "defaultInvalidValueError")
+      initproperty        QName(PackageNamespace(""), "error")
+
+      pushstring          ""
+      returnvalue
+
+L49:
+      jump                L59
+
+L50:
+      getlocal1
+      getlex              QName(PackageNamespace(""), "Date")
+      istypelate
+      iftrue              L59
+
+      findproperty        QName(PackageNamespace(""), "error")
+      getlex              QName(PackageNamespace(""), "defaultInvalidValueError")
+      initproperty        QName(PackageNamespace(""), "error")
+
+      pushstring          ""
+      returnvalue
+
+L59:
+      pushbyte            0
+      setlocal3
+
+      pushstring          ""
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "formatString")
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal            5
+
+      pushbyte            0
+      setlocal            6
+
+      jump                L120
+
+L71:
+      label
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "formatString")
+      getlocal            6
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      coerce_s
+      setlocal2
+
+      getlex              QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "VALID_PATTERN_CHARS")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      equals
+      not
+      dup
+      iffalse             L91
+
+      pop
+      getlocal2
+      pushstring          ","
+      equals
+      not
+L91:
+      iffalse             L119
+
+      inclocal_i          3
+      getlocal            4
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "indexOf"), 1
+      pushbyte            255
+      ifne                L104
+
+      getlocal            4
+      getlocal2
+      add
+      coerce_s
+      setlocal            4
+
+      jump                L119
+
+L104:
+      getlocal2
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "formatString")
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            6
+      decrement
+      pushbyte            0
+      callproperty        QName(PackageNamespace(""), "max"), 2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+      ifeq                L119
+
+      findproperty        QName(PackageNamespace(""), "error")
+      getlex              QName(PackageNamespace(""), "defaultInvalidFormatError")
+      initproperty        QName(PackageNamespace(""), "error")
+
+      pushstring          ""
+      returnvalue
+
+L119:
+      inclocal_i          6
+L120:
+      getlocal            6
+      getlocal            5
+      iflt                L71
+
+      getlocal3
+      pushbyte            1
+      ifnlt               L131
+
+      findproperty        QName(PackageNamespace(""), "error")
+      getlex              QName(PackageNamespace(""), "defaultInvalidFormatError")
+      initproperty        QName(PackageNamespace(""), "error")
+
+      pushstring          ""
+      returnvalue
+
+L131:
+      findpropstrict      QName(PackageNamespace("mx.formatters"), "StringFormatter")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "formatString")
+      getlex              QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "VALID_PATTERN_CHARS")
+      getlex              QName(PackageNamespace("mx.formatters"), "DateBase")
+      getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "extractTokenDate")
+      constructprop       QName(PackageNamespace("mx.formatters"), "StringFormatter"), 3
+      coerce              QName(PackageNamespace("mx.formatters"), "StringFormatter")
+      dup
+      setlocal            7
+
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "formatValue"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.formatters:DateFormatter/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.6.0.23201"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    findproperty        QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "VALID_PATTERN_CHARS")
+    pushstring          "Y,M,D,A,E,H,J,K,L,N,S,Q"
+    initproperty        QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "VALID_PATTERN_CHARS")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
+ trait const QName(PrivateNamespace("*", "mx.formatters:DateFormatter"), "VALID_PATTERN_CHARS") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("Y,M,D,A,E,H,J,K,L,N,S,Q") end
+ trait method QName(PackageNamespace(""), "parseDateString") flag FINAL dispid 3
+  method
+   refid "mx.formatters:DateFormatter/parseDateString"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Date")
+   body
+    maxstack 7
+    localcount 21
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal            14
+
+     pushbyte            0
+     setlocal            15
+
+     pushbyte            0
+     setlocal            16
+
+     pushnull
+     coerce_s
+     setlocal            17
+
+     pushnull
+     coerce_s
+     setlocal            18
+
+     pushbyte            0
+     setlocal            19
+
+     getlocal1
+     not
+     dup
+     iftrue              L25
+
+     pop
+     getlocal1
+     pushstring          ""
+     equals
+L25:
+     iffalse             L28
+
+     pushnull
+     returnvalue
+
+L28:
+     pushbyte            255
+     setlocal2
+
+     pushbyte            255
+     setlocal3
+
+     pushbyte            255
+     setlocal            4
+
+     pushbyte            255
+     setlocal            5
+
+     pushbyte            255
+     setlocal            6
+
+     pushbyte            255
+     setlocal            7
+
+     pushstring          ""
+     setlocal            8
+
+     pushbyte            0
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            9
+
+     pushbyte            0
+     setlocal            10
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            11
+
+     getlex              QName(PackageNamespace(""), "RegExp")
+     pushstring          "(GMT|UTC)((\\+|-)\\d\\d\\d\\d )?"
+     pushstring          "ig"
+     construct           2
+     coerce              QName(PackageNamespace(""), "RegExp")
+     setlocal            12
+
+     getlocal1
+     getlocal            12
+     pushstring          ""
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+     coerce_s
+     setlocal1
+
+     jump                L482
+
+L64:
+     label
+     getlocal1
+     getlocal            10
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     coerce_s
+     setlocal            8
+
+     inclocal_i          10
+     getlocal            8
+     pushstring          " "
+     lessequals
+     dup
+     iftrue              L80
+
+     pop
+     getlocal            8
+     pushstring          ","
+     equals
+L80:
+     iffalse             L82
+
+     jump                L482
+
+L82:
+     getlocal            8
+     pushstring          "/"
+     equals
+     dup
+     iftrue              L91
+
+     pop
+     getlocal            8
+     pushstring          ":"
+     equals
+L91:
+     dup
+     iftrue              L97
+
+     pop
+     getlocal            8
+     pushstring          "+"
+     equals
+L97:
+     dup
+     iftrue              L103
+
+     pop
+     getlocal            8
+     pushstring          "-"
+     equals
+L103:
+     iffalse             L108
+
+     getlocal            8
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            9
+
+     jump                L482
+
+L108:
+     pushstring          "a"
+     getlocal            8
+     lessequals
+     dup
+     iffalse             L117
+
+     pop
+     getlocal            8
+     pushstring          "z"
+     lessequals
+L117:
+     dup
+     iftrue              L129
+
+     pop
+     pushstring          "A"
+     getlocal            8
+     lessequals
+     dup
+     iffalse             L129
+
+     pop
+     getlocal            8
+     pushstring          "Z"
+     lessequals
+L129:
+     iffalse             L271
+
+     getlocal            8
+     coerce_s
+     setlocal            14
+
+     jump                L169
+
+L134:
+     label
+     getlocal1
+     getlocal            10
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     coerce_s
+     setlocal            8
+
+     pushstring          "a"
+     getlocal            8
+     lessequals
+     dup
+     iffalse             L149
+
+     pop
+     getlocal            8
+     pushstring          "z"
+     lessequals
+L149:
+     dup
+     iftrue              L161
+
+     pop
+     pushstring          "A"
+     getlocal            8
+     lessequals
+     dup
+     iffalse             L161
+
+     pop
+     getlocal            8
+     pushstring          "Z"
+     lessequals
+L161:
+     iftrue              L163
+
+     jump                L172
+
+L163:
+     getlocal            14
+     getlocal            8
+     add
+     coerce_s
+     setlocal            14
+
+     inclocal_i          10
+L169:
+     getlocal            10
+     getlocal            11
+     iflt                L134
+
+L172:
+     getlex              QName(PackageNamespace("mx.formatters"), "DateBase")
+     getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "defaultStringKey")
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            15
+
+     pushbyte            0
+     setlocal            16
+
+     jump                L264
+
+L180:
+     label
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlex              QName(PackageNamespace("mx.formatters"), "DateBase")
+     getproperty         QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "defaultStringKey")
+     getlocal            16
+     getproperty         MultinameL([PrivateNamespace("*", "mx.formatters:DateFormatter"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.formatters"), PrivateNamespace("*", "mx.formatters:DateFormatter/parseDateString"), PackageInternalNs("mx.formatters"), ProtectedNamespace("mx.formatters:DateFormatter"), StaticProtectedNs("mx.formatters:DateFormatter"), StaticProtectedNs("mx.formatters:Formatter")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     dup
+     setlocal            17
+
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     getlocal            14
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     equals
+     dup
+     iftrue              L205
+
+     pop
+     getlocal            17
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     pushbyte            0
+     pushbyte            3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "substr"), 2
+     getlocal            14
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     equals
+L205:
+     iffalse             L263
+
+     getlocal            16
+     pushbyte            13
+     ifne                L230
+
+     getlocal            5
+     pushbyte            12
+     greaterthan
+     dup
+     iftrue              L218
+
+     pop
+     getlocal            5
+     pushbyte            1
+     lessthan
+L218:
+     iffalse             L221
+
+     jump                L267
+
+     jump                L229
+
+L221:
+     getlocal            5
+     pushbyte            12
+     ifnlt               L229
+
+     getlocal            5
+     pushbyte            12
+     add
+     convert_i
+     setlocal            5
+
+L229:
+     jump                L262
+
+L230:
+     getlocal            16
+     pushbyte            12
+     ifne                L251
+
+     getlocal            5
+     pushbyte            12
+     greaterthan
+     dup
+     iftrue              L242
+
+     pop
+     getlocal            5
+     pushbyte            1
+     lessthan
+L242:
+     iffalse             L245
+
+     jump                L267
+
+     jump                L250
+
+L245:
+     getlocal            5
+     pushbyte            12
+     ifne                L250
+
+     pushbyte            0
+     setlocal            5
+
+L250:
+     jump                L262
+
+L251:
+     getlocal            16
+     pushbyte            12
+     ifnlt               L262
+
+     getlocal3
+     pushbyte            0
+     ifnlt               L261
+
+     getlocal            16
+     convert_i
+     setlocal3
+
+     jump                L262
+
+L261:
+     jump                L267
+
+L262:
+     jump                L267
+
+L263:
+     inclocal_i          16
+L264:
+     getlocal            16
+     getlocal            15
+     iflt                L180
+
+L267:
+     pushbyte            0
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            9
+
+     jump                L482
+
+L271:
+     pushstring          "0"
+     getlocal            8
+     lessequals
+     dup
+     iffalse             L280
+
+     pop
+     getlocal            8
+     pushstring          "9"
+     lessequals
+L280:
+     iffalse             L482
+
+     getlocal            8
+     coerce_s
+     setlocal            18
+
+     jump                L292
+
+L285:
+     label
+     getlocal            18
+     getlocal            8
+     add
+     coerce_s
+     setlocal            18
+
+     inclocal_i          10
+L292:
+     pushstring          "0"
+     getlocal1
+     getlocal            10
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     dup
+     setlocal            20
+
+     coerce_s
+     setlocal            8
+
+     getlocal            20
+     kill                20
+     lessequals
+     dup
+     iffalse             L309
+
+     pop
+     getlocal            8
+     pushstring          "9"
+     lessequals
+L309:
+     dup
+     iffalse             L315
+
+     pop
+     getlocal            10
+     getlocal            11
+     lessthan
+L315:
+     iftrue              L285
+
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal            18
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     convert_i
+     dup
+     setlocal            19
+
+     pushbyte            70
+     ifnge               L369
+
+     getlocal2
+     pushbyte            255
+     ifeq                L329
+
+     jump                L485
+
+     jump                L368
+
+L329:
+     getlocal            8
+     pushstring          " "
+     lessequals
+     dup
+     iftrue              L338
+
+     pop
+     getlocal            8
+     pushstring          ","
+     equals
+L338:
+     dup
+     iftrue              L344
+
+     pop
+     getlocal            8
+     pushstring          "."
+     equals
+L344:
+     dup
+     iftrue              L350
+
+     pop
+     getlocal            8
+     pushstring          "/"
+     equals
+L350:
+     dup
+     iftrue              L356
+
+     pop
+     getlocal            8
+     pushstring          "-"
+     equals
+L356:
+     dup
+     iftrue              L362
+
+     pop
+     getlocal            10
+     getlocal            11
+     greaterequals
+L362:
+     iffalse             L367
+
+     getlocal            19
+     convert_i
+     setlocal2
+
+     jump                L368
+
+L367:
+     jump                L485
+
+L368:
+     jump                L479
+
+L369:
+     getlocal            8
+     pushstring          "/"
+     equals
+     dup
+     iftrue              L378
+
+     pop
+     getlocal            8
+     pushstring          "-"
+     equals
+L378:
+     dup
+     iftrue              L384
+
+     pop
+     getlocal            8
+     pushstring          "."
+     equals
+L384:
+     iffalse             L402
+
+     getlocal3
+     pushbyte            0
+     ifnlt               L393
+
+     getlocal            19
+     decrement
+     convert_i
+     setlocal3
+
+     jump                L401
+
+L393:
+     getlocal            4
+     pushbyte            0
+     ifnlt               L400
+
+     getlocal            19
+     convert_i
+     setlocal            4
+
+     jump                L401
+
+L400:
+     jump                L485
+
+L401:
+     jump                L479
+
+L402:
+     getlocal            8
+     pushstring          ":"
+     ifne                L421
+
+     getlocal            5
+     pushbyte            0
+     ifnlt               L412
+
+     getlocal            19
+     convert_i
+     setlocal            5
+
+     jump                L420
+
+L412:
+     getlocal            6
+     pushbyte            0
+     ifnlt               L419
+
+     getlocal            19
+     convert_i
+     setlocal            6
+
+     jump                L420
+
+L419:
+     jump                L485
+
+L420:
+     jump                L479
+
+L421:
+     getlocal            5
+     pushbyte            0
+     greaterequals
+     dup
+     iffalse             L430
+
+     pop
+     getlocal            6
+     pushbyte            0
+     lessthan
+L430:
+     iffalse             L435
+
+     getlocal            19
+     convert_i
+     setlocal            6
+
+     jump                L479
+
+L435:
+     getlocal            6
+     pushbyte            0
+     greaterequals
+     dup
+     iffalse             L444
+
+     pop
+     getlocal            7
+     pushbyte            0
+     lessthan
+L444:
+     iffalse             L449
+
+     getlocal            19
+     convert_i
+     setlocal            7
+
+     jump                L479
+
+L449:
+     getlocal            4
+     pushbyte            0
+     ifnlt               L456
+
+     getlocal            19
+     convert_i
+     setlocal            4
+
+     jump                L479
+
+L456:
+     getlocal2
+     pushbyte            0
+     lessthan
+     dup
+     iffalse             L465
+
+     pop
+     getlocal3
+     pushbyte            0
+     greaterequals
+L465:
+     dup
+     iffalse             L471
+
+     pop
+     getlocal            4
+     pushbyte            0
+     greaterequals
+L471:
+     iffalse             L478
+
+     pushshort           2000
+     getlocal            19
+     add
+     convert_i
+     setlocal2
+
+     jump                L479
+
+L478:
+     jump                L485
+
+L479:
+     pushbyte            0
+     coerce              QName(PackageNamespace(""), "Object")
+     setlocal            9
+
+L482:
+     getlocal            10
+     getlocal            11
+     iflt                L64
+
+L485:
+     getlocal2
+     pushbyte            0
+     lessthan
+     dup
+     iftrue              L494
+
+     pop
+     getlocal3
+     pushbyte            0
+     lessthan
+L494:
+     dup
+     iftrue              L500
+
+     pop
+     getlocal3
+     pushbyte            11
+     greaterthan
+L500:
+     dup
+     iftrue              L506
+
+     pop
+     getlocal            4
+     pushbyte            1
+     lessthan
+L506:
+     dup
+     iftrue              L512
+
+     pop
+     getlocal            4
+     pushbyte            31
+     greaterthan
+L512:
+     iffalse             L515
+
+     pushnull
+     returnvalue
+
+L515:
+     getlocal            7
+     pushbyte            0
+     ifnlt               L520
+
+     pushbyte            0
+     setlocal            7
+
+L520:
+     getlocal            6
+     pushbyte            0
+     ifnlt               L525
+
+     pushbyte            0
+     setlocal            6
+
+L525:
+     getlocal            5
+     pushbyte            0
+     ifnlt               L530
+
+     pushbyte            0
+     setlocal            5
+
+L530:
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     getlocal2
+     getlocal3
+     getlocal            4
+     getlocal            5
+     getlocal            6
+     getlocal            7
+     constructprop       QName(PackageNamespace(""), "Date"), 6
+     coerce              QName(PackageNamespace(""), "Date")
+     setlocal            13
+
+     getlocal            4
+     getlocal            13
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getDate"), 0
+     equals
+     not
+     dup
+     iftrue              L553
+
+     pop
+     getlocal3
+     getlocal            13
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getMonth"), 0
+     equals
+     not
+L553:
+     iffalse             L556
+
+     pushnull
+     returnvalue
+
+L556:
+     getlocal            13
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

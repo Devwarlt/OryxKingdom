@@ -1,0 +1,209 @@
+class
+ refid "_-qj:_-8y"
+ instance QName(PackageNamespace("_-qj"), "_-8y")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-pn", [PackageNamespace("_-qj")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-49")
+  iinit
+   refid "_-qj:_-8y/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     bitxor
+     convert_b
+     istypelate
+     not
+     bitor
+     greaterthan
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "matches")
+   method
+    refid "_-qj:_-8y/matches"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      jump                L10
+
+      nextname
+      convert_u
+      pushtrue
+      convert_u
+      bitor
+      lessequals
+L10:
+      pushstring          "BaseMatcher#matches must be override by subclass"
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "describeMismatch")
+   method
+    refid "_-qj:_-8y/describeMismatch"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace("_-qj"), "Description")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal2
+
+      bitnot
+      getlocal2
+      inclocal            2
+      declocal_i          3
+      setlocal3
+
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L26
+
+      getlocal2
+      pushstring          "was "
+      callproperty        QName(Namespace("_-08T"), "appendText"), 1
+      getlocal1
+      callpropvoid        QName(Namespace("_-08T"), "_-BU"), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "describeTo")
+   method
+    refid "_-qj:_-8y/describeTo"
+    param QName(PackageNamespace("_-qj"), "Description")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("flash.errors"), "IllegalOperationError")
+      jump                L10
+
+      lessequals
+      lessequals
+      pop
+      nextname
+      bitxor
+      astypelate
+L10:
+      pushstring          "BaseMatcher#describeTo must be override by subclass"
+      constructprop       QName(PackageNamespace("flash.errors"), "IllegalOperationError"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_-qj:_-8y/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_-qj"), "_-ne")
+      jump                L10
+
+      multiply
+      convert_d
+      getlocal2
+      increment
+      swap
+      convert_s
+L10:
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "toString"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-qj:_-8y/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

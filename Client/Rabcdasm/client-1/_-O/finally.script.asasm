@@ -1,0 +1,29 @@
+script ; 90
+ sinit
+  refid "_-O:finally.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("finally", [PackageNamespace("_-O")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-O:finally"
+    popscope
+    initproperty        QName(PackageNamespace("_-O"), "finally")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-O"), "finally")
+  #include "finally.class.asasm"
+ end ; trait
+end ; script

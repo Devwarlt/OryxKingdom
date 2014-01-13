@@ -1,0 +1,33 @@
+script ; 1047
+ sinit
+  refid "mx.events:FlexEvent.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("FlexEvent", [PackageNamespace("mx.events")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "Event")
+    newclass            "mx.events:FlexEvent"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.events"), "FlexEvent")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.events"), "FlexEvent")
+  #include "FlexEvent.class.asasm"
+ end ; trait
+end ; script

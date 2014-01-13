@@ -1,0 +1,266 @@
+class
+ refid "_-0Km:_-l2"
+ instance QName(PackageNamespace("_-0Km"), "_-l2")
+  extends QName(PackageNamespace("_-0Km"), "_-Ib")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Oa")
+  iinit
+   refid "_-0Km:_-l2/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     declocal            3
+     lessthan
+     greaterthan
+     multiply
+     declocal            3
+     declocal_i          3
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     jump                L23
+
+     inclocal_i          2
+     setlocal3
+
+     bitand
+     swap
+     typeof
+     inclocal            2
+L23:
+     iffalse             L27
+
+     pop
+     getlocal2
+     convert_b
+L27:
+     iftrue              L42
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     iftrue              L36
+
+     pop
+     getlocal1
+     convert_b
+L36:
+     iffalse             L45
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "go_")
+
+     getlocal            4
+     iffalse             L45
+
+L42:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "color_")
+
+L45:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PackageNamespace(""), "color_") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_-0Km:_-l2/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 11
+     localcount 7
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      swap
+      modulo
+      inclocal            5
+      pushscope
+
+      getlocal3
+      setlocal2
+
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      getlocal            5
+      dup
+      iftrue              L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iffalse             L50
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "map_")
+      pushnull
+      ifne                L31
+
+      getlocal            5
+      iffalse             L31
+
+      pushfalse
+      returnvalue
+
+      getlocal            5
+      iffalse             L55
+
+L31:
+      findproperty        QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      initproperty        QName(PackageNamespace(""), "x_")
+
+      getlocal            5
+      dup
+      iftrue              L49
+
+      pop
+      getlocal3
+      convert_b
+      jump                L49
+
+      divide
+      inclocal_i          2
+      inclocal_i          4
+      getlocal3
+      declocal            3
+      strictequals
+L49:
+      iffalse             L55
+
+L50:
+      findproperty        QName(PackageNamespace(""), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      initproperty        QName(PackageNamespace(""), "y_")
+
+L55:
+      pushbyte            10
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      jump                L100
+
+L60:
+      label
+      getlex              QName(PackageNamespace(""), "map_")
+      findpropstrict      QName(PackageNamespace("_-0Km"), "_-06s")
+      pushbyte            100
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "color_")
+      pushshort           400
+      pushdouble          0.75
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-04d")
+      pushbyte            4
+      callproperty        QName(PackageNamespace(""), "_-Fe"), 1
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-04d")
+      pushbyte            4
+      callproperty        QName(PackageNamespace(""), "_-Fe"), 1
+      jump                L81
+
+      kill                5
+      negate_i
+      typeof
+      setlocal2
+
+      pushtrue
+      convert_u
+L81:
+      constructprop       QName(PackageNamespace("_-0Km"), "_-06s"), 6
+      getlex              QName(PackageNamespace(""), "x_")
+      getlex              QName(PackageNamespace(""), "y_")
+      callpropvoid        QName(PackageNamespace(""), "addObj"), 3
+
+      getlocal            5
+      dup
+      iftrue              L91
+
+      pop
+      getlocal3
+      convert_b
+L91:
+      iffalse             L103
+
+      inclocal_i          4
+      getlocal            6
+      dup
+      iffalse             L99
+
+      pop
+      getlocal2
+      convert_b
+L99:
+      iftrue              L103
+
+L100:
+      getlocal            4
+      getlocal3
+      iflt                L60
+
+L103:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Km:_-l2/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

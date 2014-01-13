@@ -1,0 +1,336 @@
+class
+ refid "_-5H:_-5P"
+ instance QName(PackageNamespace("_-5H"), "_-5P")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-dG")
+  iinit
+   refid "_-5H:_-5P/iinit"
+   param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-5H"), "_-xY")>)
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     coerce_s
+     declocal            2
+     lshift
+     nextname
+     convert_i
+     not
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L19
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iffalse             L22
+
+L19:
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-5H:_-5P"), "_-05t")
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-5H:_-5P"), "_-05t") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-5H"), "_-xY")>) end
+  trait slot QName(PrivateNamespace("*", "_-5H:_-5P"), "selected") type QName(PackageNamespace("_-5H"), "_-xY") end
+  trait method QName(PackageNamespace(""), "setSelected")
+   method
+    refid "_-5H:_-5P/setSelected"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      negate
+      kill                4
+      getglobalscope
+      astypelate
+      getlocal3
+      convert_b
+L10:
+      setlocal            5
+
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-5H"), "_-xY")
+      setlocal2
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "_-05t")
+      coerce_a
+      setlocal            4
+
+      jump                L68
+
+L24:
+      label
+      getlocal            4
+      jump                L33
+
+      declocal            2
+      hasnext
+      kill                2
+      astypelate
+      declocal            2
+      setlocal            4
+
+L33:
+      getlocal3
+      nextvalue
+      coerce              QName(PackageNamespace("_-5H"), "_-xY")
+      setlocal2
+
+      getlocal            5
+      dup
+      iffalse             L50
+
+      pop
+      getlocal2
+      jump                L49
+
+      declocal            5
+      setlocal            4
+
+      instanceof
+      add
+      getlocal3
+      multiply
+L49:
+      convert_b
+L50:
+      iftrue              L67
+
+      getlocal2
+      callproperty        QName(Namespace("_-w4"), "getValue"), 0
+      getlocal1
+      ifne                L68
+
+      getlocal            6
+      dup
+      iftrue              L61
+
+      pop
+      getlocal1
+      convert_b
+L61:
+      iffalse             L68
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "_-5H:_-5P"), "_-0HV"), 1
+
+      getlocal            6
+      iffalse             L68
+
+L67:
+      returnvoid
+
+L68:
+      hasnext2            4, 3
+      iftrue              L24
+
+      kill                4
+      kill                3
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-rq")
+   method
+    refid "_-5H:_-5P/_-rq"
+    returns QName(PackageNamespace("_-5H"), "_-xY")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-5H:_-5P"), "_-0HV")
+   method
+    refid "_-5H:_-5P/_-0HV"
+    param QName(PackageNamespace("_-5H"), "_-xY")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal2
+      greaterequals
+      inclocal_i          2
+      kill                2
+      getlocal2
+      lshift
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L76
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      getlocal3
+      iftrue              L74
+
+      pushnull
+      ifeq                L67
+
+      getlocal2
+      dup
+      iftrue              L27
+
+      pop
+      getlocal3
+      convert_b
+L27:
+      iffalse             L76
+
+      jump                L35
+
+      bitxor
+      nextvalue
+      negate
+      setlocal2
+
+      coerce_a
+      convert_i
+L35:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+      getlocal3
+      dup
+      iffalse             L43
+
+      pop
+      getlocal1
+      convert_b
+L43:
+      iftrue              L74
+
+      pushfalse
+      getlocal3
+      jump                L53
+
+      nextname
+      swap
+      setlocal2
+
+      add
+      pushtrue
+      declocal_i          2
+L53:
+      dup
+      iffalse             L58
+
+      pop
+      getlocal1
+      convert_b
+L58:
+      iftrue              L75
+
+      callpropvoid        QName(Namespace("_-w4"), "setSelected"), 1
+
+      getlocal2
+      dup
+      iftrue              L66
+
+      pop
+      getlocal1
+      convert_b
+L66:
+      iffalse             L76
+
+L67:
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+
+      getlocal2
+      iffalse             L76
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-5H:_-5P"), "selected")
+L74:
+      pushtrue
+L75:
+      callpropvoid        QName(Namespace("_-w4"), "setSelected"), 1
+
+L76:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-5H:_-5P/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

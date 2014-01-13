@@ -1,0 +1,177 @@
+class
+ refid "_-QA:_-nJ"
+ instance QName(PackageInternalNs("_-QA"), "_-nJ")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-05-")
+  iinit
+   refid "_-QA:_-nJ/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                2
+     convert_o
+     setlocal2
+
+     dup
+     getlocal2
+     inclocal_i          2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L24
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-QA:_-nJ/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    getlocal1
+    coerce_a
+    divide
+    pushundefined
+    subtract_i
+    getlocal2
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal1
+    convert_b
+L19:
+    iftrue              L70
+
+    findproperty        QName(PackageNamespace(""), "DONE")
+    pushstring          "ACCOUNT_DONE"
+    initproperty        QName(PackageNamespace(""), "DONE")
+
+    findproperty        QName(PackageNamespace(""), "_-tp")
+    pushstring          "ACCOUNT_CURRENT"
+    initproperty        QName(PackageNamespace(""), "_-tp")
+
+    jump                L33
+
+    pushnull
+    subtract
+    rshift
+    not
+    swap
+    getglobalscope
+L33:
+    getlocal1
+    dup
+    iftrue              L39
+
+    pop
+    getlocal1
+    convert_b
+L39:
+    iffalse             L73
+
+    findproperty        QName(PackageNamespace(""), "_-G-")
+    pushstring          "ACCOUNT_REGISTER"
+    initproperty        QName(PackageNamespace(""), "_-G-")
+
+    jump                L50
+
+    swap
+    pushtrue
+    add_i
+    newactivation
+    getlocal3
+    typeof
+L50:
+    findproperty        QName(PackageNamespace(""), "_-2K")
+    pushstring          "ACCOUNT_SIGN_IN"
+    initproperty        QName(PackageNamespace(""), "_-2K")
+
+    getlocal2
+    dup
+    iffalse             L59
+
+    pop
+    getlocal1
+    convert_b
+L59:
+    iftrue              L70
+
+    findproperty        QName(PackageNamespace(""), "_-lS")
+    pushstring          "ACCOUNT_FORGOT"
+    initproperty        QName(PackageNamespace(""), "_-lS")
+
+    getlocal1
+    dup
+    iftrue              L69
+
+    pop
+    getlocal0
+    convert_b
+L69:
+    iffalse             L73
+
+L70:
+    findproperty        QName(PackageNamespace(""), "CHANGE")
+    pushstring          "ACCOUNT_CHANGE"
+    initproperty        QName(PackageNamespace(""), "CHANGE")
+
+L73:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "DONE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_DONE") end
+ trait const QName(PackageNamespace(""), "_-tp") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_CURRENT") end
+ trait const QName(PackageNamespace(""), "_-G-") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_REGISTER") end
+ trait const QName(PackageNamespace(""), "_-2K") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_SIGN_IN") end
+ trait const QName(PackageNamespace(""), "_-lS") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_FORGOT") end
+ trait const QName(PackageNamespace(""), "CHANGE") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_CHANGE") end
+end ; class

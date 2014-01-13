@@ -1,0 +1,321 @@
+class
+ refid "com.company.assembleegameclient.ui:return"
+ instance QName(PackageNamespace("com.company.assembleegameclient.ui"), "return")
+  extends QName(PackageNamespace("flash.display"), "Shape")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-PX")
+  iinit
+   refid "com.company.assembleegameclient.ui:return/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 7
+    localcount 5
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     typeof
+     pushundefined
+     add
+     declocal_i          2
+     pushtrue
+     declocal_i          3
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     dup
+     iffalse             L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iftrue              L33
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsSolidFill")
+     pushint             16777215
+     pushbyte            1
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsSolidFill"), 2
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-7H")
+
+     getlocal            4
+     dup
+     iffalse             L32
+
+     pop
+     getlocal0
+     convert_b
+L32:
+     iftrue              L97
+
+L33:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "GraphicsPath")
+     getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), PrivateNamespace("*", "com.company.assembleegameclient.ui:return/iinit"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-PX"), StaticProtectedNs("_-PX"), StaticProtectedNs("flash.display:Shape"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace(""), "int")
+     applytype           1
+     construct           0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), PrivateNamespace("*", "com.company.assembleegameclient.ui:return/iinit"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-PX"), StaticProtectedNs("_-PX"), StaticProtectedNs("flash.display:Shape"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     jump                L47
+
+     kill                3
+     setlocal3
+
+     pushnan
+     kill                3
+     kill                3
+     inclocal            3
+L47:
+     getlex              QName(PackageNamespace(""), "Number")
+     applytype           1
+     construct           0
+     getlex              QName(PackageNamespace("flash.display"), "GraphicsPathWinding")
+     getproperty         QName(PackageNamespace(""), "NON_ZERO")
+     constructprop       QName(PackageNamespace("flash.display"), "GraphicsPath"), 3
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-nM")
+
+     getlocal3
+     iffalse             L93
+
+     getlocal0
+     findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+     getproperty         Multiname("Vector", [PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), PrivateNamespace("*", "com.company.assembleegameclient.ui:return/iinit"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.ui"), PackageInternalNs("com.company.assembleegameclient.ui"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-PX"), StaticProtectedNs("_-PX"), StaticProtectedNs("flash.display:Shape"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("flash.display"), "IGraphicsData")
+     applytype           1
+     pushbyte            3
+     construct           1
+     dup
+     pushbyte            0
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-7H")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            1
+     getlocal0
+     jump                L78
+
+     kill                2
+     dxnslate
+     setlocal3
+
+     instanceof
+     inclocal_i          3
+     inclocal_i          3
+L78:
+     getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-nM")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     dup
+     pushbyte            2
+     getlex              QName(PackageNamespace("com.company.util"), "_-9e")
+     getproperty         QName(PackageNamespace(""), "END_FILL")
+     setproperty         MultinameL([PackageNamespace("")])
+
+     initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-Af")
+
+     getlocal            4
+     dup
+     iffalse             L92
+
+     pop
+     getlocal2
+     convert_b
+L92:
+     iftrue              L101
+
+L93:
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     iffalse             L101
+
+L97:
+     getlocal0
+     getlocal1
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "_-rs"), 2
+
+L101:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-7H") type QName(PackageNamespace("flash.display"), "GraphicsSolidFill") end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-nM") type QName(PackageNamespace("flash.display"), "GraphicsPath") end
+  trait const QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-Af") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "IGraphicsData")>) end
+  trait method QName(PackageNamespace(""), "_-rs")
+   method
+    refid "com.company.assembleegameclient.ui:return/_-rs"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "uint")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 5
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      pushwith
+      getlocal2
+      declocal            3
+      setlocal2
+
+      inclocal            3
+      greaterthan
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "clear"), 0
+
+      getlocal            4
+      iftrue              L28
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-7H")
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "color")
+
+      getlocal            4
+      dup
+      iffalse             L27
+
+      pop
+      getlocal3
+      convert_b
+L27:
+      iftrue              L46
+
+L28:
+      getlex              QName(PackageNamespace("com.company.util"), "_-9e")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-nM")
+      callpropvoid        QName(PackageNamespace(""), "_-0L6"), 1
+
+      getlocal3
+      dup
+      iftrue              L45
+
+      pop
+      jump                L43
+
+      dup
+      pop
+      setlocal2
+
+      lessequals
+      getlocal3
+      typeof
+L43:
+      getlocal0
+      convert_b
+L45:
+      iffalse             L74
+
+L46:
+      getlex              QName(PackageNamespace("com.company.util"), "_-9e")
+      pushbyte            0
+      dup
+      pushbyte            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-nM")
+      callpropvoid        QName(PackageNamespace(""), "_-00w"), 4
+
+      getlocal3
+      dup
+      iftrue              L59
+
+      pop
+      getlocal0
+      convert_b
+L59:
+      iffalse             L74
+
+      getlex              QName(PackageNamespace("com.company.util"), "_-9e")
+      getlocal1
+      pushbyte            0
+      jump                L70
+
+      pop
+      declocal_i          3
+      inclocal            3
+      nextvalue
+      getlocal3
+      getlocal2
+L70:
+      pushbyte            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-nM")
+      callpropvoid        QName(PackageNamespace(""), "_-00w"), 4
+
+L74:
+      getlex              QName(PackageNamespace("com.company.util"), "_-9e")
+      pushbyte            0
+      pushbyte            255
+      getlocal1
+      pushbyte            2
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-nM")
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 5
+
+      getlocal            4
+      dup
+      iffalse             L88
+
+      pop
+      getlocal3
+      convert_b
+L88:
+      iftrue              L93
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.ui:return"), "_-Af")
+      callpropvoid        QName(PackageNamespace(""), "drawGraphicsData"), 1
+
+L93:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.ui:return/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

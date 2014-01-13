@@ -1,0 +1,141 @@
+class
+ refid "_-Z6:_-sR"
+ instance QName(PackageNamespace("_-Z6"), "_-sR")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Us")
+  iinit
+   refid "_-Z6:_-sR/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     instanceof
+     typeof
+     checkfilter
+     newactivation
+     bitnot
+     setlocal2
+
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-Z6:_-sR/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "encode") flag FINAL dispid 3
+  method
+   refid "_-Z6:_-sR/encode"
+   param QName(PackageNamespace(""), "Object")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("_-Z6"), "_-mW")
+     jump                L10
+
+     divide
+     subtract
+     pushwith
+     not
+     pushwith
+     pushtrue
+L10:
+     getlocal1
+     constructprop       QName(PackageNamespace("_-Z6"), "_-mW"), 1
+     coerce              QName(PackageNamespace("_-Z6"), "_-mW")
+     setlocal2
+
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getString"), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "decode") flag FINAL dispid 4
+  method
+   refid "_-Z6:_-sR/decode"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace("_-Z6"), "_-0IK")
+     jump                L10
+
+     pushfalse
+     bitand
+     multiply
+     getlocal2
+     bitor
+     subtract_i
+L10:
+     getlocal1
+     constructprop       QName(PackageNamespace("_-Z6"), "_-0IK"), 1
+     coerce              QName(PackageNamespace("_-Z6"), "_-0IK")
+     setlocal2
+
+     getlocal2
+     callproperty        QName(PackageNamespace(""), "getValue"), 0
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,35 @@
+method
+ refid "_-092:not"
+ param QName(PackageNamespace(""), "Object")
+ returns QName(PackageNamespace("_-qj"), "_-pn")
+ body
+  maxstack 3
+  localcount 2
+  initscopedepth 1
+  maxscopedepth 2
+  code
+   getlocal0
+   pushscope
+
+   getlocal1
+   getlex              QName(PackageNamespace("_-qj"), "_-pn")
+   istypelate
+   iffalse             L12
+
+   findpropstrict      QName(PackageNamespace("_-092"), "_-L")
+   getlocal1
+   getlex              QName(PackageNamespace("_-qj"), "_-pn")
+   astypelate
+   constructprop       QName(PackageNamespace("_-092"), "_-L"), 1
+   returnvalue
+
+L12:
+   findpropstrict      QName(PackageNamespace("_-092"), "not")
+   findpropstrict      QName(PackageNamespace("_-g3"), "equalTo")
+   getlocal1
+   callproperty        QName(PackageNamespace("_-g3"), "equalTo"), 1
+   callproperty        QName(PackageNamespace("_-092"), "not"), 1
+   returnvalue
+  end ; code
+ end ; body
+end ; method

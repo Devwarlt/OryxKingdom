@@ -1,0 +1,94 @@
+class
+ refid "_-0Jk:_-00m"
+ instance QName(PackageNamespace("_-0Jk"), "_-00m")
+  extends QName(PackageNamespace("_-0Jk"), "_-ND")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Cb")
+  iinit
+   refid "_-0Jk:_-00m/iinit"
+   body
+    maxstack 6
+    localcount 3
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     convert_i
+     dup
+     convert_o
+     pushtrue
+     pushwith
+     pushundefined
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L26
+
+     getlocal0
+     newarray            0
+     pushbyte            0
+     getlex              QName(PackageNamespace(""), "injectParameters")
+     constructsuper      3
+
+L26:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "createInstance") flag OVERRIDE
+   method
+    refid "_-0Jk:_-00m/createInstance"
+    param QName(PackageNamespace(""), "Class")
+    param QName(PackageNamespace("_-eZ"), "_-08b")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      construct           0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Jk:_-00m/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

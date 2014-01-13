@@ -1,0 +1,37 @@
+script ; 998
+ sinit
+  refid "_-0Km:_-Nh.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-Nh", [PackageNamespace("_-0Km")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "Particle")
+    newclass            "_-0Km:_-Nh"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-0Km"), "_-Nh")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0Km"), "_-Nh")
+  #include "_-Nh.class.asasm"
+ end ; trait
+end ; script

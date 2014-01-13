@@ -1,0 +1,29 @@
+script ; 1071
+ sinit
+  refid "_-mv:_-md.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-md", [PackageNamespace("_-mv")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-mv:_-md"
+    popscope
+    initproperty        QName(PackageNamespace("_-mv"), "_-md")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-mv"), "_-md")
+  #include "_-md.class.asasm"
+ end ; trait
+end ; script

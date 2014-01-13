@@ -1,0 +1,95 @@
+class
+ refid "_-WD:_-0IH"
+ instance QName(PackageNamespace("_-WD"), "_-0IH")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-04N")
+  iinit
+   refid "_-WD:_-0IH/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lshift
+     rshift
+     instanceof
+     pushfalse
+     decrement_i
+     instanceof
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     jump                L20
+
+     convert_s
+     pushnan
+     instanceof
+     pop
+     subtract_i
+     dxnslate
+L20:
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L27
+
+     pop
+     getlocal1
+     convert_b
+L27:
+     iftrue              L40
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iftrue              L36
+
+     pop
+     getlocal1
+     convert_b
+L36:
+     iffalse             L40
+
+     getlocal0
+     pushtrue
+     initproperty        QName(PackageNamespace(""), "_-34")
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-T1") type QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR") end
+  trait slot QName(PackageNamespace(""), "_-34") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "_-sy") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "_-WD:_-0IH/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,707 @@
+class
+ refid "_-QA:_-L-"
+ instance QName(PackageInternalNs("_-QA"), "_-L-")
+  extends QName(PackageNamespace("_-0Dd"), "Frame")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-VR")
+  iinit
+   refid "_-QA:_-L-/iinit"
+   body
+    maxstack 7
+    localcount 3
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     nextname
+     istypelate
+     coerce_s
+     setlocal2
+
+     bitand
+     subtract
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushstring          "Sign in"
+     pushstring          "Cancel"
+     pushstring          "Sign in"
+     pushstring          "/signIn"
+     constructsuper      4
+
+     getlocal1
+     iftrue              L109
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0Dd"), "_-OI")
+     pushstring          "Username"
+     pushfalse
+     pushstring          ""
+     constructprop       QName(PackageNamespace("_-0Dd"), "_-OI"), 3
+     initproperty        QName(PackageNamespace(""), "_-xb")
+
+     findpropstrict      QName(PackageNamespace(""), "_-vO")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-xb")
+     callpropvoid        QName(PackageNamespace(""), "_-vO"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-0Dd"), "_-OI")
+     pushstring          "Password"
+     pushtrue
+     pushstring          ""
+     constructprop       QName(PackageNamespace("_-0Dd"), "_-OI"), 3
+     initproperty        QName(PackageNamespace(""), "password_")
+
+     getlocal1
+     dup
+     iffalse             L46
+
+     pop
+     getlocal1
+     convert_b
+L46:
+     iftrue              L76
+
+     findpropstrict      QName(PackageNamespace(""), "_-vO")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "password_")
+     callpropvoid        QName(PackageNamespace(""), "_-vO"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-jM")
+     pushbyte            12
+     jump                L61
+
+     add
+     checkfilter
+     astypelate
+     convert_o
+     hasnext
+     dup
+L61:
+     pushfalse
+     pushstring          "Forgot your password?  Click here"
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-jM"), 3
+     initproperty        QName(PackageNamespace(""), "_-5K")
+
+     findpropstrict      QName(PackageNamespace(""), " true")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-5K")
+     callpropvoid        QName(PackageNamespace(""), " true"), 1
+
+     getlocal2
+     dup
+     iftrue              L75
+
+     pop
+     getlocal1
+     convert_b
+L75:
+     iffalse             L109
+
+L76:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-jM")
+     pushbyte            12
+     pushfalse
+     pushstring          "New user?  Click here to Register"
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-jM"), 3
+     initproperty        QName(PackageNamespace(""), "static")
+
+     findpropstrict      QName(PackageNamespace(""), " true")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "static")
+     callpropvoid        QName(PackageNamespace(""), " true"), 1
+
+     getlocal2
+     iffalse             L122
+
+     getlex              QName(PackageNamespace(""), "_-MH")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-QA:_-L-"), "onCancel")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal2
+     dup
+     iftrue              L108
+
+     pop
+     jump                L106
+
+     pushnull
+     typeof
+     increment
+     subtract_i
+     increment_i
+     astypelate
+L106:
+     getlocal1
+     convert_b
+L108:
+     iffalse             L122
+
+L109:
+     getlex              QName(PackageNamespace(""), "_-uu")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-QA:_-L-"), "_-q5")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-5K")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-QA:_-L-"), "_-08Y")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L122:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "static")
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-QA:_-L-"), "_-mO")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-xb") type QName(PackageNamespace("_-0Dd"), "_-OI") end
+  trait slot QName(PackageNamespace(""), "password_") type QName(PackageNamespace("_-0Dd"), "_-OI") end
+  trait slot QName(PackageNamespace(""), "_-5K") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-jM") end
+  trait slot QName(PackageNamespace(""), "static") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-jM") end
+  trait method QName(PrivateNamespace("*", "_-QA:_-L-"), "onCancel")
+   method
+    refid "_-QA:_-L-/onCancel"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      increment_i
+      pushtrue
+      inclocal_i          2
+      inclocal            2
+      nextname
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L21
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageInternalNs("_-QA"), "_-nJ")
+      getlex              QName(PackageInternalNs("_-QA"), "_-nJ")
+      getproperty         QName(PackageNamespace(""), "DONE")
+      constructprop       QName(PackageInternalNs("_-QA"), "_-nJ"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-QA:_-L-"), "_-q5")
+   method
+    refid "_-QA:_-L-/_-q5"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 8
+     localcount 5
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      inclocal            3
+      inclocal_i          3
+      getlocal2
+      declocal            2
+      pop
+      lessequals
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L51
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-xb")
+      getlocal            4
+      iffalse             L34
+
+      callproperty        QName(PackageNamespace(""), "text"), 0
+      getlocal            4
+      iffalse             L42
+
+      pushstring          ""
+      getlocal            4
+      dup
+      iftrue              L30
+
+      pop
+      getlocal3
+      convert_b
+L30:
+      iffalse             L43
+
+      ifne                L37
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-xb")
+L34:
+      pushstring          "Invalid Username (max 12 chars)"
+      callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
+
+      returnvoid
+
+L37:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "password_")
+      getlocal3
+      iftrue              L53
+
+      callproperty        QName(PackageNamespace(""), "text"), 0
+L42:
+      pushstring          ""
+L43:
+      ifne                L70
+
+      getlocal3
+      dup
+      iffalse             L50
+
+      pop
+      getlocal1
+      convert_b
+L50:
+      iftrue              L70
+
+L51:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "password_")
+L53:
+      pushstring          "Password too short"
+      jump                L61
+
+      declocal_i          3
+      inclocal_i          3
+      declocal_i          2
+      inclocal_i          2
+      setlocal2
+
+      inclocal_i          2
+L61:
+      callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
+
+      getlocal3
+      dup
+      iffalse             L68
+
+      pop
+      getlocal2
+      convert_b
+L68:
+      iftrue              L70
+
+      returnvoid
+
+L70:
+      findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callproperty        QName(PackageNamespace(""), "_-fK"), 0
+      pushstring          "/account"
+      pushtrue
+      constructprop       QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu"), 3
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0Bu")
+      setlocal2
+
+      getlocal3
+      dup
+      iffalse             L84
+
+      pop
+      getlocal3
+      convert_b
+L84:
+      iftrue              L129
+
+      getlocal2
+      getlex              QName(PackageNamespace("_-zo"), "_-8C")
+      getproperty         QName(PackageNamespace(""), "GENERIC_DATA")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-QA:_-L-"), "_-GL")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal3
+      dup
+      iffalse             L97
+
+      pop
+      getlocal3
+      convert_b
+L97:
+      iftrue              L127
+
+      getlocal2
+      jump                L106
+
+      inclocal_i          2
+      getlocal2
+      nextname
+      increment_i
+      astypelate
+      typeof
+L106:
+      getlex              QName(PackageNamespace("_-zo"), "_-mS")
+      getproperty         QName(PackageNamespace(""), "TEXT_ERROR")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-QA:_-L-"), "_-V5")
+      callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+      getlocal3
+      iftrue              L127
+
+      getlocal2
+      pushstring          "verify"
+      pushstring          "guid"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-xb")
+      callproperty        QName(PackageNamespace(""), "text"), 0
+      pushstring          "password"
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "password_")
+      callproperty        QName(PackageNamespace(""), "text"), 0
+      newobject           2
+      callpropvoid        QName(PackageNamespace(""), "sendRequest"), 2
+
+      getlocal            4
+      iffalse             L129
+
+L127:
+      findpropstrict      QName(PackageNamespace(""), "_-pW")
+      callpropvoid        QName(PackageNamespace(""), "_-pW"), 0
+
+L129:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-QA:_-L-"), "_-GL")
+   method
+    refid "_-QA:_-L-/_-GL"
+    param QName(PackageNamespace("_-zo"), "_-8C")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      pushnull
+      greaterthan
+      setlocal2
+
+      inclocal_i          2
+      setlocal2
+
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L64
+
+      getlex              QName(PackageNamespace("com.company.googleanalytics"), "GA")
+      callproperty        QName(PackageNamespace(""), "global"), 0
+      pushstring          "account"
+      pushstring          "signedIn"
+      callpropvoid        QName(PackageNamespace(""), "trackEvent"), 2
+
+      getlocal2
+      dup
+      jump                L29
+
+      getlocal2
+      nextvalue
+      astypelate
+      decrement
+      declocal            2
+      getlocal2
+L29:
+      iftrue              L33
+
+      pop
+      getlocal3
+      convert_b
+L33:
+      iffalse             L58
+
+      jump                L41
+
+      declocal_i          2
+      kill                2
+      dxnslate
+      bitxor
+      strictequals
+      inclocal_i          2
+L41:
+      getlex              QName(PackageNamespace("_-qN"), "Account")
+      callproperty        QName(PackageNamespace(""), "get"), 0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-xb")
+      callproperty        QName(PackageNamespace(""), "text"), 0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "password_")
+      callproperty        QName(PackageNamespace(""), "text"), 0
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "modify"), 3
+
+      getlocal2
+      dup
+      iftrue              L57
+
+      pop
+      getlocal1
+      convert_b
+L57:
+      iffalse             L64
+
+L58:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageInternalNs("_-QA"), "_-nJ")
+      getlex              QName(PackageInternalNs("_-QA"), "_-nJ")
+      getproperty         QName(PackageNamespace(""), "_-tp")
+      constructprop       QName(PackageInternalNs("_-QA"), "_-nJ"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L64:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-QA:_-L-"), "_-V5")
+   method
+    refid "_-QA:_-L-/_-V5"
+    param QName(PackageNamespace("_-zo"), "_-mS")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      kill                2
+      add
+      pushfalse
+      lessthan
+      pushscope
+
+      negate_i
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iffalse             L27
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "password_")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "text_")
+      callpropvoid        QName(PackageNamespace(""), "_-0BT"), 1
+
+      getlocal2
+      iffalse             L29
+
+L27:
+      findpropstrict      QName(PackageNamespace(""), "for")
+      callpropvoid        QName(PackageNamespace(""), "for"), 0
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-QA:_-L-"), "_-08Y")
+   method
+    refid "_-QA:_-L-/_-08Y"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal2
+      getlocal3
+      kill                2
+      setlocal2
+
+      declocal_i          2
+      inclocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal3
+      convert_b
+L19:
+      iftrue              L26
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageInternalNs("_-QA"), "_-nJ")
+      getlex              QName(PackageInternalNs("_-QA"), "_-nJ")
+      getproperty         QName(PackageNamespace(""), "_-lS")
+      constructprop       QName(PackageInternalNs("_-QA"), "_-nJ"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-QA:_-L-"), "_-mO")
+   method
+    refid "_-QA:_-L-/_-mO"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      declocal_i          2
+      inclocal_i          2
+      kill                2
+      add
+      pushwith
+      inclocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L21
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageInternalNs("_-QA"), "_-nJ")
+      getlex              QName(PackageInternalNs("_-QA"), "_-nJ")
+      getproperty         QName(PackageNamespace(""), "_-G-")
+      constructprop       QName(PackageInternalNs("_-QA"), "_-nJ"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-QA:_-L-/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

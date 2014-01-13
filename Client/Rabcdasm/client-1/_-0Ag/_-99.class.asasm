@@ -1,0 +1,271 @@
+class
+ refid "_-0Ag:_-99"
+ instance QName(PackageNamespace("_-0Ag"), "_-99")
+  extends QName(PackageNamespace("_-0Ag"), "_-Rq")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-08a")
+  iinit
+   refid "_-0Ag:_-99/iinit"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     getlocal2
+     multiply
+     setlocal2
+
+     declocal_i          2
+     pushwith
+     declocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iffalse             L65
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0")
+     jump                L29
+
+     divide
+     inclocal            2
+     pushwith
+     declocal            2
+     pushnan
+     istypelate
+L29:
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0"), 0
+     initproperty        QName(PackageNamespace(""), "position_")
+
+     getlocal2
+     dup
+     iftrue              L44
+
+     pop
+     jump                L42
+
+     bitor
+     greaterequals
+     nextname
+     coerce_a
+     declocal            2
+     add
+L42:
+     getlocal3
+     convert_b
+L44:
+     iffalse             L62
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-0-3")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-0-3"), 0
+     initproperty        QName(PackageNamespace(""), "slotObject1_")
+
+     getlocal2
+     dup
+     iftrue              L55
+
+     pop
+     getlocal1
+     convert_b
+L55:
+     iffalse             L62
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-0-3")
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-0-3"), 0
+     initproperty        QName(PackageNamespace(""), "slotObject2_")
+
+     getlocal3
+     iftrue              L65
+
+L62:
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L65:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "time_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "position_") type QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-Q0") end
+  trait slot QName(PackageNamespace(""), "slotObject1_") type QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-0-3") end
+  trait slot QName(PackageNamespace(""), "slotObject2_") type QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-0-3") end
+  trait method QName(PackageNamespace(""), "writeToOutput") flag OVERRIDE
+   method
+    refid "_-0Ag:_-99/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          2
+      kill                2
+      setlocal2
+
+      inclocal_i          2
+      inclocal_i          2
+      dup
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L52
+
+      jump                L28
+
+      declocal_i          2
+      inclocal            2
+      negate_i
+      istypelate
+      popscope
+      divide
+L28:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "time_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      jump                L39
+
+      pushscope
+
+      checkfilter
+      setlocal2
+
+      increment_i
+      declocal            2
+      convert_o
+L39:
+      getlocal3
+      dup
+      iftrue              L45
+
+      pop
+      getlocal2
+      convert_b
+L45:
+      iffalse             L58
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "position_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeToOutput"), 1
+
+      getlocal2
+      iftrue              L62
+
+L52:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "slotObject1_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeToOutput"), 1
+
+      getlocal2
+      iftrue              L62
+
+L58:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "slotObject2_")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "writeToOutput"), 1
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_-0Ag:_-99/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
+      jump                L10
+
+      pushfalse
+      convert_o
+      typeof
+      urshift
+      greaterthan
+      lessequals
+L10:
+      pushstring          "INVSWAP"
+      pushstring          "time_"
+      pushstring          "position_"
+      pushstring          "slotObject1_"
+      pushstring          "slotObject2_"
+      callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Ag:_-99/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

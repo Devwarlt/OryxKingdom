@@ -1,0 +1,29 @@
+script ; 270
+ sinit
+  refid "_-TY:_-4A.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-4A", [PackageNamespace("_-TY")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-TY:_-4A"
+    popscope
+    initproperty        QName(PackageNamespace("_-TY"), "_-4A")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-TY"), "_-4A")
+  #include "_-4A.class.asasm"
+ end ; trait
+end ; script

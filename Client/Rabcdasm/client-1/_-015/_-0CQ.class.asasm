@@ -1,0 +1,409 @@
+class
+ refid "_-015:_-0CQ"
+ instance QName(PackageNamespace("_-015"), "_-0CQ")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-WU")
+  iinit
+   refid "_-015:_-0CQ/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     not
+     pushtrue
+     convert_u
+     convert_u
+     bitnot
+     bitnot
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iftrue              L26
+
+     pop
+     getlocal2
+     jump                L25
+
+     lshift
+     checkfilter
+     equals
+     instanceof
+     bitor
+     strictequals
+L25:
+     convert_b
+L26:
+     iffalse             L42
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+     initproperty        QName(PackageNamespace(""), "_-oX")
+
+     getlocal2
+     dup
+     iffalse             L37
+
+     pop
+     getlocal2
+     convert_b
+L37:
+     iftrue              L47
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     iffalse             L47
+
+L42:
+     findproperty        QName(PackageNamespace(""), "mouseEnabled")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "mouseEnabled")
+
+     getlocal1
+     iffalse             L50
+
+L47:
+     findproperty        QName(PackageNamespace(""), "mouseChildren")
+     pushfalse
+     initproperty        QName(PackageNamespace(""), "mouseChildren")
+
+L50:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-oX") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait method QName(PackageNamespace(""), "addSpeechBalloon")
+   method
+    refid "_-015:_-0CQ/addSpeechBalloon"
+    param QName(PackageNamespace("_-015"), "_-6T")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      bitor
+      getlocal3
+      kill                3
+      declocal_i          2
+      declocal_i          2
+      inclocal            2
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "_-015:_-0CQ"), "_-sX")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "objectId_")
+      getproperty         MultinameL([PrivateNamespace("*", "_-015:_-0CQ"), PackageNamespace(""), PrivateNamespace("*", "_-015:_-0CQ/addSpeechBalloon"), PackageNamespace("_-015"), PackageInternalNs("_-015"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-WU"), StaticProtectedNs("_-WU"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+      coerce              QName(PackageNamespace("_-015"), "_-6T")
+      setlocal2
+
+      getlocal            4
+      iftrue              L88
+
+      getlocal2
+      pushnull
+      equals
+      getlocal            4
+      dup
+      iffalse             L31
+
+      pop
+      getlocal1
+      convert_b
+L31:
+      iftrue              L68
+
+      not
+      getlocal3
+      dup
+      iftrue              L46
+
+      pop
+      getlocal0
+      convert_b
+      jump                L46
+
+      instanceof
+      declocal            2
+      setlocal3
+
+      getlocal3
+      getlocal3
+      declocal            3
+L46:
+      iffalse             L56
+
+      dup
+      iffalse             L68
+
+      getlocal3
+      dup
+      iftrue              L55
+
+      pop
+      getlocal0
+      convert_b
+L55:
+      iffalse             L68
+
+L56:
+      pop
+      getlocal            4
+      dup
+      iffalse             L63
+
+      pop
+      getlocal3
+      convert_b
+L63:
+      iftrue              L99
+
+      findpropstrict      QName(PackageNamespace(""), "contains")
+      getlocal2
+      callproperty        QName(PackageNamespace(""), "contains"), 1
+      convert_b
+L68:
+      iffalse             L88
+
+      jump                L76
+
+      strictequals
+      declocal            3
+      subtract_i
+      getlocal2
+      declocal            3
+      setlocal2
+
+L76:
+      getlocal3
+      iffalse             L99
+
+      findpropstrict      QName(PackageNamespace(""), "removeChild")
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+      getlocal3
+      dup
+      iftrue              L87
+
+      pop
+      getlocal3
+      convert_b
+L87:
+      iffalse             L99
+
+L88:
+      getlex              QName(PrivateNamespace("*", "_-015:_-0CQ"), "_-sX")
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "objectId_")
+      getlocal1
+      setproperty         MultinameL([PrivateNamespace("*", "_-015:_-0CQ"), PackageNamespace(""), PrivateNamespace("*", "_-015:_-0CQ/addSpeechBalloon"), PackageNamespace("_-015"), PackageInternalNs("_-015"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-WU"), StaticProtectedNs("_-WU"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+      getlocal3
+      iffalse             L99
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L99:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "draw")
+   method
+    refid "_-015:_-0CQ/draw"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 7
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      add_i
+      rshift
+      declocal_i          5
+      getlocal            5
+      kill                4
+      urshift
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-015"), "_-0Jp")
+      setlocal            4
+
+      pushbyte            0
+      setlocal3
+
+      jump                L69
+
+L19:
+      label
+      findpropstrict      QName(PackageNamespace(""), "getChildAt")
+      getlocal3
+      callproperty        QName(PackageNamespace(""), "getChildAt"), 1
+      getlex              QName(PackageNamespace("_-015"), "_-0Jp")
+      astypelate
+      coerce              QName(PackageNamespace("_-015"), "_-0Jp")
+      jump                L33
+
+      pushfalse
+      pop
+      swap
+      coerce_a
+      setlocal            5
+
+      pushnull
+L33:
+      dup
+      setlocal            4
+
+      pushnull
+      ifne                L50
+
+      getlocal            6
+      iftrue              L49
+
+      inclocal_i          3
+      getlocal            5
+      iffalse             L57
+
+      jump                L49
+
+      setlocal3
+
+      subtract_i
+      lessequals
+      pushwith
+      declocal            3
+      getlocal            4
+L49:
+      jump                L69
+
+L50:
+      getlocal            4
+      getlocal1
+      getlocal2
+      callproperty        QName(Namespace("_-ww"), "draw"), 2
+      iftrue              L68
+
+      getlocal            5
+      iffalse             L69
+
+L57:
+      findpropstrict      QName(PackageNamespace(""), "removeChildAt")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "removeChildAt"), 1
+
+      getlocal            6
+      dup
+      iffalse             L66
+
+      pop
+      getlocal0
+      convert_b
+L66:
+      iftrue              L69
+
+      jump                L69
+
+L68:
+      inclocal_i          3
+L69:
+      getlocal3
+      getlex              QName(PackageNamespace(""), "numChildren")
+      iflt                L19
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-015:_-0CQ/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    subtract_i
+    modulo
+    subtract_i
+    convert_d
+    pushwith
+    decrement
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L20
+
+    findproperty        QName(PrivateNamespace("*", "_-015:_-0CQ"), "_-sX")
+    findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+    constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 0
+    setproperty         QName(PrivateNamespace("*", "_-015:_-0CQ"), "_-sX")
+
+L20:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "_-015:_-0CQ"), "_-sX") slotid 1 type QName(PackageNamespace("flash.utils"), "Dictionary") end
+end ; class

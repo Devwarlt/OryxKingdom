@@ -1,0 +1,140 @@
+class
+ refid "_-C-:_-07U"
+ instance QName(PackageNamespace("_-C-"), "_-07U")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-al", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-07H")
+  iinit
+   refid "_-C-:_-07U/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     swap
+     getlocal2
+     pushwith
+     convert_o
+     pushtrue
+     subtract
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "extend")
+   method
+    refid "_-C-:_-07U/extend"
+    param QName(PackageNamespace("_-0-p"), "_-Ly")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 16
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      urshift
+      declocal_i          2
+      declocal_i          2
+      multiply_i
+      swap
+      inclocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L26
+
+      pop
+      jump                L24
+
+      declocal_i          2
+      declocal_i          2
+      decrement_i
+      popscope
+      inclocal            2
+      multiply_i
+L24:
+      getlocal0
+      convert_b
+L26:
+      iftrue              L44
+
+      getlocal1
+      getlex              QName(PackageNamespace("_-IV"), "_-2l")
+      getlex              QName(PackageNamespace("_-IV"), "_-Cg")
+      getlex              QName(PackageNamespace("_-08G"), "_-kB")
+      getlex              QName(PackageNamespace("_-MT"), "_-ON")
+      getlex              QName(PackageNamespace("_-Fd"), "_-0Z")
+      getlex              QName(PackageNamespace("_-KS"), "_-DA")
+      getlex              QName(PackageNamespace("_-3b"), "_-2Y")
+      getlex              QName(PackageNamespace("_-bJ"), "_-2W")
+      getlex              QName(PackageNamespace("_-1O"), "_-06h")
+      getlex              QName(PackageNamespace("_-1O"), "_-pj")
+      getlex              QName(PackageNamespace("_-1O"), "_-jv")
+      getlex              QName(PackageNamespace("_-Hh"), "_-0Lj")
+      getlex              QName(PackageNamespace("_-lW"), "_-CT")
+      callpropvoid        QName(Namespace("_-06J"), "extend"), 13
+
+      getlocal3
+      iftrue              L47
+
+L44:
+      getlocal1
+      getlex              QName(PackageNamespace("_-O"), "finally")
+      callpropvoid        QName(Namespace("_-06J"), "_-K"), 1
+
+L47:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-C-:_-07U/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

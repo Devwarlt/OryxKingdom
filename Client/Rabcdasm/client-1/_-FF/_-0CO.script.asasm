@@ -1,0 +1,29 @@
+script ; 122
+ sinit
+  refid "_-FF:_-0CO.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-0CO", [PackageNamespace("_-FF")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-FF:_-0CO"
+    popscope
+    initproperty        QName(PackageNamespace("_-FF"), "_-0CO")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-FF"), "_-0CO")
+  #include "_-0CO.class.asasm"
+ end ; trait
+end ; script

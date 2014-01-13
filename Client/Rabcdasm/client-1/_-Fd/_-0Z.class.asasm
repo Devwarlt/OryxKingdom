@@ -1,0 +1,711 @@
+class
+ refid "_-Fd:_-0Z"
+ instance QName(PackageNamespace("_-Fd"), "_-0Z")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-Dv", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-4b")
+  iinit
+   refid "_-Fd:_-0Z/iinit"
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "Boolean")
+   flag HAS_OPTIONAL
+   optional True()
+   optional True()
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     strictequals
+     bitnot
+     inclocal            2
+     declocal            3
+     kill                2
+     bitxor
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L43
+
+     getlocal0
+     jump                L23
+
+     pushwith
+     setlocal3
+
+     inclocal_i          3
+     divide
+     pushundefined
+     kill                3
+L23:
+     getlex              QName(PackageNamespace("_-03T"), "_-078")
+     getlex              QName(PackageNamespace("_-Fd"), "_-0Z")
+     callproperty        QName(PackageNamespace(""), "create"), 1
+     initproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-ul")
+
+     getlocal3
+     iffalse             L38
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     iffalse             L37
+
+     pop
+     getlocal0
+     convert_b
+L37:
+     iftrue              L46
+
+L38:
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eW")
+
+     getlocal            4
+     iftrue              L46
+
+L43:
+     getlocal0
+     getlocal2
+     initproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "extends")
+
+L46:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
+  trait slot QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz") type QName(PackageNamespace("_-eZ"), "_-08b") end
+  trait slot QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eo") type QName(PackageNamespace("_-0-p"), "_-Q5") end
+  trait slot QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eW") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PrivateNamespace("*", "_-Fd:_-0Z"), "extends") type QName(PackageNamespace(""), "Boolean") end
+  trait method QName(PackageNamespace(""), "extend")
+   method
+    refid "_-Fd:_-0Z/extend"
+    param QName(PackageNamespace("_-0-p"), "_-Ly")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal1
+      convert_d
+      declocal_i          2
+      rshift
+      declocal_i          2
+      convert_u
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L57
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-rA")
+
+      getlocal2
+      iffalse             L63
+
+      getlocal0
+      jump                L28
+
+      getlocal2
+      setlocal2
+
+      pushwith
+      pushscope
+
+      popscope
+      negate_i
+L28:
+      getlocal1
+      getproperty         QName(Namespace("_-06J"), "_-OR")
+      initproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz")
+
+      getlocal2
+      dup
+      jump                L40
+
+      inclocal_i          2
+      declocal_i          2
+      declocal            2
+      lessthan
+      swap
+      setlocal2
+
+L40:
+      iftrue              L44
+
+      pop
+      getlocal1
+      convert_b
+L44:
+      iffalse             L63
+
+      getlocal0
+      getlocal1
+      getlocal0
+      callproperty        QName(Namespace("_-06J"), "_-0H4"), 1
+      initproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eo")
+
+      getlocal2
+      dup
+      iftrue              L56
+
+      pop
+      getlocal0
+      convert_b
+L56:
+      iffalse             L63
+
+L57:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-rA")
+      getproperty         QName(Namespace("_-06J"), "_-iL")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-8u")
+      callpropvoid        QName(Namespace("_-CZ"), "_-8u"), 1
+
+L63:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_-Fd:_-0Z/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-ul")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-8u")
+   method
+    refid "_-Fd:_-0Z/_-8u"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      astypelate
+      coerce_s
+      greaterequals
+      increment_i
+      convert_s
+      increment
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L61
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eW")
+      getlocal2
+      dup
+      iftrue              L24
+
+      pop
+      getlocal0
+      convert_b
+L24:
+      iffalse             L63
+
+      coerce_a
+      dup
+      iffalse             L46
+
+      pop
+      jump                L36
+
+      lshift
+      negate
+      pushnan
+      greaterequals
+      pushnan
+      convert_d
+L36:
+      getlocal2
+      dup
+      iftrue              L42
+
+      pop
+      getlocal0
+      convert_b
+L42:
+      iffalse             L74
+
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-RL"), 0
+      coerce_a
+L46:
+      pop
+      getlocal2
+      jump                L55
+
+      getlocal2
+      getlocal0
+      hasnext
+      pushundefined
+      typeof
+      pop
+L55:
+      dup
+      iftrue              L60
+
+      pop
+      getlocal1
+      convert_b
+L60:
+      iffalse             L74
+
+L61:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "extends")
+L63:
+      coerce_a
+      dup
+      iffalse             L77
+
+      pop
+      getlocal2
+      dup
+      iftrue              L73
+
+      pop
+      getlocal0
+      convert_b
+L73:
+      iffalse             L78
+
+L74:
+      getlocal0
+      callproperty        QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-03p"), 0
+      coerce_a
+L77:
+      pop
+L78:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-RL")
+   method
+    refid "_-Fd:_-0Z/_-RL"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      declocal_i          2
+      convert_o
+      getlocal2
+      multiply_i
+      inclocal            2
+      inclocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal1
+
+      getlocal3
+      dup
+      iftrue              L23
+
+      pop
+      getlocal2
+      convert_b
+L23:
+      iffalse             L78
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz")
+      getlocal3
+      iffalse             L59
+
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      jump                L36
+
+      typeof
+      declocal            2
+      add_i
+      instanceof
+      istypelate
+      convert_o
+L36:
+      callproperty        QName(PackageNamespace(""), "_-d6"), 1
+      iffalse             L74
+
+      getlocal2
+      iftrue              L78
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eo")
+      getlocal2
+      iftrue              L76
+
+      pushstring          "Context configured to inherit. Broadcasting existence event..."
+      getlocal3
+      iffalse             L77
+
+      callpropvoid        QName(Namespace("_-4t"), "debug"), 1
+
+      jump                L55
+
+      declocal            2
+      convert_o
+      decrement
+      kill                2
+      nextname
+      nextname
+L55:
+      getlocal3
+      iffalse             L78
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz")
+L59:
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal1
+
+      getlocal2
+      iftrue              L73
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("_-9W"), "ModularContextEvent")
+      getlex              QName(PackageNamespace("_-9W"), "ModularContextEvent")
+      getproperty         QName(PackageNamespace(""), "_-qb")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-rA")
+      constructprop       QName(PackageNamespace("_-9W"), "ModularContextEvent"), 2
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L73:
+      jump                L78
+
+L74:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eo")
+L76:
+      pushstring          "Context has been configured to inherit dependencies but has no way to do so"
+L77:
+      callpropvoid        QName(Namespace("_-4t"), "_-0EQ"), 1
+
+L78:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-03p")
+   method
+    refid "_-Fd:_-0Z/_-03p"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      convert_s
+      popscope
+      getlocal3
+      inclocal            2
+      greaterequals
+      checkfilter
+L10:
+      setlocal3
+
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-s3"), "_-im")
+      setlocal1
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      getlocal3
+      iftrue              L58
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz")
+      getlocal            4
+      iffalse             L96
+
+      getlex              QName(PackageNamespace("_-s3"), "_-im")
+      callproperty        QName(PackageNamespace(""), "_-d6"), 1
+      getlocal            4
+      iffalse             L98
+
+      iffalse             L87
+
+      getlocal            4
+      dup
+      iftrue              L37
+
+      pop
+      getlocal0
+      convert_b
+L37:
+      iffalse             L128
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eo")
+      getlocal            4
+      dup
+      iftrue              L46
+
+      pop
+      getlocal0
+      convert_b
+L46:
+      iffalse             L110
+
+      pushstring          "Context has a ViewManager. Configuring view manager based context existence watcher..."
+      getlocal            4
+      iffalse             L146
+
+      callpropvoid        QName(Namespace("_-4t"), "debug"), 1
+
+      getlocal            4
+      dup
+      iftrue              L57
+
+      pop
+      getlocal1
+      convert_b
+L57:
+      iffalse             L147
+
+L58:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz")
+      getlocal            4
+      iffalse             L130
+
+      getlex              QName(PackageNamespace("_-s3"), "_-im")
+      jump                L70
+
+      kill                3
+      getlocal2
+      inclocal            3
+      inclocal            3
+      declocal            3
+      divide
+L70:
+      callproperty        QName(PackageNamespace(""), "getInstance"), 1
+      coerce              QName(PackageNamespace("_-s3"), "_-im")
+      setlocal1
+
+      getlocal            4
+      dup
+      iftrue              L79
+
+      pop
+      getlocal1
+      convert_b
+L79:
+      iffalse             L86
+
+      findpropstrict      QName(PackageNamespace("_-9W"), "_-J6")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-rA")
+      getlocal1
+      constructprop       QName(PackageNamespace("_-9W"), "_-J6"), 2
+      pop
+L86:
+      jump                L147
+
+L87:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz")
+      getlocal            4
+      dup
+      iftrue              L95
+
+      pop
+      getlocal0
+      convert_b
+L95:
+      iffalse             L130
+
+L96:
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      callproperty        QName(PackageNamespace(""), "_-d6"), 1
+L98:
+      iffalse             L143
+
+      getlocal3
+      iftrue              L147
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eo")
+      getlocal3
+      dup
+      iffalse             L109
+
+      pop
+      getlocal2
+      convert_b
+L109:
+      iftrue              L145
+
+L110:
+      pushstring          "Context has a ContextView. Configuring context view based context existence watcher..."
+      getlocal3
+      dup
+      iffalse             L124
+
+      pop
+      getlocal2
+      convert_b
+      jump                L124
+
+      kill                3
+      add
+      convert_d
+      typeof
+      declocal            2
+      setlocal3
+
+L124:
+      iftrue              L146
+
+      callpropvoid        QName(Namespace("_-4t"), "debug"), 1
+
+      getlocal            4
+      iffalse             L147
+
+L128:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-vz")
+L130:
+      getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      callproperty        QName(PackageNamespace(""), "getInstance"), 1
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+      setlocal2
+
+      getlocal3
+      iftrue              L142
+
+      findpropstrict      QName(PackageNamespace("_-9W"), "_-we")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-rA")
+      getlocal2
+      constructprop       QName(PackageNamespace("_-9W"), "_-we"), 2
+      pop
+L142:
+      jump                L147
+
+L143:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Fd:_-0Z"), "_-eo")
+L145:
+      pushstring          "Context has been configured to expose its dependencies but has no way to do so"
+L146:
+      callpropvoid        QName(Namespace("_-4t"), "_-0EQ"), 1
+
+L147:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Fd:_-0Z/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

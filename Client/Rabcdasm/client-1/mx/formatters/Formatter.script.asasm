@@ -1,0 +1,29 @@
+script ; 249
+ sinit
+  refid "mx.formatters:Formatter.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("Formatter", [PackageNamespace("mx.formatters")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.formatters:Formatter"
+    popscope
+    initproperty        QName(PackageNamespace("mx.formatters"), "Formatter")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.formatters"), "Formatter")
+  #include "Formatter.class.asasm"
+ end ; trait
+end ; script

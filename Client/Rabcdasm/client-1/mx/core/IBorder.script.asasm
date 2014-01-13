@@ -1,0 +1,25 @@
+script ; 306
+ sinit
+  refid "mx.core:IBorder.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("IBorder", [PackageNamespace("mx.core")])
+    pushnull
+    newclass            "mx.core:IBorder"
+    initproperty        QName(PackageNamespace("mx.core"), "IBorder")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.core"), "IBorder")
+  #include "IBorder.class.asasm"
+ end ; trait
+end ; script

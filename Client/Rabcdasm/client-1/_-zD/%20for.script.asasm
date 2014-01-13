@@ -1,0 +1,33 @@
+script ; 110
+ sinit
+  refid "_-zD: for.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname(" for", [PackageNamespace("_-zD")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    newclass            "_-zD: for"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-zD"), " for")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-zD"), " for")
+  #include "%20for.class.asasm"
+ end ; trait
+end ; script

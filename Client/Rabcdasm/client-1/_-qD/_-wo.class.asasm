@@ -1,0 +1,538 @@
+class
+ refid "_-qD:_-wo"
+ instance QName(PackageNamespace("_-qD"), "_-wo")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-ol")
+  iinit
+   refid "_-qD:_-wo/iinit"
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitand
+     inclocal_i          6
+     not
+     inclocal            6
+     negate
+     inclocal            5
+L10:
+     setlocal            6
+
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce_s
+     setlocal2
+
+     pushnull
+     coerce              QName(PackageNamespace("_-qD"), "_-JB")
+     setlocal3
+
+     getlocal            6
+     dup
+     iffalse             L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iftrue              L40
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-qD:_-wo#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-qD:_-wo#1"), PackageNamespace("_-qD"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-ol"), StaticProtectedNs("_-ol"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     getlex              QName(PackageNamespace("_-qD"), "_-JB")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "_-kx")
+
+     getlocal            7
+     dup
+     iftrue              L39
+
+     pop
+     getlocal3
+     convert_b
+L39:
+     iffalse             L42
+
+L40:
+     getlocal0
+     constructsuper      0
+
+L42:
+     pushbyte            0
+     setlocal1
+
+     pushbyte            0
+     setlocal            4
+
+     getlex              QName(PackageNamespace(""), "_-0Ey")
+     coerce_a
+     setlocal            5
+
+     jump                L116
+
+L50:
+     label
+     getlocal            5
+     getlocal            4
+     nextvalue
+     coerce_s
+     setlocal2
+
+     jump                L63
+
+     declocal            5
+     nextvalue
+     setlocal            6
+
+     coerce_a
+     inclocal            4
+     pop
+L63:
+     findpropstrict      QName(PackageNamespace("_-qD"), "_-JB")
+     getlocal2
+     constructprop       QName(PackageNamespace("_-qD"), "_-JB"), 1
+     coerce              QName(PackageNamespace("_-qD"), "_-JB")
+     setlocal3
+
+     getlocal            6
+     iftrue              L100
+
+     getlocal3
+     getlex              QName(PackageNamespace("flash.events"), "MouseEvent")
+     getproperty         QName(PackageNamespace(""), "CLICK")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-qD:_-wo#0"), "_-021")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal            7
+     iffalse             L100
+
+     getlocal3
+     getlocal1
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            6
+     iftrue              L100
+
+     getlocal1
+     getlocal            7
+     dup
+     iftrue              L90
+
+     pop
+     getlocal3
+     convert_b
+L90:
+     iffalse             L97
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            5
+     add
+     add
+     convert_i
+L97:
+     setlocal1
+
+     getlocal            6
+     iftrue              L116
+
+L100:
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     jump                L110
+
+     equals
+     inclocal_i          2
+     convert_d
+     subtract_i
+     getlocal2
+     kill                2
+L110:
+     getlocal            6
+     iftrue              L116
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-kx")
+     getlocal3
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L116:
+     hasnext2            5, 4
+     iftrue              L50
+
+     kill                5
+     kill                4
+     getlocal            6
+     dup
+     iffalse             L126
+
+     pop
+     getlocal0
+     convert_b
+L126:
+     iftrue              L133
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-kx")
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "_-qD:_-wo#0"), PackageNamespace(""), PrivateNamespace("*", "_-qD:_-wo#1"), PackageNamespace("_-qD"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-ol"), StaticProtectedNs("_-ol"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callpropvoid        QName(PrivateNamespace("*", "_-qD:_-wo#0"), "setSelected"), 1
+
+L133:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-kx") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-qD"), "_-JB")>) end
+  trait slot QName(PackageNamespace(""), "selected_") type QName(PackageNamespace("_-qD"), "_-JB") value Null() end
+  trait method QName(PackageNamespace(""), "_-rq")
+   method
+    refid "_-qD:_-wo/_-rq"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      jump                L10
+
+      subtract
+      nextvalue
+      increment
+      negate
+      bitand
+      rshift
+L10:
+      getproperty         QName(PackageNamespace(""), "selected_")
+      getproperty         QName(PackageNamespace(""), "label_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-qD:_-wo#0"), "setSelected")
+   method
+    refid "_-qD:_-wo/setSelected"
+    param QName(PackageNamespace("_-qD"), "_-JB")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal3
+      declocal_i          2
+      getlocal2
+      getlocal1
+      istypelate
+      inclocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L74
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selected_")
+      getlocal3
+      iftrue              L64
+
+      pushnull
+      ifeq                L57
+
+      getlocal3
+      iftrue              L57
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selected_")
+      getlocal2
+      dup
+      jump                L34
+
+      kill                2
+      astypelate
+      declocal_i          2
+      kill                2
+      declocal            2
+      pushnan
+L34:
+      iftrue              L38
+
+      pop
+      getlocal2
+      convert_b
+L38:
+      iffalse             L64
+
+      pushfalse
+      getlocal2
+      iffalse             L65
+
+      callpropvoid        QName(PackageNamespace(""), "setSelected"), 1
+
+      getlocal3
+      jump                L51
+
+      setlocal2
+
+      urshift
+      kill                2
+      declocal            2
+      declocal_i          2
+      bitnot
+L51:
+      dup
+      iffalse             L56
+
+      pop
+      getlocal2
+      convert_b
+L56:
+      iftrue              L74
+
+L57:
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "selected_")
+
+      getlocal3
+      iftrue              L74
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "selected_")
+L64:
+      pushtrue
+L65:
+      callpropvoid        QName(PackageNamespace(""), "setSelected"), 1
+
+      getlocal3
+      iftrue              L74
+
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "CHANGE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L74:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-qD:_-wo#0"), "_-021")
+   method
+    refid "_-qD:_-wo/_-021"
+    param QName(PackageNamespace("flash.events"), "MouseEvent")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      bitxor
+      pushnan
+      getlocal3
+      declocal            3
+      subtract_i
+      pushtrue
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "target")
+      getlex              QName(PackageNamespace("_-qD"), "_-JB")
+      astypelate
+      coerce              QName(PackageNamespace("_-qD"), "_-JB")
+      setlocal2
+
+      getlocal3
+      dup
+      iftrue              L25
+
+      pop
+      getlocal3
+      convert_b
+L25:
+      iffalse             L29
+
+      getlocal0
+      getlocal2
+      callpropvoid        QName(PrivateNamespace("*", "_-qD:_-wo#0"), "setSelected"), 1
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-qD:_-wo/cinit"
+  body
+   maxstack 7
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    pushscope
+
+    modulo
+    coerce_a
+    pushwith
+    checkfilter
+    multiply
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_-sS")
+    pushstring          "Stand"
+    initproperty        QName(PackageNamespace(""), "_-sS")
+
+    findproperty        QName(PackageNamespace(""), "WALK1")
+    pushstring          "Walk 1"
+    initproperty        QName(PackageNamespace(""), "WALK1")
+
+    findproperty        QName(PackageNamespace(""), "WALK2")
+    pushstring          "Walk 2"
+    initproperty        QName(PackageNamespace(""), "WALK2")
+
+    getlocal1
+    dup
+    iftrue              L28
+
+    pop
+    getlocal2
+    convert_b
+L28:
+    iffalse             L41
+
+    jump                L36
+
+    rshift
+    subtract
+    checkfilter
+    convert_o
+    divide
+    bitor
+L36:
+    findproperty        QName(PackageNamespace(""), "ATTACK1")
+    pushstring          "Attack 1"
+    initproperty        QName(PackageNamespace(""), "ATTACK1")
+
+    getlocal1
+    iffalse             L79
+
+L41:
+    findproperty        QName(PackageNamespace(""), "ATTACK2")
+    pushstring          "Attack 2"
+    initproperty        QName(PackageNamespace(""), "ATTACK2")
+
+    findproperty        QName(PackageNamespace(""), "_-0Ey")
+    findpropstrict      Multiname("Vector", [PackageNamespace("__AS3__.vec")])
+    getproperty         Multiname("Vector", [PrivateNamespace("*", "_-qD:_-wo#0"), PackageNamespace(""), PackageNamespace("__AS3__.vec"), PrivateNamespace("*", "_-qD:_-wo#1"), PackageNamespace("_-qD"), PackageInternalNs("_-qD"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-ol"), StaticProtectedNs("_-ol"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+    getlex              QName(PackageNamespace(""), "String")
+    applytype           1
+    jump                L56
+
+    dxnslate
+    swap
+    pushnull
+    hasnext
+    greaterequals
+    getlocal0
+L56:
+    pushbyte            5
+    construct           1
+    dup
+    pushbyte            0
+    getlex              QName(PackageNamespace(""), "_-sS")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            1
+    getlex              QName(PackageNamespace(""), "WALK1")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            2
+    getlex              QName(PackageNamespace(""), "WALK2")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            3
+    getlex              QName(PackageNamespace(""), "ATTACK1")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    dup
+    pushbyte            4
+    getlex              QName(PackageNamespace(""), "ATTACK2")
+    setproperty         MultinameL([PackageNamespace("")])
+
+    initproperty        QName(PackageNamespace(""), "_-0Ey")
+
+L79:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-sS") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("Stand") end
+ trait const QName(PackageNamespace(""), "WALK1") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("Walk 1") end
+ trait const QName(PackageNamespace(""), "WALK2") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("Walk 2") end
+ trait const QName(PackageNamespace(""), "ATTACK1") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("Attack 1") end
+ trait const QName(PackageNamespace(""), "ATTACK2") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("Attack 2") end
+ trait const QName(PackageNamespace(""), "_-0Ey") slotid 6 type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace(""), "String")>) end
+end ; class

@@ -1,0 +1,264 @@
+class
+ refid "_-0-p:_-IY"
+ instance QName(PackageNamespace("_-0-p"), "_-IY")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-p3")
+  iinit
+   refid "_-0-p:_-IY/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lessthan
+     declocal            2
+     kill                2
+     pushfalse
+     getlocal2
+     bitand
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L19
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L19:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "error") type QName(PackageNamespace(""), "Error") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "_-0-p:_-IY/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      strictequals
+      setlocal2
+
+      setlocal2
+
+      decrement_i
+      decrement
+      coerce_a
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-0-p"), "_-IY")
+      getlex              QName(PackageNamespace(""), "type")
+      constructprop       QName(PackageNamespace("_-0-p"), "_-IY"), 1
+      coerce              QName(PackageNamespace("_-0-p"), "_-IY")
+      setlocal1
+
+      getlocal3
+      dup
+      iffalse             L24
+
+      pop
+      getlocal1
+      convert_b
+L24:
+      iftrue              L29
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "error")
+      setproperty         QName(PackageNamespace(""), "error")
+
+L29:
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0-p:_-IY/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    divide
+    setlocal3
+
+    astypelate
+    lessequals
+    convert_s
+    add_i
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal2
+    convert_b
+L20:
+    iffalse             L94
+
+    findproperty        QName(PackageNamespace(""), "ERROR")
+    pushstring          "error"
+    initproperty        QName(PackageNamespace(""), "ERROR")
+
+    getlocal1
+    iftrue              L91
+
+    findproperty        QName(PackageNamespace(""), "_-Wi")
+    pushstring          "preInitialize"
+    initproperty        QName(PackageNamespace(""), "_-Wi")
+
+    findproperty        QName(PackageNamespace(""), "INITIALIZE")
+    pushstring          "initialize"
+    initproperty        QName(PackageNamespace(""), "INITIALIZE")
+
+    findproperty        QName(PackageNamespace(""), "_-wv")
+    pushstring          "postInitialize"
+    initproperty        QName(PackageNamespace(""), "_-wv")
+
+    getlocal1
+    iftrue              L94
+
+    jump                L44
+
+    popscope
+    pushnull
+    add
+    coerce_a
+    typeof
+    popscope
+L44:
+    findproperty        QName(PackageNamespace(""), "_-7J")
+    pushstring          "preSuspend"
+    initproperty        QName(PackageNamespace(""), "_-7J")
+
+    getlocal2
+    iffalse             L91
+
+    findproperty        QName(PackageNamespace(""), "_-05j")
+    pushstring          "suspend"
+    initproperty        QName(PackageNamespace(""), "_-05j")
+
+    findproperty        QName(PackageNamespace(""), "_-mx")
+    pushstring          "postSuspend"
+    initproperty        QName(PackageNamespace(""), "_-mx")
+
+    getlocal1
+    dup
+    iffalse             L61
+
+    pop
+    getlocal1
+    convert_b
+L61:
+    iftrue              L91
+
+    findproperty        QName(PackageNamespace(""), "_-ob")
+    pushstring          "preResume"
+    jump                L71
+
+    multiply_i
+    getglobalscope
+    divide
+    checkfilter
+    convert_s
+    checkfilter
+L71:
+    initproperty        QName(PackageNamespace(""), "_-ob")
+
+    findproperty        QName(PackageNamespace(""), "_-x8")
+    pushstring          "resume"
+    initproperty        QName(PackageNamespace(""), "_-x8")
+
+    findproperty        QName(PackageNamespace(""), "_-Y6")
+    pushstring          "postResume"
+    initproperty        QName(PackageNamespace(""), "_-Y6")
+
+    findproperty        QName(PackageNamespace(""), "_-0GZ")
+    pushstring          "preDestroy"
+    initproperty        QName(PackageNamespace(""), "_-0GZ")
+
+    getlocal2
+    dup
+    iftrue              L87
+
+    pop
+    getlocal1
+    convert_b
+L87:
+    iffalse             L94
+
+    findproperty        QName(PackageNamespace(""), "_-8Z")
+    pushstring          "destroy"
+    initproperty        QName(PackageNamespace(""), "_-8Z")
+
+L91:
+    findproperty        QName(PackageNamespace(""), "_-0KI")
+    pushstring          "postDestroy"
+    initproperty        QName(PackageNamespace(""), "_-0KI")
+
+L94:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "ERROR") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("error") end
+ trait const QName(PackageNamespace(""), "_-Wi") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("preInitialize") end
+ trait const QName(PackageNamespace(""), "INITIALIZE") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("initialize") end
+ trait const QName(PackageNamespace(""), "_-wv") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("postInitialize") end
+ trait const QName(PackageNamespace(""), "_-7J") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("preSuspend") end
+ trait const QName(PackageNamespace(""), "_-05j") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("suspend") end
+ trait const QName(PackageNamespace(""), "_-mx") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("postSuspend") end
+ trait const QName(PackageNamespace(""), "_-ob") slotid 8 type QName(PackageNamespace(""), "String") value Utf8("preResume") end
+ trait const QName(PackageNamespace(""), "_-x8") slotid 9 type QName(PackageNamespace(""), "String") value Utf8("resume") end
+ trait const QName(PackageNamespace(""), "_-Y6") slotid 10 type QName(PackageNamespace(""), "String") value Utf8("postResume") end
+ trait const QName(PackageNamespace(""), "_-0GZ") slotid 11 type QName(PackageNamespace(""), "String") value Utf8("preDestroy") end
+ trait const QName(PackageNamespace(""), "_-8Z") slotid 12 type QName(PackageNamespace(""), "String") value Utf8("destroy") end
+ trait const QName(PackageNamespace(""), "_-0KI") slotid 13 type QName(PackageNamespace(""), "String") value Utf8("postDestroy") end
+end ; class

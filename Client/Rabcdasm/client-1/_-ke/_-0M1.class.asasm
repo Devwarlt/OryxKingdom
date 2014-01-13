@@ -1,0 +1,129 @@
+class
+ refid "_-ke:_-0M1"
+ instance QName(PackageNamespace("_-ke"), "_-0M1")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-7x")
+  iinit
+   refid "_-ke:_-0M1/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     decrement
+     increment
+     convert_d
+     pushnan
+     subtract
+     dup
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iffalse             L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-ke:_-0M1/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    add_i
+    swap
+    newactivation
+    pushwith
+    hasnext
+    increment_i
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L34
+
+    jump                L23
+
+    getlocal3
+    modulo
+    convert_d
+    equals
+    increment
+    increment_i
+L23:
+    findproperty        QName(PackageNamespace(""), "PLAY")
+    pushstring          "PLAY"
+    initproperty        QName(PackageNamespace(""), "PLAY")
+
+    findproperty        QName(PackageNamespace(""), "SERVERS")
+    pushstring          "SERVERS"
+    initproperty        QName(PackageNamespace(""), "SERVERS")
+
+    findproperty        QName(PackageNamespace(""), "LEGENDS")
+    pushstring          "LEGENDS"
+    initproperty        QName(PackageNamespace(""), "LEGENDS")
+
+    getlocal2
+    iffalse             L37
+
+L34:
+    findproperty        QName(PackageNamespace(""), "CREDITS")
+    pushstring          "CREDITS"
+    initproperty        QName(PackageNamespace(""), "CREDITS")
+
+L37:
+    findproperty        QName(PackageNamespace(""), "ACCOUNT")
+    pushstring          "ACCOUNT"
+    initproperty        QName(PackageNamespace(""), "ACCOUNT")
+
+    findproperty        QName(PackageNamespace(""), "EDITOR")
+    pushstring          "EDITOR"
+    initproperty        QName(PackageNamespace(""), "EDITOR")
+
+    findproperty        QName(PackageNamespace(""), "QUIT")
+    pushstring          "QUIT"
+    initproperty        QName(PackageNamespace(""), "QUIT")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "PLAY") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("PLAY") end
+ trait const QName(PackageNamespace(""), "SERVERS") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("SERVERS") end
+ trait const QName(PackageNamespace(""), "LEGENDS") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("LEGENDS") end
+ trait const QName(PackageNamespace(""), "CREDITS") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("CREDITS") end
+ trait const QName(PackageNamespace(""), "ACCOUNT") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT") end
+ trait const QName(PackageNamespace(""), "EDITOR") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("EDITOR") end
+ trait const QName(PackageNamespace(""), "QUIT") slotid 7 type QName(PackageNamespace(""), "String") value Utf8("QUIT") end
+end ; class

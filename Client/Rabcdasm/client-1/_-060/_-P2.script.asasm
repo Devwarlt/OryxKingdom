@@ -1,0 +1,29 @@
+script ; 401
+ sinit
+  refid "_-060:_-P2.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-P2", [PackageNamespace("_-060")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-060:_-P2"
+    popscope
+    initproperty        QName(PackageNamespace("_-060"), "_-P2")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-060"), "_-P2")
+  #include "_-P2.class.asasm"
+ end ; trait
+end ; script

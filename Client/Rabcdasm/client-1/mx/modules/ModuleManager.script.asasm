@@ -1,0 +1,89 @@
+script ; 1044
+ sinit
+  refid "mx.modules:ModuleManager.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ModuleManager", [PackageNamespace("mx.modules")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.modules:ModuleManager"
+    popscope
+    initproperty        QName(PackageNamespace("mx.modules"), "ModuleManager")
+
+    findpropstrict      Multiname("ModuleManagerImpl", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.modules:ModuleManager/ModuleManagerImpl"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleManagerImpl")
+
+    findpropstrict      Multiname("ModuleInfo", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.modules:ModuleManager/ModuleInfo"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+
+    findpropstrict      Multiname("FactoryInfo", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.modules:ModuleManager/FactoryInfo"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "FactoryInfo")
+
+    findpropstrict      Multiname("ModuleInfoProxy", [PrivateNamespace("*", "mx.modules:ModuleManager#0")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.modules:ModuleManager/ModuleInfoProxy"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfoProxy")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.modules"), "ModuleManager")
+  #include "ModuleManager.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleManagerImpl")
+  #include "ModuleManager/ModuleManagerImpl.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfo")
+  #include "ModuleManager/ModuleInfo.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "FactoryInfo")
+  #include "ModuleManager/FactoryInfo.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.modules:ModuleManager#0"), "ModuleInfoProxy")
+  #include "ModuleManager/ModuleInfoProxy.class.asasm"
+ end ; trait
+end ; script

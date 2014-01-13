@@ -1,0 +1,195 @@
+class
+ refid "com.company.assembleegameclient.objects:ClosedVaultChest"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "ClosedVaultChest")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "SellableObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-RC")
+  iinit
+   refid "com.company.assembleegameclient.objects:ClosedVaultChest/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     dup
+     nextname
+     add
+     increment_i
+     declocal            2
+     inclocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iftrue              L20
+
+     pop
+     getlocal3
+     convert_b
+L20:
+     iffalse             L24
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "soldObjectName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ClosedVaultChest/soldObjectName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "Vault Chest"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "soldObjectInternalName") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ClosedVaultChest/soldObjectInternalName"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "Vault Chest"
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getTooltip") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ClosedVaultChest/getTooltip"
+    returns QName(PackageNamespace("_-E7"), "for ")
+    body
+     maxstack 8
+     localcount 4
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      inclocal_i          2
+      pushnan
+      popscope
+      add
+      declocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-E7"), "_-aS")
+      pushint             4405294
+      pushint             10197915
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "soldObjectName"), 0
+      pushstring          "A chest that will safely store 8 items and is "
+      getlocal2
+      iffalse             L23
+
+      pushstring          "accessible by all of your characters."
+      add
+L23:
+      pushshort           200
+      constructprop       QName(PackageNamespace("_-E7"), "_-aS"), 5
+      coerce              QName(PackageNamespace("_-E7"), "for ")
+      setlocal1
+
+      getlocal1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getIcon") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:ClosedVaultChest/getIcon"
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      jump                L10
+
+      rshift
+      convert_u
+      add_i
+      newactivation
+      multiply
+      pop
+L10:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+      getproperty         QName(PackageNamespace(""), "_-pb")
+      pushstring          "Vault Chest"
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.objects:ClosedVaultChest/getIcon#0"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.objects"), PrivateNamespace("*", "com.company.assembleegameclient.objects:ClosedVaultChest/getIcon#1"), PackageInternalNs("com.company.assembleegameclient.objects"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-RC"), StaticProtectedNs("_-RC"), StaticProtectedNs("_-VP"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      pushbyte            80
+      pushtrue
+      callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:ClosedVaultChest/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

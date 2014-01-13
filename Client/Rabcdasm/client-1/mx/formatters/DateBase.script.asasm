@@ -1,0 +1,29 @@
+script ; 476
+ sinit
+  refid "mx.formatters:DateBase.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("DateBase", [PackageNamespace("mx.formatters")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.formatters:DateBase"
+    popscope
+    initproperty        QName(PackageNamespace("mx.formatters"), "DateBase")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.formatters"), "DateBase")
+  #include "DateBase.class.asasm"
+ end ; trait
+end ; script

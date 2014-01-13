@@ -1,0 +1,61 @@
+script ; 899
+ sinit
+  refid "mx.resources:ResourceManagerImpl.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ResourceManagerImpl", [PackageNamespace("mx.resources")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.resources:ResourceManagerImpl"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("mx.resources"), "ResourceManagerImpl")
+
+    findpropstrict      Multiname("ResourceModuleInfo", [PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:ResourceManagerImpl/ResourceModuleInfo"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1"), "ResourceModuleInfo")
+
+    findpropstrict      Multiname("ResourceEventDispatcher", [PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    newclass            "mx.resources:ResourceManagerImpl/ResourceEventDispatcher"
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1"), "ResourceEventDispatcher")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "ResourceManagerImpl")
+  #include "ResourceManagerImpl.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1"), "ResourceModuleInfo")
+  #include "ResourceManagerImpl/ResourceModuleInfo.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1"), "ResourceEventDispatcher")
+  #include "ResourceManagerImpl/ResourceEventDispatcher.class.asasm"
+ end ; trait
+end ; script

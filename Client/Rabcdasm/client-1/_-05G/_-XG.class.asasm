@@ -1,0 +1,112 @@
+class
+ refid "_-05G:_-XG"
+ instance QName(PackageNamespace("_-05G"), "_-XG")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-v", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-9m")
+  iinit
+   refid "_-05G:_-XG/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     negate
+     dxnslate
+     dxnslate
+     multiply
+     lessequals
+     multiply
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "mediatorMap") flag METADATA type QName(PackageNamespace("_-AG"), "_-v1")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-K")
+   method
+    refid "_-05G:_-XG/_-K"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      rshift
+      nextname
+      setlocal2
+
+      bitxor
+      getlocal0
+      negate_i
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L21
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mediatorMap")
+      getlex              QName(PackageNamespace("_-0-j"), "_-kW")
+      callproperty        QName(Namespace("_-Lh"), "map"), 1
+      getlex              QName(PackageNamespace("_-K8"), "_-LG")
+      callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-05G:_-XG/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

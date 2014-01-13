@@ -1,0 +1,211 @@
+class
+ refid "_-011:_-Io"
+ instance QName(PackageNamespace("_-011"), "_-Io")
+  extends QName(PackageNamespace("_-011"), "_-01Q")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Gj")
+  iinit
+   refid "_-011:_-Io/iinit"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     pushnan
+     swap
+     kill                2
+     inclocal_i          2
+     bitand
+     pushnan
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L19
+
+     pop
+     getlocal3
+     convert_b
+L19:
+     iftrue              L23
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "bulletId_") type QName(PackageNamespace(""), "uint") end
+  trait slot QName(PackageNamespace(""), "ownerId_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "containerType_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "angle_") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "parseFromInput") flag OVERRIDE
+   method
+    refid "_-011:_-Io/parseFromInput"
+    param QName(PackageNamespace("flash.utils"), "IDataInput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitand
+      getlocal2
+      nextvalue
+      getlocal2
+      getglobalscope
+      convert_u
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L58
+
+      jump                L28
+
+      strictequals
+      bitxor
+      declocal_i          2
+      setlocal2
+
+      kill                2
+      inclocal            2
+L28:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readUnsignedByte"), 0
+      initproperty        QName(PackageNamespace(""), "bulletId_")
+
+      jump                L39
+
+      instanceof
+      rshift
+      setlocal3
+
+      increment
+      getlocal2
+      declocal            2
+L39:
+      getlocal2
+      dup
+      iffalse             L45
+
+      pop
+      getlocal2
+      convert_b
+L45:
+      iftrue              L62
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readInt"), 0
+      initproperty        QName(PackageNamespace(""), "ownerId_")
+
+      getlocal3
+      iffalse             L58
+
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readShort"), 0
+      initproperty        QName(PackageNamespace(""), "containerType_")
+
+      getlocal3
+      iffalse             L62
+
+L58:
+      getlocal0
+      getlocal1
+      callproperty        QName(Namespace("flash.utils:IDataInput"), "readFloat"), 0
+      initproperty        QName(PackageNamespace(""), "angle_")
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_-011:_-Io/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 8
+     localcount 1
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(ProtectedNamespace("_-1E"), "formatToString")
+      jump                L10
+
+      getlocal3
+      subtract_i
+      urshift
+      coerce_a
+      lessequals
+      newactivation
+L10:
+      pushstring          "ALLYSHOOT"
+      pushstring          "bulletId_"
+      pushstring          "ownerId_"
+      pushstring          "containerType_"
+      pushstring          "angle_"
+      callproperty        QName(ProtectedNamespace("_-1E"), "formatToString"), 5
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-011:_-Io/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

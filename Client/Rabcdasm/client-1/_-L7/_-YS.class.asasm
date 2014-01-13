@@ -1,0 +1,161 @@
+class
+ refid "_-L7:_-YS"
+ instance QName(PackageNamespace("_-L7"), "_-YS")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-GO")
+  iinit
+   refid "_-L7:_-YS/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     getlocal3
+     setlocal2
+
+     inclocal_i          2
+     setlocal2
+
+     getlocal2
+     inclocal            2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iftrue              L23
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-L7:_-YS/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    bitnot
+    lshift
+    newactivation
+    hasnext
+    convert_u
+    pushwith
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iffalse             L19
+
+    pop
+    getlocal1
+    convert_b
+L19:
+    iftrue              L62
+
+    findproperty        QName(PackageNamespace(""), "DONE")
+    jump                L28
+
+    istypelate
+    astypelate
+    pushnull
+    negate_i
+    bitnot
+    convert_d
+L28:
+    pushstring          "KONG_ACCOUNT_DONE"
+    initproperty        QName(PackageNamespace(""), "DONE")
+
+    getlocal2
+    dup
+    jump                L39
+
+    setlocal3
+
+    decrement_i
+    checkfilter
+    strictequals
+    add_i
+    multiply
+L39:
+    iffalse             L43
+
+    pop
+    getlocal2
+    convert_b
+L43:
+    iftrue              L59
+
+    findproperty        QName(PackageNamespace(""), "_-tp")
+    pushstring          "KONG_ACCOUNT_CURRENT"
+    initproperty        QName(PackageNamespace(""), "_-tp")
+
+    getlocal1
+    dup
+    iftrue              L53
+
+    pop
+    getlocal0
+    convert_b
+L53:
+    iffalse             L62
+
+    findproperty        QName(PackageNamespace(""), "_-G-")
+    pushstring          "KONG_ACCOUNT_REGISTER"
+    initproperty        QName(PackageNamespace(""), "_-G-")
+
+    getlocal1
+    iffalse             L62
+
+L59:
+    findproperty        QName(PackageNamespace(""), "LINK")
+    pushstring          "KONG_ACCOUNT_LINK"
+    initproperty        QName(PackageNamespace(""), "LINK")
+
+L62:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "DONE") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("KONG_ACCOUNT_DONE") end
+ trait const QName(PackageNamespace(""), "_-tp") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("KONG_ACCOUNT_CURRENT") end
+ trait const QName(PackageNamespace(""), "_-G-") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("KONG_ACCOUNT_REGISTER") end
+ trait const QName(PackageNamespace(""), "LINK") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("KONG_ACCOUNT_LINK") end
+end ; class

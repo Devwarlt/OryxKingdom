@@ -1,0 +1,88 @@
+class
+ refid "_-9R:_-Wh"
+ instance QName(PackageNamespace("_-9R"), "_-Wh")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-xr")
+  iinit
+   refid "_-9R:_-Wh/iinit"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     divide
+     hasnext
+     decrement_i
+     negate_i
+     rshift
+     pushnan
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L19
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "ACCOUNT_CHANGED")
+     pushtrue
+     constructsuper      2
+
+L19:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-9R:_-Wh/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    convert_s
+    convert_d
+    convert_o
+    decrement_i
+    typeof
+    strictequals
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L19
+
+    findproperty        QName(PackageNamespace(""), "ACCOUNT_CHANGED")
+    pushstring          "ACCOUNT_CHANGED"
+    initproperty        QName(PackageNamespace(""), "ACCOUNT_CHANGED")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "ACCOUNT_CHANGED") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("ACCOUNT_CHANGED") end
+end ; class

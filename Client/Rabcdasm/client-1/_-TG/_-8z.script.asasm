@@ -1,0 +1,29 @@
+script ; 485
+ sinit
+  refid "_-TG:_-8z.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-8z", [PackageNamespace("_-TG")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-TG:_-8z"
+    popscope
+    initproperty        QName(PackageNamespace("_-TG"), "_-8z")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-TG"), "_-8z")
+  #include "_-8z.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,25 @@
+script ; 5
+ sinit
+  refid "_-sp:_-F6.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-F6", [PackageNamespace("_-sp")])
+    pushnull
+    newclass            "_-sp:_-F6"
+    initproperty        QName(PackageNamespace("_-sp"), "_-F6")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-sp"), "_-F6")
+  #include "_-F6.class.asasm"
+ end ; trait
+end ; script

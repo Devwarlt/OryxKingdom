@@ -1,0 +1,77 @@
+script ; 924
+ sinit
+  refid "_-E7:EquipmentToolTip.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("EquipmentToolTip", [PackageNamespace("_-E7")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.events"), "EventDispatcher")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "InteractiveObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "DisplayObjectContainer")
+    pushscope
+
+    getlex              QName(PackageNamespace("flash.display"), "Sprite")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-E7"), "for ")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-E7"), "for ")
+    newclass            "_-E7:EquipmentToolTip"
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-E7"), "EquipmentToolTip")
+
+    findpropstrict      Multiname("Effect", [PrivateNamespace("*", "_-E7:EquipmentToolTip#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-E7:EquipmentToolTip/Effect"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-E7:EquipmentToolTip#1"), "Effect")
+
+    findpropstrict      Multiname("Restriction", [PrivateNamespace("*", "_-E7:EquipmentToolTip#1")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-E7:EquipmentToolTip/Restriction"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-E7:EquipmentToolTip#1"), "Restriction")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-E7"), "EquipmentToolTip")
+  #include "EquipmentToolTip.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-E7:EquipmentToolTip#1"), "Effect")
+  #include "EquipmentToolTip/Effect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-E7:EquipmentToolTip#1"), "Restriction")
+  #include "EquipmentToolTip/Restriction.class.asasm"
+ end ; trait
+end ; script

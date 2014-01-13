@@ -1,0 +1,180 @@
+class
+ refid "_-TY:_-4A"
+ instance QName(PackageNamespace("_-TY"), "_-4A")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-fq", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-C4")
+  iinit
+   refid "_-TY:_-4A/iinit"
+   param QName(PackageNamespace("_-0-p"), "_-Ly")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     pushundefined
+     getlocal2
+     divide
+     declocal            2
+     istypelate
+     declocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L25
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-TY"), "_-08n")
+     constructprop       QName(PackageNamespace("_-TY"), "_-08n"), 0
+     initproperty        QName(PrivateNamespace("*", "_-TY:_-4A"), "_-Zp")
+
+     getlocal3
+     iftrue              L25
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     iftrue              L28
+
+L25:
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-TY:_-4A"), "_-rA")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-TY:_-4A"), "_-Zp") type QName(PackageNamespace("_-TY"), "_-08n") end
+  trait slot QName(PrivateNamespace("*", "_-TY:_-4A"), "_-rA") type QName(PackageNamespace("_-0-p"), "_-Ly") end
+  trait method QName(PackageNamespace(""), "log")
+   method
+    refid "_-TY:_-4A/log"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace(""), "uint")
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "Array")
+    returns QName(PackageNamespace(""), "void")
+    flag HAS_OPTIONAL
+    optional Null()
+    body
+     maxstack 7
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal3
+
+      nextname
+      add
+      inclocal_i          3
+      istypelate
+      getlocal            4
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      getlocal            6
+      dup
+      iffalse             L20
+
+      pop
+      getlocal2
+      convert_b
+L20:
+      iftrue              L62
+
+      jump                L28
+
+      convert_s
+      declocal_i          4
+      pushtrue
+      dup
+      pushundefined
+      add
+L28:
+      findpropstrict      QName(PackageNamespace(""), "trace")
+      getlocal3
+      pushstring          " "
+      add
+      jump                L39
+
+      subtract_i
+      kill                3
+      declocal            2
+      inclocal_i          4
+      inclocal_i          2
+      declocal_i          4
+L39:
+      getlex              QName(PackageNamespace("_-0-p"), "_-CP")
+      getproperty         QName(PackageNamespace(""), "_-An")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "_-TY:_-4A"), PackageNamespace("_-TY"), PackageNamespace(""), PrivateNamespace("*", "_-TY:_-4A/log"), PackageInternalNs("_-TY"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-C4"), StaticProtectedNs("_-C4")])
+      add
+      pushstring          " "
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-TY:_-4A"), "_-rA")
+      add
+      pushstring          " "
+      add
+      getlocal1
+      add
+      pushstring          " - "
+      add
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-TY:_-4A"), "_-Zp")
+      getlocal            4
+      getlocal            5
+      callproperty        QName(PackageNamespace(""), "_-nx"), 2
+      add
+      callpropvoid        QName(PackageNamespace(""), "trace"), 1
+
+L62:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-TY:_-4A/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

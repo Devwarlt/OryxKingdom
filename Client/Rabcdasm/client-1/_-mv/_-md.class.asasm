@@ -1,0 +1,205 @@
+class
+ refid "_-mv:_-md"
+ instance QName(PackageNamespace("_-mv"), "_-md")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-F8", [PackageNamespace("_-mv")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-8V")
+  iinit
+   refid "_-mv:_-md/iinit"
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal            2
+     inclocal_i          2
+     istypelate
+     declocal_i          2
+     inclocal_i          2
+     urshift
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     jump                L20
+
+     pop
+     declocal_i          2
+     getlocal2
+     getlocal2
+     istypelate
+     getlocal2
+L20:
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L27
+
+     pop
+     getlocal2
+     convert_b
+L27:
+     iftrue              L40
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iffalse             L36
+
+     pop
+     getlocal2
+     convert_b
+L36:
+     iftrue              L40
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "padding")
+
+L40:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "padding") type QName(PackageNamespace(""), "int") end
+  trait method QName(PackageNamespace(""), "layout")
+   method
+    refid "_-mv:_-md/layout"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("flash.display"), "DisplayObject")>)
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      instanceof
+      declocal            2
+      instanceof
+      popscope
+      istypelate
+      pushscope
+
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      setlocal            5
+
+      pushbyte            0
+      setlocal2
+
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      convert_i
+      setlocal3
+
+      pushbyte            0
+      jump                L31
+
+      pop
+      kill                3
+      bitxor
+      decrement
+      lshift
+      convert_o
+L31:
+      setlocal            4
+
+      jump                L65
+
+L33:
+      label
+      getlocal1
+      getlocal            4
+      getproperty         MultinameL([PrivateNamespace("*", "_-mv:_-md/layout#0"), PackageNamespace(""), PrivateNamespace("*", "_-mv:_-md/layout#1"), PackageNamespace("_-mv"), PackageInternalNs("_-mv"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-8V"), StaticProtectedNs("_-8V")])
+      coerce              QName(PackageNamespace("flash.display"), "DisplayObject")
+      jump                L45
+
+      declocal_i          4
+      subtract
+      inclocal            5
+      inclocal_i          3
+      declocal_i          4
+      greaterthan
+L45:
+      dup
+      setlocal            5
+
+      getlocal2
+      setproperty         QName(PackageNamespace(""), "x")
+
+      getlocal            6
+      iftrue              L64
+
+      getlocal2
+      getlocal            6
+      iftrue              L61
+
+      getlocal            5
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "padding")
+      add
+      add
+      convert_i
+L61:
+      setlocal2
+
+      getlocal            6
+      iftrue              L65
+
+L64:
+      inclocal_i          4
+L65:
+      getlocal            4
+      getlocal3
+      iflt                L33
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-mv:_-md/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

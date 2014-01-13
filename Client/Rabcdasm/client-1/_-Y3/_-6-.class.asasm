@@ -1,0 +1,156 @@
+class
+ refid "_-Y3:_-6-"
+ instance QName(PackageNamespace("_-Y3"), "_-6-")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-5d", [PackageNamespace("_-Y3")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-vQ")
+  iinit
+   refid "_-Y3:_-6-/iinit"
+   param QName(PackageNamespace(""), "Class")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     getlocal2
+     greaterequals
+     convert_d
+     decrement
+     inclocal            2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     setlocal2
+
+     declocal_i          2
+     setlocal2
+
+     pop
+     pop
+     astypelate
+L20:
+     getlocal2
+     dup
+     iftrue              L26
+
+     pop
+     getlocal3
+     convert_b
+L26:
+     iffalse             L39
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     dup
+     iffalse             L35
+
+     pop
+     getlocal1
+     convert_b
+L35:
+     iftrue              L39
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PrivateNamespace("*", "_-Y3:_-6-"), "_-2h")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-Y3:_-6-"), "_-2h") type QName(PackageNamespace(""), "Class") end
+  trait method QName(PackageNamespace(""), "apply")
+   method
+    refid "_-Y3:_-6-/apply"
+    param QName(PackageNamespace(""), "Class")
+    param QName(PackageNamespace("_-eZ"), "_-08b")
+    param QName(PackageNamespace("flash.utils"), "Dictionary")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 5
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal2
+      jump                L10
+
+      kill                2
+      declocal            2
+      kill                3
+      increment
+      convert_o
+      kill                3
+L10:
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace("_-4u"), "SsInternal")
+      coerce              QName(PackageNamespace(""), "Namespace")
+      getproperty         RTQName("_-0IF")
+      getlocal            4
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Y3:_-6-"), "_-2h")
+      call                1
+      kill                4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy")
+   method
+    refid "_-Y3:_-6-/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Y3:_-6-/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

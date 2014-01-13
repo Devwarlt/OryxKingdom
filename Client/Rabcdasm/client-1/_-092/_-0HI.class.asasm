@@ -1,0 +1,287 @@
+class
+ refid "_-092:_-0HI"
+ instance QName(PackageNamespace("_-092"), "_-0HI")
+  extends QName(PackageNamespace("_-qj"), "_-0Kd")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-C1")
+  iinit
+   refid "_-092:_-0HI/iinit"
+   param QName(PackageNamespace(""), "Array")
+   body
+    maxstack 5
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     instanceof
+     kill                2
+     inclocal            2
+     inclocal            2
+     inclocal_i          2
+     inclocal            2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L26
+
+     pop
+     jump                L24
+
+     getlocal2
+     declocal            2
+     getlocal1
+     convert_o
+     multiply_i
+     getlocal1
+L24:
+     getlocal3
+     convert_b
+L26:
+     iffalse             L47
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iffalse             L47
+
+     getlocal0
+     getlocal3
+     dup
+     iffalse             L38
+
+     pop
+     getlocal2
+     convert_b
+L38:
+     iftrue              L44
+
+     getlocal1
+     coerce              QName(PackageNamespace(""), "Array")
+     dup
+     iftrue              L46
+
+     pop
+L44:
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+L46:
+     initproperty        QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1")
+
+L47:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1") type QName(PackageNamespace(""), "Array") end
+  trait method QName(ProtectedNamespace("_-C1"), "matchesOrDescribesMismatch") flag OVERRIDE
+   method
+    refid "_-092:_-0HI/_-C1:matchesOrDescribesMismatch"
+    param QName(PackageNamespace(""), "Object")
+    param QName(PackageNamespace("_-qj"), "Description")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            6
+
+      jump                L10
+
+      inclocal_i          3
+      setlocal            4
+
+      nextname
+      inclocal_i          5
+      negate
+      setlocal            6
+
+L10:
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("_-qj"), "_-pn")
+      setlocal3
+
+      pushbyte            0
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1")
+      coerce_a
+      setlocal            5
+
+      jump                L80
+
+L23:
+      label
+      getlocal            5
+      getlocal            4
+      nextvalue
+      coerce              QName(PackageNamespace("_-qj"), "_-pn")
+      setlocal3
+
+      getlocal            7
+      dup
+      iffalse             L42
+
+      jump                L39
+
+      bitxor
+      inclocal_i          2
+      getlocal            4
+      inclocal_i          3
+      bitor
+      getglobalscope
+L39:
+      pop
+      getlocal2
+      convert_b
+L42:
+      iftrue              L80
+
+      getlocal3
+      getlocal1
+      callproperty        QName(Namespace("_-08J"), "matches"), 1
+      getlocal            6
+      iffalse             L79
+
+      iftrue              L80
+
+      getlocal            7
+      dup
+      iffalse             L62
+
+      pop
+      getlocal0
+      convert_b
+      jump                L62
+
+      add
+      setlocal            6
+
+      declocal            3
+      hasnext
+      declocal_i          3
+      pop
+L62:
+      iftrue              L78
+
+      getlocal2
+      getlocal3
+      callproperty        QName(Namespace("_-08T"), "_-ka"), 1
+      pushstring          " "
+      callproperty        QName(Namespace("_-08T"), "appendText"), 1
+      getlocal3
+      getlocal1
+      callpropvoid        QName(Namespace("_-08T"), "_-zW"), 2
+
+      getlocal            6
+      dup
+      iftrue              L77
+
+      pop
+      getlocal3
+      convert_b
+L77:
+      iffalse             L80
+
+L78:
+      pushfalse
+L79:
+      returnvalue
+
+L80:
+      hasnext2            5, 4
+      iftrue              L23
+
+      kill                5
+      kill                4
+      pushtrue
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "describeTo") flag OVERRIDE
+   method
+    refid "_-092:_-0HI/describeTo"
+    param QName(PackageNamespace("_-qj"), "Description")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      instanceof
+      getglobalscope
+      inclocal            2
+      declocal_i          2
+      declocal            2
+      nextvalue
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L22
+
+      getlocal1
+      pushstring          "("
+      pushstring          " and "
+      pushstring          ")"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-092:_-0HI"), "_-Z1")
+      callpropvoid        QName(Namespace("_-08T"), "_-05o"), 4
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-092:_-0HI/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

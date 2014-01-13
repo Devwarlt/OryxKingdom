@@ -1,0 +1,29 @@
+script ; 1144
+ sinit
+  refid "com.company.util:_-mz.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-mz", [PackageNamespace("com.company.util")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "com.company.util:_-mz"
+    popscope
+    initproperty        QName(PackageNamespace("com.company.util"), "_-mz")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("com.company.util"), "_-mz")
+  #include "_-mz.class.asasm"
+ end ; trait
+end ; script

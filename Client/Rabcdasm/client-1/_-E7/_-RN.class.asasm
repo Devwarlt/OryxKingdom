@@ -1,0 +1,101 @@
+class
+ refid "_-E7:_-RN"
+ instance QName(PackageNamespace("_-E7"), "_-RN")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Kn")
+  iinit
+   refid "_-E7:_-RN/iinit"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     subtract_i
+     rshift
+     add
+     pushnull
+     convert_o
+     convert_o
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     jump                L22
+
+     setlocal3
+
+     convert_o
+     newactivation
+     subtract
+     increment
+     getglobalscope
+L22:
+     iffalse             L39
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iffalse             L44
+
+     getlocal0
+     pushstring          ""
+     initproperty        QName(PackageNamespace(""), "text")
+
+     getlocal2
+     iffalse             L44
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(PackageNamespace(""), "_-5n")
+
+     getlocal1
+     iftrue              L44
+
+L39:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.utils"), "Dictionary")
+     pushtrue
+     constructprop       QName(PackageNamespace("flash.utils"), "Dictionary"), 1
+     initproperty        QName(PackageNamespace(""), "_-P3")
+
+L44:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "text") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_-5n") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+  trait slot QName(PackageNamespace(""), "_-P3") type QName(PackageNamespace("flash.utils"), "Dictionary") end
+ end ; instance
+ cinit
+  refid "_-E7:_-RN/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

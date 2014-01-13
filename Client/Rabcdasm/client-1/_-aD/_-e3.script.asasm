@@ -1,0 +1,29 @@
+script ; 30
+ sinit
+  refid "_-aD:_-e3.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-e3", [PackageNamespace("_-aD")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-aD:_-e3"
+    popscope
+    initproperty        QName(PackageNamespace("_-aD"), "_-e3")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-aD"), "_-e3")
+  #include "_-e3.class.asasm"
+ end ; trait
+end ; script

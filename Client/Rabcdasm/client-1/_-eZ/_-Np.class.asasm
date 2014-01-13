@@ -1,0 +1,70 @@
+class
+ refid "_-eZ:_-Np"
+ instance QName(PackageNamespace("_-eZ"), "_-Np")
+  extends QName(PackageNamespace(""), "Error")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-yg")
+  iinit
+   refid "_-eZ:_-Np/iinit"
+   param null
+   param null
+   flag HAS_OPTIONAL
+   optional Utf8("")
+   optional Integer(0)
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     nextname
+     kill                2
+     modulo
+     inclocal            2
+     declocal_i          2
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L20
+
+     getlocal0
+     getlocal1
+     getlocal2
+     constructsuper      2
+
+L20:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-eZ:_-Np/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

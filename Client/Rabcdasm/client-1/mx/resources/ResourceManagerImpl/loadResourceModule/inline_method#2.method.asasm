@@ -1,0 +1,36 @@
+method
+ refid "mx.resources:ResourceManagerImpl/loadResourceModule/inline_method#2"
+ param QName(PackageNamespace("mx.events"), "ModuleEvent")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 2
+  localcount 3
+  initscopedepth 6
+  maxscopedepth 6
+  code
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "module")
+   getproperty         QName(Namespace("mx.modules:IModuleInfo"), "factory")
+   callproperty        QName(Namespace("mx.core:IFlexModuleFactory"), "create"), 0
+   coerce_a
+   setlocal2
+
+   getlex              QName(PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), "resourceModules")
+   getlocal1
+   getproperty         QName(PackageNamespace(""), "module")
+   getproperty         QName(Namespace("mx.modules:IModuleInfo"), "url")
+   getproperty         MultinameL([PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1"), PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
+   getlocal2
+   setproperty         Multiname("resourceModule", [PackageNamespace(""), PackageNamespace("mx.resources"), PrivateNamespace("*", "mx.resources:ResourceManagerImpl#1"), PrivateNamespace("*", "mx.resources:ResourceManagerImpl#0"), Namespace("http://www.adobe.com/2006/flex/mx/internal"), PackageInternalNs("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:ResourceManagerImpl"), StaticProtectedNs("mx.resources:ResourceManagerImpl"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+   getlex              QName(PackageInternalNs("mx.resources"), "updateFlag")
+   iffalse             L17
+
+   findpropstrict      QName(PackageNamespace(""), "update")
+   callpropvoid        QName(PackageNamespace(""), "update"), 0
+
+L17:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

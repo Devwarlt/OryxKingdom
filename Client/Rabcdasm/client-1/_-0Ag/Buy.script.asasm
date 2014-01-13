@@ -1,0 +1,37 @@
+script ; 688
+ sinit
+  refid "_-0Ag:Buy.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.net"), "_-098")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Ag"), "_-Rq")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Ag"), "_-Rq")
+    newclass            "_-0Ag:Buy"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-0Ag"), "Buy")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0Ag"), "Buy") slotid 1
+  #include "Buy.class.asasm"
+ end ; trait
+end ; script

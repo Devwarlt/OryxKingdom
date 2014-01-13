@@ -1,0 +1,29 @@
+script ; 195
+ sinit
+  refid "_-0BK:try.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("try", [PackageNamespace("_-0BK")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-0BK:try"
+    popscope
+    initproperty        QName(PackageNamespace("_-0BK"), "try")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0BK"), "try")
+  #include "try.class.asasm"
+ end ; trait
+end ; script

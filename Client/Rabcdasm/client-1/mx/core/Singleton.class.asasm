@@ -1,0 +1,155 @@
+class
+ refid "mx.core:Singleton"
+ instance QName(PackageNamespace("mx.core"), "Singleton")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:Singleton")
+  iinit
+   refid "mx.core:Singleton/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "mx.core:Singleton/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.6.0.23201"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    findproperty        QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+    newobject           0
+    setproperty         QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
+ trait slot QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap") slotid 2 type QName(PackageNamespace(""), "Object") end
+ trait method QName(PackageNamespace(""), "registerClass") flag FINAL dispid 3
+  method
+   refid "mx.core:Singleton/registerClass"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Class")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal3
+
+     getlocal3
+     iftrue              L13
+
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlocal1
+     getlocal2
+     setproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+
+L13:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getClass") flag FINAL dispid 4
+  method
+   refid "mx.core:Singleton/getClass"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Class")
+   body
+    maxstack 2
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "getInstance") flag FINAL dispid 5
+  method
+   refid "mx.core:Singleton/getInstance"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Object")
+   body
+    maxstack 3
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PrivateNamespace("*", "mx.core:Singleton#0"), "classMap")
+     getlocal1
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     coerce              QName(PackageNamespace(""), "Class")
+     setlocal2
+
+     getlocal2
+     iftrue              L17
+
+     findpropstrict      QName(PackageNamespace(""), "Error")
+     pushstring          "No class registered for interface '"
+     getlocal1
+     add
+     pushstring          "'."
+     add
+     constructprop       QName(PackageNamespace(""), "Error"), 1
+     throw
+L17:
+     getlocal2
+     dup
+     setlocal3
+
+     pushstring          "getInstance"
+     getproperty         MultinameL([PrivateNamespace("*", "mx.core:Singleton#0"), PrivateNamespace("*", "mx.core:Singleton#1"), PackageNamespace(""), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:Singleton"), StaticProtectedNs("mx.core:Singleton")])
+     getlocal3
+     call                0
+     kill                3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,106 @@
+class
+ refid "_-011:_-01Q"
+ instance QName(PackageNamespace("_-011"), "_-01Q")
+  extends QName(PackageNamespace("com.company.net"), "_-098")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Cg")
+  iinit
+   refid "_-011:_-01Q/iinit"
+   param QName(PackageNamespace(""), "uint")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                2
+     inclocal            2
+     inclocal_i          2
+     pushfalse
+     declocal_i          2
+     inclocal            2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L20
+
+     pop
+     getlocal2
+     convert_b
+L20:
+     iftrue              L24
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "writeToOutput") flag FINAL flag OVERRIDE
+   method
+    refid "_-011:_-01Q/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 2
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "Error")
+      jump                L10
+
+      swap
+      subtract
+      convert_s
+      subtract
+      subtract
+      getlocal1
+L10:
+      pushstring          "Client should not send "
+      getlex              QName(PackageNamespace(""), "id_")
+      add
+      pushstring          " messages"
+      add
+      constructprop       QName(PackageNamespace(""), "Error"), 1
+      throw
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-011:_-01Q/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

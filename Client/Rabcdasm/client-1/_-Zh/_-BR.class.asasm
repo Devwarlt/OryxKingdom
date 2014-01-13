@@ -1,0 +1,199 @@
+class
+ refid "_-Zh:_-BR"
+ instance QName(PackageNamespace("_-Zh"), "_-BR")
+  extends QName(PackageNamespace("_-qN"), "_-px")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Hk")
+  iinit
+   refid "_-Zh:_-BR/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     getlocal3
+     bitxor
+     nextvalue
+     convert_u
+     not
+     setlocal3
+
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "_-Zh:_-BR/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      setlocal3
+
+      kill                2
+      inclocal_i          3
+      checkfilter
+      divide
+      setlocal3
+
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushstring          "identifier"
+      getlex              QName(PackageNamespace(""), "offer")
+      getproperty         QName(PackageNamespace(""), "id_")
+      pushstring          "data"
+      getlex              QName(PackageNamespace(""), "offer")
+      jump                L25
+
+      declocal            2
+      inclocal            2
+      getlocal2
+      inclocal_i          2
+      inclocal            3
+      nextvalue
+L25:
+      getproperty         QName(PackageNamespace(""), "data_")
+      newobject           2
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      getlex              QName(PackageNamespace("_-qN"), "Account")
+      callproperty        QName(PackageNamespace(""), "get"), 0
+      getlex              QName(PackageNamespace("_-Zh"), "_-m7")
+      astypelate
+      coerce              QName(PackageNamespace("_-Zh"), "_-m7")
+      setlocal2
+
+      getlocal            4
+      dup
+      iffalse             L42
+
+      pop
+      getlocal1
+      convert_b
+L42:
+      iftrue              L50
+
+      getlocal2
+      getproperty         QName(PackageNamespace(""), "_-nq")
+      getproperty         Multiname("mtx", [PrivateNamespace("*", "_-Zh:_-BR"), PackageNamespace(""), PackageNamespace("_-Zh"), PrivateNamespace("*", "_-Zh:_-BR/execute"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hk"), StaticProtectedNs("_-Hk"), StaticProtectedNs("_-QU")])
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-Zh:_-BR"), "_-D")
+      callpropvoid        Multiname("purchaseItems", [PrivateNamespace("*", "_-Zh:_-BR"), PackageNamespace(""), PackageNamespace("_-Zh"), PrivateNamespace("*", "_-Zh:_-BR/execute"), PackageInternalNs("_-Zh"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-Hk"), StaticProtectedNs("_-Hk"), StaticProtectedNs("_-QU")]), 2
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-Zh:_-BR"), "_-D")
+   method
+    refid "_-Zh:_-BR/_-D"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      pushtrue
+      nextname
+      setlocal2
+
+      multiply_i
+      getglobalscope
+      pushundefined
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L24
+
+      getlex              QName(PackageNamespace(""), "mediator")
+      iffalse             L26
+
+      getlocal3
+      iftrue              L26
+
+L24:
+      getlex              QName(PackageNamespace(""), "mediator")
+      callpropvoid        QName(PackageNamespace(""), "complete"), 0
+
+L26:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Zh:_-BR/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

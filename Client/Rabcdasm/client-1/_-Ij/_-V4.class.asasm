@@ -1,0 +1,234 @@
+class
+ refid "_-Ij:_-V4"
+ instance QName(PackageNamespace("_-Ij"), "_-V4")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-v", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-06d")
+  iinit
+   refid "_-Ij:_-V4/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     modulo
+     negate
+     convert_b
+     popscope
+     newactivation
+     modulo
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     iftrue              L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-OR") flag METADATA type QName(PackageNamespace("_-eZ"), "_-08b")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "mediatorMap") flag METADATA type QName(PackageNamespace("_-AG"), "_-v1")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-1G") flag METADATA type QName(PackageNamespace("_-EE"), "_-UA")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-K")
+   method
+    refid "_-Ij:_-V4/_-K"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      add_i
+      pushundefined
+      newactivation
+      getlocal3
+      getlocal1
+      getlocal0
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L98
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-OR")
+      getlocal2
+      dup
+      iffalse             L23
+
+      pop
+      getlocal1
+      convert_b
+L23:
+      iftrue              L37
+
+      getlex              QName(PackageNamespace("_-0Mm"), "_-j5")
+      callproperty        QName(PackageNamespace(""), "map"), 1
+      getlocal2
+      dup
+      iffalse             L32
+
+      pop
+      getlocal1
+      convert_b
+L32:
+      iftrue              L39
+
+      getlex              QName(PackageNamespace("_-0Mm"), "_-0Ev")
+      callpropvoid        QName(PackageNamespace(""), "_-00S"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-OR")
+L37:
+      getlex              QName(PackageNamespace("_-0Mm"), "_-00V")
+      callproperty        QName(PackageNamespace(""), "map"), 1
+L39:
+      getlex              QName(PackageNamespace("_-0Mm"), "_-Ee")
+      callpropvoid        QName(PackageNamespace(""), "_-00S"), 1
+
+      getlocal0
+      jump                L49
+
+      convert_o
+      subtract
+      pushwith
+      convert_o
+      hasnext
+      lessthan
+L49:
+      getproperty         QName(PackageNamespace(""), "mediatorMap")
+      getlocal2
+      iftrue              L67
+
+      getlex              QName(PackageNamespace("_-nA"), "_-ax")
+      callproperty        QName(Namespace("_-Lh"), "map"), 1
+      getlocal1
+      dup
+      iftrue              L60
+
+      pop
+      getlocal0
+      convert_b
+L60:
+      iffalse             L83
+
+      getlex              QName(PackageNamespace("_-nA"), "_-bN")
+      callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mediatorMap")
+      getlocal2
+      iftrue              L94
+
+L67:
+      getlex              QName(PackageNamespace("_-nA"), "_-0FU")
+      callproperty        QName(Namespace("_-Lh"), "map"), 1
+      getlocal1
+      dup
+      iftrue              L82
+
+      pop
+      getlocal1
+      jump                L81
+
+      pushnan
+      multiply
+      pushnull
+      nextvalue
+      bitand
+      urshift
+L81:
+      convert_b
+L82:
+      iffalse             L96
+
+L83:
+      getlex              QName(PackageNamespace("_-nA"), "_-07N")
+      callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
+
+      getlocal1
+      dup
+      iftrue              L91
+
+      pop
+      getlocal1
+      convert_b
+L91:
+      iffalse             L98
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mediatorMap")
+L94:
+      getlex              QName(PackageNamespace("_-nA"), "_-Og")
+      callproperty        QName(Namespace("_-Lh"), "map"), 1
+L96:
+      getlex              QName(PackageNamespace("_-nA"), "_-Vy")
+      callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
+
+L98:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-1G")
+      getlex              QName(PackageNamespace("_-PE"), "_-W2")
+      callproperty        QName(Namespace("_-jh"), "map"), 1
+      getlex              QName(PackageNamespace("_-RS"), "_-Iy")
+      callpropvoid        QName(Namespace("_-v3"), "_-1N"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Ij:_-V4/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

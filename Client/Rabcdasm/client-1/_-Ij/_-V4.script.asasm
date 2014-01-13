@@ -1,0 +1,29 @@
+script ; 10
+ sinit
+  refid "_-Ij:_-V4.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-V4", [PackageNamespace("_-Ij")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-Ij:_-V4"
+    popscope
+    initproperty        QName(PackageNamespace("_-Ij"), "_-V4")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Ij"), "_-V4")
+  #include "_-V4.class.asasm"
+ end ; trait
+end ; script

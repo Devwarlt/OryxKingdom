@@ -1,0 +1,152 @@
+class
+ refid "_-qD:_-Q8"
+ instance QName(PackageNamespace("_-qD"), "_-Q8")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-YL")
+  iinit
+   refid "_-qD:_-Q8/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("_-qD"), "_-s-")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_s
+     convert_i
+     inclocal_i          3
+     coerce_a
+     coerce_a
+     pushnull
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     jump                L20
+
+     divide
+     nextname
+     nextname
+     declocal            2
+     bitxor
+     inclocal            2
+L20:
+     pushscope
+
+     getlocal            4
+     iffalse             L29
+
+     getlocal0
+     getlocal1
+     pushtrue
+     constructsuper      2
+
+     getlocal            4
+     iffalse             L39
+
+L29:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "_-fD")
+
+     getlocal3
+     iftrue              L39
+
+     getlocal0
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-fD")
+     getproperty         QName(PackageNamespace(""), "_-Ud")
+     initproperty        QName(PackageNamespace(""), "_-0-a")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-fD") type QName(PackageNamespace("_-qD"), "_-s-") end
+  trait slot QName(PackageNamespace(""), "_-0-a") type QName(PackageNamespace("_-4x"), "_-0Iy") end
+ end ; instance
+ cinit
+  refid "_-qD:_-Q8/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    nextvalue
+    getlocal2
+    divide
+    setlocal2
+
+    pushnan
+    istypelate
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L20
+
+    getglobalscope
+    checkfilter
+    getlocal3
+    greaterequals
+    getlocal3
+    strictequals
+L20:
+    getlocal2
+    iftrue              L40
+
+    findproperty        QName(PackageNamespace(""), "PIXEL_EVENT")
+    pushstring          "PIXEL_EVENT"
+    initproperty        QName(PackageNamespace(""), "PIXEL_EVENT")
+
+    getlocal2
+    iftrue              L37
+
+    findproperty        QName(PackageNamespace(""), "TEMP_PIXEL_EVENT")
+    pushstring          "TEMP_PIXEL_EVENT"
+    initproperty        QName(PackageNamespace(""), "TEMP_PIXEL_EVENT")
+
+    getlocal1
+    dup
+    iftrue              L36
+
+    pop
+    getlocal1
+    convert_b
+L36:
+    iffalse             L40
+
+L37:
+    findproperty        QName(PackageNamespace(""), "UNDO_TEMP_EVENT")
+    pushstring          "UNDO_TEMP_EVENT"
+    initproperty        QName(PackageNamespace(""), "UNDO_TEMP_EVENT")
+
+L40:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "PIXEL_EVENT") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("PIXEL_EVENT") end
+ trait const QName(PackageNamespace(""), "TEMP_PIXEL_EVENT") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("TEMP_PIXEL_EVENT") end
+ trait const QName(PackageNamespace(""), "UNDO_TEMP_EVENT") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("UNDO_TEMP_EVENT") end
+end ; class

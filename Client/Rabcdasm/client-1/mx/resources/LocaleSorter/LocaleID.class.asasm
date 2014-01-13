@@ -1,0 +1,1098 @@
+class
+ refid "mx.resources:LocaleSorter/LocaleID"
+ instance QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("LocaleSorter.as$619:LocaleID")
+  iinit
+   refid "mx.resources:LocaleSorter/LocaleID/iinit"
+   body
+    maxstack 2
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+
+     getlocal0
+     newobject           0
+     initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+
+     getlocal0
+     newarray            0
+     initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions") type QName(PackageNamespace(""), "Object") end
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates") type QName(PackageNamespace(""), "Array") end
+  trait slot QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privateLangs") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait method QName(PackageNamespace(""), "canonicalize")
+   method
+    refid "mx.resources:LocaleSorter/LocaleID/canonicalize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      coerce_a
+      setlocal3
+
+      jump                L45
+
+L12:
+      label
+      getlocal3
+      getlocal2
+      nextname
+      coerce_s
+      setlocal1
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal1
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L45
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+      getproperty         Multiname("length", [PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+      pushbyte            0
+      ifne                L36
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+      pop
+      jump                L45
+
+L36:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+      callproperty        Multiname("sort", [PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")]), 0
+      setproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+
+L45:
+      hasnext2            3, 2
+      iftrue              L12
+
+      kill                3
+      kill                2
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 0
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 0
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "sort"), 0
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      pushstring          ""
+      ifne                L74
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      callproperty        QName(PackageNamespace(""), "getScriptByLang"), 1
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+
+L74:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      pushstring          ""
+      equals
+      dup
+      iffalse             L86
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+      pushstring          ""
+      equals
+      not
+L86:
+      iffalse             L95
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+      callproperty        QName(PackageNamespace(""), "getScriptByLangAndRegion"), 2
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+
+L95:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+      pushstring          ""
+      equals
+      dup
+      iffalse             L107
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      pushstring          ""
+      equals
+      not
+L107:
+      iffalse             L116
+
+      getlocal0
+      getlex              QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      callproperty        QName(PackageNamespace(""), "getDefaultRegionForLangAndScript"), 2
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+
+L116:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "mx.resources:LocaleSorter/LocaleID/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      newarray            1
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal1
+
+      findpropstrict      QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+      callpropvoid        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements"), 2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      pushstring          ""
+      ifeq                L23
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L23:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+      pushstring          ""
+      ifeq                L31
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L31:
+      findpropstrict      QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+      callpropvoid        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements"), 2
+
+      pushbyte            0
+      setlocal3
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      coerce_a
+      setlocal            4
+
+      jump                L64
+
+L43:
+      label
+      getlocal            4
+      getlocal3
+      nextname
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L64
+
+      getlocal1
+      getlocal2
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal2
+      getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+      callpropvoid        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements"), 2
+
+L64:
+      hasnext2            4, 3
+      iftrue              L43
+
+      kill                4
+      kill                3
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L81
+
+      getlocal1
+      pushstring          "x"
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      findpropstrict      QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements")
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+      callpropvoid        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements"), 2
+
+L81:
+      getlocal1
+      pushstring          "_"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "equals")
+   method
+    refid "mx.resources:LocaleSorter/LocaleID/equals"
+    param QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "toString"), 0
+      equals
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "isSiblingOf")
+   method
+    refid "mx.resources:LocaleSorter/LocaleID/isSiblingOf"
+    param QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      getlocal1
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      equals
+      dup
+      iffalse             L15
+
+      pop
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      getlocal1
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      equals
+L15:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "transformToParent")
+   method
+    refid "mx.resources:LocaleSorter/LocaleID/transformToParent"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 3
+     localcount 7
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce_s
+      setlocal2
+
+      pushnull
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      pushnull
+      coerce_s
+      setlocal            4
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L26
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      pushtrue
+      returnvalue
+
+L26:
+      pushnull
+      coerce_s
+      setlocal1
+
+      pushbyte            0
+      setlocal            5
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      coerce_a
+      setlocal            6
+
+      jump                L50
+
+L36:
+      label
+      getlocal            6
+      getlocal            5
+      nextname
+      coerce_s
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal2
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L50
+
+      getlocal2
+      coerce_s
+      setlocal1
+
+L50:
+      hasnext2            6, 5
+      iftrue              L36
+
+      kill                6
+      kill                5
+      getlocal1
+      iffalse             L81
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal1
+      getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+      coerce              QName(PackageNamespace(""), "Array")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            1
+      ifne                L73
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+      getlocal1
+      deleteproperty      MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+      pop
+      pushtrue
+      returnvalue
+
+L73:
+      getlocal3
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      pushtrue
+      returnvalue
+
+L81:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L96
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      pushtrue
+      returnvalue
+
+L96:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      pushstring          ""
+      ifeq                L134
+
+      getlex              QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      callproperty        QName(PackageNamespace(""), "getScriptByLang"), 1
+      pushstring          ""
+      ifeq                L111
+
+      getlocal0
+      pushstring          ""
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+
+      pushtrue
+      returnvalue
+
+L111:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+      pushstring          ""
+      ifne                L134
+
+      getlex              QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      callproperty        QName(PackageNamespace(""), "getDefaultRegionForLangAndScript"), 2
+      coerce_s
+      dup
+      setlocal            4
+
+      pushstring          ""
+      ifeq                L134
+
+      getlocal0
+      getlocal            4
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+
+      getlocal0
+      pushstring          ""
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+
+      pushtrue
+      returnvalue
+
+L134:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+      pushstring          ""
+      ifeq                L157
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+      pushstring          ""
+      equals
+      dup
+      iffalse             L151
+
+      pop
+      getlex              QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+      callproperty        QName(PackageNamespace(""), "getScriptByLang"), 1
+      pushstring          ""
+      equals
+L151:
+      iftrue              L157
+
+      getlocal0
+      pushstring          ""
+      initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+
+      pushtrue
+      returnvalue
+
+L157:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+      getproperty         QName(PackageNamespace(""), "length")
+      pushbyte            0
+      ifngt               L172
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+      getproperty         QName(PackageNamespace(""), "length")
+      decrement
+      pushbyte            1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "splice"), 2
+
+      pushtrue
+      returnvalue
+
+L172:
+      pushfalse
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.resources:LocaleSorter/LocaleID/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+
+    findproperty        QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+
+    findproperty        QName(PackageNamespace(""), "STATE_SCRIPT")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "STATE_SCRIPT")
+
+    findproperty        QName(PackageNamespace(""), "STATE_REGION")
+    pushbyte            3
+    initproperty        QName(PackageNamespace(""), "STATE_REGION")
+
+    findproperty        QName(PackageNamespace(""), "STATE_VARIANTS")
+    pushbyte            4
+    initproperty        QName(PackageNamespace(""), "STATE_VARIANTS")
+
+    findproperty        QName(PackageNamespace(""), "STATE_EXTENSIONS")
+    pushbyte            5
+    initproperty        QName(PackageNamespace(""), "STATE_EXTENSIONS")
+
+    findproperty        QName(PackageNamespace(""), "STATE_PRIVATES")
+    pushbyte            6
+    initproperty        QName(PackageNamespace(""), "STATE_PRIVATES")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE") slotid 1 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES") slotid 2 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "STATE_SCRIPT") slotid 3 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait const QName(PackageNamespace(""), "STATE_REGION") slotid 4 type QName(PackageNamespace(""), "int") value Integer(3) end
+ trait const QName(PackageNamespace(""), "STATE_VARIANTS") slotid 5 type QName(PackageNamespace(""), "int") value Integer(4) end
+ trait const QName(PackageNamespace(""), "STATE_EXTENSIONS") slotid 6 type QName(PackageNamespace(""), "int") value Integer(5) end
+ trait const QName(PackageNamespace(""), "STATE_PRIVATES") slotid 7 type QName(PackageNamespace(""), "int") value Integer(6) end
+ trait method QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "appendElements") flag FINAL dispid 3
+  method
+   refid "mx.resources:LocaleSorter/LocaleID/mx.resources:LocaleSorter/LocaleID/appendElements"
+   param QName(PackageNamespace(""), "Array")
+   param QName(PackageNamespace(""), "Array")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 3
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal3
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal            4
+
+     jump                L20
+
+L10:
+     label
+     getlocal1
+     getlocal2
+     getlocal3
+     getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal3
+     increment
+     convert_u
+     setlocal3
+
+L20:
+     getlocal3
+     getlocal            4
+     iflt                L10
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "fromString") flag FINAL dispid 4
+  method
+   refid "mx.resources:LocaleSorter/LocaleID/fromString"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+   body
+    maxstack 4
+    localcount 11
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     pushnull
+     coerce_s
+     setlocal            8
+
+     pushbyte            0
+     setlocal            9
+
+     pushnull
+     coerce_s
+     setlocal            10
+
+     getlocal0
+     construct           0
+     coerce              QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+     setlocal2
+
+     getlex              QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+     convert_i
+     setlocal3
+
+     getlocal1
+     getlex              QName(PackageNamespace(""), "RegExp")
+     pushstring          "-"
+     pushstring          "g"
+     construct           2
+     pushstring          "_"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+     pushstring          "_"
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     pushbyte            0
+     setlocal            6
+
+     getlocal            4
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            7
+
+     jump                L249
+
+L38:
+     label
+     getlocal            4
+     getlocal            6
+     getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+     callproperty        Multiname("toLowerCase", [PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")]), 0
+     coerce_s
+     setlocal            8
+
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_PRIMARY_LANGUAGE")
+     ifne                L75
+
+     getlocal            8
+     pushstring          "x"
+     ifne                L55
+
+     getlocal2
+     pushtrue
+     setproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privateLangs")
+
+     jump                L74
+
+L55:
+     getlocal            8
+     pushstring          "i"
+     ifne                L65
+
+     getlocal2
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+     pushstring          "i-"
+     add
+     setproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+
+     jump                L74
+
+L65:
+     getlocal2
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+     getlocal            8
+     add
+     setproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "lang")
+
+     getlex              QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+     convert_i
+     setlocal3
+
+L74:
+     jump                L248
+
+L75:
+     getlocal            8
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     dup
+     setlocal            9
+
+     pushbyte            0
+     ifne                L83
+
+     jump                L248
+
+L83:
+     getlocal            8
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toLowerCase"), 0
+     coerce_s
+     setlocal            10
+
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_EXTENDED_LANGUAGES")
+     lessequals
+     dup
+     iffalse             L98
+
+     pop
+     getlocal            9
+     pushbyte            3
+     equals
+L98:
+     iffalse             L112
+
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+     getlocal            8
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extended_langs")
+     getproperty         QName(PackageNamespace(""), "length")
+     pushbyte            3
+     ifne                L111
+
+     getlex              QName(PackageNamespace(""), "STATE_SCRIPT")
+     convert_i
+     setlocal3
+
+L111:
+     jump                L248
+
+L112:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_SCRIPT")
+     lessequals
+     dup
+     iffalse             L121
+
+     pop
+     getlocal            9
+     pushbyte            4
+     equals
+L121:
+     iffalse             L129
+
+     getlocal2
+     getlocal            8
+     setproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "script")
+
+     getlex              QName(PackageNamespace(""), "STATE_REGION")
+     convert_i
+     setlocal3
+
+     jump                L248
+
+L129:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_REGION")
+     lessequals
+     dup
+     iffalse             L144
+
+     pop
+     getlocal            9
+     pushbyte            2
+     equals
+     dup
+     iftrue              L144
+
+     pop
+     getlocal            9
+     pushbyte            3
+     equals
+L144:
+     iffalse             L152
+
+     getlocal2
+     getlocal            8
+     setproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "region")
+
+     getlex              QName(PackageNamespace(""), "STATE_VARIANTS")
+     convert_i
+     setlocal3
+
+     jump                L248
+
+L152:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_VARIANTS")
+     lessequals
+     dup
+     iffalse             L191
+
+     pop
+     getlocal            10
+     pushstring          "a"
+     greaterequals
+     dup
+     iffalse             L167
+
+     pop
+     getlocal            10
+     pushstring          "z"
+     lessequals
+L167:
+     dup
+     iffalse             L173
+
+     pop
+     getlocal            9
+     pushbyte            5
+     greaterequals
+L173:
+     dup
+     iftrue              L191
+
+     pop
+     getlocal            10
+     pushstring          "0"
+     greaterequals
+     dup
+     iffalse             L185
+
+     pop
+     getlocal            10
+     pushstring          "9"
+     lessequals
+L185:
+     dup
+     iffalse             L191
+
+     pop
+     getlocal            9
+     pushbyte            4
+     greaterequals
+L191:
+     iffalse             L200
+
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "variants")
+     getlocal            8
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlex              QName(PackageNamespace(""), "STATE_VARIANTS")
+     convert_i
+     setlocal3
+
+     jump                L248
+
+L200:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_PRIVATES")
+     lessthan
+     dup
+     iffalse             L209
+
+     pop
+     getlocal            9
+     pushbyte            1
+     equals
+L209:
+     iffalse             L242
+
+     getlocal            8
+     pushstring          "x"
+     ifne                L221
+
+     getlex              QName(PackageNamespace(""), "STATE_PRIVATES")
+     convert_i
+     setlocal3
+
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "privates")
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     jump                L241
+
+L221:
+     getlex              QName(PackageNamespace(""), "STATE_EXTENSIONS")
+     convert_i
+     setlocal3
+
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+     getlocal            8
+     getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+     coerce              QName(PackageNamespace(""), "Array")
+     dup
+     iftrue              L234
+
+     pop
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+L234:
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            5
+
+     getlocal2
+     getproperty         QName(PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), "extensions")
+     getlocal            8
+     getlocal            5
+     setproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "mx.resources:LocaleSorter/LocaleID"), ProtectedNamespace("LocaleSorter.as$619:LocaleID"), StaticProtectedNs("LocaleSorter.as$619:LocaleID")])
+
+L241:
+     jump                L248
+
+L242:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "STATE_EXTENSIONS")
+     ifnge               L248
+
+     getlocal            5
+     getlocal            8
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L248:
+     inclocal_i          6
+L249:
+     getlocal            6
+     getlocal            7
+     iflt                L38
+
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "canonicalize"), 0
+
+     getlocal2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

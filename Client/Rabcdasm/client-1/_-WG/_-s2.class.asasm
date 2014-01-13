@@ -1,0 +1,92 @@
+class
+ refid "_-WG:_-s2"
+ instance QName(PackageNamespace("_-WG"), "_-s2")
+  extends QName(PackageNamespace(""), "Error")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Ga")
+  iinit
+   refid "_-WG:_-s2/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     getglobalscope
+     kill                2
+     declocal_i          2
+     setlocal2
+
+     setlocal2
+
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L19
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L19:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-WG:_-s2/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    bitand
+    bitor
+    instanceof
+    subtract
+    pushtrue
+    convert_d
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    iftrue              L19
+
+    findproperty        QName(PackageNamespace(""), "_-0DO")
+    pushstring          "An empty matcher will create a filter which matches nothing. You should specify at least one condition for the filter."
+    initproperty        QName(PackageNamespace(""), "_-0DO")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-0DO") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("An empty matcher will create a filter which matches nothing. You should specify at least one condition for the filter.") end
+end ; class

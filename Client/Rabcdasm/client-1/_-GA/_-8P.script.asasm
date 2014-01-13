@@ -1,0 +1,33 @@
+script ; 17
+ sinit
+  refid "_-GA:_-8P.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-8P", [PackageNamespace("_-GA")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-03T"), "_-03")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-03T"), "_-03")
+    newclass            "_-GA:_-8P"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-GA"), "_-8P")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-GA"), "_-8P")
+  #include "_-8P.class.asasm"
+ end ; trait
+end ; script

@@ -1,0 +1,1081 @@
+class
+ refid "_-00g:WebAccount"
+ instance QName(PackageNamespace("_-00g"), "WebAccount")
+  extends QName(PackageNamespace("_-qN"), "Account")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-G5")
+  iinit
+   refid "_-00g:WebAccount/iinit"
+   body
+    maxstack 6
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     dup
+     inclocal_i          2
+     setlocal2
+
+     add_i
+     setlocal3
+
+     declocal_i          2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L27
+
+     jump                L24
+
+     getlocal2
+     bitor
+     setlocal2
+
+     declocal_i          2
+     typeof
+     declocal            2
+L24:
+     pop
+     getlocal2
+     convert_b
+L27:
+     iftrue              L30
+
+     getlocal0
+     constructsuper      0
+
+L30:
+     getlocal0
+     getlex              QName(PackageNamespace("flash.external"), "ExternalInterface")
+     pushstring          "rotmg.UrlLib.getParam"
+     pushstring          "entrypt"
+     callproperty        QName(PackageNamespace(""), "call"), 2
+     initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-8U")
+
+L36:
+     jump                L48
+
+L37:
+     getlocal0
+     pushscope
+
+     newcatch            0
+     dup
+     setlocal1
+
+     dup
+     pushscope
+
+     swap
+     setslot             1
+
+     popscope
+     kill                1
+L48:
+     returnvoid
+    end ; code
+    try from L30 to L36 target L37 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_") type QName(PackageNamespace(""), "String") value Null() end
+  trait slot QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-8U") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait method QName(PackageNamespace(""), "guid") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/guid"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "password") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/password"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      negate_i
+      convert_b
+      convert_d
+      rshift
+      urshift
+      dxnslate
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L33
+
+      getlocal0
+      jump                L23
+
+      convert_b
+      negate_i
+      divide
+      pushscope
+
+      subtract_i
+      dxnslate
+L23:
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      getlocal2
+      dup
+      iffalse             L30
+
+      pop
+      getlocal2
+      convert_b
+L30:
+      iftrue              L45
+
+      pushnull
+      ifne                L35
+
+L33:
+      pushstring          ""
+      jump                L45
+
+L35:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      getlocal1
+      dup
+      iftrue              L43
+
+      pop
+      getlocal1
+      convert_b
+L43:
+      iffalse             L45
+
+      coerce_s
+L45:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "credentials") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/credentials"
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      pushstring          "guid"
+      jump                L10
+
+      coerce_s
+      convert_u
+      decrement_i
+      convert_d
+      typeof
+      nextvalue
+L10:
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "guid"), 0
+      pushstring          "password"
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "password"), 0
+      newobject           2
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "isRegistered") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/isRegistered"
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      checkfilter
+      coerce_s
+      pushscope
+
+      coerce_a
+      hasnext
+      increment
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "password"), 0
+      pushstring          ""
+      equals
+      getlocal2
+      dup
+      iffalse             L23
+
+      pop
+      getlocal2
+      convert_b
+L23:
+      iftrue              L25
+
+      not
+L25:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(ProtectedNamespace("_-G5"), "internalLoad") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/_-G5:internalLoad"
+    param QName(PackageNamespace("flash.display"), "Stage")
+    param QName(PackageNamespace(""), "Function")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 7
+     initscopedepth 5
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            5
+
+      jump                L10
+
+      bitand
+      inclocal_i          5
+      getlocal2
+      popscope
+      rshift
+      getlocal2
+L10:
+      setlocal            6
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "SharedObject")
+      setlocal3
+
+      getlocal            5
+      iffalse             L28
+
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+
+      getlocal            6
+      dup
+      iffalse             L27
+
+      pop
+      getlocal1
+      convert_b
+L27:
+      iftrue              L31
+
+L28:
+      getlocal0
+      pushnull
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+
+L31:
+      getlex              QName(PackageNamespace("flash.net"), "SharedObject")
+      pushstring          "RotMG"
+      pushstring          "/"
+      callproperty        QName(PackageNamespace(""), "getLocal"), 2
+      coerce              QName(PackageNamespace("flash.net"), "SharedObject")
+      setlocal3
+
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "GUID"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L55
+
+      getlocal0
+      getlocal3
+      jump                L51
+
+      pushnull
+      typeof
+      getlocal            5
+      getglobalscope
+      kill                3
+      greaterthan
+L51:
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "GUID"
+      getproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+
+L55:
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "Password"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "hasOwnProperty"), 1
+      iffalse             L75
+
+      getlocal            6
+      dup
+      iffalse             L66
+
+      pop
+      getlocal2
+      convert_b
+L66:
+      iftrue              L104
+
+      getlocal0
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "Password"
+      getproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+
+      getlocal            6
+      iftrue              L98
+
+L75:
+      jump                L94
+
+L76:
+      getlocal0
+      pushscope
+
+      jump                L85
+
+      popscope
+      setlocal            4
+
+      strictequals
+      pop
+      declocal_i          4
+      setlocal2
+
+L85:
+      newcatch            0
+      dup
+      setlocal            4
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                4
+L94:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      pushnull
+      ifne                L104
+
+L98:
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "GUID")
+      callproperty        QName(PackageNamespace(""), "create"), 0
+      pushnull
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "modify"), 3
+
+L104:
+      getlocal2
+      getglobalscope
+      call                0
+      pop
+      returnvoid
+     end ; code
+     try from L31 to L75 target L76 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "modify") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/modify"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 8
+     initscopedepth 5
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      checkfilter
+      pushnan
+      bitnot
+      add
+      getlocal3
+      inclocal            2
+L10:
+      setlocal            6
+
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("flash.net"), "SharedObject")
+      setlocal            4
+
+      getlocal            6
+      dup
+      iffalse             L23
+
+      pop
+      getlocal0
+      convert_b
+L23:
+      iftrue              L32
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+
+      getlocal            6
+      iftrue              L32
+
+      getlocal0
+      getlocal2
+      initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+
+L32:
+      getlex              QName(PackageNamespace("flash.net"), "SharedObject")
+      jump                L40
+
+      bitor
+      lessequals
+      urshift
+      convert_o
+      inclocal_i          4
+      subtract_i
+L40:
+      pushstring          "RotMG"
+      pushstring          "/"
+      callproperty        QName(PackageNamespace(""), "getLocal"), 2
+      coerce              QName(PackageNamespace("flash.net"), "SharedObject")
+      dup
+      setlocal            4
+
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "GUID"
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "guid_")
+      setproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+
+      getlocal            7
+      iffalse             L75
+
+      getlocal            4
+      getproperty         QName(PackageNamespace(""), "data")
+      pushstring          "Password"
+      getlocal0
+      jump                L64
+
+      lessthan
+      bitnot
+      nextname
+      increment_i
+      convert_d
+      nextname
+L64:
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "password_")
+      setproperty         MultinameL([PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+
+      getlocal            7
+      dup
+      iftrue              L72
+
+      pop
+      getlocal2
+      convert_b
+L72:
+      iffalse             L75
+
+      getlocal            4
+      callpropvoid        QName(PackageNamespace(""), "flush"), 0
+
+L75:
+      jump                L87
+
+L76:
+      getlocal0
+      pushscope
+
+      newcatch            0
+      dup
+      setlocal            5
+
+      dup
+      pushscope
+
+      swap
+      setslot             1
+
+      popscope
+      kill                5
+L87:
+      returnvoid
+     end ; code
+     try from L32 to L75 target L76 type QName(PackageNamespace(""), "Error") name QName(PackageNamespace(""), "error") end
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "clear") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/clear"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      getlocal2
+      setlocal3
+
+      decrement
+      convert_b
+      dup
+      typeof
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L19
+
+      pop
+      getlocal1
+      convert_b
+L19:
+      iftrue              L51
+
+      jump                L27
+
+      strictequals
+      swap
+      equals
+      dxnslate
+      pushfalse
+      dup
+L27:
+      getlocal0
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "GUID")
+      callproperty        QName(PackageNamespace(""), "create"), 0
+      pushnull
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "modify"), 3
+
+      getlocal2
+      dup
+      iffalse             L39
+
+      pop
+      getlocal0
+      convert_b
+L39:
+      iftrue              L53
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "_-hk")
+
+      getlocal2
+      iftrue              L51
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      newobject           0
+      setproperty         Multiname("charIdUseMap", [PrivateNamespace("*", "_-00g:WebAccount#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PrivateNamespace("*", "_-00g:WebAccount#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), ProtectedNamespace("_-G5"), StaticProtectedNs("_-G5"), StaticProtectedNs("_-iT")])
+
+      getlocal2
+      iftrue              L53
+
+L51:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+L53:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "reportIntStat") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/reportIntStat"
+    param QName(PackageNamespace(""), "String")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "newAccountText") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/newAccountText"
+    returns QName(PackageNamespace("_-qN"), "_-9j")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-QA"), "_-jz")
+      constructprop       QName(PackageNamespace("_-QA"), "_-jz"), 0
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "newAccountManagement") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/newAccountManagement"
+    returns QName(PackageNamespace("flash.display"), "Sprite")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-QA"), "_-ak")
+      jump                L10
+
+      pushscope
+
+      pushwith
+      negate
+      greaterthan
+      pushscope
+
+      dxnslate
+L10:
+      pushfalse
+      constructprop       QName(PackageNamespace("_-QA"), "_-ak"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "showInGameRegister") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/showInGameRegister"
+    param QName(PackageNamespace("flash.display"), "Stage")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      declocal_i          2
+      inclocal            2
+      bitnot
+      add_i
+      kill                3
+      getlocal2
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-QA"), "_-0Ac")
+      constructprop       QName(PackageNamespace("_-QA"), "_-0Ac"), 0
+      coerce              QName(PackageNamespace("_-QA"), "_-0Ac")
+      setlocal2
+
+      getlocal3
+      iffalse             L22
+
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L22:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "cacheOffers") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/cacheOffers"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      equals
+      add
+      add_i
+      pushundefined
+      bitxor
+      pushnan
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L19
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-02k")
+      pushstring          "/credits"
+      pushnull
+      callpropvoid        QName(PackageNamespace(""), "_-Ut"), 2
+
+L19:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "showMoneyManagement") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/showMoneyManagement"
+    param QName(PackageNamespace("flash.display"), "Stage")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 4
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      nextvalue
+      getlocal1
+      subtract
+      convert_s
+      convert_s
+      inclocal            2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L39
+
+      jump                L22
+
+      setlocal2
+
+      increment
+      pushwith
+      newactivation
+      getlocal0
+      increment_i
+L22:
+      getlocal0
+      callproperty        QName(PackageNamespace(""), "isRegistered"), 0
+      iftrue              L39
+
+      getlocal2
+      iffalse             L36
+
+      getlocal1
+      findpropstrict      QName(PackageNamespace("_-0LC"), "_-2k")
+      pushstring          "In order to buy Gold "
+      pushstring          ", you must be a registered user."
+      add
+      constructprop       QName(PackageNamespace("_-0LC"), "_-2k"), 1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+      getlocal3
+      iftrue              L39
+
+L36:
+      returnvoid
+
+      getlocal3
+      iftrue              L43
+
+L39:
+      getlocal1
+      findpropstrict      QName(PackageNamespace("_-QA"), "_-02R")
+      constructprop       QName(PackageNamespace("_-QA"), "_-02R"), 0
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L43:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "gameNetworkUserId") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/gameNetworkUserId"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "gameNetwork") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/gameNetwork"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace(""), "_-000")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "playPlatform") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/playPlatform"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "entrytag") flag OVERRIDE
+   method
+    refid "_-00g:WebAccount/entrytag"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-8U")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-00g:WebAccount/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    coerce_a
+    pushundefined
+    setlocal2
+
+    getlocal2
+    add
+    pushtrue
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    dup
+    iftrue              L26
+
+    pop
+    getlocal2
+    jump                L25
+
+    convert_d
+    newactivation
+    hasnext
+    add
+    increment_i
+    convert_i
+L25:
+    convert_b
+L26:
+    iffalse             L37
+
+    findproperty        QName(PackageNamespace(""), "_-000")
+    pushstring          "rotmg"
+    initproperty        QName(PackageNamespace(""), "_-000")
+
+    getlocal1
+    dup
+    iftrue              L36
+
+    pop
+    getlocal2
+    convert_b
+L36:
+    iffalse             L50
+
+L37:
+    findproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF")
+    pushstring          ""
+    initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF")
+
+    getlocal2
+    dup
+    iffalse             L46
+
+    pop
+    getlocal1
+    convert_b
+L46:
+    iftrue              L50
+
+    findproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R")
+    pushstring          "rotmg"
+    initproperty        QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R")
+
+L50:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-000") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("rotmg") end
+ trait const QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-oF") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("") end
+ trait const QName(PrivateNamespace("*", "_-00g:WebAccount#0"), "_-03R") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("rotmg") end
+end ; class

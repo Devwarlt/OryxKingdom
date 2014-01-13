@@ -1,0 +1,724 @@
+class
+ refid "mx.utils:StringUtil"
+ instance QName(PackageNamespace("mx.utils"), "StringUtil")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.utils:StringUtil")
+  iinit
+   refid "mx.utils:StringUtil/iinit"
+   body
+    maxstack 1
+    localcount 1
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "mx.utils:StringUtil/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.6.0.23201"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
+ trait method QName(PackageNamespace(""), "trim") flag FINAL dispid 3
+  method
+   refid "mx.utils:StringUtil/trim"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal1
+     pushnull
+     ifne                L7
+
+     pushstring          ""
+     returnvalue
+
+L7:
+     pushbyte            0
+     setlocal2
+
+     jump                L12
+
+L10:
+     label
+     inclocal_i          2
+L12:
+     findpropstrict      QName(PackageNamespace(""), "isWhitespace")
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(PackageNamespace(""), "isWhitespace"), 1
+     iftrue              L10
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     decrement
+     convert_i
+     setlocal3
+
+     jump                L28
+
+L24:
+     label
+     getlocal3
+     decrement_i
+     setlocal3
+
+L28:
+     findpropstrict      QName(PackageNamespace(""), "isWhitespace")
+     getlocal1
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charAt"), 1
+     callproperty        QName(PackageNamespace(""), "isWhitespace"), 1
+     iftrue              L24
+
+     getlocal3
+     getlocal2
+     ifnge               L44
+
+     getlocal1
+     getlocal2
+     getlocal3
+     pushbyte            1
+     add
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "slice"), 2
+     returnvalue
+
+L44:
+     pushstring          ""
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "trimArrayElements") flag FINAL dispid 4
+  method
+   refid "mx.utils:StringUtil/trimArrayElements"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     pushbyte            0
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     getlocal1
+     pushstring          ""
+     equals
+     not
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     pushnull
+     equals
+     not
+L20:
+     iffalse             L54
+
+     getlocal1
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     jump                L43
+
+L33:
+     label
+     getlocal3
+     getlocal            5
+     getlex              QName(PackageNamespace("mx.utils"), "StringUtil")
+     getlocal3
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     callproperty        QName(PackageNamespace(""), "trim"), 1
+     setproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+
+     inclocal_i          5
+L43:
+     getlocal            5
+     getlocal            4
+     iflt                L33
+
+     getlocal            4
+     pushbyte            0
+     ifngt               L54
+
+     getlocal3
+     getlocal2
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+     coerce_s
+     setlocal1
+
+L54:
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "isWhitespace") flag FINAL dispid 5
+  method
+   refid "mx.utils:StringUtil/isWhitespace"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     jump                L9
+
+L3:
+     label
+     pushtrue
+     returnvalue
+
+L6:
+     label
+     pushfalse
+     returnvalue
+
+L9:
+     getlocal1
+     setlocal2
+
+     pushstring          " "
+     getlocal2
+     ifstrictne          L16
+
+     pushbyte            0
+     jump                L40
+
+L16:
+     pushstring          "\x09"
+     getlocal2
+     ifstrictne          L21
+
+     pushbyte            1
+     jump                L40
+
+L21:
+     pushstring          "\r"
+     getlocal2
+     ifstrictne          L26
+
+     pushbyte            2
+     jump                L40
+
+L26:
+     pushstring          "\n"
+     getlocal2
+     ifstrictne          L31
+
+     pushbyte            3
+     jump                L40
+
+L31:
+     pushstring          "\x0C"
+     getlocal2
+     ifstrictne          L36
+
+     pushbyte            4
+     jump                L40
+
+L36:
+     jump                L39
+
+     pushbyte            5
+     jump                L40
+
+L39:
+     pushbyte            5
+L40:
+     kill                2
+     lookupswitch        L6, [L3, L3, L3, L3, L3, L6]
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "substitute") flag FINAL dispid 6
+  method
+   refid "mx.utils:StringUtil/substitute"
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   flag NEED_REST
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+     getlocal1
+     pushnull
+     ifne                L10
+
+     pushstring          ""
+     returnvalue
+
+L10:
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal3
+
+     getlocal3
+     pushbyte            1
+     equals
+     dup
+     iffalse             L25
+
+     pop
+     getlocal2
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     getlex              QName(PackageNamespace(""), "Array")
+     istypelate
+L25:
+     iffalse             L38
+
+     getlocal2
+     pushbyte            0
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     getlex              QName(PackageNamespace(""), "Array")
+     astypelate
+     coerce              QName(PackageNamespace(""), "Array")
+     dup
+     setlocal            4
+
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_u
+     setlocal3
+
+     jump                L41
+
+L38:
+     getlocal2
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal            4
+
+L41:
+     pushbyte            0
+     setlocal            5
+
+     jump                L61
+
+L44:
+     label
+     getlocal1
+     findpropstrict      QName(PackageNamespace(""), "RegExp")
+     pushstring          "\\{"
+     getlocal            5
+     add
+     pushstring          "\\}"
+     add
+     pushstring          "g"
+     constructprop       QName(PackageNamespace(""), "RegExp"), 2
+     getlocal            4
+     getlocal            5
+     getproperty         MultinameL([PrivateNamespace("*", "mx.utils:StringUtil#0"), PackageNamespace(""), Namespace("http://adobe.com/AS3/2006/builtin"), PackageNamespace("mx.utils"), PrivateNamespace("*", "mx.utils:StringUtil#1"), PackageInternalNs("mx.utils"), ProtectedNamespace("mx.utils:StringUtil"), StaticProtectedNs("mx.utils:StringUtil")])
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "replace"), 2
+     coerce_s
+     setlocal1
+
+     inclocal_i          5
+L61:
+     getlocal            5
+     getlocal3
+     iflt                L44
+
+     getlocal1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "repeat") flag FINAL dispid 7
+  method
+   refid "mx.utils:StringUtil/repeat"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 2
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlocal2
+     pushbyte            0
+     ifne                L7
+
+     pushstring          ""
+     returnvalue
+
+L7:
+     getlocal1
+     coerce_s
+     setlocal3
+
+     pushbyte            1
+     setlocal            4
+
+     jump                L20
+
+L13:
+     label
+     getlocal3
+     getlocal1
+     add
+     coerce_s
+     setlocal3
+
+     inclocal_i          4
+L20:
+     getlocal            4
+     getlocal2
+     iflt                L13
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PackageNamespace(""), "restrict") flag FINAL dispid 8
+  method
+   refid "mx.utils:StringUtil/restrict"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 3
+    localcount 7
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal            6
+
+     getlocal2
+     pushnull
+     ifne                L10
+
+     getlocal1
+     returnvalue
+
+L10:
+     getlocal2
+     pushstring          ""
+     ifne                L15
+
+     pushstring          ""
+     returnvalue
+
+L15:
+     newarray            0
+     coerce              QName(PackageNamespace(""), "Array")
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     setlocal            4
+
+     pushbyte            0
+     setlocal            5
+
+     jump                L40
+
+L25:
+     label
+     getlocal1
+     getlocal            5
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     setlocal            6
+
+     findpropstrict      QName(PrivateNamespace("*", "mx.utils:StringUtil#0"), "testCharacter")
+     getlocal            6
+     getlocal2
+     callproperty        QName(PrivateNamespace("*", "mx.utils:StringUtil#0"), "testCharacter"), 2
+     iffalse             L39
+
+     getlocal3
+     getlocal            6
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+L39:
+     inclocal_i          5
+L40:
+     getlocal            5
+     getlocal            4
+     iflt                L25
+
+     getlex              QName(PackageNamespace(""), "String")
+     getproperty         QName(Namespace("http://adobe.com/AS3/2006/builtin"), "fromCharCode")
+     pushnull
+     getlocal3
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "apply"), 2
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("*", "mx.utils:StringUtil#0"), "testCharacter") flag FINAL dispid 9
+  method
+   refid "mx.utils:StringUtil/testCharacter"
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "String")
+   returns QName(PackageNamespace(""), "Boolean")
+   body
+    maxstack 2
+    localcount 12
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     pushbyte            0
+     convert_u
+     setlocal            9
+
+     pushfalse
+     setlocal            11
+
+     pushfalse
+     setlocal3
+
+     pushfalse
+     setlocal            4
+
+     pushfalse
+     setlocal            5
+
+     pushtrue
+     setlocal            6
+
+     pushbyte            0
+     convert_u
+     setlocal            7
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "length")
+     convert_i
+     dup
+     setlocal            8
+
+     pushbyte            0
+     ifngt               L35
+
+     getlocal2
+     pushbyte            0
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     dup
+     setlocal            9
+
+     pushbyte            94
+     ifne                L35
+
+     pushtrue
+     setlocal3
+
+L35:
+     pushbyte            0
+     setlocal            10
+
+     jump                L107
+
+L38:
+     label
+     getlocal2
+     getlocal            10
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "charCodeAt"), 1
+     convert_u
+     setlocal            9
+
+     pushfalse
+     setlocal            11
+
+     getlocal            4
+     iftrue              L70
+
+     getlocal            9
+     pushbyte            45
+     ifne                L54
+
+     pushtrue
+     setlocal            5
+
+     jump                L69
+
+L54:
+     getlocal            9
+     pushbyte            94
+     ifne                L61
+
+     getlocal            6
+     not
+     setlocal            6
+
+     jump                L69
+
+L61:
+     getlocal            9
+     pushbyte            92
+     ifne                L67
+
+     pushtrue
+     setlocal            4
+
+     jump                L69
+
+L67:
+     pushtrue
+     setlocal            11
+
+L69:
+     jump                L74
+
+L70:
+     pushtrue
+     setlocal            11
+
+     pushfalse
+     setlocal            4
+
+L74:
+     getlocal            11
+     iffalse             L106
+
+     getlocal            5
+     iffalse             L97
+
+     getlocal            7
+     getlocal1
+     lessequals
+     dup
+     iffalse             L87
+
+     pop
+     getlocal1
+     getlocal            9
+     lessequals
+L87:
+     iffalse             L91
+
+     getlocal            6
+     convert_b
+     setlocal3
+
+L91:
+     pushfalse
+     setlocal            5
+
+     pushbyte            0
+     convert_u
+     setlocal            7
+
+     jump                L106
+
+L97:
+     getlocal1
+     getlocal            9
+     ifne                L103
+
+     getlocal            6
+     convert_b
+     setlocal3
+
+L103:
+     getlocal            9
+     convert_u
+     setlocal            7
+
+L106:
+     inclocal_i          10
+L107:
+     getlocal            10
+     getlocal            8
+     iflt                L38
+
+     getlocal3
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

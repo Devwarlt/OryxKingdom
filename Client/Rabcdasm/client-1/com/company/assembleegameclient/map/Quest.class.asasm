@@ -1,0 +1,431 @@
+class
+ refid "com.company.assembleegameclient.map:Quest"
+ instance QName(PackageNamespace("com.company.assembleegameclient.map"), "Quest")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-QQ")
+  iinit
+   refid "com.company.assembleegameclient.map:Quest/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     popscope
+     equals
+     setlocal2
+
+     declocal_i          2
+     pop
+     getlocal2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L24
+
+     getlocal0
+     constructsuper      0
+
+     getlocal3
+     dup
+     iffalse             L23
+
+     pop
+     getlocal0
+     convert_b
+L23:
+     iftrue              L27
+
+L24:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "map_")
+
+L27:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "map_") type QName(PackageNamespace("com.company.assembleegameclient.map"), "_-Xl") end
+  trait slot QName(PackageNamespace(""), "objectId_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait slot QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx") type QName(PackageNamespace(""), "int") value Integer(0) end
+  trait method QName(PackageNamespace(""), "setObject")
+   method
+    refid "com.company.assembleegameclient.map:Quest/setObject"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      setlocal2
+
+      equals
+      kill                2
+      inclocal            2
+      lshift
+      declocal            2
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iffalse             L97
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "objectId_")
+      getlocal3
+      dup
+      iftrue              L24
+
+      pop
+      getlocal0
+      convert_b
+L24:
+      iffalse             L61
+
+      pushbyte            255
+      getlocal3
+      iffalse             L62
+
+      equals
+      getlocal3
+      dup
+      iftrue              L35
+
+      pop
+      getlocal3
+      convert_b
+L35:
+      iffalse             L66
+
+      dup
+      iffalse             L66
+
+      getlocal3
+      dup
+      jump                L47
+
+      getlocal0
+      getlocal2
+      kill                2
+      checkfilter
+      setlocal2
+
+      add
+L47:
+      iftrue              L51
+
+      pop
+      getlocal2
+      convert_b
+L51:
+      iffalse             L65
+
+      pop
+      getlocal3
+      dup
+      iftrue              L59
+
+      pop
+      getlocal2
+      convert_b
+L59:
+      iffalse             L84
+
+      getlocal1
+L61:
+      pushbyte            255
+L62:
+      equals
+      getlocal2
+      iftrue              L66
+
+L65:
+      not
+L66:
+      iffalse             L97
+
+      getlocal2
+      iftrue              L84
+
+      getlocal0
+      jump                L77
+
+      decrement_i
+      getlocal2
+      getlocal2
+      istypelate
+      setlocal2
+
+      not
+L77:
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      pushshort           4000
+      add
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+
+      getlocal2
+      iftrue              L97
+
+L84:
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      pushshort           2000
+      add
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx")
+
+      getlocal2
+      dup
+      iffalse             L96
+
+      pop
+      getlocal3
+      convert_b
+L96:
+      iftrue              L100
+
+L97:
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "objectId_")
+
+L100:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "completed")
+   method
+    refid "com.company.assembleegameclient.map:Quest/completed"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      lshift
+      dup
+      nextname
+      modulo
+      rshift
+      bitand
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iftrue              L27
+
+      pop
+      getlocal0
+      jump                L26
+
+      pushtrue
+      convert_o
+      pop
+      getlocal0
+      convert_d
+      convert_i
+L26:
+      convert_b
+L27:
+      iffalse             L52
+
+      getlocal0
+      findpropstrict      QName(PackageNamespace("flash.utils"), "getTimer")
+      callproperty        QName(PackageNamespace("flash.utils"), "getTimer"), 0
+      pushshort           15000
+      add
+      getlex              QName(PackageNamespace(""), "Math")
+      callproperty        QName(PackageNamespace(""), "random"), 0
+      pushshort           10000
+      multiply
+      subtract
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+
+      getlocal1
+      dup
+      iffalse             L45
+
+      pop
+      getlocal0
+      convert_b
+L45:
+      iftrue              L52
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      pushshort           2000
+      add
+      initproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx")
+
+L52:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "getObject")
+   method
+    refid "com.company.assembleegameclient.map:Quest/getObject"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      dxnslate
+      kill                2
+      setlocal2
+
+      bitxor
+      inclocal            2
+      bitxor
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      jump                L21
+
+      dup
+      declocal_i          2
+      inclocal_i          2
+      setlocal2
+
+      declocal            2
+      negate
+L21:
+      getlocal3
+      iffalse             L36
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-F2")
+      ifnlt               L36
+
+      getlocal3
+      dup
+      iftrue              L33
+
+      pop
+      getlocal2
+      convert_b
+L33:
+      iffalse             L36
+
+      pushnull
+      returnvalue
+
+L36:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "map_")
+      getproperty         QName(PackageNamespace(""), "goDict_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "objectId_")
+      getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), PackageNamespace(""), PackageNamespace("com.company.assembleegameclient.map"), PrivateNamespace("*", "com.company.assembleegameclient.map:Quest/getObject"), PackageInternalNs("com.company.assembleegameclient.map"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-QQ"), StaticProtectedNs("_-QQ")])
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "isNew")
+   method
+    refid "com.company.assembleegameclient.map:Quest/isNew"
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal1
+      jump                L10
+
+      multiply_i
+      popscope
+      decrement
+      pushwith
+      dxnslate
+      decrement
+L10:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "com.company.assembleegameclient.map:Quest"), "_-vx")
+      lessthan
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.map:Quest/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

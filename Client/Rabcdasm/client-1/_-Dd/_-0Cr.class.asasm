@@ -1,0 +1,111 @@
+class
+ refid "_-Dd:_-0Cr"
+ instance QName(PackageNamespace("_-Dd"), "_-0Cr")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-rX")
+  iinit
+   refid "_-Dd:_-0Cr/iinit"
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     lshift
+     inclocal_i          2
+     setlocal2
+
+     bitand
+     lessthan
+     inclocal            2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iffalse             L28
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "_-048")
+     constructsuper      1
+
+     getlocal2
+     iffalse             L28
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "_-2B")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-2B") type QName(PackageNamespace(""), "String") end
+ end ; instance
+ cinit
+  refid "_-Dd:_-0Cr/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    bitxor
+    astypelate
+    decrement
+    greaterthan
+    coerce_s
+    checkfilter
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal1
+    convert_b
+L20:
+    iffalse             L24
+
+    findproperty        QName(PackageNamespace(""), "_-048")
+    pushstring          "MAP_TEST_EVENT"
+    initproperty        QName(PackageNamespace(""), "_-048")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-048") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("MAP_TEST_EVENT") end
+end ; class

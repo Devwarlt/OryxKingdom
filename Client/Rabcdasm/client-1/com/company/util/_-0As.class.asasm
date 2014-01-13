@@ -1,0 +1,219 @@
+class
+ refid "com.company.util:_-0As"
+ instance QName(PackageNamespace("com.company.util"), "_-0As")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0JW")
+  iinit
+   refid "com.company.util:_-0As/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal3
+     greaterthan
+     hasnext
+     swap
+     add
+     bitor
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.util:_-0As/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PackageNamespace(""), "_-mP") flag FINAL dispid 3
+  method
+   refid "com.company.util:_-0As/_-mP"
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 5
+    localcount 6
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal_i          3
+     getlocal            4
+     declocal            2
+     greaterequals
+     istypelate
+     convert_d
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     findpropstrict      QName(PackageNamespace(""), "Date")
+     constructprop       QName(PackageNamespace(""), "Date"), 0
+     coerce              QName(PackageNamespace(""), "Date")
+     setlocal1
+
+     getlocal1
+     callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "getTime"), 0
+     convert_d
+     setlocal2
+
+     getlocal            5
+     iffalse             L77
+
+     getlocal2
+     getlocal            4
+     dup
+     iffalse             L31
+
+     pop
+     getlocal2
+     convert_b
+L31:
+     iftrue              L74
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "timezoneOffset")
+     pushshort           420
+     subtract
+     getlocal            5
+     dup
+     jump                L45
+
+     kill                4
+     instanceof
+     pushnull
+     getlocal2
+     astypelate
+     setlocal2
+
+L45:
+     iftrue              L49
+
+     pop
+     getlocal1
+     convert_b
+L49:
+     iffalse             L61
+
+     pushbyte            60
+     getlocal            4
+     iftrue              L62
+
+     multiply
+     getlocal            4
+     dup
+     iffalse             L60
+
+     pop
+     getlocal3
+     convert_b
+L60:
+     iftrue              L63
+
+L61:
+     pushshort           1000
+L62:
+     multiply
+L63:
+     add
+     getlocal            5
+     iffalse             L74
+
+     convert_d
+     jump                L74
+
+     increment
+     urshift
+     nextname
+     declocal_i          3
+     pushnan
+     coerce_s
+L74:
+     setlocal2
+
+     getlocal            4
+     iftrue              L80
+
+L77:
+     getlocal1
+     getlocal2
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "setTime"), 1
+
+L80:
+     findpropstrict      QName(PackageNamespace("mx.formatters"), "DateFormatter")
+     constructprop       QName(PackageNamespace("mx.formatters"), "DateFormatter"), 0
+     coerce              QName(PackageNamespace("mx.formatters"), "DateFormatter")
+     setlocal3
+
+     getlocal            5
+     dup
+     iftrue              L90
+
+     pop
+     getlocal0
+     convert_b
+L90:
+     iffalse             L94
+
+     getlocal3
+     pushstring          "MMMM D, YYYY"
+     setproperty         QName(PackageNamespace(""), "formatString")
+
+L94:
+     getlocal3
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "format"), 1
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

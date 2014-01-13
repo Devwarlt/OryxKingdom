@@ -1,0 +1,33 @@
+script ; 203
+ sinit
+  refid "_-eZ:_-Np.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-Np", [PackageNamespace("_-eZ")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Error")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Error")
+    newclass            "_-eZ:_-Np"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-eZ"), "_-Np")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-eZ"), "_-Np")
+  #include "_-Np.class.asasm"
+ end ; trait
+end ; script

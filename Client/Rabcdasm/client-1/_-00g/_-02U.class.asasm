@@ -1,0 +1,195 @@
+class
+ refid "_-00g:_-02U"
+ instance QName(PackageNamespace("_-00g"), "_-02U")
+  extends QName(PackageNamespace("_-qN"), "_-px")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0J")
+  iinit
+   refid "_-00g:_-02U/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     getlocal0
+     newactivation
+     typeof
+     coerce_s
+     convert_s
+     newactivation
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "execute") flag OVERRIDE
+   method
+    refid "_-00g:_-02U/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 5
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      decrement_i
+      newactivation
+      declocal            3
+      nextname
+      setlocal2
+
+      inclocal_i          3
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-zR")
+      setlocal1
+
+      getlocal3
+      dup
+      iftrue              L22
+
+      pop
+      getlocal0
+      convert_b
+L22:
+      iffalse             L31
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      getproperty         QName(PackageNamespace(""), "data_")
+      getlocal1
+      setproperty         Multiname("paymentMethod", [PrivateNamespace("*", "_-00g:_-02U/execute#0"), PackageNamespace(""), PrivateNamespace("*", "_-00g:_-02U/execute#1"), PackageNamespace("_-00g"), PackageInternalNs("_-00g"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-0J"), StaticProtectedNs("_-0J"), StaticProtectedNs("_-QU")])
+
+      getlocal3
+      iffalse             L31
+
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.parameters"), "Parameters")
+      callpropvoid        QName(PackageNamespace(""), "save"), 0
+
+L31:
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-zR")
+      getlex              QName(PackageNamespace(""), "paymentMethod")
+      jump                L40
+
+      kill                3
+      nextname
+      kill                2
+      inclocal            3
+      inclocal_i          2
+      kill                3
+L40:
+      callproperty        QName(PackageNamespace(""), "_-8N"), 1
+      coerce              QName(PackageNamespace("com.company.assembleegameclient.util"), "_-zR")
+      setlocal1
+
+      getlocal1
+      getlex              QName(PackageNamespace(""), "_-0JE")
+      getproperty         QName(PackageNamespace(""), "tok")
+      getlex              QName(PackageNamespace(""), "_-0JE")
+      getproperty         QName(PackageNamespace(""), "exp")
+      getlex              QName(PackageNamespace(""), "offer")
+      callproperty        QName(PackageNamespace(""), "_-TR"), 3
+      getlocal            4
+      iftrue              L53
+
+      coerce_s
+L53:
+      setlocal2
+
+      getlocal            4
+      dup
+      jump                L63
+
+      convert_d
+      convert_o
+      inclocal            3
+      add_i
+      multiply_i
+      declocal_i          2
+L63:
+      iffalse             L67
+
+      pop
+      getlocal3
+      convert_b
+L67:
+      iftrue              L76
+
+      findpropstrict      QName(PackageNamespace("flash.net"), "navigateToURL")
+      findpropstrict      QName(PackageNamespace("flash.net"), "URLRequest")
+      getlocal2
+      constructprop       QName(PackageNamespace("flash.net"), "URLRequest"), 1
+      pushstring          "_blank"
+      callpropvoid        QName(PackageNamespace("flash.net"), "navigateToURL"), 2
+
+      getlocal3
+      iffalse             L80
+
+L76:
+      getlex              QName(PackageNamespace(""), "mediator")
+      iffalse             L86
+
+      getlocal            4
+      iftrue              L86
+
+L80:
+      getlex              QName(PackageNamespace(""), "mediator")
+      findpropstrict      QName(PackageNamespace("flash.events"), "Event")
+      getlex              QName(PackageNamespace("flash.events"), "Event")
+      getproperty         QName(PackageNamespace(""), "COMPLETE")
+      constructprop       QName(PackageNamespace("flash.events"), "Event"), 1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+L86:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-00g:_-02U/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

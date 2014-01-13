@@ -1,0 +1,187 @@
+class
+ refid "_-Dd:_-0Ew"
+ instance QName(PackageNamespace("_-Dd"), "_-0Ew")
+  extends QName(PackageNamespace("_-Dd"), "_-Pu")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-5i")
+  iinit
+   refid "_-Dd:_-0Ew/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 8
+    localcount 5
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal_i          3
+     kill                3
+     declocal            2
+     subtract
+     inclocal_i          3
+     not
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L27
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal1
+     getproperty         MultinameA("type", [PrivateNamespace("*", "_-Dd:_-0Ew/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "_-Dd:_-0Ew/iinit#1"), PackageNamespace("_-Dd"), PackageInternalNs("_-Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5i"), StaticProtectedNs("_-5i"), StaticProtectedNs("_-m4"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     constructsuper      1
+
+     getlocal3
+     iftrue              L27
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "_-hI")
+
+L27:
+     findpropstrict      QName(PackageNamespace("flash.display"), "Shape")
+     constructprop       QName(PackageNamespace("flash.display"), "Shape"), 0
+     coerce              QName(PackageNamespace("flash.display"), "Shape")
+     setlocal2
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "graphics")
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.map"), "_-sn")
+     getlex              QName(PackageNamespace(""), "type_")
+     jump                L42
+
+     multiply
+     setlocal3
+
+     declocal            2
+     not
+     kill                3
+     getlocal3
+L42:
+     callproperty        QName(PackageNamespace(""), "getColor"), 1
+     pushdouble          0.5
+     callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+     getlocal            4
+     iffalse             L78
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "graphics")
+     pushbyte            0
+     dup
+     getlex              QName(PackageNamespace(""), "WIDTH")
+     pushbyte            8
+     subtract
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     pushbyte            8
+     subtract
+     callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "graphics")
+     callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+     jump                L68
+
+     greaterequals
+     getlocal3
+     getlocal0
+     getlocal3
+     setlocal2
+
+     setlocal3
+
+L68:
+     getlocal2
+     getlex              QName(PackageNamespace(""), "WIDTH")
+     pushbyte            2
+     divide
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     subtract
+     setproperty         QName(PackageNamespace(""), "x")
+
+L78:
+     getlocal2
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     pushbyte            2
+     divide
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            2
+     divide
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal2
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-hI") type QName(PackageNamespace(""), "XML") end
+  trait method QName(ProtectedNamespace("_-5i"), "getToolTip") flag OVERRIDE
+   method
+    refid "_-Dd:_-0Ew/_-5i:getToolTip"
+    returns QName(PackageNamespace("_-E7"), "for ")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Dd"), "_-DM")
+      jump                L10
+
+      convert_i
+      urshift
+      coerce_s
+      negate_i
+      setlocal3
+
+      getlocal2
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-hI")
+      constructprop       QName(PackageNamespace("_-Dd"), "_-DM"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Dd:_-0Ew/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

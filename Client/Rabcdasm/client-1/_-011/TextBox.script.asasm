@@ -1,0 +1,37 @@
+script ; 1174
+ sinit
+  refid "_-011:TextBox.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    getlocal0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.net"), "_-098")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-011"), "_-01Q")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-011"), "_-01Q")
+    newclass            "_-011:TextBox"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-011"), "TextBox")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-011"), "TextBox") slotid 1
+  #include "TextBox.class.asasm"
+ end ; trait
+end ; script

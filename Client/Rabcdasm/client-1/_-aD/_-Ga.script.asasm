@@ -1,0 +1,29 @@
+script ; 31
+ sinit
+  refid "_-aD:_-Ga.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-Ga", [PackageNamespace("_-aD")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "_-aD:_-Ga"
+    popscope
+    initproperty        QName(PackageNamespace("_-aD"), "_-Ga")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-aD"), "_-Ga")
+  #include "_-Ga.class.asasm"
+ end ; trait
+end ; script

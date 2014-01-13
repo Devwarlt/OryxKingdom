@@ -1,0 +1,61 @@
+script ; 666
+ sinit
+  refid "_-0Km:HitEffect.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("HitEffect", [PackageNamespace("_-0Km")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "_-Ib")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "_-Ib")
+    newclass            "_-0Km:HitEffect"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-0Km"), "HitEffect")
+
+    findpropstrict      Multiname("HitParticle", [PrivateNamespace("*", "_-0Km:HitEffect")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "Particle")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "Particle")
+    newclass            "_-0Km:HitEffect/HitParticle"
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PrivateNamespace("*", "_-0Km:HitEffect"), "HitParticle")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-0Km"), "HitEffect")
+  #include "HitEffect.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "_-0Km:HitEffect"), "HitParticle")
+  #include "HitEffect/HitParticle.class.asasm"
+ end ; trait
+end ; script

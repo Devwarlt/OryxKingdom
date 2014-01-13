@@ -1,0 +1,93 @@
+class
+ refid "_-U5:_-zz"
+ instance QName(PackageNamespace("_-U5"), "_-zz")
+  extends QName(PackageNamespace("_-sp"), "_-aJ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Fv")
+  iinit
+   refid "_-U5:_-zz/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     pushnull
+     convert_o
+     bitor
+     hasnext
+     getlocal0
+     subtract
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     jump                L20
+
+     astypelate
+     negate_i
+     lessthan
+     swap
+     convert_o
+     modulo
+L20:
+     getlocal2
+     dup
+     iffalse             L26
+
+     pop
+     getlocal0
+     convert_b
+L26:
+     iftrue              L36
+
+     getlocal0
+     constructsuper      0
+
+     getlocal1
+     dup
+     iftrue              L35
+
+     pop
+     getlocal1
+     convert_b
+L35:
+     iffalse             L39
+
+L36:
+     findproperty        QName(PackageNamespace(""), "instance")
+     getlocal0
+     setproperty         QName(PackageNamespace(""), "instance")
+
+L39:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-U5:_-zz/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "instance") slotid 1 type QName(PackageNamespace("_-U5"), "_-zz") end
+end ; class

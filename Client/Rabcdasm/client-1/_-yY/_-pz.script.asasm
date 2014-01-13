@@ -1,0 +1,41 @@
+script ; 760
+ sinit
+  refid "_-yY:_-pz.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-pz", [PackageNamespace("_-yY")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "BasicObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "_-Ib")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-0Km"), "_-Ib")
+    newclass            "_-yY:_-pz"
+    popscope
+    popscope
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-yY"), "_-pz")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-yY"), "_-pz")
+  #include "_-pz.class.asasm"
+ end ; trait
+end ; script

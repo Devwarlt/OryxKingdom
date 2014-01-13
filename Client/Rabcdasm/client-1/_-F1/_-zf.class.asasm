@@ -1,0 +1,298 @@
+class
+ refid "_-F1:_-zf"
+ instance QName(PackageNamespace("_-F1"), "_-zf")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-")
+  iinit
+   refid "_-F1:_-zf/iinit"
+   body
+    maxstack 10
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     getlocal3
+     rshift
+     pushfalse
+     setlocal2
+
+     newactivation
+     setlocal2
+
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     findpropstrict      QName(PackageNamespace("_-02t"), "_-Rf")
+     constructprop       QName(PackageNamespace("_-02t"), "_-Rf"), 0
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal2
+     dup
+     iffalse             L25
+
+     pop
+     getlocal2
+     convert_b
+L25:
+     iftrue              L124
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     findpropstrict      QName(PackageNamespace("com.company.rotmg.graphics"), "ScreenGraphic")
+     constructprop       QName(PackageNamespace("com.company.rotmg.graphics"), "ScreenGraphic"), 0
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
+     pushbyte            30
+     pushint             16777215
+     pushfalse
+     pushbyte            0
+     dup
+     pushstring          "Myriad Pro"
+     constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
+     initproperty        QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getlocal1
+     dup
+     iftrue              L48
+
+     pop
+     getlocal1
+     convert_b
+L48:
+     iffalse             L88
+
+     pushshort           526
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal1
+     jump                L59
+
+     instanceof
+     getlocal2
+     modulo
+     increment_i
+     getlocal0
+     add_i
+L59:
+     iffalse             L79
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getlocal2
+     iftrue              L107
+
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getlocal2
+     dup
+     iffalse             L74
+
+     pop
+     getlocal2
+     convert_b
+L74:
+     iftrue              L88
+
+     pushstring          "<p align=\"center\">Loading...</p>"
+     setproperty         QName(PackageNamespace(""), "htmlText")
+
+     getlocal2
+     iftrue              L120
+
+L79:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getlocal2
+     dup
+     iffalse             L87
+
+     pop
+     getlocal0
+     convert_b
+L87:
+     iftrue              L110
+
+L88:
+     getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+     getproperty         QName(PackageNamespace(""), "CENTER")
+     setproperty         QName(PackageNamespace(""), "autoSize")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     getlocal1
+     jump                L101
+
+     checkfilter
+     lessthan
+     popscope
+     negate
+     convert_o
+     divide
+L101:
+     dup
+     iftrue              L106
+
+     pop
+     getlocal0
+     convert_b
+L106:
+     iffalse             L110
+
+L107:
+     callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+L110:
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     pushbyte            1
+     pushbyte            4
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 6
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+L120:
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L124:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-F1:_-zf"), "text") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait method QName(PackageNamespace(""), "_-02C")
+   method
+    refid "_-F1:_-zf/_-02C"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 5
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      popscope
+      getlocal2
+      inclocal_i          2
+      multiply
+      setlocal2
+
+      inclocal_i          2
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L53
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+      getlocal3
+      dup
+      iffalse             L30
+
+      jump                L27
+
+      negate
+      declocal_i          2
+      setlocal2
+
+      newactivation
+      not
+      convert_s
+L27:
+      pop
+      getlocal0
+      convert_b
+L30:
+      iftrue              L42
+
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "htmlText")
+
+      getlocal3
+      dup
+      iffalse             L39
+
+      pop
+      getlocal2
+      convert_b
+L39:
+      iftrue              L53
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+L42:
+      getlex              QName(PackageNamespace(""), "stage")
+      getproperty         QName(PackageNamespace(""), "stageWidth")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-F1:_-zf"), "text")
+      getproperty         QName(PackageNamespace(""), "width")
+      subtract
+      getlocal2
+      iffalse             L52
+
+      pushdouble          0.5
+      multiply
+L52:
+      setproperty         QName(PackageNamespace(""), "x")
+
+L53:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-F1:_-zf/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

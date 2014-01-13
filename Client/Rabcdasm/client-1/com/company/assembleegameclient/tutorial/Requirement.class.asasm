@@ -1,0 +1,230 @@
+class
+ refid "com.company.assembleegameclient.tutorial:Requirement"
+ instance QName(PackageNamespace("com.company.assembleegameclient.tutorial"), "Requirement")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-5G")
+  iinit
+   refid "com.company.assembleegameclient.tutorial:Requirement/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 5
+    localcount 5
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     getlocal3
+     kill                2
+     lessthan
+     setlocal3
+
+     inclocal            3
+     pushnan
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iffalse             L30
+
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     iftrue              L24
+
+     pop
+     getlocal1
+     convert_b
+L24:
+     iffalse             L30
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal1
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     initproperty        QName(PackageNamespace(""), "type_")
+
+L30:
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal1
+     getproperty         MultinameA("objectId", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5G"), StaticProtectedNs("_-5G")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     coerce_s
+     setlocal2
+
+     getlocal2
+     getlocal            4
+     dup
+     iftrue              L43
+
+     pop
+     getlocal1
+     convert_b
+L43:
+     iffalse             L83
+
+     pushnull
+     getlocal            4
+     dup
+     iftrue              L51
+
+     pop
+     getlocal0
+     convert_b
+L51:
+     iffalse             L113
+
+     equals
+     getlocal3
+     dup
+     iffalse             L66
+
+     pop
+     getlocal0
+     jump                L65
+
+     getlocal3
+     getlocal3
+     declocal            2
+     getlocal3
+     popscope
+     getlocal3
+L65:
+     convert_b
+L66:
+     iftrue              L88
+
+     not
+     getlocal            4
+     iffalse             L88
+
+     dup
+     iffalse             L88
+
+     getlocal3
+     dup
+     iffalse             L78
+
+     pop
+     getlocal1
+     convert_b
+L78:
+     iftrue              L87
+
+     pop
+     getlocal2
+     getlocal3
+     iftrue              L105
+
+L83:
+     pushstring          ""
+     equals
+     getlocal3
+     iftrue              L88
+
+L87:
+     not
+L88:
+     iffalse             L95
+
+     getlocal0
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+     getproperty         QName(PackageNamespace(""), "_-pb")
+     getlocal2
+     getproperty         MultinameL([PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5G"), StaticProtectedNs("_-5G")])
+     initproperty        QName(PackageNamespace(""), "objectType_")
+
+L95:
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "String")
+     getlocal1
+     getproperty         MultinameA("objectName", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5G"), StaticProtectedNs("_-5G")])
+     callproperty        QName(PackageNamespace(""), "String"), 1
+     initproperty        QName(PackageNamespace(""), "_-Ow")
+
+     getlocal            4
+     iffalse             L124
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-Ow")
+L105:
+     pushnull
+     jump                L113
+
+     kill                2
+     getlocal2
+     modulo
+     setlocal3
+
+     getglobalscope
+     pushtrue
+L113:
+     ifne                L124
+
+     getlocal3
+     dup
+     iffalse             L120
+
+     pop
+     getlocal1
+     convert_b
+L120:
+     iftrue              L124
+
+     getlocal0
+     pushstring          ""
+     initproperty        QName(PackageNamespace(""), "_-Ow")
+
+L124:
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal1
+     getproperty         MultinameA("slot", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5G"), StaticProtectedNs("_-5G")])
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     initproperty        QName(PackageNamespace(""), "_-01U")
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "Number")
+     getlocal1
+     getproperty         MultinameA("radius", [PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "com.company.assembleegameclient.tutorial:Requirement/iinit#1"), PackageNamespace("com.company.assembleegameclient.tutorial"), PackageInternalNs("com.company.assembleegameclient.tutorial"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-5G"), StaticProtectedNs("_-5G")])
+     callproperty        QName(PackageNamespace(""), "Number"), 1
+     initproperty        QName(PackageNamespace(""), "radius_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "type_") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_-01U") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "objectType_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait slot QName(PackageNamespace(""), "_-Ow") type QName(PackageNamespace(""), "String") value Utf8("") end
+  trait slot QName(PackageNamespace(""), "radius_") type QName(PackageNamespace(""), "Number") value Integer(1) end
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.tutorial:Requirement/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

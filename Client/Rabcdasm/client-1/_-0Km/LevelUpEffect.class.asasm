@@ -1,0 +1,927 @@
+class
+ refid "_-0Km:LevelUpEffect"
+ instance QName(PackageNamespace("_-0Km"), "LevelUpEffect")
+  extends QName(PackageNamespace("_-0Km"), "_-Ib")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-E9")
+  iinit
+   refid "_-0Km:LevelUpEffect/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   param QName(PackageNamespace(""), "uint")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 5
+    localcount 8
+    initscopedepth 7
+    maxscopedepth 8
+    code
+     pushfalse
+     pushtrue
+     setlocal            6
+
+     jump                L10
+
+     checkfilter
+     strictequals
+     pushtrue
+     inclocal            2
+     declocal            6
+     strictequals
+L10:
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+     setlocal            4
+
+     getlocal            6
+     dup
+     iftrue              L22
+
+     pop
+     getlocal0
+     convert_b
+L22:
+     iffalse             L36
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), PackageNamespace(""), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-E9"), StaticProtectedNs("_-E9"), StaticProtectedNs("_-2g"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "parts1_")
+
+     getlocal            7
+     dup
+     iffalse             L35
+
+     pop
+     getlocal1
+     convert_b
+L35:
+     iftrue              L51
+
+L36:
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), PackageNamespace(""), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-E9"), StaticProtectedNs("_-E9"), StaticProtectedNs("_-2g"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+     applytype           1
+     construct           0
+     initproperty        QName(PackageNamespace(""), "parts2_")
+
+     getlocal            7
+     iftrue              L58
+
+     jump                L51
+
+     getlocal3
+     inclocal_i          6
+     pushnull
+     getlocal            4
+     instanceof
+     kill                2
+L51:
+     getlocal0
+     constructsuper      0
+
+     getlocal            7
+     iftrue              L58
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "go_")
+
+L58:
+     pushbyte            0
+     setlocal            5
+
+     jump                L106
+
+L61:
+     label
+     findpropstrict      QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+     getlocal2
+     pushbyte            100
+     constructprop       QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle"), 2
+     coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+     setlocal            4
+
+     getlocal            6
+     dup
+     iftrue              L74
+
+     pop
+     getlocal0
+     convert_b
+L74:
+     iffalse             L86
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "parts1_")
+     getlocal            4
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     jump                L86
+
+     setlocal2
+
+     declocal            3
+     inclocal            6
+     declocal            5
+     inclocal_i          5
+     convert_b
+L86:
+     findpropstrict      QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+     getlocal2
+     pushbyte            100
+     constructprop       QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle"), 2
+     coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+     setlocal            4
+
+     getlocal            6
+     dup
+     iftrue              L98
+
+     pop
+     getlocal1
+     convert_b
+L98:
+     iffalse             L106
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "parts2_")
+     getlocal            4
+     callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+     getlocal            6
+     iffalse             L106
+
+     inclocal_i          5
+L106:
+     getlocal            5
+     getlocal3
+     iflt                L61
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "go_") type QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject") end
+  trait slot QName(PackageNamespace(""), "parts1_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")>) end
+  trait slot QName(PackageNamespace(""), "parts2_") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")>) end
+  trait slot QName(PackageNamespace(""), "startTime_") type QName(PackageNamespace(""), "int") value Integer(-1) end
+  trait method QName(PackageNamespace(""), "update") flag OVERRIDE
+   method
+    refid "_-0Km:LevelUpEffect/update"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "Boolean")
+    body
+     maxstack 7
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            4
+
+      jump                L10
+
+      declocal            3
+      bitxor
+      convert_i
+      kill                3
+      istypelate
+      equals
+L10:
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iffalse             L31
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "map_")
+      pushnull
+      ifne                L24
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), "_-HD"), 0
+
+      pushfalse
+      returnvalue
+
+L24:
+      findproperty        QName(PackageNamespace(""), "x_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "x_")
+      initproperty        QName(PackageNamespace(""), "x_")
+
+      getlocal            4
+      iffalse             L38
+
+L31:
+      findproperty        QName(PackageNamespace(""), "y_")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getproperty         QName(PackageNamespace(""), "y_")
+      initproperty        QName(PackageNamespace(""), "y_")
+
+      getlocal            4
+      iffalse             L59
+
+L38:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "startTime_")
+      getlocal            4
+      dup
+      iftrue              L46
+
+      pop
+      getlocal3
+      convert_b
+L46:
+      iffalse             L67
+
+      pushbyte            0
+      getlocal            5
+      dup
+      iffalse             L54
+
+      pop
+      getlocal3
+      convert_b
+L54:
+      iftrue              L69
+
+      ifnlt               L59
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PackageNamespace(""), "startTime_")
+
+L59:
+      getlocal1
+      jump                L67
+
+      setlocal            4
+
+      setlocal3
+
+      lessequals
+      inclocal_i          3
+      inclocal_i          4
+      pushscope
+
+L67:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "startTime_")
+L69:
+      subtract
+      getlocal            4
+      iffalse             L77
+
+      getlex              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), "set")
+      divide
+      getlocal            5
+      iftrue              L77
+
+      convert_d
+L77:
+      setlocal3
+
+      getlocal            5
+      dup
+      iffalse             L84
+
+      pop
+      getlocal3
+      convert_b
+L84:
+      iftrue              L117
+
+      getlocal3
+      pushbyte            1
+      ifnge               L117
+
+      getlocal            4
+      dup
+      iftrue              L94
+
+      pop
+      getlocal0
+      convert_b
+L94:
+      iffalse             L117
+
+      getlocal0
+      callpropvoid        QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), "_-HD"), 0
+
+      getlocal            5
+      iftrue              L131
+
+      pushfalse
+      getlocal            5
+      dup
+      iffalse             L106
+
+      pop
+      getlocal0
+      convert_b
+L106:
+      iftrue              L140
+
+      returnvalue
+
+      getlocal            4
+      iffalse             L131
+
+      jump                L117
+
+      declocal            2
+      inclocal_i          3
+      subtract
+      equals
+      greaterequals
+      getlocal0
+L117:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parts1_")
+      pushbyte            1
+      pushbyte            0
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "_-w3"), 4
+
+      getlocal            4
+      dup
+      iftrue              L130
+
+      pop
+      getlocal1
+      convert_b
+L130:
+      iffalse             L139
+
+L131:
+      getlocal0
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parts2_")
+      pushbyte            1
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "_-w3"), 4
+
+L139:
+      pushtrue
+L140:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), "_-HD")
+   method
+    refid "_-0Km:LevelUpEffect/_-HD"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 6
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      bitxor
+      instanceof
+      nextvalue
+      kill                4
+      setlocal3
+
+      kill                4
+L10:
+      setlocal            4
+
+      setlocal            5
+
+      getlocal0
+      pushscope
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal1
+
+      pushbyte            0
+      setlocal2
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parts1_")
+      coerce_a
+      setlocal3
+
+      jump                L35
+
+L24:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal1
+
+      getlocal            4
+      iftrue              L35
+
+      getlocal1
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "alive_")
+
+L35:
+      hasnext2            3, 2
+      getlocal            4
+      dup
+      iffalse             L49
+
+      pop
+      getlocal1
+      convert_b
+      jump                L49
+
+      bitor
+      setlocal2
+
+      pushscope
+
+      bitxor
+      declocal            4
+      setlocal3
+
+L49:
+      iftrue              L102
+
+      iftrue              L24
+
+      getlocal            5
+      dup
+      iftrue              L57
+
+      pop
+      getlocal3
+      convert_b
+L57:
+      iffalse             L103
+
+      kill                3
+      getlocal            4
+      iftrue              L104
+
+      kill                2
+      getlocal            5
+      iffalse             L105
+
+      pushbyte            0
+      setlocal2
+
+      getlocal            5
+      dup
+      iftrue              L72
+
+      pop
+      getlocal3
+      convert_b
+L72:
+      iffalse             L104
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "parts2_")
+      jump                L82
+
+      divide
+      convert_o
+      greaterthan
+      inclocal_i          2
+      popscope
+      modulo
+L82:
+      coerce_a
+      setlocal3
+
+      jump                L101
+
+L85:
+      label
+      getlocal3
+      getlocal2
+      nextvalue
+      coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal1
+
+      getlocal            5
+      dup
+      iftrue              L97
+
+      pop
+      getlocal2
+      convert_b
+L97:
+      iffalse             L101
+
+      getlocal1
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "alive_")
+
+L101:
+      hasnext2            3, 2
+L102:
+      iftrue              L85
+
+L103:
+      kill                3
+L104:
+      kill                2
+L105:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-w3")
+   method
+    refid "_-0Km:LevelUpEffect/_-w3"
+    param TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")>)
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 6
+     localcount 12
+     initscopedepth 7
+     maxscopedepth 8
+     code
+      pushfalse
+      pushtrue
+      setlocal            10
+
+      jump                L10
+
+      setlocal2
+
+      getlocal            8
+      istypelate
+      kill                4
+      pushnan
+      increment
+L10:
+      setlocal            11
+
+      getlocal0
+      pushscope
+
+      pushbyte            0
+      setlocal            5
+
+      pushnull
+      coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+      setlocal            6
+
+      pushnan
+      setlocal            7
+
+      pushnan
+      setlocal            8
+
+      pushnan
+      setlocal            9
+
+      getlocal            11
+      dup
+      iffalse             L30
+
+      pop
+      getlocal0
+      convert_b
+L30:
+      iftrue              L33
+
+      pushbyte            0
+      setlocal            5
+
+L33:
+      jump                L208
+
+L34:
+      label
+      getlocal1
+      getlocal            5
+      getproperty         MultinameL([PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), PackageNamespace(""), PackageNamespace("_-0Km"), PackageInternalNs("_-0Km"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-E9"), StaticProtectedNs("_-E9"), StaticProtectedNs("_-2g"), StaticProtectedNs("_-iP"), StaticProtectedNs("_-0-I")])
+      coerce              QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#0"), "LevelUpParticle")
+      dup
+      setlocal            6
+
+      getlocal            4
+      getlocal            10
+      dup
+      iftrue              L48
+
+      pop
+      getlocal0
+      convert_b
+L48:
+      iffalse             L58
+
+      pushbyte            2
+      getlocal            10
+      iffalse             L59
+
+      multiply
+      getlocal            11
+      iftrue              L58
+
+      decrement
+      getlocal            11
+      iftrue              L63
+
+L58:
+      getlocal            5
+L59:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      divide
+      add
+L63:
+      setproperty         QName(PackageNamespace(""), "z_")
+
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "z_")
+      pushbyte            0
+      ifnlt               L69
+
+      jump                L207
+
+L69:
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "z_")
+      pushbyte            1
+      ifngt               L79
+
+      getlocal            6
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "alive_")
+
+      getlocal            10
+      iffalse             L191
+
+      jump                L207
+
+L79:
+      getlocal2
+      getlocal            11
+      iftrue              L149
+
+      pushbyte            2
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      multiply
+      getlocal            11
+      iftrue              L144
+
+      getlocal            5
+      getlocal            11
+      dup
+      iffalse             L95
+
+      pop
+      getlocal2
+      convert_b
+L95:
+      iftrue              L122
+
+      jump                L103
+
+      pushnan
+      inclocal            4
+      convert_u
+      inclocal_i          5
+      inclocal            2
+      declocal            9
+L103:
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      divide
+      getlocal            11
+      dup
+      iffalse             L112
+
+      pop
+      getlocal0
+      convert_b
+L112:
+      iftrue              L136
+
+      multiply
+      getlocal            11
+      dup
+      iffalse             L120
+
+      pop
+      getlocal0
+      convert_b
+L120:
+      iftrue              L146
+
+      pushbyte            2
+L122:
+      getlex              QName(PackageNamespace(""), "Math")
+      getproperty         QName(PackageNamespace(""), "PI")
+      multiply
+      getlocal            11
+      iftrue              L136
+
+      getlocal            4
+      multiply
+      getlocal            10
+      dup
+      iftrue              L135
+
+      pop
+      getlocal0
+      convert_b
+L135:
+      iffalse             L145
+
+L136:
+      add
+      getlocal            10
+      dup
+      iftrue              L143
+
+      pop
+      getlocal1
+      convert_b
+L143:
+      iffalse             L146
+
+L144:
+      getlocal3
+L145:
+      add
+L146:
+      multiply
+      getlocal            10
+      iffalse             L172
+
+L149:
+      convert_d
+      getlocal            10
+      iffalse             L172
+
+      setlocal            7
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+      getlocal            11
+      iftrue              L175
+
+      getproperty         QName(PackageNamespace(""), "x_")
+      pushdouble          0.5
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "cos"), 1
+      multiply
+      add
+      convert_d
+      getlocal            10
+      dup
+      iftrue              L171
+
+      pop
+      getlocal1
+      convert_b
+L171:
+      iffalse             L190
+
+L172:
+      setlocal            8
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "go_")
+L175:
+      getproperty         QName(PackageNamespace(""), "y_")
+      pushdouble          0.5
+      getlex              QName(PackageNamespace(""), "Math")
+      getlocal            7
+      callproperty        QName(PackageNamespace(""), "sin"), 1
+      multiply
+      add
+      jump                L189
+
+      strictequals
+      inclocal            5
+      subtract
+      inclocal            4
+      declocal_i          6
+      add_i
+L189:
+      convert_d
+L190:
+      setlocal            9
+
+L191:
+      getlocal            6
+      getproperty         QName(PackageNamespace(""), "map_")
+      pushnull
+      ifne                L203
+
+      getlex              QName(PackageNamespace(""), "map_")
+      getlocal            6
+      getlocal            8
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "addObj"), 3
+
+      getlocal            10
+      iffalse             L207
+
+      jump                L207
+
+L203:
+      getlocal            6
+      getlocal            8
+      getlocal            9
+      callpropvoid        QName(PackageNamespace(""), "moveTo"), 2
+
+L207:
+      inclocal_i          5
+L208:
+      getlocal            5
+      getlocal1
+      getproperty         QName(PackageNamespace(""), "length")
+      iflt                L34
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Km:LevelUpEffect/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 6
+   maxscopedepth 7
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    astypelate
+    negate
+    multiply_i
+    getlocal1
+    lessequals
+    negate
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal1
+    dup
+    iffalse             L20
+
+    pop
+    getlocal0
+    convert_b
+L20:
+    iftrue              L24
+
+    findproperty        QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), "set")
+    pushshort           2000
+    initproperty        QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), "set")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PrivateNamespace("*", "_-0Km:LevelUpEffect#1"), "set") slotid 1 type QName(PackageNamespace(""), "int") value Integer(2000) end
+end ; class

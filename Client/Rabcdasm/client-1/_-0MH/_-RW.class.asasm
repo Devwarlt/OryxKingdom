@@ -1,0 +1,73 @@
+class
+ refid "_-0MH:_-RW"
+ instance QName(PackageNamespace("_-0MH"), "_-RW")
+  extends QName(PackageNamespace("_-sp"), "_-aJ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-C2")
+  iinit
+   refid "_-0MH:_-RW/iinit"
+   body
+    maxstack 4
+    localcount 3
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     bitand
+     convert_i
+     pushfalse
+     pop
+     pushscope
+
+     pushundefined
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L21
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-8Q"), "_-1l")
+     constructsuper      1
+
+     getlocal2
+     iffalse             L24
+
+L21:
+     findproperty        QName(PackageNamespace(""), "instance")
+     getlocal0
+     setproperty         QName(PackageNamespace(""), "instance")
+
+L24:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-0MH:_-RW/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PackageNamespace(""), "instance") slotid 1 type QName(PackageNamespace("_-0MH"), "_-RW") end
+end ; class

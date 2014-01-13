@@ -1,0 +1,241 @@
+class
+ refid "_-F1:News"
+ instance QName(PackageNamespace("_-F1"), "News")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-s5")
+  iinit
+   refid "_-F1:News/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-0KR")
+   body
+    maxstack 10
+    localcount 7
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     modulo
+     coerce_s
+     equals
+     inclocal_i          3
+     getlocal2
+     increment
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-vt")
+     setlocal2
+
+     getlocal            5
+     iftrue              L29
+
+     getlocal0
+     getlex              Multiname("Vector", [PrivateNamespace("*", "_-F1:News"), PrivateNamespace("*", "_-F1:News/iinit"), PackageNamespace(""), PackageNamespace("_-F1"), PackageInternalNs("_-F1"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-s5"), StaticProtectedNs("_-s5"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher"), PackageNamespace("__AS3__.vec")])
+     getlex              QName(PackageNamespace("_-F1"), "_-0Bm")
+     applytype           1
+     construct           0
+     initproperty        QName(PrivateNamespace("*", "_-F1:News"), "_-dL")
+
+     getlocal            5
+     iftrue              L29
+
+     getlocal0
+     constructsuper      0
+
+L29:
+     pushbyte            0
+     setlocal3
+
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "_-tZ")
+     coerce_a
+     jump                L41
+
+     bitand
+     declocal_i          3
+     setlocal            4
+
+     instanceof
+     decrement_i
+     inclocal_i          3
+L41:
+     setlocal            4
+
+     jump                L84
+
+L43:
+     label
+     getlocal            4
+     getlocal3
+     nextvalue
+     coerce              QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-vt")
+     setlocal2
+
+     getlocal            5
+     iftrue              L68
+
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_-5U")
+     iffalse             L84
+
+     getlocal            5
+     dup
+     iffalse             L67
+
+     pop
+     jump                L65
+
+     dxnslate
+     declocal            3
+     coerce_s
+     astypelate
+     setlocal3
+
+     inclocal            4
+L65:
+     getlocal2
+     convert_b
+L67:
+     iftrue              L84
+
+L68:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("_-F1"), "_-0Bm")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_-5U")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_-Ok")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_-03P")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_-qh")
+     getlocal2
+     getproperty         QName(PackageNamespace(""), "_-We")
+     getlocal1
+     getproperty         QName(PackageNamespace(""), "accountId_")
+     constructprop       QName(PackageNamespace("_-F1"), "_-0Bm"), 6
+     callpropvoid        QName(PackageNamespace(""), "_-yQ"), 1
+
+L84:
+     hasnext2            4, 3
+     iftrue              L43
+
+     kill                4
+     kill                3
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-F1:News"), "_-dL") type TypeName(QName(PackageNamespace("__AS3__.vec"), "Vector")<QName(PackageNamespace("_-F1"), "_-0Bm")>) end
+  trait method QName(PackageNamespace(""), "_-yQ")
+   method
+    refid "_-F1:News/_-yQ"
+    param QName(PackageNamespace("_-F1"), "_-0Bm")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 4
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      getlocal0
+      convert_s
+      declocal_i          2
+      bitnot
+      declocal_i          2
+      convert_d
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L41
+
+      getlocal1
+      pushbyte            4
+      getlocal0
+      jump                L25
+
+      declocal_i          2
+      inclocal            2
+      getlocal2
+      kill                2
+      setlocal2
+
+      convert_d
+L25:
+      getproperty         QName(PrivateNamespace("*", "_-F1:News"), "_-dL")
+      getproperty         QName(PackageNamespace(""), "length")
+      getlex              QName(PackageNamespace("_-F1"), "_-0Bm")
+      getproperty         QName(PackageNamespace(""), "HEIGHT")
+      pushbyte            4
+      add
+      multiply
+      add
+      setproperty         QName(PackageNamespace(""), "y")
+
+      getlocal3
+      dup
+      iffalse             L40
+
+      pop
+      getlocal3
+      convert_b
+L40:
+      iftrue              L50
+
+L41:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-F1:News"), "_-dL")
+      getlocal1
+      callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+      getlocal2
+      iffalse             L50
+
+      findpropstrict      QName(PackageNamespace(""), "addChild")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L50:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-F1:News/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

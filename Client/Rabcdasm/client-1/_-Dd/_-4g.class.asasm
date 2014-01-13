@@ -1,0 +1,132 @@
+class
+ refid "_-Dd:_-4g"
+ instance QName(PackageNamespace("_-Dd"), "_-4g")
+  extends QName(PackageInternalNs("_-Dd"), "_-Em")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-T2")
+  iinit
+   refid "_-Dd:_-4g/iinit"
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal            5
+
+     jump                L10
+
+     inclocal            5
+     convert_b
+     bitnot
+     declocal            3
+     multiply
+     bitxor
+L10:
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     pushnull
+     coerce              QName(PackageNamespace(""), "XML")
+     setlocal1
+
+     pushnull
+     coerce              QName(PackageNamespace("_-Dd"), "_-0Ew")
+     setlocal2
+
+     getlocal            5
+     iffalse             L32
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-Dd"), "_-Mu")
+     getproperty         QName(PackageNamespace(""), "_-0Gm")
+     constructsuper      1
+
+     jump                L32
+
+     instanceof
+     subtract
+     bitnot
+     bitand
+     declocal            2
+     inclocal_i          4
+L32:
+     pushbyte            0
+     setlocal3
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.map"), "_-sn")
+     getproperty         QName(PackageNamespace(""), "_-QF")
+     coerce_a
+     setlocal            4
+
+     jump                L67
+
+L39:
+     label
+     getlocal            4
+     jump                L48
+
+     kill                4
+     inclocal            5
+     divide
+     inclocal_i          3
+     getlocal1
+     nextvalue
+L48:
+     getlocal3
+     nextvalue
+     coerce              QName(PackageNamespace(""), "XML")
+     setlocal1
+
+     findpropstrict      QName(PackageNamespace("_-Dd"), "_-0Ew")
+     getlocal1
+     constructprop       QName(PackageNamespace("_-Dd"), "_-0Ew"), 1
+     coerce              QName(PackageNamespace("_-Dd"), "_-0Ew")
+     setlocal2
+
+     getlocal            5
+     dup
+     iftrue              L63
+
+     pop
+     getlocal3
+     convert_b
+L63:
+     iffalse             L67
+
+     findpropstrict      QName(ProtectedNamespace("_-1w"), "_-08M")
+     getlocal2
+     callpropvoid        QName(ProtectedNamespace("_-1w"), "_-08M"), 1
+
+L67:
+     hasnext2            4, 3
+     iftrue              L39
+
+     kill                4
+     kill                3
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-Dd:_-4g/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,132 @@
+class
+ refid "_-0G-:_-YR"
+ instance QName(PackageNamespace("_-0G-"), "_-YR")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0Lz")
+  iinit
+   refid "_-0G-:_-YR/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     lshift
+     multiply
+     popscope
+     coerce_a
+     urshift
+     equals
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iftrue              L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-0Ky") flag METADATA type QName(PackageNamespace("_-WD"), "_-Bd")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-10") flag METADATA type QName(PackageNamespace("_-WD"), "Domain")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "execute")
+   method
+    refid "_-0G-:_-YR/execute"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      dxnslate
+      typeof
+      pushundefined
+      strictequals
+      greaterthan
+      dxnslate
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L29
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-0Ky")
+      callproperty        QName(PackageNamespace(""), "_-0Bz"), 0
+      iffalse             L29
+
+      getlocal2
+      dup
+      iffalse             L25
+
+      pop
+      getlocal1
+      convert_b
+L25:
+      iftrue              L29
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-10")
+      callpropvoid        QName(PackageNamespace(""), "_-Br"), 0
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0G-:_-YR/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

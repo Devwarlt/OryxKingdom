@@ -1,0 +1,34 @@
+method
+ refid "mx.resources:LocaleSorter/sortLocalesByPreference/inline_method"
+ param QName(PackageNamespace(""), "String")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 4
+  localcount 2
+  initscopedepth 4
+  maxscopedepth 4
+  code
+   getlex              QName(PackageInternalNs("mx.resources"), "hasLocale")
+   getlocal1
+   getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#1"), PackageInternalNs("mx.resources"), PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter")])
+   typeof
+   pushstring          "undefined"
+   ifeq                L17
+
+   getlex              QName(PackageInternalNs("mx.resources"), "result")
+   getlex              QName(PackageInternalNs("mx.resources"), "appLocales")
+   getlex              QName(PackageInternalNs("mx.resources"), "hasLocale")
+   getlocal1
+   getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#1"), PackageInternalNs("mx.resources"), PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter")])
+   getproperty         MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#1"), PackageInternalNs("mx.resources"), PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter")])
+   callpropvoid        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "push"), 1
+
+   getlex              QName(PackageInternalNs("mx.resources"), "hasLocale")
+   getlocal1
+   deleteproperty      MultinameL([PrivateNamespace("*", "mx.resources:LocaleSorter#1"), PackageInternalNs("mx.resources"), PrivateNamespace("*", "mx.resources:LocaleSorter#0"), PackageNamespace(""), PackageNamespace("mx.resources"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.resources:LocaleSorter"), StaticProtectedNs("mx.resources:LocaleSorter")])
+   pop
+L17:
+   returnvoid
+  end ; code
+ end ; body
+end ; method

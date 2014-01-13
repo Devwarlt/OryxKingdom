@@ -1,0 +1,171 @@
+class
+ refid "_-3b:_-2Y"
+ instance QName(PackageNamespace("_-3b"), "_-2Y")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-Dv", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0EP")
+  iinit
+   refid "_-3b:_-2Y/iinit"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     nextvalue
+     modulo
+     add_i
+     typeof
+     getlocal2
+     equals
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     jump                L21
+
+     setlocal3
+
+     istypelate
+     greaterthan
+     bitnot
+     multiply
+     convert_u
+L21:
+     getlocal1
+     dup
+     iffalse             L27
+
+     pop
+     getlocal1
+     convert_b
+L27:
+     iftrue              L40
+
+     getlocal0
+     getlex              QName(PackageNamespace("_-03T"), "_-078")
+     getlex              QName(PackageNamespace("_-3b"), "_-2Y")
+     callproperty        QName(PackageNamespace(""), "create"), 1
+     initproperty        QName(PrivateNamespace("*", "_-3b:_-2Y"), "_-ul")
+
+     getlocal1
+     dup
+     iffalse             L39
+
+     pop
+     getlocal2
+     convert_b
+L39:
+     iftrue              L42
+
+L40:
+     getlocal0
+     constructsuper      0
+
+L42:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait const QName(PrivateNamespace("*", "_-3b:_-2Y"), "_-ul") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "extend")
+   method
+    refid "_-3b:_-2Y/extend"
+    param QName(PackageNamespace("_-0-p"), "_-Ly")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      istypelate
+      inclocal_i          2
+      inclocal            2
+      convert_d
+      rshift
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      dup
+      iffalse             L20
+
+      pop
+      getlocal0
+      convert_b
+L20:
+      iftrue              L27
+
+      getlocal1
+      getproperty         QName(Namespace("_-06J"), "_-OR")
+      getlex              QName(PackageNamespace("_-j1"), "_-Xy")
+      callproperty        QName(PackageNamespace(""), "map"), 1
+      getlex              QName(PackageNamespace("_-0K"), "_-Cv")
+      callpropvoid        QName(PackageNamespace(""), "_-00S"), 1
+
+L27:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "_-3b:_-2Y/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-3b:_-2Y"), "_-ul")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-3b:_-2Y/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

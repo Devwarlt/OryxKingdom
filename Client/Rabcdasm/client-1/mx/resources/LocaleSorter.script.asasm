@@ -1,0 +1,53 @@
+script ; 1040
+ sinit
+  refid "mx.resources:LocaleSorter.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("LocaleSorter", [PackageNamespace("mx.resources")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:LocaleSorter"
+    popscope
+    initproperty        QName(PackageNamespace("mx.resources"), "LocaleSorter")
+
+    findpropstrict      Multiname("LocaleID", [PrivateNamespace("*", "mx.resources:LocaleSorter#0")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:LocaleSorter/LocaleID"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+
+    findpropstrict      Multiname("LocaleRegistry", [PrivateNamespace("*", "mx.resources:LocaleSorter#0")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.resources:LocaleSorter/LocaleRegistry"
+    popscope
+    initproperty        QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.resources"), "LocaleSorter")
+  #include "LocaleSorter.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleID")
+  #include "LocaleSorter/LocaleID.class.asasm"
+ end ; trait
+ trait class QName(PrivateNamespace("*", "mx.resources:LocaleSorter#0"), "LocaleRegistry")
+  #include "LocaleSorter/LocaleRegistry.class.asasm"
+ end ; trait
+end ; script

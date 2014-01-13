@@ -1,0 +1,360 @@
+class
+ refid "mx.core:MovieClipLoaderAsset"
+ instance QName(PackageNamespace("mx.core"), "MovieClipLoaderAsset")
+  extends QName(PackageNamespace("mx.core"), "MovieClipAsset")
+  implements Multiname("IFlexAsset", [PackageNamespace("mx.core")])
+  implements Multiname("IFlexDisplayObject", [PackageNamespace("mx.core")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("mx.core:MovieClipLoaderAsset")
+  iinit
+   refid "mx.core:MovieClipLoaderAsset/iinit"
+   body
+    maxstack 3
+    localcount 2
+    initscopedepth 12
+    maxscopedepth 13
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     findpropstrict      QName(PackageNamespace("flash.system"), "LoaderContext")
+     constructprop       QName(PackageNamespace("flash.system"), "LoaderContext"), 0
+     coerce              QName(PackageNamespace("flash.system"), "LoaderContext")
+     setlocal1
+
+     getlocal1
+     findpropstrict      QName(PackageNamespace("flash.system"), "ApplicationDomain")
+     getlex              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+     getproperty         QName(PackageNamespace(""), "currentDomain")
+     constructprop       QName(PackageNamespace("flash.system"), "ApplicationDomain"), 1
+     setproperty         QName(PackageNamespace(""), "applicationDomain")
+
+     pushstring          "allowLoadBytesCodeExecution"
+     getlocal1
+     in
+     iffalse             L22
+
+     getlocal1
+     pushstring          "allowLoadBytesCodeExecution"
+     pushtrue
+     setproperty         MultinameL([PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), PackageNamespace(""), PrivateNamespace("*", "mx.core:MovieClipLoaderAsset/iinit"), PackageNamespace("mx.core"), PackageInternalNs("mx.core"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("mx.core:MovieClipLoaderAsset"), StaticProtectedNs("mx.core:MovieClipLoaderAsset"), StaticProtectedNs("mx.core:MovieClipAsset"), StaticProtectedNs("mx.core:FlexMovieClip"), StaticProtectedNs("flash.display:MovieClip"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+
+L22:
+     getlocal0
+     findpropstrict      QName(PackageNamespace("flash.display"), "Loader")
+     constructprop       QName(PackageNamespace("flash.display"), "Loader"), 0
+     initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+     getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+     getlex              QName(PackageNamespace("flash.events"), "Event")
+     getproperty         QName(PackageNamespace(""), "COMPLETE")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "completeHandler")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "movieClipData")
+     getlocal1
+     callpropvoid        QName(PackageNamespace(""), "loadBytes"), 2
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader") type QName(PackageNamespace("flash.display"), "Loader") value Null() end
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "initialized") type QName(PackageNamespace(""), "Boolean") value False() end
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedWidth") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedHeight") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialWidth") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait slot QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialHeight") type QName(PackageNamespace(""), "Number") value Integer(0) end
+  trait getter QName(PackageNamespace(""), "height") flag OVERRIDE
+   method
+    refid "mx.core:MovieClipLoaderAsset/height/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "initialized")
+      iftrue              L8
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialHeight")
+      returnvalue
+
+L8:
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "height")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "height") flag OVERRIDE
+   method
+    refid "mx.core:MovieClipLoaderAsset/height/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "initialized")
+      iftrue              L9
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedHeight")
+
+      jump                L13
+
+L9:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "height")
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "measuredHeight") flag OVERRIDE
+   method
+    refid "mx.core:MovieClipLoaderAsset/measuredHeight/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialHeight")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "measuredWidth") flag OVERRIDE
+   method
+    refid "mx.core:MovieClipLoaderAsset/measuredWidth/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialWidth")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "width") flag OVERRIDE
+   method
+    refid "mx.core:MovieClipLoaderAsset/width/getter"
+    returns QName(PackageNamespace(""), "Number")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "initialized")
+      iftrue              L8
+
+      getlocal0
+      getproperty         QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialWidth")
+      returnvalue
+
+L8:
+      getlocal0
+      getsuper            QName(PackageNamespace(""), "width")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait setter QName(PackageNamespace(""), "width") flag OVERRIDE
+   method
+    refid "mx.core:MovieClipLoaderAsset/width/setter"
+    param QName(PackageNamespace(""), "Number")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "initialized")
+      iftrue              L9
+
+      getlocal0
+      getlocal1
+      initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedWidth")
+
+      jump                L13
+
+L9:
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+      getlocal1
+      setproperty         QName(PackageNamespace(""), "width")
+
+L13:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait getter QName(PackageNamespace(""), "movieClipData")
+   method
+    refid "mx.core:MovieClipLoaderAsset/movieClipData/getter"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 1
+     localcount 1
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      pushnull
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "completeHandler")
+   method
+    refid "mx.core:MovieClipLoaderAsset/completeHandler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 2
+     localcount 2
+     initscopedepth 12
+     maxscopedepth 13
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      pushtrue
+      initproperty        QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "initialized")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getproperty         QName(PackageNamespace(""), "width")
+      initproperty        QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialWidth")
+
+      getlocal0
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+      getproperty         QName(PackageNamespace(""), "contentLoaderInfo")
+      getproperty         QName(PackageNamespace(""), "height")
+      initproperty        QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialHeight")
+
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedWidth")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L27
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedWidth")
+      setproperty         QName(PackageNamespace(""), "width")
+
+L27:
+      findpropstrict      QName(PackageNamespace(""), "isNaN")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedHeight")
+      callproperty        QName(PackageNamespace(""), "isNaN"), 1
+      iftrue              L37
+
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "loader")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "mx.core:MovieClipLoaderAsset"), "requestedHeight")
+      setproperty         QName(PackageNamespace(""), "height")
+
+L37:
+      findpropstrict      QName(PackageNamespace(""), "dispatchEvent")
+      getlocal1
+      callpropvoid        QName(PackageNamespace(""), "dispatchEvent"), 1
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "mx.core:MovieClipLoaderAsset/cinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 11
+   maxscopedepth 12
+   code
+    getlocal0
+    pushscope
+
+    findproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+    pushstring          "4.6.0.23201"
+    initproperty        QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(Namespace("http://www.adobe.com/2006/flex/mx/internal"), "VERSION") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("4.6.0.23201") end
+end ; class

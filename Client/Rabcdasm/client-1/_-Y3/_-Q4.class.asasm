@@ -1,0 +1,71 @@
+class
+ refid "_-Y3:_-Q4"
+ instance QName(PackageNamespace("_-Y3"), "_-Q4")
+  extends QName(PackageNamespace("_-Y3"), "_-d5")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-2P")
+  iinit
+   refid "_-Y3:_-Q4/iinit"
+   param QName(PackageNamespace("_-Y3"), "_-5d")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     decrement
+     setlocal2
+
+     inclocal_i          2
+     lessequals
+     negate
+     bitxor
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     dup
+     iffalse             L19
+
+     pop
+     getlocal2
+     convert_b
+L19:
+     iftrue              L23
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "_-Y3:_-Q4/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

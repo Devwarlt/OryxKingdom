@@ -1,0 +1,149 @@
+class
+ refid "_-nA:_-Og"
+ instance QName(PackageNamespace("_-nA"), "_-Og")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0GQ")
+  iinit
+   refid "_-nA:_-Og/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     dup
+     checkfilter
+     hasnext
+     strictequals
+     popscope
+     rshift
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "initialize")
+   method
+    refid "_-nA:_-Og/initialize"
+    param QName(PackageNamespace(""), "int")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 7
+     localcount 5
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      pushfalse
+      pushtrue
+      setlocal3
+
+      jump                L10
+
+      inclocal            2
+      inclocal            3
+      pushscope
+
+      lshift
+      astypelate
+      declocal_i          2
+L10:
+      setlocal            4
+
+      getlocal0
+      pushscope
+
+      getlocal            4
+      iftrue              L33
+
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushint             1381653
+      jump                L24
+
+      pushscope
+
+      pushfalse
+      declocal_i          3
+      equals
+      getlocal3
+      greaterthan
+L24:
+      pushdouble          0.6
+      callpropvoid        QName(PackageNamespace(""), "beginFill"), 2
+
+      getlocal3
+      dup
+      iftrue              L32
+
+      pop
+      getlocal1
+      convert_b
+L32:
+      iffalse             L46
+
+L33:
+      getlex              QName(PackageNamespace(""), "graphics")
+      pushbyte            0
+      dup
+      getlocal1
+      getlocal2
+      callpropvoid        QName(PackageNamespace(""), "drawRect"), 4
+
+      getlocal3
+      dup
+      iftrue              L45
+
+      pop
+      getlocal0
+      convert_b
+L45:
+      iffalse             L48
+
+L46:
+      getlex              QName(PackageNamespace(""), "graphics")
+      callpropvoid        QName(PackageNamespace(""), "endFill"), 0
+
+L48:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-nA:_-Og/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

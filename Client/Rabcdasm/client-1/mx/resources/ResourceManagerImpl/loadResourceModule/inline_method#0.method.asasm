@@ -1,0 +1,28 @@
+method
+ refid "mx.resources:ResourceManagerImpl/loadResourceModule/inline_method#0"
+ param QName(PackageNamespace("flash.events"), "TimerEvent")
+ returns QName(PackageNamespace(""), "void")
+ body
+  maxstack 3
+  localcount 2
+  initscopedepth 6
+  maxscopedepth 6
+  code
+   getlex              QName(PackageInternalNs("mx.resources"), "timer")
+   getlex              QName(PackageNamespace("flash.events"), "TimerEvent")
+   getproperty         QName(PackageNamespace(""), "TIMER")
+   getlex              QName(PackageInternalNs("mx.resources"), "timerHandler")
+   callpropvoid        QName(PackageNamespace(""), "removeEventListener"), 2
+
+   getlex              QName(PackageInternalNs("mx.resources"), "timer")
+   callpropvoid        QName(PackageNamespace(""), "stop"), 0
+
+   getlex              QName(PackageInternalNs("mx.resources"), "moduleInfo")
+   getlex              QName(PackageInternalNs("mx.resources"), "applicationDomain")
+   getlex              QName(PackageInternalNs("mx.resources"), "securityDomain")
+   callpropvoid        QName(Namespace("mx.modules:IModuleInfo"), "load"), 2
+
+   returnvoid
+  end ; code
+ end ; body
+end ; method

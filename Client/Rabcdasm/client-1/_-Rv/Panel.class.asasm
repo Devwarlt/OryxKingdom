@@ -1,0 +1,125 @@
+class
+ refid "_-Rv:Panel"
+ instance QName(PackageNamespace("_-Rv"), "Panel")
+  extends QName(PackageNamespace("flash.display"), "Sprite")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-90")
+  iinit
+   refid "_-Rv:Panel/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 9
+    maxscopedepth 10
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal            2
+     inclocal            2
+     inclocal_i          2
+     typeof
+     pushtrue
+     declocal_i          2
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     iftrue              L23
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "gs_")
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "gs_") type QName(PackageNamespace("com.company.assembleegameclient.game"), "GameSprite") end
+  trait method QName(PackageNamespace(""), "draw")
+   method
+    refid "_-Rv:Panel/draw"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 9
+     maxscopedepth 10
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Rv:Panel/cinit"
+  body
+   maxstack 5
+   localcount 3
+   initscopedepth 8
+   maxscopedepth 9
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    rshift
+    multiply
+    bitor
+    getlocal2
+    add_i
+    not
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iftrue              L27
+
+    findproperty        QName(PackageNamespace(""), "WIDTH")
+    pushshort           200
+    pushbyte            12
+    subtract
+    initproperty        QName(PackageNamespace(""), "WIDTH")
+
+    getlocal1
+    iffalse             L27
+
+    findproperty        QName(PackageNamespace(""), "HEIGHT")
+    pushbyte            100
+    pushbyte            16
+    subtract
+    initproperty        QName(PackageNamespace(""), "HEIGHT")
+
+L27:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "WIDTH") slotid 1 type QName(PackageNamespace(""), "int") value Double(188) end
+ trait const QName(PackageNamespace(""), "HEIGHT") slotid 2 type QName(PackageNamespace(""), "int") value Double(84) end
+end ; class

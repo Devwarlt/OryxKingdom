@@ -1,0 +1,241 @@
+class
+ refid "_-Dd:_-QH"
+ instance QName(PackageInternalNs("_-Dd"), "_-QH")
+  extends QName(PackageNamespace("_-Dd"), "_-Pu")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-7I")
+  iinit
+   refid "_-Dd:_-QH/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 7
+    localcount 8
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     kill                3
+     setlocal            5
+
+     declocal            4
+     getlocal2
+     declocal_i          6
+     increment_i
+L10:
+     setlocal            6
+
+     setlocal            7
+
+     getlocal0
+     pushscope
+
+     getlocal            7
+     iffalse             L32
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace(""), "int")
+     getlocal1
+     getproperty         MultinameA("type", [PrivateNamespace("*", "_-Dd:_-QH/iinit#0"), PackageNamespace(""), PrivateNamespace("*", "_-Dd:_-QH/iinit#1"), PackageNamespace("_-Dd"), PackageInternalNs("_-Dd"), Namespace("http://adobe.com/AS3/2006/builtin"), ProtectedNamespace("_-7I"), StaticProtectedNs("_-7I"), StaticProtectedNs("_-m4"), StaticProtectedNs("flash.display:Sprite"), StaticProtectedNs("flash.display:DisplayObjectContainer"), StaticProtectedNs("flash.display:InteractiveObject"), StaticProtectedNs("flash.display:DisplayObject"), StaticProtectedNs("flash.events:EventDispatcher")])
+     callproperty        QName(PackageNamespace(""), "int"), 1
+     constructsuper      1
+
+     getlocal            6
+     dup
+     iffalse             L28
+
+     pop
+     getlocal2
+     convert_b
+L28:
+     iftrue              L32
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "_-Ji")
+
+L32:
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.objects"), "ObjectLibrary")
+     getlex              QName(PackageNamespace(""), "type_")
+     pushbyte            100
+     pushtrue
+     pushfalse
+     callproperty        QName(PackageNamespace(""), "getRedrawnTextureFromType"), 4
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal2
+
+     findpropstrict      QName(PackageNamespace("flash.display"), "Bitmap")
+     getlocal2
+     constructprop       QName(PackageNamespace("flash.display"), "Bitmap"), 1
+     coerce              QName(PackageNamespace("flash.display"), "Bitmap")
+     setlocal3
+
+     getlex              QName(PackageNamespace(""), "WIDTH")
+     pushbyte            4
+     subtract
+     getlocal            6
+     iftrue              L67
+
+     getlex              QName(PackageNamespace(""), "Math")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "width")
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "height")
+     jump                L62
+
+     kill                5
+     inclocal            4
+     kill                6
+     getlocal            5
+     inclocal            6
+     pushnan
+L62:
+     callproperty        QName(PackageNamespace(""), "max"), 2
+     divide
+     getlocal            7
+     iffalse             L67
+
+     convert_d
+L67:
+     setlocal            4
+
+     getlocal            6
+     dup
+     iffalse             L74
+
+     pop
+     getlocal2
+     convert_b
+L74:
+     iftrue              L91
+
+     getlocal3
+     getlocal3
+     getlocal            4
+     dup
+     setlocal            5
+
+     setproperty         QName(PackageNamespace(""), "scaleY")
+
+     getlocal            5
+     kill                5
+     setproperty         QName(PackageNamespace(""), "scaleX")
+
+     getlocal            6
+     dup
+     iffalse             L90
+
+     pop
+     getlocal2
+     convert_b
+L90:
+     iftrue              L127
+
+L91:
+     getlocal3
+     getlex              QName(PackageNamespace(""), "WIDTH")
+     pushbyte            2
+     divide
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "width")
+     pushbyte            2
+     divide
+     subtract
+     jump                L107
+
+     declocal_i          4
+     getlocal            6
+     kill                2
+     inclocal            3
+     kill                5
+     inclocal            4
+L107:
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal            6
+     dup
+     iffalse             L114
+
+     pop
+     getlocal2
+     convert_b
+L114:
+     iftrue              L130
+
+     getlocal3
+     getlex              QName(PackageNamespace(""), "HEIGHT")
+     pushbyte            2
+     divide
+     getlocal3
+     getproperty         QName(PackageNamespace(""), "height")
+     pushbyte            2
+     divide
+     subtract
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal            7
+     iffalse             L130
+
+L127:
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal3
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L130:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-Ji") type QName(PackageNamespace(""), "XML") end
+  trait method QName(ProtectedNamespace("_-7I"), "getToolTip") flag OVERRIDE
+   method
+    refid "_-Dd:_-QH/_-7I:getToolTip"
+    returns QName(PackageNamespace("_-E7"), "for ")
+    body
+     maxstack 4
+     localcount 1
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Dd"), "_-9o")
+      jump                L10
+
+      pushfalse
+      getlocal0
+      decrement_i
+      pushundefined
+      greaterequals
+      swap
+L10:
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-Ji")
+      constructprop       QName(PackageNamespace("_-Dd"), "_-9o"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Dd:_-QH/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

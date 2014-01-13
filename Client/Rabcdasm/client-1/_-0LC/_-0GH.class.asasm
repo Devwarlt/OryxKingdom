@@ -1,0 +1,259 @@
+class
+ refid "_-0LC:_-0GH"
+ instance QName(PackageNamespace("_-0LC"), "_-0GH")
+  extends QName(PackageNamespace("_-0LC"), "_-qO")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-QT")
+  iinit
+   refid "_-0LC:_-0GH/iinit"
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 8
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     declocal            2
+     not
+     checkfilter
+     subtract
+     pushwith
+     subtract
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L81
+
+     getlocal0
+     pushstring          "Another character slot costs "
+     getlocal3
+     iftrue              L45
+
+     getlocal1
+     add
+     getlocal3
+     dup
+     iffalse             L27
+
+     pop
+     getlocal3
+     convert_b
+L27:
+     iftrue              L41
+
+     pushstring          " Gold.  "
+     getlocal2
+     iffalse             L44
+
+     add
+     getlocal3
+     jump                L40
+
+     inclocal_i          2
+     nextvalue
+     nextname
+     inclocal_i          2
+     bitand
+     setlocal2
+
+L40:
+     iftrue              L45
+
+L41:
+     pushstring          "Would you like to buy Gold?"
+     getlocal3
+     iftrue              L46
+
+L44:
+     add
+L45:
+     pushstring          "Not Enough Gold"
+L46:
+     pushstring          "Cancel"
+     pushstring          "Buy Gold"
+     pushstring          "/charSlotNeedGold"
+     constructsuper      5
+
+     getlocal2
+     iffalse             L81
+
+     getlex              QName(PackageNamespace("_-qN"), "Account")
+     callproperty        QName(PackageNamespace(""), "get"), 0
+     callpropvoid        QName(PackageNamespace(""), "cacheOffers"), 0
+
+     getlocal2
+     jump                L63
+
+     greaterthan
+     setlocal2
+
+     inclocal_i          2
+     bitxor
+     inclocal            2
+     declocal_i          2
+L63:
+     dup
+     iftrue              L68
+
+     pop
+     getlocal0
+     convert_b
+L68:
+     iffalse             L81
+
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace(""), "BUTTON1_EVENT")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "onCancel")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+     getlocal2
+     dup
+     iftrue              L80
+
+     pop
+     getlocal3
+     convert_b
+L80:
+     iffalse             L86
+
+L81:
+     findpropstrict      QName(PackageNamespace(""), "addEventListener")
+     getlex              QName(PackageNamespace(""), "BUTTON2_EVENT")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-8v")
+     callpropvoid        QName(PackageNamespace(""), "addEventListener"), 2
+
+L86:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "onCancel")
+   method
+    refid "_-0LC:_-0GH/onCancel"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal            2
+      strictequals
+      convert_s
+      getlocal2
+      add_i
+      dup
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iffalse             L18
+
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L18:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-8v")
+   method
+    refid "_-0LC:_-0GH/_-8v"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 10
+     maxscopedepth 11
+     code
+      pushfalse
+      pushtrue
+      setlocal2
+
+      jump                L10
+
+      inclocal_i          2
+      inclocal            2
+      inclocal            2
+      increment
+      getlocal3
+      equals
+L10:
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      iftrue              L26
+
+      getlex              QName(PackageNamespace("_-qN"), "Account")
+      callproperty        QName(PackageNamespace(""), "get"), 0
+      getlex              QName(PackageNamespace(""), "stage")
+      callpropvoid        QName(PackageNamespace(""), "showMoneyManagement"), 1
+
+      getlocal2
+      dup
+      iftrue              L25
+
+      pop
+      getlocal1
+      convert_b
+L25:
+      iffalse             L29
+
+L26:
+      getlex              QName(PackageNamespace(""), "parent")
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "removeChild"), 1
+
+L29:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0LC:_-0GH/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

@@ -1,0 +1,134 @@
+class
+ refid "_-0Dn:_-iC"
+ instance QName(PackageNamespace("_-0Dn"), "_-iC")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("throw", [PackageNamespace("_-0Dn")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0G5")
+  iinit
+   refid "_-0Dn:_-iC/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     pushtrue
+     greaterequals
+     getglobalscope
+     coerce_s
+     setlocal2
+
+     rshift
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L23
+
+     getlocal0
+     constructsuper      0
+
+L23:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(PackageNamespace(""), "_-I7")
+   method
+    refid "_-0Dn:_-iC/_-I7"
+    param QName(PackageNamespace(""), "Object")
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_-Z6"), "_-sR")
+      jump                L10
+
+      getlocal0
+      negate_i
+      convert_o
+      instanceof
+      pushscope
+
+      multiply_i
+L10:
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "encode"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "parse")
+   method
+    refid "_-0Dn:_-iC/parse"
+    param QName(PackageNamespace(""), "String")
+    returns QName(PackageNamespace(""), "Object")
+    body
+     maxstack 4
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlex              QName(PackageNamespace("_-Z6"), "_-sR")
+      jump                L10
+
+      urshift
+      convert_i
+      subtract
+      bitnot
+      dxnslate
+      urshift
+L10:
+      getlocal1
+      callproperty        QName(PackageNamespace(""), "decode"), 1
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-0Dn:_-iC/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

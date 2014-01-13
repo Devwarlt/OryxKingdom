@@ -1,0 +1,47 @@
+method
+ refid "_-qj:BaseDescription/_-BU/inline_method#0"
+ param QName(PackageNamespace(""), "int")
+ returns QName(PackageNamespace(""), "String")
+ body
+  maxstack 3
+  localcount 2
+  initscopedepth 5
+  maxscopedepth 5
+  code
+   getlocal1
+   pushbyte            10
+   lessthan
+   iffalse             L11
+
+   pushstring          "00"
+   getlocal1
+   pushbyte            10
+   callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+   add
+   coerce_s
+   jump                L26
+
+L11:
+   getlocal1
+   pushbyte            100
+   lessthan
+   iffalse             L22
+
+   pushstring          "0"
+   getlocal1
+   pushbyte            10
+   callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+   add
+   coerce_s
+   jump                L26
+
+L22:
+   getlocal1
+   pushbyte            10
+   callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "toString"), 1
+   coerce_s
+L26:
+   returnvalue
+  end ; code
+ end ; body
+end ; method

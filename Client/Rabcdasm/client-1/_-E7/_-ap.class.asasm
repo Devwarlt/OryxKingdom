@@ -1,0 +1,279 @@
+class
+ refid "_-E7:_-ap"
+ instance QName(PackageNamespace("_-E7"), "_-ap")
+  extends QName(PackageNamespace("_-E7"), "for ")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-je")
+  iinit
+   refid "_-E7:_-ap/iinit"
+   param QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+   body
+    maxstack 10
+    localcount 4
+    initscopedepth 10
+    maxscopedepth 11
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     setlocal2
+
+     lessthan
+     equals
+     declocal            2
+     pushfalse
+     convert_o
+L10:
+     setlocal2
+
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal0
+     pushint             6036765
+     pushbyte            1
+     pushint             16549442
+     pushbyte            1
+     pushfalse
+     constructsuper      5
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.ui"), "SimpleText")
+     pushbyte            22
+     pushint             16549442
+     pushfalse
+     pushbyte            0
+     dup
+     pushstring          "Myriad Pro"
+     constructprop       QName(PackageNamespace("com.company.ui"), "SimpleText"), 6
+     initproperty        QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+
+     getlocal2
+     dup
+     iffalse             L37
+
+     pop
+     getlocal3
+     convert_b
+L37:
+     iftrue              L72
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getlocal2
+     iftrue              L71
+
+     pushtrue
+     callpropvoid        QName(PackageNamespace(""), "_-8Y"), 1
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getlocal3
+     dup
+     iftrue              L52
+
+     pop
+     getlocal0
+     convert_b
+L52:
+     iffalse             L83
+
+     pushstring          "Quest!"
+     setproperty         QName(PackageNamespace(""), "text")
+
+     getlocal2
+     dup
+     iffalse             L61
+
+     pop
+     getlocal2
+     convert_b
+L61:
+     iftrue              L169
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getlocal2
+     dup
+     iffalse             L70
+
+     pop
+     getlocal2
+     convert_b
+L70:
+     iftrue              L83
+
+L71:
+     callpropvoid        QName(PackageNamespace(""), "updateMetrics"), 0
+
+L72:
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getlocal3
+     iffalse             L107
+
+     jump                L83
+
+     multiply_i
+     setlocal2
+
+     inclocal            2
+     nextname
+     decrement
+     setlocal3
+
+L83:
+     findpropstrict      QName(PackageNamespace("flash.filters"), "DropShadowFilter")
+     pushbyte            0
+     dup
+     dup
+     constructprop       QName(PackageNamespace("flash.filters"), "DropShadowFilter"), 3
+     newarray            1
+     setproperty         QName(PackageNamespace(""), "filters")
+
+     getlocal2
+     dup
+     iffalse             L96
+
+     pop
+     getlocal2
+     convert_b
+L96:
+     iftrue              L169
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     getlocal3
+     iffalse             L107
+
+     pushbyte            0
+     getlocal3
+     iffalse             L108
+
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+L107:
+     pushbyte            0
+L108:
+     setproperty         QName(PackageNamespace(""), "y")
+
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PrivateNamespace("*", "_-E7:_-ap"), "text_")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+     getlocal2
+     dup
+     iffalse             L119
+
+     pop
+     getlocal0
+     convert_b
+L119:
+     iftrue              L127
+
+     getlocal0
+     findpropstrict      QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV")
+     pushint             11776947
+     pushtrue
+     getlocal1
+     constructprop       QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV"), 3
+     initproperty        QName(PackageNamespace(""), "_-id")
+
+L127:
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-id")
+     getlocal3
+     dup
+     iftrue              L135
+
+     pop
+     getlocal3
+     convert_b
+L135:
+     iffalse             L156
+
+     pushbyte            0
+     getlocal3
+     iffalse             L157
+
+     setproperty         QName(PackageNamespace(""), "x")
+
+     getlocal2
+     dup
+     jump                L149
+
+     bitxor
+     declocal            2
+     swap
+     pushscope
+
+     inclocal_i          2
+     getglobalscope
+L149:
+     iffalse             L153
+
+     pop
+     getlocal2
+     convert_b
+L153:
+     iftrue              L165
+
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-id")
+L156:
+     pushbyte            32
+L157:
+     setproperty         QName(PackageNamespace(""), "y")
+
+     getlocal3
+     dup
+     iftrue              L164
+
+     pop
+     getlocal3
+     convert_b
+L164:
+     iffalse             L169
+
+L165:
+     findpropstrict      QName(PackageNamespace(""), "addChild")
+     getlocal0
+     getproperty         QName(PackageNamespace(""), "_-id")
+     callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L169:
+     findproperty        QName(PackageNamespace(""), "filters")
+     newarray            0
+     initproperty        QName(PackageNamespace(""), "filters")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PrivateNamespace("*", "_-E7:_-ap"), "text_") type QName(PackageNamespace("com.company.ui"), "SimpleText") end
+  trait slot QName(PackageNamespace(""), "_-id") type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-gV") end
+ end ; instance
+ cinit
+  refid "_-E7:_-ap/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 9
+   maxscopedepth 10
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

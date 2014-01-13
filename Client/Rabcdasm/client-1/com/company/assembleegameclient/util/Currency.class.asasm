@@ -1,0 +1,327 @@
+class
+ refid "com.company.assembleegameclient.util:Currency"
+ instance QName(PackageNamespace("com.company.assembleegameclient.util"), "Currency")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-ms")
+  iinit
+   refid "com.company.assembleegameclient.util:Currency/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     strictequals
+     subtract
+     popscope
+     bitor
+     pushundefined
+     convert_o
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     iffalse             L18
+
+     getlocal0
+     constructsuper      0
+
+L18:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.util:Currency/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    multiply_i
+    strictequals
+    bitand
+    negate_i
+    astypelate
+    lessthan
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    jump                L21
+
+    bitand
+    coerce_s
+    coerce_a
+    pushnan
+    hasnext
+    pushundefined
+L21:
+    getlocal1
+    iftrue              L38
+
+    findproperty        QName(PackageNamespace(""), "INVALID")
+    pushbyte            255
+    initproperty        QName(PackageNamespace(""), "INVALID")
+
+    getlocal1
+    iftrue              L33
+
+    findproperty        QName(PackageNamespace(""), "class")
+    pushbyte            0
+    initproperty        QName(PackageNamespace(""), "class")
+
+    getlocal1
+    iftrue              L38
+
+L33:
+    findproperty        QName(PackageNamespace(""), "FAME")
+    pushbyte            1
+    initproperty        QName(PackageNamespace(""), "FAME")
+
+    getlocal2
+    iffalse             L41
+
+L38:
+    findproperty        QName(PackageNamespace(""), "_-Ah")
+    pushbyte            2
+    initproperty        QName(PackageNamespace(""), "_-Ah")
+
+L41:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "INVALID") slotid 1 type QName(PackageNamespace(""), "int") value Integer(-1) end
+ trait const QName(PackageNamespace(""), "class") slotid 2 type QName(PackageNamespace(""), "int") value Integer(0) end
+ trait const QName(PackageNamespace(""), "FAME") slotid 3 type QName(PackageNamespace(""), "int") value Integer(1) end
+ trait const QName(PackageNamespace(""), "_-Ah") slotid 4 type QName(PackageNamespace(""), "int") value Integer(2) end
+ trait method QName(PackageNamespace(""), "_-01r") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.util:Currency/_-01r"
+   param QName(PackageNamespace(""), "int")
+   returns QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     coerce_a
+     multiply
+     inclocal            2
+     kill                3
+     swap
+     subtract
+L10:
+     setlocal3
+
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     jump                L60
+
+L15:
+     label
+     pushstring          "Gold"
+     getlocal            4
+     dup
+     iftrue              L23
+
+     pop
+     getlocal0
+     convert_b
+L23:
+     iffalse             L48
+
+     returnvalue
+
+     getlocal            4
+     dup
+     iftrue              L31
+
+     pop
+     getlocal2
+     convert_b
+L31:
+     iffalse             L121
+
+L32:
+     label
+     pushstring          "Fame"
+     getlocal            4
+     iffalse             L122
+
+     returnvalue
+
+     getlocal            4
+     dup
+     iftrue              L43
+
+     pop
+     getlocal0
+     convert_b
+L43:
+     iffalse             L58
+
+L44:
+     label
+     pushstring          "Guild Fame"
+     getlocal            4
+     iffalse             L122
+
+L48:
+     returnvalue
+
+     getlocal3
+     iftrue              L121
+
+     jump                L58
+
+     declocal            3
+     inclocal            3
+     increment
+     declocal            3
+     declocal            3
+     inclocal_i          3
+L58:
+     label
+     jump                L121
+
+L60:
+     getlocal1
+     getlocal            4
+     iffalse             L120
+
+     setlocal2
+
+     getlocal3
+     iftrue              L113
+
+     getlex              QName(PackageNamespace(""), "class")
+     getlocal3
+     dup
+     iffalse             L73
+
+     pop
+     getlocal3
+     convert_b
+L73:
+     iftrue              L111
+
+     getlocal2
+     getlocal            4
+     iffalse             L100
+
+     ifstrictne          L89
+
+     getlocal3
+     iftrue              L113
+
+     pushbyte            0
+     getlocal3
+     dup
+     iffalse             L87
+
+     pop
+     getlocal1
+     convert_b
+L87:
+     iftrue              L111
+
+     jump                L119
+
+L89:
+     getlex              QName(PackageNamespace(""), "FAME")
+     getlocal2
+     getlocal3
+     jump                L99
+
+     declocal_i          3
+     inclocal            2
+     subtract_i
+     inclocal_i          2
+     declocal            3
+     coerce_s
+L99:
+     iftrue              L112
+
+L100:
+     ifstrictne          L110
+
+     getlocal            4
+     dup
+     iftrue              L107
+
+     pop
+     getlocal1
+     convert_b
+L107:
+     iffalse             L113
+
+     pushbyte            1
+     jump                L119
+
+L110:
+     getlex              QName(PackageNamespace(""), "_-Ah")
+L111:
+     getlocal2
+L112:
+     ifstrictne          L115
+
+L113:
+     pushbyte            2
+     jump                L119
+
+L115:
+     jump                L118
+
+     pushbyte            3
+     jump                L119
+
+L118:
+     pushbyte            3
+L119:
+     kill                2
+L120:
+     lookupswitch        L58, [L15, L32, L44, L58]
+
+L121:
+     pushstring          ""
+L122:
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

@@ -1,0 +1,33 @@
+script ; 474
+ sinit
+  refid "en_US$SharedResources_properties.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    getscopeobject      0
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+    pushscope
+
+    getlex              QName(PackageNamespace("mx.resources"), "ResourceBundle")
+    newclass            "en_US$SharedResources_properties"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace(""), "en_US$SharedResources_properties")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace(""), "en_US$SharedResources_properties") slotid 1
+  #include "en_US$SharedResources_properties.class.asasm"
+ end ; trait
+end ; script

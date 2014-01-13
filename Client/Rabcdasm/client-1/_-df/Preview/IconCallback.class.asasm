@@ -1,0 +1,85 @@
+class
+ refid "_-df:Preview/IconCallback"
+ instance QName(PrivateNamespace("*", "_-df:Preview#1"), "IconCallback")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("Preview.as$687:IconCallback")
+  iinit
+   refid "_-df:Preview/IconCallback/iinit"
+   param QName(PackageNamespace("_-df"), "Preview")
+   param QName(PackageNamespace(""), "Function")
+   returns QName(PackageNamespace(""), "void")
+   body
+    maxstack 2
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     getlocal0
+     pushscope
+
+     getlocal0
+     constructsuper      0
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "preview_")
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "callback_")
+
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "preview_") type QName(PackageNamespace("_-df"), "Preview") end
+  trait slot QName(PackageNamespace(""), "callback_") type QName(PackageNamespace(""), "Function") end
+  trait method QName(PackageNamespace(""), "handler")
+   method
+    refid "_-df:Preview/IconCallback/handler"
+    param QName(PackageNamespace("flash.events"), "Event")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 1
+     localcount 2
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      getlocal0
+      pushscope
+
+      getlocal0
+      callpropvoid        QName(PackageNamespace(""), "callback_"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "preview_")
+      callpropvoid        QName(PackageNamespace(""), "redraw"), 0
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "preview_")
+      callpropvoid        QName(PackageNamespace(""), "position"), 0
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-df:Preview/IconCallback/cinit"
+  body
+   maxstack 1
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

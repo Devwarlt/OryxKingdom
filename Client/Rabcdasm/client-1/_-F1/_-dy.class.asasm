@@ -1,0 +1,196 @@
+class
+ refid "_-F1:_-dy"
+ instance QName(PackageNamespace("_-F1"), "_-dy")
+  extends QName(PackageNamespace("mx.core"), "MovieClipLoaderAsset")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-3l")
+  iinit
+   refid "_-F1:_-dy/iinit"
+   body
+    maxstack 5
+    localcount 3
+    initscopedepth 13
+    maxscopedepth 14
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     rshift
+     coerce_s
+     rshift
+     pushtrue
+     swap
+     instanceof
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal2
+     dup
+     iffalse             L19
+
+     pop
+     getlocal0
+     convert_b
+L19:
+     iftrue              L53
+
+     jump                L27
+
+     add_i
+     negate_i
+     convert_u
+     convert_i
+     dup
+     bitnot
+L27:
+     getlocal0
+     getlex              QName(PackageNamespace("_-F1"), "_-SG")
+     initproperty        QName(PackageNamespace(""), "_-2M")
+
+     getlocal1
+     iffalse             L53
+
+     getlocal0
+     constructsuper      0
+
+     getlocal2
+     dup
+     iffalse             L40
+
+     pop
+     getlocal2
+     convert_b
+L40:
+     iftrue              L53
+
+     findproperty        QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialWidth")
+     pushshort           16000
+     pushbyte            20
+     divide
+     initproperty        QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialWidth")
+
+     getlocal1
+     iffalse             L53
+
+     findproperty        QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialHeight")
+     pushshort           12000
+     pushbyte            20
+     divide
+     initproperty        QName(ProtectedNamespace("mx.core:MovieClipLoaderAsset"), "initialHeight")
+
+L53:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait getter QName(PackageNamespace(""), "movieClipData") flag OVERRIDE
+   method
+    refid "_-F1:_-dy/movieClipData/getter"
+    returns QName(PackageNamespace("flash.utils"), "ByteArray")
+    body
+     maxstack 5
+     localcount 3
+     initscopedepth 13
+     maxscopedepth 14
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      dup
+      decrement_i
+      urshift
+      setlocal3
+
+      typeof
+      pushnan
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal2
+      iftrue              L26
+
+      getlex              QName(PrivateNamespace("*", "_-F1:_-dy"), "_-03m")
+      pushnull
+      ifne                L26
+
+      getlocal1
+      iffalse             L26
+
+      findproperty        QName(PrivateNamespace("*", "_-F1:_-dy"), "_-03m")
+      findpropstrict      QName(PackageNamespace("flash.utils"), "ByteArray")
+      getlocal0
+      constructprop       QName(PackageNamespace(""), "_-2M"), 0
+      callproperty        QName(PackageNamespace("flash.utils"), "ByteArray"), 1
+      setproperty         QName(PrivateNamespace("*", "_-F1:_-dy"), "_-03m")
+
+L26:
+      getlex              QName(PrivateNamespace("*", "_-F1:_-dy"), "_-03m")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-2M") type QName(PackageNamespace(""), "Class") end
+ end ; instance
+ cinit
+  refid "_-F1:_-dy/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 12
+   maxscopedepth 13
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    greaterthan
+    subtract
+    popscope
+    greaterequals
+    lshift
+    setlocal3
+
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    dup
+    iftrue              L20
+
+    pop
+    getlocal1
+    convert_b
+L20:
+    iffalse             L24
+
+    findproperty        QName(PrivateNamespace("*", "_-F1:_-dy"), "_-03m")
+    pushnull
+    setproperty         QName(PrivateNamespace("*", "_-F1:_-dy"), "_-03m")
+
+L24:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait slot QName(PrivateNamespace("*", "_-F1:_-dy"), "_-03m") slotid 1 type QName(PackageNamespace("flash.utils"), "ByteArray") value Null() end
+end ; class

@@ -1,0 +1,33 @@
+script ; 171
+ sinit
+  refid "_-K8:_-LG.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-LG", [PackageNamespace("_-K8")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    pushscope
+
+    getlex              QName(PackageNamespace("_-C-"), "_-cM")
+    newclass            "_-K8:_-LG"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-K8"), "_-LG")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-K8"), "_-LG")
+  #include "_-LG.class.asasm"
+ end ; trait
+end ; script

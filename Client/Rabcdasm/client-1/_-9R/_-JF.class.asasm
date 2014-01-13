@@ -1,0 +1,138 @@
+class
+ refid "_-9R:_-JF"
+ instance QName(PackageNamespace("_-9R"), "_-JF")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-Jj")
+  iinit
+   refid "_-9R:_-JF/iinit"
+   param QName(PackageNamespace(""), "Boolean")
+   param QName(PackageNamespace(""), "String")
+   body
+    maxstack 4
+    localcount 5
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     setlocal3
+
+     jump                L10
+
+     inclocal            2
+     strictequals
+     astypelate
+     convert_d
+     dup
+     pushnull
+L10:
+     setlocal            4
+
+     getlocal0
+     pushscope
+
+     getlocal            4
+     iftrue              L28
+
+     getlocal0
+     getlex              QName(PackageNamespace(""), "_-hx")
+     constructsuper      1
+
+     getlocal3
+     iffalse             L28
+
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "success_")
+
+     getlocal            4
+     iftrue              L28
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "errorText_")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "success_") type QName(PackageNamespace(""), "Boolean") end
+  trait slot QName(PackageNamespace(""), "errorText_") type QName(PackageNamespace(""), "String") end
+  trait method QName(PackageNamespace(""), "toString") flag OVERRIDE
+   method
+    refid "_-9R:_-JF/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 6
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace(""), "formatToString")
+      jump                L10
+
+      swap
+      nextvalue
+      setlocal2
+
+      nextname
+      decrement
+      greaterequals
+L10:
+      pushstring          "GUILDRESULTEVENT"
+      pushstring          "success_"
+      pushstring          "errorText_"
+      callproperty        QName(PackageNamespace(""), "formatToString"), 3
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-9R:_-JF/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    swap
+    jump                L10
+
+    bitor
+    pushtrue
+    pushwith
+    coerce_a
+    pushtrue
+    decrement_i
+L10:
+    setlocal1
+
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    getlocal2
+    iffalse             L19
+
+    findproperty        QName(PackageNamespace(""), "_-hx")
+    pushstring          "GUILDRESULTEVENT"
+    initproperty        QName(PackageNamespace(""), "_-hx")
+
+L19:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-hx") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("GUILDRESULTEVENT") end
+end ; class

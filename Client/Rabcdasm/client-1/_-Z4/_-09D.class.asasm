@@ -1,0 +1,219 @@
+class
+ refid "_-Z4:_-09D"
+ instance QName(PackageNamespace("_-Z4"), "_-09D")
+  extends QName(PackageNamespace("flash.events"), "Event")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-xP")
+  iinit
+   refid "_-Z4:_-09D/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "Class")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace("_-Z4"), "_-nZ")
+   body
+    maxstack 4
+    localcount 7
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     inclocal_i          4
+     inclocal_i          2
+     inclocal_i          3
+     subtract
+     modulo
+     equals
+L10:
+     setlocal            5
+
+     setlocal            6
+
+     getlocal0
+     pushscope
+
+     getlocal            6
+     iffalse             L33
+
+     jump                L23
+
+     setlocal            4
+
+     negate
+     declocal            2
+     multiply
+     getlocal3
+     inclocal_i          2
+L23:
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal            5
+     iftrue              L43
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "_-0O")
+
+     getlocal            6
+     iffalse             L43
+
+L33:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "_-KL")
+
+     getlocal            6
+     dup
+     iftrue              L42
+
+     pop
+     getlocal2
+     convert_b
+L42:
+     iffalse             L46
+
+L43:
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "mapping")
+
+L46:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-0O") type QName(PackageNamespace(""), "Class") end
+  trait slot QName(PackageNamespace(""), "_-KL") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "mapping") type QName(PackageNamespace("_-Z4"), "_-nZ") end
+  trait method QName(PackageNamespace(""), "clone") flag OVERRIDE
+   method
+    refid "_-Z4:_-09D/clone"
+    returns QName(PackageNamespace("flash.events"), "Event")
+    body
+     maxstack 7
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      findpropstrict      QName(PackageNamespace("_-Z4"), "_-09D")
+      jump                L10
+
+      astypelate
+      getlocal2
+      setlocal2
+
+      pushscope
+
+      dxnslate
+      setlocal2
+
+L10:
+      getlex              QName(PackageNamespace(""), "type")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-0O")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-KL")
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mapping")
+      constructprop       QName(PackageNamespace("_-Z4"), "_-09D"), 4
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-Z4:_-09D/cinit"
+  body
+   maxstack 4
+   localcount 3
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    pushfalse
+    pushtrue
+    setlocal1
+
+    jump                L10
+
+    istypelate
+    typeof
+    getglobalscope
+    setlocal2
+
+    hasnext
+    pushfalse
+L10:
+    setlocal2
+
+    getlocal0
+    pushscope
+
+    findproperty        QName(PackageNamespace(""), "_-dZ")
+    pushstring          "preMappingCreate"
+    initproperty        QName(PackageNamespace(""), "_-dZ")
+
+    getlocal1
+    jump                L24
+
+    checkfilter
+    nextname
+    instanceof
+    modulo
+    newactivation
+    istypelate
+L24:
+    iffalse             L31
+
+    findproperty        QName(PackageNamespace(""), "_-Su")
+    pushstring          "postMappingCreate"
+    initproperty        QName(PackageNamespace(""), "_-Su")
+
+    findproperty        QName(PackageNamespace(""), "_-b-")
+    pushstring          "preMappingChange"
+    initproperty        QName(PackageNamespace(""), "_-b-")
+
+L31:
+    findproperty        QName(PackageNamespace(""), "_-yL")
+    pushstring          "postMappingChange"
+    initproperty        QName(PackageNamespace(""), "_-yL")
+
+    findproperty        QName(PackageNamespace(""), "_-Ke")
+    pushstring          "postMappingRemove"
+    initproperty        QName(PackageNamespace(""), "_-Ke")
+
+    getlocal1
+    dup
+    iftrue              L43
+
+    pop
+    getlocal1
+    convert_b
+L43:
+    iffalse             L47
+
+    findproperty        QName(PackageNamespace(""), "_-PL")
+    pushstring          "mappingOverride"
+    initproperty        QName(PackageNamespace(""), "_-PL")
+
+L47:
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait const QName(PackageNamespace(""), "_-dZ") slotid 1 type QName(PackageNamespace(""), "String") value Utf8("preMappingCreate") end
+ trait const QName(PackageNamespace(""), "_-Su") slotid 2 type QName(PackageNamespace(""), "String") value Utf8("postMappingCreate") end
+ trait const QName(PackageNamespace(""), "_-b-") slotid 3 type QName(PackageNamespace(""), "String") value Utf8("preMappingChange") end
+ trait const QName(PackageNamespace(""), "_-yL") slotid 4 type QName(PackageNamespace(""), "String") value Utf8("postMappingChange") end
+ trait const QName(PackageNamespace(""), "_-Ke") slotid 5 type QName(PackageNamespace(""), "String") value Utf8("postMappingRemove") end
+ trait const QName(PackageNamespace(""), "_-PL") slotid 6 type QName(PackageNamespace(""), "String") value Utf8("mappingOverride") end
+end ; class

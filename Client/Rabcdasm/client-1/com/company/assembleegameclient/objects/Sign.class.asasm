@@ -1,0 +1,307 @@
+class
+ refid "com.company.assembleegameclient.objects:Sign"
+ instance QName(PackageNamespace("com.company.assembleegameclient.objects"), "Sign")
+  extends QName(PackageNamespace("com.company.assembleegameclient.objects"), "GameObject")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-r7")
+  iinit
+   refid "com.company.assembleegameclient.objects:Sign/iinit"
+   param QName(PackageNamespace(""), "XML")
+   body
+    maxstack 4
+    localcount 4
+    initscopedepth 6
+    maxscopedepth 7
+    code
+     pushfalse
+     pushtrue
+     setlocal2
+
+     jump                L10
+
+     inclocal_i          2
+     inclocal_i          2
+     getlocal2
+     bitand
+     setlocal2
+
+     declocal_i          2
+L10:
+     setlocal3
+
+     getlocal0
+     pushscope
+
+     getlocal3
+     iftrue              L28
+
+     getlocal0
+     getlocal1
+     constructsuper      1
+
+     getlocal2
+     dup
+     iftrue              L24
+
+     pop
+     getlocal3
+     convert_b
+L24:
+     iffalse             L28
+
+     findproperty        QName(PackageNamespace(""), "texture_")
+     pushnull
+     initproperty        QName(PackageNamespace(""), "texture_")
+
+L28:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait method QName(ProtectedNamespace("_-r7"), "getTexture") flag OVERRIDE
+   method
+    refid "com.company.assembleegameclient.objects:Sign/_-r7:getTexture"
+    param QName(PackageNamespace("com.company.assembleegameclient.map"), "_-0Dv")
+    param QName(PackageNamespace(""), "int")
+    returns QName(PackageNamespace("flash.display"), "BitmapData")
+    body
+     maxstack 9
+     localcount 8
+     initscopedepth 6
+     maxscopedepth 7
+     code
+      pushfalse
+      pushtrue
+      setlocal            6
+
+      jump                L10
+
+      convert_s
+      kill                6
+      pushundefined
+      setlocal            5
+
+      inclocal_i          5
+      getlocal            4
+L10:
+      setlocal            7
+
+      getlocal0
+      pushscope
+
+      getlocal            7
+      dup
+      iffalse             L19
+
+      pop
+      getlocal0
+      convert_b
+L19:
+      iftrue              L32
+
+      getlex              QName(PackageNamespace(""), "texture_")
+      pushnull
+      ifeq                L32
+
+      getlocal            7
+      dup
+      iffalse             L29
+
+      pop
+      getlocal2
+      convert_b
+L29:
+      iftrue              L32
+
+      getlex              QName(PackageNamespace(""), "texture_")
+      returnvalue
+
+L32:
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextField")
+      constructprop       QName(PackageNamespace("flash.text"), "TextField"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextField")
+      setlocal3
+
+      getlocal            6
+      dup
+      iftrue              L42
+
+      pop
+      getlocal0
+      convert_b
+L42:
+      iffalse             L76
+
+      getlocal3
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "multiline")
+
+      getlocal            7
+      iftrue              L81
+
+      getlocal3
+      pushfalse
+      setproperty         QName(PackageNamespace(""), "wordWrap")
+
+      getlocal            6
+      dup
+      iftrue              L57
+
+      pop
+      getlocal3
+      convert_b
+L57:
+      iffalse             L84
+
+      getlocal3
+      getlex              QName(PackageNamespace("flash.text"), "TextFieldAutoSize")
+      getproperty         QName(PackageNamespace(""), "LEFT")
+      setproperty         QName(PackageNamespace(""), "autoSize")
+
+      getlocal            7
+      dup
+      iffalse             L75
+
+      pop
+      getlocal0
+      jump                L74
+
+      declocal_i          3
+      coerce_a
+      inclocal_i          4
+      declocal_i          6
+      inclocal            6
+      declocal            2
+L74:
+      convert_b
+L75:
+      iftrue              L84
+
+L76:
+      getlocal3
+      pushint             16777215
+      setproperty         QName(PackageNamespace(""), "textColor")
+
+      getlocal            6
+      iffalse             L84
+
+L81:
+      getlocal3
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "embedFonts")
+
+L84:
+      findpropstrict      QName(PackageNamespace("flash.text"), "TextFormat")
+      constructprop       QName(PackageNamespace("flash.text"), "TextFormat"), 0
+      coerce              QName(PackageNamespace("flash.text"), "TextFormat")
+      dup
+      setlocal            4
+
+      getlex              QName(PackageNamespace("flash.text"), "TextFormatAlign")
+      getproperty         QName(PackageNamespace(""), "CENTER")
+      setproperty         QName(PackageNamespace(""), "align")
+
+      getlocal            4
+      pushstring          "Myriad Pro"
+      setproperty         QName(PackageNamespace(""), "font")
+
+      getlocal            4
+      pushbyte            24
+      setproperty         QName(PackageNamespace(""), "size")
+
+      getlocal            7
+      iftrue              L123
+
+      getlocal            4
+      pushint             16777215
+      setproperty         QName(PackageNamespace(""), "color")
+
+      getlocal            4
+      pushtrue
+      setproperty         QName(PackageNamespace(""), "bold")
+
+      getlocal            7
+      dup
+      iffalse             L112
+
+      pop
+      getlocal0
+      convert_b
+L112:
+      iftrue              L123
+
+      getlocal3
+      getlocal            4
+      setproperty         QName(PackageNamespace(""), "defaultTextFormat")
+
+      getlocal3
+      getlex              QName(PackageNamespace(""), "name_")
+      pushstring          "|"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "split"), 1
+      pushstring          "\n"
+      callproperty        QName(Namespace("http://adobe.com/AS3/2006/builtin"), "join"), 1
+      setproperty         QName(PackageNamespace(""), "text")
+
+L123:
+      findpropstrict      QName(PackageNamespace("flash.display"), "BitmapData")
+      getlocal3
+      jump                L132
+
+      subtract
+      inclocal_i          6
+      declocal_i          6
+      inclocal_i          3
+      declocal_i          4
+      declocal            5
+L132:
+      getproperty         QName(PackageNamespace(""), "width")
+      getlocal3
+      getproperty         QName(PackageNamespace(""), "height")
+      pushtrue
+      pushbyte            0
+      constructprop       QName(PackageNamespace("flash.display"), "BitmapData"), 4
+      coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+      dup
+      setlocal            5
+
+      getlocal3
+      callpropvoid        QName(PackageNamespace(""), "draw"), 1
+
+      getlocal            7
+      iftrue              L154
+
+      findproperty        QName(PackageNamespace(""), "texture_")
+      getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+      getlocal            5
+      getlex              QName(PackageNamespace(""), "size_")
+      pushfalse
+      pushbyte            0
+      dup
+      callproperty        QName(PackageNamespace(""), "redraw"), 5
+      initproperty        QName(PackageNamespace(""), "texture_")
+
+L154:
+      getlex              QName(PackageNamespace(""), "texture_")
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.objects:Sign/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 5
+   maxscopedepth 6
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

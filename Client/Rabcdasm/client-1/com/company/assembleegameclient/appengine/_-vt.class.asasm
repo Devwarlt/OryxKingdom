@@ -1,0 +1,300 @@
+class
+ refid "com.company.assembleegameclient.appengine:_-vt"
+ instance QName(PackageNamespace("com.company.assembleegameclient.appengine"), "_-vt")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0N2")
+  iinit
+   refid "com.company.assembleegameclient.appengine:_-vt/iinit"
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "String")
+   param QName(PackageNamespace(""), "int")
+   body
+    maxstack 4
+    localcount 9
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal            7
+
+     jump                L10
+
+     strictequals
+     setlocal            4
+
+     declocal            3
+     inclocal            4
+     getlocal            4
+     negate_i
+L10:
+     setlocal            8
+
+     getlocal0
+     pushscope
+
+     getlocal            8
+     iftrue              L17
+
+     getlocal0
+     constructsuper      0
+
+L17:
+     jump                L32
+
+L18:
+     label
+     getlocal0
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-07m")
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-07m"), 0
+     initproperty        QName(PackageNamespace(""), "_-5U")
+
+     jump                L93
+
+L24:
+     label
+L25:
+     label
+     getlocal0
+     findpropstrict      QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-zK")
+     callproperty        QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-zK"), 0
+     initproperty        QName(PackageNamespace(""), "_-5U")
+
+     jump                L93
+
+     jump                L93
+
+L32:
+     getlocal1
+     setlocal            6
+
+     getlocal            8
+     iftrue              L69
+
+     pushstring          "fame"
+     getlocal            8
+     iftrue              L67
+
+     getlocal            6
+     getlocal            7
+     dup
+     iftrue              L53
+
+     pop
+     getlocal0
+     convert_b
+     jump                L53
+
+     pushtrue
+     pushundefined
+     declocal            5
+     astypelate
+     checkfilter
+     pushfalse
+L53:
+     iffalse             L68
+
+     ifstrictne          L66
+
+     getlocal            8
+     dup
+     iffalse             L61
+
+     pop
+     getlocal0
+     convert_b
+L61:
+     iftrue              L69
+
+     pushbyte            0
+     getlocal            7
+     iffalse             L77
+
+     jump                L89
+
+L66:
+     pushstring          "news"
+L67:
+     getlocal            6
+L68:
+     ifstrictne          L78
+
+L69:
+     pushbyte            1
+     getlocal            7
+     dup
+     iftrue              L76
+
+     pop
+     getlocal2
+     convert_b
+L76:
+     iffalse             L89
+
+L77:
+     jump                L89
+
+L78:
+     jump                L81
+
+     pushbyte            2
+     jump                L89
+
+L81:
+     pushbyte            2
+     jump                L89
+
+     pushwith
+     greaterthan
+     setlocal            7
+
+     kill                3
+     astypelate
+     not
+L89:
+     kill                6
+     lookupswitch        L25, [L18, L24, L25]
+
+     getlocal            8
+     iftrue              L112
+
+L93:
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "_-Ok")
+
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "_-03P")
+
+     getlocal0
+     getlocal            4
+     initproperty        QName(PackageNamespace(""), "_-qh")
+
+     getlocal            7
+     dup
+     iftrue              L108
+
+     pop
+     getlocal1
+     convert_b
+L108:
+     iffalse             L112
+
+     getlocal0
+     getlocal            5
+     initproperty        QName(PackageNamespace(""), "_-We")
+
+L112:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "_-5U") type QName(PackageNamespace("flash.display"), "BitmapData") end
+  trait slot QName(PackageNamespace(""), "_-Ok") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_-03P") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_-qh") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PackageNamespace(""), "_-We") type QName(PackageNamespace(""), "int") end
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.appengine:_-vt/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-zK") flag FINAL dispid 3
+  method
+   refid "com.company.assembleegameclient.appengine:_-vt/_-zK"
+   returns QName(PackageNamespace("flash.display"), "BitmapData")
+   body
+    maxstack 8
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+     jump                L10
+
+     getlocal2
+     negate
+     pushwith
+     pushtrue
+     swap
+     equals
+L10:
+     pushstring          "lofiInterface2"
+     pushbyte            4
+     callproperty        QName(PackageNamespace(""), "_-xK"), 2
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal1
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+     getlocal1
+     pushbyte            80
+     pushtrue
+     pushbyte            0
+     dup
+     callproperty        QName(PackageNamespace(""), "redraw"), 5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+ trait method QName(PrivateNamespace("*", "com.company.assembleegameclient.appengine:_-vt"), "_-07m") flag FINAL dispid 4
+  method
+   refid "com.company.assembleegameclient.appengine:_-vt/_-07m"
+   returns QName(PackageNamespace("flash.display"), "BitmapData")
+   body
+    maxstack 8
+    localcount 2
+    initscopedepth 3
+    maxscopedepth 4
+    code
+     getlocal0
+     pushscope
+
+     getlex              QName(PackageNamespace("com.company.util"), "AssetLibrary")
+     jump                L10
+
+     convert_o
+     increment
+     getlocal1
+     increment
+     coerce_s
+     decrement_i
+L10:
+     pushstring          "lofiObj3"
+     pushshort           224
+     callproperty        QName(PackageNamespace(""), "_-xK"), 2
+     coerce              QName(PackageNamespace("flash.display"), "BitmapData")
+     setlocal1
+
+     getlex              QName(PackageNamespace("com.company.assembleegameclient.util"), "TextureRedrawer")
+     getlocal1
+     pushbyte            80
+     pushtrue
+     pushbyte            0
+     dup
+     callproperty        QName(PackageNamespace(""), "redraw"), 5
+     returnvalue
+    end ; code
+   end ; body
+  end ; method
+ end ; trait
+end ; class

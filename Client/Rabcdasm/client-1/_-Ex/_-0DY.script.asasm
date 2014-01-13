@@ -1,0 +1,33 @@
+script ; 1050
+ sinit
+  refid "_-Ex:_-0DY.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-0DY", [PackageNamespace("_-Ex")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Error")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Error")
+    newclass            "_-Ex:_-0DY"
+    popscope
+    popscope
+    initproperty        QName(PackageNamespace("_-Ex"), "_-0DY")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-Ex"), "_-0DY")
+  #include "_-0DY.class.asasm"
+ end ; trait
+end ; script

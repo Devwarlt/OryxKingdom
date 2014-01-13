@@ -1,0 +1,29 @@
+script ; 1138
+ sinit
+  refid "mx.modules:ModuleManagerGlobals.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 3
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("ModuleManagerGlobals", [PackageNamespace("mx.modules")])
+    getlex              QName(PackageNamespace(""), "Object")
+    pushscope
+
+    getlex              QName(PackageNamespace(""), "Object")
+    newclass            "mx.modules:ModuleManagerGlobals"
+    popscope
+    initproperty        QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("mx.modules"), "ModuleManagerGlobals")
+  #include "ModuleManagerGlobals.class.asasm"
+ end ; trait
+end ; script

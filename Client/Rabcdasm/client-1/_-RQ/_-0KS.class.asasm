@@ -1,0 +1,197 @@
+class
+ refid "_-RQ:_-0KS"
+ instance QName(PackageNamespace("_-RQ"), "_-0KS")
+  extends QName(PackageNamespace(""), "Object")
+  implements Multiname("_-v", [PackageNamespace("_-0-p")])
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-qK")
+  iinit
+   refid "_-RQ:_-0KS/iinit"
+   body
+    maxstack 3
+    localcount 3
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     setlocal1
+
+     jump                L10
+
+     subtract_i
+     divide
+     astypelate
+     getlocal0
+     setlocal2
+
+     checkfilter
+L10:
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iftrue              L19
+
+     pop
+     getlocal1
+     convert_b
+L19:
+     iffalse             L22
+
+     getlocal0
+     constructsuper      0
+
+L22:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "context") flag METADATA type QName(PackageNamespace("_-0-p"), "_-Ly")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "mediatorMap") flag METADATA type QName(PackageNamespace("_-AG"), "_-v1")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PackageNamespace(""), "_-Ql") flag METADATA type QName(PackageNamespace("_-0I9"), "_-0Jr")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait method QName(PackageNamespace(""), "_-K")
+   method
+    refid "_-RQ:_-0KS/_-K"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      urshift
+      pushtrue
+      equals
+      dup
+      pushfalse
+      negate_i
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      jump                L21
+
+      subtract_i
+      negate_i
+      pushwith
+      convert_b
+      getlocal0
+      getlocal1
+L21:
+      getlocal1
+      iftrue              L42
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "mediatorMap")
+      getlex              QName(PackageNamespace("_-6r"), "_-0FX")
+      callproperty        QName(Namespace("_-Lh"), "map"), 1
+      getlex              QName(PackageNamespace("_-6r"), "_-iy")
+      callpropvoid        QName(Namespace("_-7j"), "_-Yu"), 1
+
+      getlocal1
+      dup
+      iffalse             L35
+
+      pop
+      getlocal0
+      convert_b
+L35:
+      iftrue              L42
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "context")
+      getproperty         QName(Namespace("_-06J"), "_-iL")
+      getlocal0
+      getproperty         QName(PrivateNamespace("*", "_-RQ:_-0KS"), "init")
+      callpropvoid        QName(Namespace("_-CZ"), "_-3a"), 1
+
+L42:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PrivateNamespace("*", "_-RQ:_-0KS"), "init")
+   method
+    refid "_-RQ:_-0KS/init"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      subtract_i
+      hasnext
+      pushnull
+      add_i
+      pushtrue
+      dxnslate
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      iffalse             L21
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "_-Ql")
+      getproperty         QName(PackageNamespace(""), "tooltips")
+      findpropstrict      QName(PackageNamespace("_-6r"), "_-0FX")
+      constructprop       QName(PackageNamespace("_-6r"), "_-0FX"), 0
+      callpropvoid        QName(PackageNamespace(""), "addChild"), 1
+
+L21:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-RQ:_-0KS/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

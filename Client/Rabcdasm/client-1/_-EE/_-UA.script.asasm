@@ -1,0 +1,25 @@
+script ; 46
+ sinit
+  refid "_-EE:_-UA.sinit"
+  body
+   maxstack 2
+   localcount 1
+   initscopedepth 1
+   maxscopedepth 2
+   code
+    getlocal0
+    pushscope
+
+    findpropstrict      Multiname("_-UA", [PackageNamespace("_-EE")])
+    pushnull
+    newclass            "_-EE:_-UA"
+    initproperty        QName(PackageNamespace("_-EE"), "_-UA")
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+ trait class QName(PackageNamespace("_-EE"), "_-UA")
+  #include "_-UA.class.asasm"
+ end ; trait
+end ; script

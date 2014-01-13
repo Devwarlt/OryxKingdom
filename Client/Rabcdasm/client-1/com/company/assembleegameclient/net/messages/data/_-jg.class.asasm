@@ -1,0 +1,336 @@
+class
+ refid "com.company.assembleegameclient.net.messages.data:_-jg"
+ instance QName(PackageNamespace("com.company.assembleegameclient.net.messages.data"), "_-jg")
+  extends QName(PackageNamespace(""), "Object")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-0AE")
+  iinit
+   refid "com.company.assembleegameclient.net.messages.data:_-jg/iinit"
+   param QName(PackageNamespace(""), "int")
+   param QName(PackageNamespace(""), "Number")
+   param QName(PackageNamespace(""), "Number")
+   body
+    maxstack 4
+    localcount 6
+    initscopedepth 4
+    maxscopedepth 5
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     strictequals
+     kill                4
+     declocal_i          2
+     decrement
+     setlocal2
+
+     inclocal_i          2
+L10:
+     setlocal            4
+
+     setlocal            5
+
+     getlocal0
+     pushscope
+
+     getlocal            5
+     dup
+     iftrue              L20
+
+     pop
+     getlocal0
+     convert_b
+L20:
+     iffalse             L44
+
+     jump                L28
+
+     convert_u
+     declocal            3
+     setlocal3
+
+     getlocal            4
+     setlocal2
+
+     declocal_i          3
+L28:
+     getlocal0
+     constructsuper      0
+
+     getlocal            4
+     dup
+     jump                L39
+
+     negate
+     dxnslate
+     declocal            3
+     coerce_a
+     typeof
+     inclocal_i          4
+L39:
+     iffalse             L43
+
+     pop
+     getlocal1
+     convert_b
+L43:
+     iftrue              L59
+
+L44:
+     getlocal0
+     getlocal1
+     initproperty        QName(PackageNamespace(""), "time_")
+
+     getlocal            5
+     dup
+     iftrue              L53
+
+     pop
+     getlocal0
+     convert_b
+L53:
+     iffalse             L59
+
+     getlocal0
+     getlocal2
+     initproperty        QName(PackageNamespace(""), "x_")
+
+     getlocal            5
+     iffalse             L62
+
+L59:
+     getlocal0
+     getlocal3
+     initproperty        QName(PackageNamespace(""), "y_")
+
+L62:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "time_") type QName(PackageNamespace(""), "int") end
+  trait slot QName(PackageNamespace(""), "x_") type QName(PackageNamespace(""), "Number") end
+  trait slot QName(PackageNamespace(""), "y_") type QName(PackageNamespace(""), "Number") end
+  trait method QName(PackageNamespace(""), "writeToOutput")
+   method
+    refid "com.company.assembleegameclient.net.messages.data:_-jg/writeToOutput"
+    param QName(PackageNamespace("flash.utils"), "IDataOutput")
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 4
+     localcount 4
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      kill                2
+      getlocal2
+      convert_s
+      getlocal2
+      inclocal_i          2
+      checkfilter
+L10:
+      setlocal2
+
+      setlocal3
+
+      getlocal0
+      pushscope
+
+      getlocal3
+      dup
+      iftrue              L27
+
+      pop
+      jump                L25
+
+      declocal_i          2
+      rshift
+      declocal            2
+      declocal            2
+      inclocal_i          2
+      getlocal2
+L25:
+      getlocal0
+      convert_b
+L27:
+      iffalse             L45
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "time_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeInt"), 1
+
+      getlocal2
+      iftrue              L45
+
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "x_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeFloat"), 1
+
+      getlocal2
+      dup
+      iffalse             L44
+
+      pop
+      getlocal3
+      convert_b
+L44:
+      iftrue              L49
+
+L45:
+      getlocal1
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y_")
+      callpropvoid        QName(Namespace("flash.utils:IDataOutput"), "writeFloat"), 1
+
+L49:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "toString")
+   method
+    refid "com.company.assembleegameclient.net.messages.data:_-jg/toString"
+    returns QName(PackageNamespace(""), "String")
+    body
+     maxstack 4
+     localcount 3
+     initscopedepth 4
+     maxscopedepth 5
+     code
+      pushfalse
+      pushtrue
+      setlocal1
+
+      jump                L10
+
+      multiply
+      bitxor
+      convert_o
+      increment
+      popscope
+      getglobalscope
+L10:
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      pushstring          "time_: "
+      getlocal1
+      dup
+      iftrue              L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iffalse             L38
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "time_")
+      add
+      getlocal1
+      dup
+      iftrue              L37
+
+      jump                L34
+
+      pushnull
+      getlocal1
+      pop
+      convert_o
+      swap
+      popscope
+L34:
+      pop
+      getlocal2
+      convert_b
+L37:
+      iffalse             L68
+
+L38:
+      pushstring          " x_: "
+      getlocal1
+      iffalse             L69
+
+      add
+      getlocal1
+      dup
+      iftrue              L55
+
+      jump                L52
+
+      negate_i
+      swap
+      pushundefined
+      decrement
+      pushnull
+      subtract
+L52:
+      pop
+      getlocal0
+      convert_b
+L55:
+      iffalse             L68
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "x_")
+      getlocal1
+      dup
+      iftrue              L64
+
+      pop
+      getlocal0
+      convert_b
+L64:
+      iffalse             L74
+
+      add
+      getlocal1
+      iffalse             L75
+
+L68:
+      pushstring          " y_: "
+L69:
+      add
+      getlocal1
+      iffalse             L75
+
+      getlocal0
+      getproperty         QName(PackageNamespace(""), "y_")
+L74:
+      add
+L75:
+      returnvalue
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "com.company.assembleegameclient.net.messages.data:_-jg/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 3
+   maxscopedepth 4
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class

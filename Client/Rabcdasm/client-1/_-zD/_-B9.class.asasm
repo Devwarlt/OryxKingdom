@@ -1,0 +1,193 @@
+class
+ refid "_-zD:_-B9"
+ instance QName(PackageNamespace("_-zD"), "_-B9")
+  extends QName(PackageNamespace("_-C-"), "_-cM")
+  flag SEALED
+  flag PROTECTEDNS
+  protectedns ProtectedNamespace("_-jK")
+  iinit
+   refid "_-zD:_-B9/iinit"
+   body
+    maxstack 21
+    localcount 3
+    initscopedepth 5
+    maxscopedepth 6
+    code
+     pushfalse
+     pushtrue
+     swap
+     jump                L10
+
+     lessthan
+     instanceof
+     getlocal2
+     newactivation
+     increment_i
+     convert_u
+L10:
+     setlocal1
+
+     setlocal2
+
+     getlocal0
+     pushscope
+
+     getlocal1
+     dup
+     iffalse             L20
+
+     pop
+     getlocal1
+     convert_b
+L20:
+     iftrue              L63
+
+     getlocal0
+     jump                L29
+
+     convert_d
+     getglobalscope
+     astypelate
+     bitxor
+     subtract_i
+     convert_b
+L29:
+     pushstring          "Apple"
+     pushstring          "Tortilla"
+     pushstring          "Chainsaw"
+     pushstring          "Monkey"
+     pushstring          "Flotilla"
+     pushstring          "Zephyr"
+     jump                L42
+
+     divide
+     negate
+     modulo
+     greaterthan
+     istypelate
+     pushtrue
+L42:
+     pushstring          "Ghost"
+     pushstring          "Tupac"
+     pushstring          "Alluvial"
+     pushstring          "Dante"
+     pushstring          "Soprano"
+     pushstring          "Godzilla"
+     pushstring          "Hate"
+     pushstring          "Freebird"
+     pushstring          "Desire"
+     pushstring          "Good"
+     pushstring          "Nightie"
+     pushstring          "Osprey"
+     newarray            18
+     initproperty        QName(PrivateNamespace("*", "_-zD:_-B9"), "_-06G")
+
+     getlocal1
+     dup
+     iffalse             L62
+
+     pop
+     getlocal1
+     convert_b
+L62:
+     iftrue              L65
+
+L63:
+     getlocal0
+     constructsuper      0
+
+L65:
+     returnvoid
+    end ; code
+   end ; body
+  end ; method
+  trait slot QName(PackageNamespace(""), "view") flag METADATA type QName(PackageNamespace("com.company.assembleegameclient.ui"), "_-TW")
+   metadata "Inject"
+   end ; metadata
+  end ; trait
+  trait slot QName(PrivateNamespace("*", "_-zD:_-B9"), "name") type QName(PackageNamespace(""), "String") end
+  trait slot QName(PrivateNamespace("*", "_-zD:_-B9"), "_-06G") type QName(PackageNamespace(""), "Array") end
+  trait method QName(PackageNamespace(""), "initialize") flag OVERRIDE
+   method
+    refid "_-zD:_-B9/initialize"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 1
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      getlocal0
+      pushscope
+
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+  trait method QName(PackageNamespace(""), "destroy") flag OVERRIDE
+   method
+    refid "_-zD:_-B9/destroy"
+    returns QName(PackageNamespace(""), "void")
+    body
+     maxstack 3
+     localcount 3
+     initscopedepth 5
+     maxscopedepth 6
+     code
+      pushfalse
+      pushtrue
+      swap
+      jump                L10
+
+      greaterequals
+      setlocal2
+
+      newactivation
+      bitxor
+      not
+      setlocal3
+
+L10:
+      setlocal1
+
+      setlocal2
+
+      getlocal0
+      pushscope
+
+      getlocal1
+      dup
+      iffalse             L20
+
+      pop
+      getlocal1
+      convert_b
+L20:
+      iftrue              L23
+
+      getlocal0
+      callsupervoid       QName(PackageNamespace(""), "destroy"), 0
+L23:
+      returnvoid
+     end ; code
+    end ; body
+   end ; method
+  end ; trait
+ end ; instance
+ cinit
+  refid "_-zD:_-B9/cinit"
+  body
+   maxstack 3
+   localcount 1
+   initscopedepth 4
+   maxscopedepth 5
+   code
+    getlocal0
+    pushscope
+
+    returnvoid
+   end ; code
+  end ; body
+ end ; method
+end ; class
