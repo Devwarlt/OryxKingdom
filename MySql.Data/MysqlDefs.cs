@@ -347,7 +347,7 @@ namespace MySql.Data.MySqlClient
     /// <summary>
     /// Shared memory connection.  Currently works only with Windows systems.
     /// </summary>
-    SharedMemory = 4,
+    SharedMemory = 16,
     Memory = 4
   }
 

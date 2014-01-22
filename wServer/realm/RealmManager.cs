@@ -91,8 +91,9 @@ namespace wServer.realm
         public static int nextTestId = 0;
         public static readonly ConcurrentDictionary<int, World> Worlds = new ConcurrentDictionary<int, World>();
         public static readonly ConcurrentDictionary<int, Vault> Vaults = new ConcurrentDictionary<int, Vault>();
-        public static readonly ConcurrentDictionary<int, PlayerHouse> PlayerHomes = new ConcurrentDictionary<int, PlayerHouse>();
+        //public static readonly ConcurrentDictionary<int, PlayerHouse> PlayerHomes = new ConcurrentDictionary<int, PlayerHouse>();
         public static readonly Dictionary<string, GuildHall> GuildHalls = new Dictionary<string, GuildHall>();
+        public static readonly Dictionary<string, PlayerHouse> PlayerHouses = new Dictionary<string, PlayerHouse>();
 
         public static readonly ConcurrentDictionary<int, ClientProcessor> Clients =
             new ConcurrentDictionary<int, ClientProcessor>();
@@ -109,7 +110,7 @@ namespace wServer.realm
             Worlds[World.NEXUS_ID] = Worlds[0] = new Nexus();
             Worlds[World.NEXUS_LIMBO] = new NexusLimbo();
             Worlds[World.VAULT_ID] = new Vault(true);
-            Worlds[World.HOUSE] = new PlayerHouse(true);
+            //Worlds[World.PHOUSE] = new PlayerHouse(true);
             Worlds[World.TEST_ID] = new Test();
             Worlds[World.RAND_REALM] = new RandomRealm();
             Worlds[World.GAUNTLET] = new GauntletMap();
@@ -174,19 +175,36 @@ namespace wServer.realm
             return v;
         }
 
-        public static PlayerHouse PlayerHome(ClientProcessor processor)
+        //public static PlayerHouse PlayerHome(ClientProcessor processor)
+        //{
+        //    PlayerHouse ph;
+        //    var id = processor.Account.AccountId;
+        //    if (PlayerHomes.ContainsKey(id))
+        //    {
+        //        ph = PlayerHomes[id];
+        //    }
+        //    else
+        //    {
+        //        ph = PlayerHomes[id] = (PlayerHouse)AddWorld(new PlayerHouse(false, processor));
+        //    }
+        //    return ph;
+        //}
+
+        public static World PlayerHouseWorld(string h)
         {
-            PlayerHouse ph;
-            var id = processor.Account.AccountId;
-            if (PlayerHomes.ContainsKey(id))
+            if (!PlayerHouses.ContainsKey(h))
             {
-                ph = PlayerHomes[id];
+                var ph = (PlayerHouse)AddWorld(new PlayerHouse(h));
+                PlayerHouses.Add(h, ph);
+                return GuildHalls[h];
             }
-            else
+            if (PlayerHouses[h].Players.Count == 0)
             {
-                ph = PlayerHomes[id] = (PlayerHouse)AddWorld(new PlayerHouse(false, processor));
+                PlayerHouses.Remove(h);
+                var ph = (PlayerHouse)AddWorld(new PlayerHouse(h));
+                PlayerHouses.Add(h, ph);
             }
-            return ph;
+            return PlayerHouses[h];
         }
 
         public static World GuildHallWorld(string g)
@@ -235,8 +253,21 @@ namespace wServer.realm
 
         public static Player FindPlayer(string name)
         {
+            if (name.Split(' ').Length > 1)
+                name = name.Split(' ')[1];
+
             return (from i in Worlds where i.Key != 0 from e in i.Value.Players where String.Equals(e.Value.Client.Account.Name, name, StringComparison.CurrentCultureIgnoreCase) select e.Value).FirstOrDefault();
         }
+
+        public static Player FindPlayerRough(string name)
+         {
+             Player dummy;
+             foreach (var i in Worlds)
+                 if (i.Key != 0)
+                     if ((dummy = i.Value.GetUniqueNamedPlayerRough(name)) != null)
+                         return dummy;
+             return null;
+         }
 
         //public CommandManager Commands { get; private set; }
 

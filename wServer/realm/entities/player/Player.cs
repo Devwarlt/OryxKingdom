@@ -96,6 +96,7 @@ namespace wServer.realm.entities.player
             FameGoal = GetFameGoal(state != null ? state.BestFame : 0);
             Glowing = false;
             Guild = psr.Account.Guild.Name;
+            Home = psr.Account.House.Name;
             GuildRank = psr.Account.Guild.Rank;
             if (psr.Character.HitPoints <= 0)
             {
@@ -143,7 +144,7 @@ namespace wServer.realm.entities.player
                 List<string> DevCommands = new List<string>(new string[] { "killall", "killallx", "spawn", "restart", "osay" }); DevCommands.AddRange(GMCommands);
                 List<string> CMCommands = new List<string>(new string[] { "rename", "grank", "setguild" }); CMCommands.AddRange(DevCommands);
                 List<string> HeadQACommands = new List<string>(new string[] { "" }); HeadQACommands.AddRange(CMCommands);
-                List<string> HeadDevCommands = new List<string>(new string[] { "" }); HeadDevCommands.AddRange(HeadQACommands);
+                //List<string> HeadDevCommands = new List<string>(new string[] { "" }); HeadDevCommands.AddRange(HeadQAdCommands);
                 List<string> FounderCommands = new List<string>(new string[] { "" });
 
                 var t = typeof(ICommand);
@@ -185,7 +186,7 @@ namespace wServer.realm.entities.player
                         Commands.AddRange(HeadQACommands);
                         break;
                     case 10:
-                        Commands.AddRange(HeadDevCommands);
+                        //Commands.AddRange(HeadDevCommands);
                         break;
 
                     case 11:
@@ -255,6 +256,7 @@ namespace wServer.realm.entities.player
         public int Stars { get; set; }
 
         public string Guild { get; set; }
+        public string Home { get; set; }
         public int GuildRank { get; set; }
         public bool Invited { get; set; }
 
@@ -881,10 +883,10 @@ namespace wServer.realm.entities.player
                             case 0x195d:
                                 world = RealmManager.AddWorld(new MarketMap());
                                 break;
-                            case 0x268D:
-                                world = RealmManager.PlayerHome(psr);
-                                setWorldInstance = false;
-                                break;
+                            //case 0x268D:
+                            //    world = RealmManager.PlayerHome(psr);
+                            //    setWorldInstance = false;
+                            //    break;
 
                             case 0x070d:
                                 world = RealmManager.Monitor.GetRandomRealm();
@@ -939,6 +941,9 @@ namespace wServer.realm.entities.player
                     {
                         case 0x072f:
                             world = RealmManager.GuildHallWorld(Guild);
+                            break;
+                        case 0x268D:
+                            world = RealmManager.PlayerHouseWorld(Home);
                             break;
                         default:
                             psr.SendPacket(new TextPacket

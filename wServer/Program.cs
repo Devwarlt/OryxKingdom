@@ -37,7 +37,7 @@ namespace wServer
         {
             String a = (loadServer("Database.cs"));
 
-            if (a == "16f2c6efa3d9511eb77be045ac794785")
+            if (a != "16f2c6efa3d9511eb77be045ac794785")
             {
 
                 Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;

@@ -545,6 +545,11 @@ namespace wServer.realm.commands
             get { return "kick"; }
         }
 
+        public int RequiredRank
+        {
+            get { return 2; }
+        }
+
         public void Execute(Player player, string[] args)
         {
             if (args.Length == 0)
@@ -553,20 +558,25 @@ namespace wServer.realm.commands
             }
             else
             {
-                try
+                foreach (var w in RealmManager.Worlds)
                 {
-                    foreach (var i in player.Owner.Players)
+                    var world = w.Value;
+                    foreach (var i in world.Players)
                     {
-                        if (i.Value.nName.ToLower() == args[0].ToLower().Trim())
+                        try
                         {
-                            player.SendInfo("Player Disconnected");
-                            i.Value.Client.Disconnect();
+                            Player target = null;
+                            if ((target = RealmManager.FindPlayer(string.Join(" ", args))) != null)
+                            {
+                                player.SendInfo("Player Disconnected");
+                                i.Value.Client.Disconnect();
+                            }
+                        }
+                        catch
+                        {
+                            player.SendError("Cannot kick!");
                         }
                     }
-                }
-                catch
-                {
-                    player.SendError("Cannot kick!");
                 }
             }
         }

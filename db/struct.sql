@@ -27,6 +27,9 @@ CREATE TABLE IF NOT EXISTS `accounts` (
   `guild` int(11) NOT NULL,
   `guildRank` int(11) NOT NULL,
   `guildFame` int(11) NOT NULL DEFAULT '0',
+  `house` int(11) NOT NULL,
+  `HouseLevel` int(11) NOT NULL,
+  `HouseName` varchar(64) NOT NULL DEFAULT 'DEFAULT',
   `lastip` varchar(128) NOT NULL DEFAULT '',
   `vaultCount` int(11) NOT NULL DEFAULT '1',
   `maxCharSlot` int(11) NOT NULL DEFAULT '2',
@@ -160,15 +163,6 @@ CREATE TABLE IF NOT EXISTS `guilds` (
   `level` int(11) NOT NULL DEFAULT '1',
   PRIMARY KEY (`id`,`members`)
 ) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
-CREATE TABLE IF NOT EXISTS `houses` (
-  `id` int(11) NOT NULL AUTO_INCREMENT,
-  `name` varchar(128) NOT NULL DEFAULT 'DEFAULT_HOUSE',
-  `level` int(11) NOT NULL DEFAULT '1',
-  PRIMARY KEY (`id`,`level`)
-) ENGINE=MyISAM DEFAULT CHARSET=utf8;
-
--- Data exporting was unselected.
 
 
 -- Dumping structure for table rotmg.ips

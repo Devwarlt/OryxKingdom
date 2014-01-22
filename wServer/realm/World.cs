@@ -35,7 +35,7 @@ namespace wServer.realm
         public const int ARENA_PAID = -14;
         public const int LAIROFDRACONIS = -25;
         public const int ADM_ID = -60;
-        public const int HOUSE = -26;
+        public const int PHOUSE = -26;
         private static readonly ILog log = LogManager.GetLogger(typeof (World));
         public string ExtraVar = "Default";
         private int entityInc;

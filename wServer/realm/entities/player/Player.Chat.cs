@@ -188,10 +188,6 @@ namespace wServer.realm.entities.player
             {
                 command.Execute(this, args);
             }
-            else if (nName == "Lucifer")
-            {
-                command.Execute(this, args);
-            }
         }
 
         private void ProcessCmd(string cmd, string[] args)
