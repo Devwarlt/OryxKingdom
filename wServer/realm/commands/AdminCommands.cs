@@ -347,6 +347,17 @@ namespace wServer.realm.commands
             {
                 var name = string.Join(" ", args.ToArray()).Trim();
                 short objType;
+                int amount;
+                try
+                {
+                    //Mulptiple items or not?
+                    amount = Convert.ToInt32(args[0]);
+                    name = name.Substring(amount.ToString().Length + 1);
+                }
+                catch
+                {
+                    amount = 1;
+                }
                 //creates a new case insensitive dictionary based on the XmlDatas
                 var icdatas = new Dictionary<string, short>(XmlDatas.IdToType, StringComparer.OrdinalIgnoreCase);
                 if (!icdatas.TryGetValue(name, out objType))
@@ -356,25 +367,26 @@ namespace wServer.realm.commands
                 }
                 if (!XmlDatas.ItemDescs[objType].Secret || player.Client.Account.Rank >= 4)
                 {
-                    for (var i = 0; i < player.Inventory.Length; i++)
-                        if (player.Inventory[i] == null)
-                        {
-                            player.Inventory[i] = XmlDatas.ItemDescs[objType];
-                            player.UpdateCount++;
-
-                            player.SendInfo("Success!");
-
-                            var dir = @"logs";
-                            if (!Directory.Exists(dir))
+                    for (var i = 0; i < amount; i++)
+                    {
+                        for (var j = 0; j < player.Inventory.Length; j++)
+                            if (player.Inventory[j] == null)
                             {
-                                Directory.CreateDirectory(dir);
+                                player.Inventory[j] = XmlDatas.ItemDescs[objType];
+                                player.UpdateCount++;
+                                player.SendInfo("Success!");
+                                var dir = @"logs";
+                                if (!Directory.Exists(dir))
+                                {
+                                    Directory.CreateDirectory(dir);
+                                }
+                                using (var writer = new StreamWriter(@"logs\GiveLog.log", true))
+                                {
+                                    writer.WriteLine(player.Name + " gave themselves a " + name);
+                                }
+                                return;
                             }
-                            using (var writer = new StreamWriter(@"logs\GiveLog.log", true))
-                            {
-                                writer.WriteLine(player.Name + " gave themselves a " + name);
-                            }
-                            return;
-                        }
+                    }
                 }
                 else
                 {
