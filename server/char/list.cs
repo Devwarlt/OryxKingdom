@@ -95,33 +95,23 @@ namespace server.@char
                 {
                     new ServerItem
                     {
-                        Name = "Oryx's Kingdom",
-                        Lat = 22.28,
-                        Long = 114.16,
-                        DNS = "172.246.115.68", //Temporary
-                        Usage = 0.2,
-                        AdminOnly = false,
-                        RankRequired = 0
-                    },
-                    new ServerItem
-                    {
-                        Name = "Testing",
-                        Lat = 22.28,
-                        Long = 114.16,
-                        DNS = "76.100.54.98", //I'll probably host
-                        Usage = 0.2,
-                        AdminOnly = false,
-                        RankRequired = 1
-                    },
-                    new ServerItem
-                    {
                         Name = "Local",
                         Lat = 22.28,
                         Long = 114.16,
                         DNS = "127.0.0.1",
                         Usage = 0.2,
                         AdminOnly = false,
-                        RankRequired = 5
+                        RankRequired = 0
+                    },
+                    new ServerItem
+                    {
+                        Name = "Non-Local",
+                        Lat = 22.28,
+                        Long = 114.16,
+                        DNS = "76.100.53.170",
+                        Usage = 0.2,
+                        AdminOnly = false,
+                        RankRequired = 0
                     }
                 };
             return Servers;

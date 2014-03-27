@@ -103,6 +103,46 @@ namespace wServer.realm.commands
         }
     }
 
+    internal class Vanish : ICommand
+    {
+        public string Command
+        {
+            get { return "vanish"; }
+        }
+
+        public int RequiredRank
+        {
+            get { return 3; }
+        }
+
+        public void Execute(Player player, string[] args)
+        {
+            player.vanished = true;
+            player.Owner.PlayersCollision.Remove(player);
+            if (player.Pet != null)
+            {
+                player.Owner.LeaveWorld(player.Pet);
+            }
+        }
+    }
+    internal class Unvanish : ICommand
+    {
+        public string Command
+        {
+            get { return "unvanish"; }
+        }
+
+        public int RequiredRank
+        {
+            get { return 3; }
+        }
+
+        public void Execute(Player player, string[] args)
+        {
+            player.vanished = false;
+        }
+    }
+
     internal class ArenaCommand : ICommand
     {
         public string Command
@@ -261,6 +301,36 @@ namespace wServer.realm.commands
             obj.Move(player.X, player.Y);
             obj.Name = name;
             player.Owner.EnterWorld(obj);
+        }
+    }
+
+    internal class ShakeCommand : ICommand
+    {
+        public string Command
+        {
+            get { return "shakethat"; }
+        }
+
+        public void Execute(Player player, string[] args)
+        {
+                try
+                {
+                   foreach (var w in RealmManager.Worlds)
+                    {
+                        var world = w.Value;
+                        foreach (var i in world.Players.Values)
+                        {
+                            i.Client.SendPacket(new ShowEffectPacket
+                            {
+                                EffectType = EffectType.Earthquake
+                            });
+                        }
+                    }
+                }
+                catch
+                {
+                    player.SendError("Error!");
+                }
         }
     }
 

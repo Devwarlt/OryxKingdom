@@ -162,8 +162,6 @@ public class Account
     public VaultData Vault { get; set; }
     public Stats Stats { get; set; }
     public Guild Guild { get; set; }
-    public House House { get; set; }
-
 
     [XmlNamespaceDeclarations]
     public XmlSerializerNamespaces Namespaces
@@ -227,16 +225,6 @@ public class Guild
     public string Name { get; set; }
     
     public int Fame { get; set; }
-}
-
-[Serializable, XmlRoot]
-
-public class House
-{
-    [XmlAttribute("id")]
-    public int Id { get; set; }
-    public int Level { get; set; }
-    public string Name { get; set; }
 }
 
 [Serializable, XmlRoot]

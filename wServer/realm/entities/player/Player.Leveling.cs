@@ -211,7 +211,7 @@ namespace wServer.realm.entities.player
 
         private bool CheckLevelUp()
         {
-            if (Experience - GetLevelExp(Level) >= ExperienceGoal && Level < 20)
+            if (Experience - GetLevelExp(Level) >= ExperienceGoal && Level < 1000000) //20
             {
                 Level++;
                 ExperienceGoal = GetExpGoal(Level);
@@ -230,9 +230,9 @@ namespace wServer.realm.entities.player
 
                 UpdateCount++;
 
-                if (Level == 20)
-                    foreach (var i in Owner.Players.Values)
-                        i.SendInfo(Name + " achieved level 20");
+                //if (Level == 20)
+                //    foreach (var i in Owner.Players.Values)
+                //        i.SendInfo(Name + " achieved level 20");
                 questEntity = null;
                 return true;
             }

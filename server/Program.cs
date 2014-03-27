@@ -25,20 +25,6 @@ namespace server
             string a2 = a[1].Substring(1);
             string[] a3 = a2.Split('<');
             string a4 = a3[0];
-
-            String b = (loadServer("char/list.cs"));
-
-            switch (b)
-            {
-                default:
-                    break;
-                case ("14a965c3e4a76080637eaddb9aea8f10"):
-                switch (a4)
-                {
-                    default:
-                        break;
-                    case ("76.111.4.126"):
-                        {
                             listener = new HttpListener();
                             listener.Prefixes.Add("http://*:" + port + "/");
                             listener.Start();
@@ -61,11 +47,6 @@ namespace server
                             Console.WriteLine("Listening at port " + port + "...");
                             Console.WriteLine("Server IP: " + a4);
                             Thread.CurrentThread.Join();
-                        }
-                        break;
-                }
-                break;
-            }
         }
 
         private static void ListenerCallback()

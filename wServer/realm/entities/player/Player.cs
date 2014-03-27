@@ -25,6 +25,7 @@ namespace wServer.realm.entities.player
         private FameCounter fames;
         private float hpRegenCounter;
 
+        public bool vanished = false;
         private RealmManager manager;
         public int maxChests = 47;
         private float mpRegenCounter;
@@ -96,7 +97,6 @@ namespace wServer.realm.entities.player
             FameGoal = GetFameGoal(state != null ? state.BestFame : 0);
             Glowing = false;
             Guild = psr.Account.Guild.Name;
-            Home = psr.Account.House.Name;
             GuildRank = psr.Account.Guild.Rank;
             if (psr.Character.HitPoints <= 0)
             {
@@ -941,9 +941,6 @@ namespace wServer.realm.entities.player
                     {
                         case 0x072f:
                             world = RealmManager.GuildHallWorld(Guild);
-                            break;
-                        case 0x268D:
-                            world = RealmManager.PlayerHouseWorld(Home);
                             break;
                         default:
                             psr.SendPacket(new TextPacket

@@ -101,7 +101,7 @@ namespace MySql.Data.Common
     private int position;
     private int connectNumber;
 
-    private const int BUFFERLENGTH = 64016;
+    private const int BUFFERLENGTH = 32008;
 
     private int readTimeout = Timeout.Infinite;
     private int writeTimeout = Timeout.Infinite;

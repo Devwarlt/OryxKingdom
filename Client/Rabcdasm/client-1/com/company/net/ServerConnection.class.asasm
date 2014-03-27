@@ -1322,7 +1322,7 @@ L10:
       iffalse             L30
 
       findpropstrict      QName(PackageNamespace(""), "trace")
-      pushstring          "Security Error: "
+      pushstring          "Server is Offline or Down for Maintenance: "
       getlocal1
       jump                L25
 
@@ -1347,7 +1347,7 @@ L30:
       getproperty         QName(PackageNamespace(""), "ERROR")
       pushfalse
       pushfalse
-      pushstring          "Security Error: "
+      pushstring          "Server is Offline or Down for Maintenance: "
       getlocal1
       getproperty         QName(PackageNamespace(""), "text")
       add

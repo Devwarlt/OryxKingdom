@@ -91,9 +91,7 @@ namespace wServer.realm
         public static int nextTestId = 0;
         public static readonly ConcurrentDictionary<int, World> Worlds = new ConcurrentDictionary<int, World>();
         public static readonly ConcurrentDictionary<int, Vault> Vaults = new ConcurrentDictionary<int, Vault>();
-        //public static readonly ConcurrentDictionary<int, PlayerHouse> PlayerHomes = new ConcurrentDictionary<int, PlayerHouse>();
         public static readonly Dictionary<string, GuildHall> GuildHalls = new Dictionary<string, GuildHall>();
-        public static readonly Dictionary<string, PlayerHouse> PlayerHouses = new Dictionary<string, PlayerHouse>();
 
         public static readonly ConcurrentDictionary<int, ClientProcessor> Clients =
             new ConcurrentDictionary<int, ClientProcessor>();
@@ -110,7 +108,6 @@ namespace wServer.realm
             Worlds[World.NEXUS_ID] = Worlds[0] = new Nexus();
             Worlds[World.NEXUS_LIMBO] = new NexusLimbo();
             Worlds[World.VAULT_ID] = new Vault(true);
-            //Worlds[World.PHOUSE] = new PlayerHouse(true);
             Worlds[World.TEST_ID] = new Test();
             Worlds[World.RAND_REALM] = new RandomRealm();
             Worlds[World.GAUNTLET] = new GauntletMap();
@@ -173,38 +170,6 @@ namespace wServer.realm
                 v = Vaults[id] = (Vault) AddWorld(new Vault(false, processor));
             }
             return v;
-        }
-
-        //public static PlayerHouse PlayerHome(ClientProcessor processor)
-        //{
-        //    PlayerHouse ph;
-        //    var id = processor.Account.AccountId;
-        //    if (PlayerHomes.ContainsKey(id))
-        //    {
-        //        ph = PlayerHomes[id];
-        //    }
-        //    else
-        //    {
-        //        ph = PlayerHomes[id] = (PlayerHouse)AddWorld(new PlayerHouse(false, processor));
-        //    }
-        //    return ph;
-        //}
-
-        public static World PlayerHouseWorld(string h)
-        {
-            if (!PlayerHouses.ContainsKey(h))
-            {
-                var ph = (PlayerHouse)AddWorld(new PlayerHouse(h));
-                PlayerHouses.Add(h, ph);
-                return GuildHalls[h];
-            }
-            if (PlayerHouses[h].Players.Count == 0)
-            {
-                PlayerHouses.Remove(h);
-                var ph = (PlayerHouse)AddWorld(new PlayerHouse(h));
-                PlayerHouses.Add(h, ph);
-            }
-            return PlayerHouses[h];
         }
 
         public static World GuildHallWorld(string g)

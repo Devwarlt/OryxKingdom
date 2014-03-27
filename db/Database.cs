@@ -127,12 +127,6 @@ AND characters.charId=death.chrId;";
                     Id = 0,
                     Rank = 0
                 },
-                House = new House
-                {
-                    Id = 0,
-                    Level = 0,
-                    Name = ""
-                },
                 NameChosen = false,
                 NextCharSlotPrice = 5000,
                 VerifiedEmail = false,
@@ -155,7 +149,7 @@ AND characters.charId=death.chrId;";
         {
             MySqlCommand cmd = CreateQuery();
             cmd.CommandText =
-                "SELECT id, name, rank, namechosen, verified, guild, guildRank, guildFame, house, HouseLevel, HouseName, banned, locked, ignored, bonuses, tags FROM accounts WHERE uuid=@uuid AND password=SHA1(@password);";
+                "SELECT id, name, rank, namechosen, verified, guild, guildRank, guildFame, banned, locked, ignored, bonuses, tags FROM accounts WHERE uuid=@uuid AND password=SHA1(@password);";
             cmd.Parameters.AddWithValue("@uuid", uuid);
             cmd.Parameters.AddWithValue("@password", password);
             Account ret;
@@ -177,12 +171,6 @@ AND characters.charId=death.chrId;";
                         Id = rdr.GetInt32("guild"),
                         Rank = rdr.GetInt32("guildRank"),
                         Fame = rdr.GetInt32("guildFame")
-                    },
-                    House = new House
-                    {
-                        Id = rdr.GetInt32("house"),
-                        Level = rdr.GetInt32("HouseLevel"),
-                        Name = rdr.GetString("HouseName")
                     },
                     NameChosen = rdr.GetBoolean("namechosen"),
                     NextCharSlotPrice = 5000,
@@ -207,7 +195,7 @@ AND characters.charId=death.chrId;";
 
             cmd = CreateQuery();
             cmd.CommandText =
-                "INSERT INTO accounts(uuid, password, name, rank, namechosen, verified, guild, guildRank, guildFame, house, HouseLevel, HouseName, vaultCount, maxCharSlot, regTime, guest, banned, locked, ignored, bonuses, tags) VALUES(@uuid, SHA1(@password), @name, 0, 1, 0, 0, 0, 0, 0, 0, @empty, 1, 2, @regTime, @guest, 0, @empty, @empty, @empty, @empty);";
+                "INSERT INTO accounts(uuid, password, name, rank, namechosen, verified, guild, guildRank, guildFame, vaultCount, maxCharSlot, regTime, guest, banned, locked, ignored, bonuses, tags) VALUES(@uuid, SHA1(@password), @name, 0, 1, 0, 0, 0, @empty, 1, 2, @regTime, @guest, 0, @empty, @empty, @empty, @empty);";
             cmd.Parameters.AddWithValue("@uuid", uuid);
             cmd.Parameters.AddWithValue("@password", password);
             cmd.Parameters.AddWithValue("@name", uuid); //names[(uint)uuid.GetHashCode() % names.Length]);
@@ -249,7 +237,7 @@ AND characters.charId=death.chrId;";
         {
             MySqlCommand cmd = CreateQuery();
             cmd.CommandText =
-                "SELECT id, name, rank, namechosen, verified, guild, guildRank, guildFame, house, HouseLevel, banned, locked, ignored, bonuses, tags FROM accounts WHERE id=@id;";
+                "SELECT id, name, rank, namechosen, verified, guild, guildRank, guildFame, banned, locked, ignored, bonuses, tags FROM accounts WHERE id=@id;";
             cmd.Parameters.AddWithValue("@id", id);
             Account ret;
             using (MySqlDataReader rdr = cmd.ExecuteReader())
@@ -271,12 +259,6 @@ AND characters.charId=death.chrId;";
                         Rank = rdr.GetInt32("guildRank"),
                         Fame = rdr.GetInt32("guildFame")
                     },
-                    House = new House
-                    {
-                        Id = rdr.GetInt32("house"),
-                        Level = rdr.GetInt32("HouseLevel"),
-                        Name = rdr.GetString("HouseName")
-                    },
                     NameChosen = rdr.GetBoolean("namechosen"),
                     NextCharSlotPrice = 5000,
                     VerifiedEmail = rdr.GetBoolean("verified"),
@@ -295,7 +277,7 @@ AND characters.charId=death.chrId;";
         {
             MySqlCommand cmd = CreateQuery();
             cmd.CommandText =
-                "SELECT id, name, rank, namechosen, verified, guild, guildRank, guildFame, house, HouseLevel, HouseName, banned, locked, ignored, bonuses, tags FROM accounts WHERE name=@name;";
+                "SELECT id, name, rank, namechosen, verified, guild, guildRank, guildFame, banned, locked, ignored, bonuses, tags FROM accounts WHERE name=@name;";
             cmd.Parameters.AddWithValue("@name", name);
             Account ret;
             using (MySqlDataReader rdr = cmd.ExecuteReader())
@@ -315,12 +297,6 @@ AND characters.charId=death.chrId;";
                         Id = rdr.GetInt32("guild"),
                         Rank = rdr.GetInt32("guildRank"),
                         Fame = rdr.GetInt32("guildFame")
-                    },
-                    House = new House
-                    {
-                        Id = rdr.GetInt32("house"),
-                        Level = rdr.GetInt32("HouseLevel"),
-                        Name = rdr.GetString("HouseName")
                     },
                     NameChosen = rdr.GetBoolean("namechosen"),
                     NextCharSlotPrice = 5000,

@@ -35,11 +35,6 @@ namespace wServer
 
         private static void Main(string[] args)
         {
-            String a = (loadServer("Database.cs"));
-
-            if (a != "16f2c6efa3d9511eb77be045ac794785")
-            {
-
                 Thread.CurrentThread.CurrentCulture = CultureInfo.InvariantCulture;
                 svrSkt = new Socket(AddressFamily.InterNetwork, SocketType.Stream, ProtocolType.Tcp);
                 svrSkt.Bind(new IPEndPoint(IPAddress.Any, 2050));
@@ -75,9 +70,6 @@ Closing...");
                 HostPolicyServer();
 
                 RealmManager.CoreTickLoop(); //Never returns
-            }
-            else {
-            }
         }
 
         private static void AutoSave()
